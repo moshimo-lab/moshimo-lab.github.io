@@ -204,6 +204,20 @@ a.zcard:hover{border-color:var(--teal);text-decoration:none;transform:translateY
 .leye{position:absolute;top:13px;width:5px;height:2px;border-radius:2px;background:#0b1220}
 .leye.l{left:4px}.leye.r{right:4px}
 .lcap{margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--sub);letter-spacing:.1em}
+
+/* ===== 観測ポスト(送信フォーム) ===== */
+[hidden]{display:none !important}
+.obs-form{display:flex;flex-direction:column;gap:14px;
+  background:linear-gradient(180deg,var(--bg2),#0a1226);border:1px solid var(--line);
+  border-radius:14px;padding:18px 16px;margin:14px 0}
+.obs-form label{display:flex;flex-direction:column;gap:6px;font-size:12.5px;color:var(--sub)}
+.obs-form input[type=text],.obs-form input[type=email],.obs-form select,.obs-form textarea{
+  background:var(--bg);border:1px solid var(--line);border-radius:8px;color:var(--text);
+  padding:10px 11px;font-family:'Noto Sans JP',sans-serif;font-size:14px}
+.obs-form input:focus,.obs-form select:focus,.obs-form textarea:focus{outline:none;border-color:var(--teal)}
+.obs-form textarea{resize:vertical}
+.obs-form button{align-self:flex-start;cursor:pointer}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
 /* ===== スライダー ===== */
 .slider-panel{background:linear-gradient(180deg,var(--bg2),#0a1226);border:1px solid var(--line);
   border-radius:14px;padding:16px}

@@ -30,12 +30,11 @@
   frame-ancestors / HSTS はmetaでは効かないため、フル対応なら上記3ホストを推奨。
 
 ## お問い合わせ(contact.html)について
-- 連絡先: ssuzuki240405+moshimo@gmail.com(Gmailエイリアス。security.txt にも設定済み)
-- Gmail側で「To: +moshimo」でフィルタを作ると、サイト宛メールを自動でラベル分けできます
-- サフィックスを変えたい場合: generator/pages_a.py のCONTACT_JS内 '+moshimo' と build.py のsecurity.txt行の2箇所
-- スパム収集ボット対策として、アドレスはHTMLに平文で書かず contact.js が組み立てて表示します
-- もし迷惑メールが増えてきたら: ①問い合わせ専用のGmailエイリアス(例: +contact付き)に変える
-  ②Netlifyで公開しているならNetlify Forms(無料枠あり)のフォームに置き換える、が定番の対処です
+- 送信フォーム方式(Formspree経由)。**メールアドレスはサイトのどこにも存在しません**
+- 届け先メールはFormspreeのアカウント設定内にだけ保存され、公開されません
+- 初回セットアップ: formspree.io で無料登録→フォーム作成→発行されたID(/f/xxxxxxxx)を
+  contact.html 内の YOUR_FORM_ID と置き換える(1箇所のみ)
+- 無料枠は月50通。超えるほど届くようになったら嬉しい悲鳴なので、そのとき考えましょう
 
 ## 公開後にやること
 1. https://securityheaders.com / Mozilla Observatory で採点確認(A+想定)

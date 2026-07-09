@@ -102,7 +102,7 @@ function update(){
   const seasonSwing=t*0.85;
   season.textContent='±'+seasonSwing.toFixed(0)+'℃';
 
-  const rotExtreme=r<0.05||r>20;
+  const rotExtreme=r<0.05||r>=17; // 17倍以上=赤道の遠心力が重力を超え地表崩壊(記事と統一)
   const distExtreme=d<0.3||d>3.2;
   const atmExtreme=effA<0.02||effA>50;
   const gravExtreme=g<0.15;

@@ -2,13 +2,13 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src https://formspree.io; base-uri 'none'; form-action https://formspree.io">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="referrer" content="strict-origin-when-cross-origin">
-<meta name="description" content="もしも地球ラボへの感想・リクエスト・まちがい報告の連絡先。">
+<meta name="description" content="もしも地球ラボへの感想・リクエスト・まちがい報告の送信フォーム。">
 <meta property="og:site_name" content="もしも地球ラボ">
 <meta property="og:title" content="お問い合わせ|もしも地球ラボ">
-<meta property="og:description" content="もしも地球ラボへの感想・リクエスト・まちがい報告の連絡先。">
+<meta property="og:description" content="もしも地球ラボへの感想・リクエスト・まちがい報告の送信フォーム。">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 <meta property="og:image" content="https://moshimo-lab.github.io/assets/ogp.png">
@@ -58,19 +58,32 @@
 
   <h2>こんなお便りを待っています</h2>
   <div class="card-grid">
-    <div class="zcard"><span class="icon">💬</span><div class="t">感想・リクエスト</div><div class="d">「この"もしも"が見たい!」というお題のリクエストも大歓迎。次の記事の候補にします。</div></div>
+    <div class="zcard"><span class="icon">💬</span><div class="t">感想・リクエスト</div><div class="d">「この『もしも』が見たい!」というお題のリクエストも大歓迎。次の記事の候補にします。</div></div>
     <div class="zcard"><span class="icon">🔍</span><div class="t">まちがいの報告</div><div class="d">記事の数値や説明のまちがいに気づいたら、ぜひ教えてください。確認のうえ、記事を直します。</div></div>
     <div class="zcard"><span class="icon">🧸</span><div class="t">グッズ・その他</div><div class="d">おみやげコーナーへの要望、掲載や紹介のご相談などもこちらへ。</div></div>
   </div>
 
-  <h2>連絡先</h2>
-  <div class="note"><div class="nt">📮 メールでどうぞ</div>
-    <p class="mt0">下のアドレス宛にメールをお送りください。件名は自由です(リンクを押すと件名入りでメールソフトが開きます)。</p>
-    <p class="center"><a id="mailLink" class="btn primary" href="#" rel="noopener">メールを送る</a>
-    <button id="copyMail" class="btn" type="button">📋 アドレスをコピー</button></p>
-    <noscript><p class="sub">JavaScriptが無効の場合はこちらへ: ssuzuki&#50;&#52;&#48;&#52;&#48;&#53;+moshimo [at] gmail [dot] com([at]を@に、[dot]を.に置き換えてください)</p></noscript>
-  </div>
-  <p class="sub">※ 個人で運営しているサイトのため、お返事には少しお時間をいただくことがあります。すべてのメールに返信をお約束するものではありませんが、まちがいの報告は必ず確認しています。</p>
+  <h2>観測ポスト(送信フォーム)</h2>
+  <form id="obsForm" class="obs-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    <input type="hidden" name="_subject" value="【もしも地球ラボ】観測ポスト">
+    <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <label>お名前(ニックネームで大丈夫・空欄でもOK)
+      <input type="text" name="name" maxlength="60" placeholder="名無しの観測員さん"></label>
+    <label>お便りの種類
+      <select name="category">
+        <option>感想・リクエスト</option>
+        <option>まちがいの報告</option>
+        <option>グッズ・その他</option>
+      </select></label>
+    <label>メッセージ(必須)
+      <textarea name="message" required rows="6" maxlength="2000" placeholder="「この『もしも』が見たい!」なども大歓迎"></textarea></label>
+    <label>返信用メールアドレス(返信がほしいときだけ・任意)
+      <input type="email" name="_replyto" maxlength="100" placeholder="you@example.com"></label>
+    <button class="btn primary" id="sendBtn" type="submit">📮 送信する</button>
+  </form>
+  <div class="note" id="formThanks" hidden><div class="nt">📡 受信完了!</div>お便り、とどいたよ。読んだら観測ログに書いとくね。ありがとう!</div>
+  <p class="sub" id="formError" hidden></p>
+  <p class="sub">※ 送信内容は管理人にだけ届きます(フォーム送信サービス Formspree 経由)。メールアドレス欄は任意で、返信を希望する場合のみ入力してください。すべてのお便りへの返信はお約束できませんが、まちがいの報告は必ず確認しています。</p>
 </div>
 
 <footer class="site">
