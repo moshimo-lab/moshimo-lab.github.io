@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; base-uri 'none'; form-action 'none'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="description" content="地球の自転・公転・地軸・大気の条件をひとつ変えたら何が起きる?観測係テラちゃんと確かめる擬似シミュレーション雑学サイト。">
+<meta property="og:site_name" content="もしも地球ラボ">
+<meta property="og:title" content="もしも地球ラボ|もしも地球が、ちょっと違ったら?">
+<meta property="og:description" content="地球の自転・公転・地軸・大気の条件をひとつ変えたら何が起きる?観測係テラちゃんと確かめる擬似シミュレーション雑学サイト。">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://moshimo-lab.github.io/assets/ogp.png">
+<title>もしも地球ラボ|もしも地球が、ちょっと違ったら?</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=JetBrains+Mono:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+<script src="assets/top.js" defer></script>
+</head>
+<body>
+<div class="stars"></div>
+<nav class="topnav">
+  <a class="brand" href="index.html">🌍 もしも地球ラボ</a>
+  <div class="links">
+    <a href="zukan/index.html">もしも図鑑</a>
+    <a href="tera.html">テラちゃんについて</a>
+    <a href="qa.html">地球のギモンQ&amp;A</a>
+    <a href="omiyage.html">おみやげ</a>
+    <a href="contact.html">お問い合わせ</a>
+  </div>
+</nav>
+
+<div class="wrap">
+  <div class="hero">
+    <div class="eyebrow">MOSHIMO EARTH LAB // OBSERVATION SITE</div>
+    <div class="copy">もしも地球が、<em>ちょっと違ったら?</em></div>
+    <p class="sub">自転・距離・傾き・大気…… 地球の"設定"をひとつ動かすと、世界はどう変わる?<br>
+    観測係のテラちゃんと一緒に、地球の「ちょうどよさ」を確かめる雑学ラボです。</p>
+  </div>
+
+  <div class="teaser">
+    <div class="stage">
+      <div class="earth-wrap small" id="earthWrap">
+      
+      <div class="atmosphere"></div>
+      <div class="earth" id="earth">
+        <div class="globe-strip" id="globeStrip">
+          <div class="hemi"><div class="land land1"></div><div class="land land2"></div><div class="land land3"></div><div class="clouds"></div></div>
+          <div class="hemi"><div class="land land1"></div><div class="land land2"></div><div class="land land3"></div><div class="clouds"></div></div>
+        </div>
+        <div class="heat-overlay" id="heatOverlay"></div>
+        <div class="ice-overlay" id="iceOverlay"></div>
+      </div>
+    </div>
+      <div class="mascot" id="mascot">
+      <div class="sat">
+        <div class="antenna"></div><div class="tip"></div>
+        <div class="wing l"><i></i><i></i><b></b></div>
+        <div class="wing r"><b></b><i></i><i></i></div>
+        <div class="mascot-body" id="mascotBody">
+          <div class="eye l"></div><div class="eye r"></div>
+          <div class="blush l"></div><div class="blush r"></div>
+          <div class="sweat"></div>
+        </div>
+        <div class="tail"></div>
+      </div>
+      <div class="speech" id="speech"><span class="name">テラちゃん</span><span id="speechLine">今日も平常運転だよ〜</span></div>
+    </div>
+      <div class="luna" id="luna" hidden>
+        <div class="lsat">
+          <div class="lant"></div><div class="ltip"></div>
+          <div class="lwing l"><i></i></div><div class="lwing r"><i></i></div>
+          <div class="lbody"><div class="leye l"></div><div class="leye r"></div></div>
+        </div>
+        <div class="lcap">月担当・ルナ</div>
+      </div>
+    </div>
+    <div class="readout mt10">
+      <div class="card"><div class="k">太陽との距離</div><div class="v" id="valDist">1.00 AU</div></div>
+      <div class="card"><div class="k">平均気温</div><div class="v" id="temp">約15℃</div></div>
+    </div>
+    <div class="slider-panel bare">
+      <div class="label">ためしに、太陽との距離をずらしてみよう</div>
+      <input type="range" id="dist" min="50" max="200" value="100" aria-label="太陽との距離">
+      <div class="scale"><span class="warn">0.5AU(近い)</span><span>1AU(いま)</span><span class="warn">2AU(遠い)</span></div>
+    </div>
+    <div class="cta-row">
+      <a class="btn primary" href="zukan/simulator.html">全部の設定をいじる → 統合シミュレーター</a>
+    </div>
+  </div>
+
+  <h2>もしも図鑑</h2>
+  <div class="section-head"><p class="sub mt0">「もしも」を一つずつ深掘りする記事シリーズ。</p><a class="more" href="zukan/index.html">一覧へ →</a></div>
+  <div class="card-grid">
+    <a class="zcard" href="zukan/simulator.html"><span class="icon">🎛️</span><div class="t">統合シミュレーター</div><div class="d">自転・距離・傾き・大気・重力を同時に操作。ミッション付き。</div><span class="tag">公開中</span></a>
+<a class="zcard" href="zukan/rotation.html"><span class="icon">🌀</span><div class="t">もしも自転が2倍速くなったら</div><div class="d">1日12時間。台風は凶暴化、体重はちょっと軽くなる。回しすぎると地面がちぎれる?</div><span class="tag">公開中</span></a>
+<a class="zcard" href="zukan/tilt.html"><span class="icon">📐</span><div class="t">もしも地軸が傾いてなかったら</div><div class="d">四季が消えた世界。でも本当に怖いのは「傾きすぎ」のほうだった。</div><span class="tag">公開中</span></a>
+<a class="zcard" href="zukan/distance.html"><span class="icon">☀️</span><div class="t">もしも太陽との距離が1.5倍だったら</div><div class="d">火星の席(1.5AU)に地球を置いたら。日射は44%、海は凍る。でも帰り道もある?</div><span class="tag">公開中</span></a>
+  </div>
+
+  <h2>今日のギモン</h2>
+  <div class="qa-teaser">
+    <div class="q" id="qaQ"></div>
+    <div class="a" id="qaA"></div>
+    <p class="mt10"><a href="qa.html">もっとギモンを見る →</a></p>
+  </div>
+
+  <h2>観測係・テラちゃん</h2>
+  <p>地球のそばにふわふわ浮かんでいる、小さな観測係。地球の条件が変わるたびに、素直すぎるリアクションで実況してくれます。<a href="tera.html">プロフィールはこちら →</a></p>
+</div>
+
+<footer class="site">
+  <div class="flinks">
+    <a href="index.html">トップ</a><a href="zukan/index.html">もしも図鑑</a><a href="tera.html">テラちゃん</a><a href="qa.html">Q&amp;A</a><a href="omiyage.html">おみやげ</a><a href="contact.html">お問い合わせ</a>
+  </div>
+  ※ 当サイトのシミュレーションはすべて簡略化した概算モデルです。実際の気候・人口動態はもっと複雑です。<br>
+  © もしも地球ラボ / OBSERVATION LOG by テラちゃん
+</footer>
+</body>
+</html>

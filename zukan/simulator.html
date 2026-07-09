@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; base-uri 'none'; form-action 'none'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="description" content="自転・太陽との距離・地軸の傾き・大気・重力の5軸を同時に操作できる地球シミュレーター。観測ミッション付き。">
+<meta property="og:site_name" content="もしも地球ラボ">
+<meta property="og:title" content="統合シミュレーター|もしも図鑑|もしも地球ラボ">
+<meta property="og:description" content="自転・太陽との距離・地軸の傾き・大気・重力の5軸を同時に操作できる地球シミュレーター。観測ミッション付き。">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://moshimo-lab.github.io/assets/ogp.png">
+<title>統合シミュレーター|もしも図鑑|もしも地球ラボ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=JetBrains+Mono:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../assets/site.css">
+<script src="../assets/sim.js" defer></script>
+</head>
+<body>
+<div class="stars"></div>
+<nav class="topnav">
+  <a class="brand" href="../index.html">🌍 もしも地球ラボ</a>
+  <div class="links">
+    <a href="../zukan/index.html" class="active">もしも図鑑</a>
+    <a href="../tera.html">テラちゃんについて</a>
+    <a href="../qa.html">地球のギモンQ&amp;A</a>
+    <a href="../omiyage.html">おみやげ</a>
+    <a href="../contact.html">お問い合わせ</a>
+  </div>
+</nav>
+
+<header class="page-head">
+  <div class="eyebrow">OBSERVATION CONSOLE // FULL VERSION</div>
+  <h1>統合シミュレーター</h1>
+  <div class="sub">5つの設定を動かして、地球の"ちょうどよさ"を確かめてみよう</div>
+</header>
+
+<div class="sticky-panel">
+  <div class="stage">
+    <div class="earth-wrap" id="earthWrap">
+      <div class="axis-line"></div>
+      <div class="atmosphere"></div>
+      <div class="earth" id="earth">
+        <div class="globe-strip" id="globeStrip">
+          <div class="hemi"><div class="land land1"></div><div class="land land2"></div><div class="land land3"></div><div class="clouds"></div></div>
+          <div class="hemi"><div class="land land1"></div><div class="land land2"></div><div class="land land3"></div><div class="clouds"></div></div>
+        </div>
+        <div class="heat-overlay" id="heatOverlay"></div>
+        <div class="ice-overlay" id="iceOverlay"></div>
+      </div>
+    </div>
+    <div class="mascot" id="mascot">
+      <div class="sat">
+        <div class="antenna"></div><div class="tip"></div>
+        <div class="wing l"><i></i><i></i><b></b></div>
+        <div class="wing r"><b></b><i></i><i></i></div>
+        <div class="mascot-body" id="mascotBody">
+          <div class="eye l"></div><div class="eye r"></div>
+          <div class="blush l"></div><div class="blush r"></div>
+          <div class="sweat"></div>
+        </div>
+        <div class="tail"></div>
+      </div>
+      <div class="speech" id="speech"><span class="name">テラちゃん</span><span id="speechLine">今日も平常運転だよ〜</span></div>
+    </div>
+  </div>
+  <div class="readout">
+    <div class="card"><div class="k">1日の長さ</div><div class="v" id="dayLen">24.0h</div></div>
+    <div class="card"><div class="k">平均気温</div><div class="v" id="temp">約15℃</div></div>
+    <div class="card"><div class="k">季節差</div><div class="v" id="season">±20℃</div></div>
+    <div class="card"><div class="k">人口予測</div><div class="v" id="pop">約80億</div></div>
+  </div>
+  <div class="presets" role="group" aria-label="プリセット">
+    <button class="preset" data-p="earth">🌍 いまの地球</button>
+    <button class="preset" data-p="venus">🔥 金星コース</button>
+    <button class="preset" data-p="mars">🥶 火星コース</button>
+    <button class="preset" data-p="spin">🌀 高速回転</button>
+    <button class="preset" data-p="side">🙃 横倒し</button>
+  </div>
+</div>
+
+<div class="sliders-scroll">
+  <div class="missions">
+    <div class="mh"><span class="t">🎯 観測ミッション</span><span class="c" id="mCount">達成 0/5</span></div>
+    <div class="mission" data-m="venus"><span class="chk">[ ]</span><span class="mt">灼熱の金星をつくろう(平均気温400℃以上)</span></div>
+    <div class="mission" data-m="snow"><span class="chk">[ ]</span><span class="mt">雪玉地球をつくろう(平均気温−40℃以下)</span></div>
+    <div class="mission" data-m="slow"><span class="chk">[ ]</span><span class="mt">のんびりな一日(1日の長さ100時間以上)</span></div>
+    <div class="mission" data-m="half"><span class="chk">[ ]</span><span class="mt">人口をぴったり半分に調整(35〜45億)</span></div>
+    <div class="mission" data-m="side"><span class="chk">[ ]</span><span class="mt">横倒し惑星(地軸の傾き80°以上)</span></div>
+  </div>
+
+  <div class="slider-panel" id="panelRot">
+    <div class="label">自転速度</div>
+    <div class="value" id="valRot">1.00 倍</div>
+    <input type="range" id="rot" min="1" max="400" value="100" aria-label="自転速度">
+    <div class="scale"><span>0.01倍</span><span class="warn">4倍</span></div>
+    <div class="why" id="whyRot">🔎 自転が速いほど1日が短くなるよ</div>
+  </div>
+
+  <div class="slider-panel" id="panelDist">
+    <div class="label">太陽との距離</div>
+    <div class="value" id="valDist">1.00 AU</div>
+    <input type="range" id="dist" min="10" max="500" value="100" aria-label="太陽との距離">
+    <div class="scale"><span class="warn">0.1AU</span><span class="warn">5.0AU</span></div>
+    <div class="why" id="whyDist">🔎 今の距離は水が凍らず沸かない"ちょうどいい"位置だよ</div>
+  </div>
+
+  <div class="slider-panel" id="panelTilt">
+    <div class="label">地軸の傾き</div>
+    <div class="value" id="valTilt">23.4°</div>
+    <input type="range" id="tilt" min="0" max="900" value="234" aria-label="地軸の傾き">
+    <div class="scale"><span>0°(傾きなし)</span><span class="warn">90°(真横)</span></div>
+    <div class="why" id="whyTilt">🔎 今の23.4°くらいの傾きが、程よい四季を生み出しているよ</div>
+  </div>
+
+  <div class="slider-panel" id="panelAtm">
+    <div class="label">大気の濃さ(地球=1倍)</div>
+    <div class="value" id="valAtm">1.00 倍</div>
+    <input type="range" id="atm" min="0" max="1000" value="600" aria-label="大気の濃さ">
+    <div class="scale"><span class="warn">0倍(真空)</span><span class="warn">100倍(金星級)</span></div>
+    <div class="why" id="whyAtm">🔎 今の大気の濃さが、程よい温室効果でちょうどいい気温を保っているよ</div>
+  </div>
+
+  <div class="slider-panel" id="panelGrav">
+    <div class="label">重力(地球=1G)【NEW】</div>
+    <div class="value" id="valGrav">1.00 G</div>
+    <input type="range" id="grav" min="10" max="300" value="100" aria-label="重力">
+    <div class="scale"><span class="warn">0.1G(月より軽い)</span><span class="warn">3.0G(超重量級)</span></div>
+    <div class="why" id="whyGrav">🔎 今の重力が、大気を逃さずつなぎとめているよ</div>
+  </div>
+
+  <div class="toolbar">
+    <button class="btn" id="copyBtn">📋 この地球の観測結果をコピー</button>
+  </div>
+
+  <div class="note"><div class="nt">📖 もっと深掘り</div>
+  1つの軸をじっくり知りたい人は個別記事へ:<a href="rotation.html">もしも自転が2倍速くなったら</a> / <a href="tilt.html">もしも地軸が傾いてなかったら</a></div>
+</div>
+
+<footer class="site">
+  <div class="flinks">
+    <a href="../index.html">トップ</a><a href="../zukan/index.html">もしも図鑑</a><a href="../tera.html">テラちゃん</a><a href="../qa.html">Q&amp;A</a><a href="../omiyage.html">おみやげ</a><a href="../contact.html">お問い合わせ</a>
+  </div>
+  ※ 当サイトのシミュレーションはすべて簡略化した概算モデルです。実際の気候・人口動態はもっと複雑です。<br>
+  © もしも地球ラボ / OBSERVATION LOG by テラちゃん
+</footer>
+</body>
+</html>

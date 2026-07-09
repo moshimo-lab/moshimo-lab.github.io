@@ -1,0 +1,325 @@
+
+@keyframes slideGlobe{from{transform:translateX(0%)}to{transform:translateX(-50%)}}
+/* utilities */
+.mt10{margin-top:10px}
+.mt0{margin-top:0}
+.center{text-align:center}
+.p-cta{text-align:center;margin-top:24px}
+.slider-panel.bare{border:0;background:transparent;padding:10px 4px 0}
+.page-head{position:relative;z-index:1;padding:18px 24px 8px;text-align:center}
+.page-head h1{font-size:22px}
+.sweat{display:none}
+.face-hot .sweat{display:block}
+/* 出典 */
+.sources{margin:26px 0 0;border-top:1px dashed var(--line);padding-top:12px}
+.sources .st{font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.1em;color:var(--sub)}
+.sources ul{margin:8px 0 0;padding-left:18px}
+.sources li{font-size:12px;color:var(--sub);margin:4px 0}
+:root{
+  --bg:#0b1220; --bg2:#0e1730; --line:#1c2b4a;
+  --teal:#5eead4; --danger:#ff6b4a;
+  --text:#e8edf5; --sub:#8ea0c0;
+}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;background:var(--bg);color:var(--text);
+  font-family:'Noto Sans JP',sans-serif;overflow-x:hidden;line-height:1.7;}
+a{color:var(--teal);text-decoration:none}
+a:hover{text-decoration:underline}
+:focus-visible{outline:2px solid var(--teal);outline-offset:2px;border-radius:4px}
+.stars{position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.5;
+  background-image:
+    radial-gradient(1px 1px at 10% 20%, #fff 0, transparent 100%),
+    radial-gradient(1px 1px at 80% 10%, #fff 0, transparent 100%),
+    radial-gradient(1px 1px at 60% 70%, #fff 0, transparent 100%),
+    radial-gradient(1px 1px at 30% 85%, #fff 0, transparent 100%),
+    radial-gradient(1px 1px at 90% 60%, #fff 0, transparent 100%),
+    radial-gradient(1px 1px at 45% 40%, #fff 0, transparent 100%),
+    radial-gradient(1px 1px at 15% 55%, #fff 0, transparent 100%);}
+
+/* ===== ナビ ===== */
+.topnav{position:relative;z-index:5;display:flex;flex-wrap:wrap;align-items:center;
+  justify-content:space-between;gap:8px;padding:12px 18px;border-bottom:1px solid var(--line);
+  background:rgba(11,18,32,.9);}
+.topnav .brand{font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:16px;color:var(--text)}
+.topnav .brand:hover{text-decoration:none;color:var(--teal)}
+.topnav .links{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:13px}
+.topnav .links a{color:var(--sub)}
+.topnav .links a.active,.topnav .links a:hover{color:var(--teal);text-decoration:none}
+
+.wrap{position:relative;z-index:1;max-width:760px;margin:0 auto;padding:0 16px}
+
+.eyebrow{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.2em;
+  color:var(--teal);text-transform:uppercase}
+h1{font-family:'Zen Maru Gothic',sans-serif;font-size:24px;margin:8px 0 6px;letter-spacing:.02em}
+h2{font-family:'Zen Maru Gothic',sans-serif;font-size:18px;margin:34px 0 10px;
+  padding-left:10px;border-left:3px solid var(--teal)}
+h3{font-family:'Zen Maru Gothic',sans-serif;font-size:15px;margin:22px 0 6px;color:var(--teal)}
+p{margin:10px 0;font-size:14px}
+.sub{color:var(--sub);font-size:12.5px}
+
+/* ===== カード・ボタン ===== */
+.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin:14px 0}
+.zcard{display:block;background:linear-gradient(180deg,var(--bg2),#0a1226);border:1px solid var(--line);
+  border-radius:14px;padding:14px 16px;color:var(--text);transition:border-color .2s,transform .2s}
+a.zcard:hover{border-color:var(--teal);text-decoration:none;transform:translateY(-2px)}
+.zcard .icon{font-size:22px}
+.zcard .t{font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:14.5px;margin:4px 0 2px}
+.zcard .d{font-size:12px;color:var(--sub)}
+.tag{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:.08em;
+  border:1px solid var(--teal);color:var(--teal);border-radius:99px;padding:1px 8px;margin-top:8px}
+.tag.soon{border-color:var(--line);color:var(--sub)}
+.btn{display:inline-block;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:13.5px;
+  border:1px solid var(--teal);color:var(--teal);background:transparent;border-radius:99px;
+  padding:9px 20px;cursor:pointer;transition:background .2s,color .2s}
+.btn:hover{background:var(--teal);color:#06251f;text-decoration:none}
+.btn.primary{background:var(--teal);color:#06251f}
+.btn.primary:hover{background:#8bf5e4}
+
+.note{border:1px dashed var(--teal);border-radius:12px;padding:12px 16px;margin:18px 0;
+  background:rgba(94,234,212,.05);font-size:13px}
+.note .nt{font-family:'Zen Maru Gothic',sans-serif;font-weight:700;color:var(--teal);
+  font-size:12.5px;margin-bottom:4px}
+
+/* ===== 地球ビジュアル ===== */
+.stage{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;
+  gap:22px;padding:6px 0 4px}
+.earth-wrap{position:relative;width:140px;height:140px;flex:0 0 auto;transition:transform .5s ease}
+.earth-wrap.small{width:110px;height:110px}
+.axis-line{position:absolute;top:-16px;bottom:-16px;left:50%;width:2px;
+  background:rgba(255,255,255,.45);transform:translateX(-50%);pointer-events:none;z-index:3}
+.axis-line::before,.axis-line::after{content:"";position:absolute;left:50%;transform:translateX(-50%);
+  width:7px;height:7px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 6px rgba(255,220,150,.9)}
+.axis-line::before{top:-4px}.axis-line::after{bottom:-4px}
+.atmosphere{position:absolute;inset:-12px;border-radius:50%;filter:blur(2px);pointer-events:none;
+  background:radial-gradient(circle, transparent 62%, rgba(120,190,255,.35) 72%, transparent 80%)}
+.earth{width:100%;height:100%;border-radius:50%;position:relative;overflow:hidden;
+  background:radial-gradient(circle at 35% 30%, #4fb3ff 0%, #1f6fd6 35%, #123a7a 70%, #081a3a 100%);
+  box-shadow:0 0 32px rgba(60,140,255,.35), inset -16px -16px 40px rgba(0,0,0,.5);
+  transition:filter .4s ease, box-shadow .4s ease}
+.globe-strip{position:absolute;top:0;left:0;height:100%;width:200%;display:flex}
+.hemi{position:relative;width:50%;height:100%;flex:0 0 50%}
+.land{position:absolute;background:#3fa869;
+  box-shadow:inset -6px -8px 14px rgba(0,0,0,.35), inset 4px 4px 10px rgba(255,255,255,.12)}
+.land1{width:56%;height:46%;top:8%;left:20%;
+  clip-path:polygon(30% 0%,55% 5%,70% 18%,90% 15%,100% 35%,85% 48%,90% 65%,70% 78%,60% 100%,40% 92%,22% 100%,15% 75%,0% 60%,10% 38%,0% 20%,20% 10%)}
+.land2{width:26%;height:30%;bottom:6%;left:4%;background:#4bb36f;
+  clip-path:polygon(20% 0%,60% 10%,80% 30%,70% 55%,85% 75%,55% 100%,20% 90%,0% 60%,10% 25%)}
+.land3{width:16%;height:14%;top:16%;right:6%;background:#3a9c60;
+  clip-path:polygon(15% 0%,85% 10%,100% 55%,70% 100%,10% 80%,0% 30%)}
+.clouds{position:absolute;inset:-6% -4%;mix-blend-mode:screen;opacity:.8;
+  background:
+    radial-gradient(ellipse 40% 14% at 20% 25%, rgba(255,255,255,.85) 0%, transparent 70%),
+    radial-gradient(ellipse 30% 10% at 65% 15%, rgba(255,255,255,.7) 0%, transparent 70%),
+    radial-gradient(ellipse 45% 16% at 70% 60%, rgba(255,255,255,.75) 0%, transparent 70%),
+    radial-gradient(ellipse 32% 12% at 25% 75%, rgba(255,255,255,.65) 0%, transparent 70%),
+    radial-gradient(ellipse 26% 10% at 45% 45%, rgba(255,255,255,.6) 0%, transparent 70%)}
+.heat-overlay{position:absolute;inset:0;opacity:0;mix-blend-mode:color;transition:opacity .6s ease;
+  background:radial-gradient(circle at 35% 30%, #ffb199 0%, #ff5a3c 45%, #7a1a0f 100%)}
+.ice-overlay{position:absolute;inset:0;opacity:0;mix-blend-mode:soft-light;transition:opacity .6s ease;
+  background:radial-gradient(circle at 35% 30%, #ffffff 0%, #cfe9ff 45%, #7fa9c9 100%)}
+.earth-wrap.extreme-heat .earth{box-shadow:0 0 45px rgba(255,90,60,.55), inset -16px -16px 40px rgba(0,0,0,.5)}
+.earth-wrap.extreme-ice .earth{box-shadow:0 0 38px rgba(160,210,255,.5), inset -16px -16px 40px rgba(0,0,0,.4)}
+
+/* ===== テラちゃん(観測衛星型) ===== */
+.mascot{position:relative;flex:0 0 auto;display:flex;flex-direction:column;align-items:center;
+  animation:bob 3.2s ease-in-out infinite;padding-top:14px}
+/* 浮遊量はCSS変数で可変(重力スライダーと連動) */
+@keyframes bob{0%,100%{transform:translateY(var(--float-base,0px))}
+  50%{transform:translateY(calc(var(--float-base,0px) - var(--float-amp,7px)))}}
+/* 機体全体:斜めの飛行姿勢 */
+.sat{position:relative;width:104px;height:62px;transform:rotate(-9deg)}
+/* アンテナ+受信灯(チカチカ) */
+.antenna{position:absolute;top:-9px;left:50%;transform:translateX(-50%);width:2px;height:11px;
+  background:#bfe9df;border-radius:2px;z-index:3}
+.tip{position:absolute;top:-15px;left:50%;transform:translateX(-50%);width:7px;height:7px;border-radius:50%;
+  background:#ffd166;box-shadow:0 0 8px rgba(255,209,102,.9);animation:blink 2.2s ease-in-out infinite;z-index:3}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
+/* ソーラーパネルの羽(片側2枚+ブーム)。ゆっくり羽ばたく */
+.wing{position:absolute;top:20px;height:22px;display:flex;align-items:center;gap:2px;z-index:1;
+  transform-origin:center}
+.wing.l{left:0;animation:flapL 3.2s ease-in-out infinite}
+.wing.r{right:0;animation:flapR 3.2s ease-in-out infinite}
+@keyframes flapL{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(-10deg)}}
+@keyframes flapR{0%,100%{transform:rotate(4deg)}50%{transform:rotate(10deg)}}
+.wing i{display:block;width:14px;height:22px;border-radius:3px;border:1.5px solid #bfe9df;
+  background-color:#123c36;
+  background-image:linear-gradient(rgba(94,234,212,.55) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(94,234,212,.55) 1px,transparent 1px);
+  background-size:5px 8px}
+.wing b{display:block;width:7px;height:2px;background:#bfe9df}
+/* カプセルボディ */
+.mascot-body{position:absolute;top:5px;left:35px;width:34px;height:52px;z-index:2;
+  border-radius:16px 16px 14px 14px;
+  background:radial-gradient(circle at 35% 22%, #eafffa 0%, #5eead4 52%, #1f9e8c 100%);
+  box-shadow:0 6px 14px rgba(0,0,0,.4), inset -5px -6px 9px rgba(0,0,0,.15)}
+.eye{position:absolute;top:16px;width:5px;height:7px;border-radius:50%;background:#0b1220}
+.eye.l{left:7px}.eye.r{right:7px}
+.blush{position:absolute;top:27px;width:6px;height:4px;border-radius:50%;background:#ff9d8a;opacity:.7}
+.blush.l{left:4px}.blush.r{right:4px}
+/* データの尾:機体下部から流れる観測データの光 */
+.tail{position:absolute;bottom:-15px;left:50%;width:9px;height:20px;z-index:1;opacity:.85;
+  border-radius:50% 50% 60% 60%/40% 40% 80% 80%;
+  background:linear-gradient(180deg, rgba(94,234,212,.9) 0%, rgba(150,140,255,.4) 55%, transparent 100%);
+  transform-origin:top center;animation:sway 2.6s ease-in-out infinite}
+@keyframes sway{0%,100%{transform:translateX(-50%) rotate(8deg)}50%{transform:translateX(-50%) rotate(-10deg)}}
+/* 表情差分 */
+.face-hot .eye{height:2px;top:19px;border-radius:2px}
+.face-hot .sweat{position:absolute;top:5px;right:-4px;width:6px;height:9px;border-radius:50% 50% 60% 60%;
+  background:#9adcff;opacity:.9}
+.face-cold .sat{filter:hue-rotate(35deg) saturate(.7) brightness(.95)}
+.face-cold{animation:bob 3.2s ease-in-out infinite, shiver .18s linear infinite}
+@keyframes shiver{0%,100%{margin-left:0}50%{margin-left:2px}}
+.face-dizzy .eye{background:transparent;border:2px solid #0b1220;width:7px;height:7px}
+.face-dizzy{animation:bob 3.2s ease-in-out infinite, wobble 1.4s ease-in-out infinite}
+@keyframes wobble{0%,100%{rotate:0deg}25%{rotate:-6deg}75%{rotate:6deg}}
+.face-happy .eye{background:transparent;border:0;border-top:2.5px solid #0b1220;
+  border-radius:50% 50% 0 0;width:7px;height:4px;top:18px}
+
+.speech{position:relative;margin-top:8px;background:#101d38;border:1px solid var(--line);
+  border-radius:12px;padding:8px 12px;font-family:'Zen Maru Gothic',sans-serif;font-size:12px;
+  width:150px;text-align:center;line-height:1.45;box-shadow:0 6px 18px rgba(0,0,0,.35)}
+.speech::after{content:"";position:absolute;top:-7px;left:50%;transform:translateX(-50%);
+  border-width:0 5px 7px 5px;border-style:solid;border-color:transparent transparent #101d38 transparent}
+.speech .name{color:var(--teal);font-size:10px;display:block;margin-bottom:2px}
+
+
+/* ===== ルナ(月担当・常連さんにだけ見える) ===== */
+.luna{display:flex;flex-direction:column;align-items:center;flex:0 0 auto;
+  animation:bob 4.4s ease-in-out infinite;padding-top:30px}
+.luna[hidden]{display:none}
+.lsat{position:relative;width:64px;height:46px;transform:rotate(7deg)}
+.lant{position:absolute;top:-7px;left:50%;transform:translateX(-50%);width:2px;height:9px;
+  background:#efe0b0;border-radius:2px;z-index:3}
+.ltip{position:absolute;top:-12px;left:50%;transform:translateX(-50%);width:6px;height:6px;border-radius:50%;
+  background:#9adcff;box-shadow:0 0 7px rgba(154,220,255,.9);animation:blink 3.4s ease-in-out infinite;z-index:3}
+.lwing{position:absolute;top:15px;height:15px;display:flex;align-items:center;z-index:1}
+.lwing.l{left:7px}.lwing.r{right:7px}
+.lwing i{display:block;width:11px;height:15px;border-radius:2px;border:1.5px solid #efe0b0;
+  background-color:#3d3820;
+  background-image:linear-gradient(rgba(255,233,168,.5) 1px,transparent 1px);background-size:4px 5px}
+.lbody{position:absolute;top:4px;left:21px;width:22px;height:38px;z-index:2;
+  border-radius:11px 11px 9px 9px;
+  background:radial-gradient(circle at 35% 22%, #fff8e1 0%, #ffe9a8 55%, #c9a24b 100%);
+  box-shadow:0 5px 10px rgba(0,0,0,.4), inset -3px -4px 6px rgba(0,0,0,.15)}
+.leye{position:absolute;top:13px;width:5px;height:2px;border-radius:2px;background:#0b1220}
+.leye.l{left:4px}.leye.r{right:4px}
+.lcap{margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--sub);letter-spacing:.1em}
+/* ===== スライダー ===== */
+.slider-panel{background:linear-gradient(180deg,var(--bg2),#0a1226);border:1px solid var(--line);
+  border-radius:14px;padding:16px}
+.slider-panel .label{font-size:13px;color:var(--sub);margin-bottom:2px}
+.slider-panel .value{font-family:'JetBrains Mono',monospace;font-size:20px;font-weight:700;
+  color:var(--teal);margin-bottom:8px}
+.slider-panel.danger .value{color:var(--danger)}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:4px;background:var(--line);
+  border-radius:2px;outline:none;margin:12px 0 6px}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:16px;height:16px;border-radius:50%;
+  background:var(--teal);cursor:pointer;border:2px solid #082;box-shadow:0 0 8px rgba(94,234,212,.6)}
+input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;
+  background:var(--teal);cursor:pointer;border:2px solid #082;box-shadow:0 0 8px rgba(94,234,212,.6)}
+.scale{display:flex;justify-content:space-between;font-family:'JetBrains Mono',monospace;
+  font-size:10px;color:var(--sub)}
+.scale .warn{color:var(--danger)}
+.why{margin-top:10px;font-size:11.5px;color:var(--sub);line-height:1.55;
+  border-top:1px dashed var(--line);padding-top:8px}
+
+/* ===== readout ===== */
+.readout{position:relative;z-index:1;max-width:640px;margin:6px auto 0;
+  display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.readout.cols3{grid-template-columns:repeat(3,1fr)}
+.card{background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:8px 6px;text-align:center}
+.card .k{font-size:9.5px;color:var(--sub);font-family:'JetBrains Mono',monospace;letter-spacing:.02em}
+.card .v{font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:700;margin-top:3px}
+
+footer.site{position:relative;z-index:1;text-align:center;color:var(--sub);font-size:11px;
+  padding:28px 16px 34px;font-family:'JetBrains Mono',monospace;border-top:1px solid var(--line);margin-top:48px}
+footer.site .flinks{margin-bottom:8px;font-family:'Noto Sans JP',sans-serif;font-size:12px}
+footer.site .flinks a{margin:0 8px;color:var(--sub)}
+
+@media (max-width:560px){
+  .stage{gap:12px}
+  .earth-wrap{width:110px;height:110px}
+  .speech{width:130px}
+  .readout{grid-template-columns:repeat(2,1fr)}
+  .readout.cols3{grid-template-columns:repeat(3,1fr)}
+}
+@media (prefers-reduced-motion: reduce){
+  .mascot,.face-cold,.face-dizzy,.tail,.tip,.wing.l,.wing.r,.luna,.ltip{animation:none}
+  .globe-strip{animation:none !important}
+  a.zcard:hover{transform:none}
+}
+
+.hero{text-align:center;padding:28px 0 8px}
+.hero .copy{font-family:'Zen Maru Gothic',sans-serif;font-size:26px;font-weight:700;margin:6px 0 2px}
+.hero .copy em{color:var(--teal);font-style:normal}
+.teaser{max-width:560px;margin:14px auto 0;background:linear-gradient(180deg,var(--bg2),#0a1226);
+  border:1px solid var(--line);border-radius:16px;padding:16px}
+.teaser .readout{grid-template-columns:repeat(2,1fr);max-width:340px}
+.cta-row{text-align:center;margin:16px 0 6px}
+.section-head{display:flex;align-items:baseline;justify-content:space-between;gap:10px}
+.section-head .more{font-size:12px}
+.qa-teaser{background:linear-gradient(180deg,var(--bg2),#0a1226);border:1px solid var(--line);
+  border-radius:14px;padding:14px 18px}
+.qa-teaser .q{font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:14.5px;color:var(--teal)}
+.qa-teaser .a{font-size:13px;margin-top:6px}
+
+.profile{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin:14px 0}
+.pcard{background:linear-gradient(180deg,var(--bg2),#0a1226);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+.pcard .k{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.15em;color:var(--teal)}
+.pcard .v{font-size:13.5px;margin-top:4px}
+.faces{display:flex;flex-wrap:wrap;gap:20px;justify-content:center;margin:20px 0;
+  background:linear-gradient(180deg,var(--bg2),#0a1226);border:1px solid var(--line);border-radius:16px;padding:22px 12px 14px}
+.face-item{display:flex;flex-direction:column;align-items:center;gap:10px}
+.face-item .cap{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--sub)}
+.face-item .mascot{animation:none;padding-top:0}
+.face-item .face-cold,.face-item .face-dizzy{animation:shiver .18s linear infinite}
+.face-item .face-dizzy{animation:wobble 1.4s ease-in-out infinite}
+.tlog{display:flex;flex-direction:column;gap:10px;margin:14px 0}
+.tlog .entry{background:linear-gradient(180deg,var(--bg2),#0a1226);border:1px solid var(--line);
+  border-left:3px solid var(--teal);border-radius:0 12px 12px 0;padding:10px 14px;
+  font-family:'Zen Maru Gothic',sans-serif;font-size:13px;line-height:1.7}
+.tlog .d{display:block;font-family:'JetBrains Mono',monospace;font-size:10px;
+  letter-spacing:.15em;color:var(--teal);margin-bottom:3px}
+
+details{background:linear-gradient(180deg,var(--bg2),#0a1226);border:1px solid var(--line);
+  border-radius:14px;padding:0;margin:10px 0;overflow:hidden}
+summary{cursor:pointer;padding:13px 16px;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;
+  font-size:14px;color:var(--teal);list-style:none;position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:16px;color:var(--sub);font-family:'JetBrains Mono',monospace}
+details[open] summary::after{content:"−"}
+details .body{padding:0 16px 14px;font-size:13.5px}
+details .tera{margin-top:8px;font-family:'Zen Maru Gothic',sans-serif;font-size:12px;color:var(--teal)}
+
+.sticky-panel{position:sticky;top:0;z-index:20;
+  background:radial-gradient(circle at 25% 10%, #14213f 0%, transparent 55%), var(--bg);
+  padding:8px 16px 12px;box-shadow:0 12px 24px -12px rgba(0,0,0,.6);border-bottom:1px solid var(--line)}
+.presets{position:relative;z-index:1;max-width:640px;margin:8px auto 0;display:flex;gap:6px;
+  overflow-x:auto;padding-bottom:2px;-webkit-overflow-scrolling:touch}
+.preset{flex:0 0 auto;font-family:'Zen Maru Gothic',sans-serif;font-size:11.5px;font-weight:700;
+  border:1px solid var(--line);color:var(--sub);background:var(--bg2);border-radius:99px;
+  padding:5px 12px;cursor:pointer;transition:border-color .2s,color .2s}
+.preset:hover{border-color:var(--teal);color:var(--teal)}
+.sliders-scroll{position:relative;z-index:1;max-width:640px;margin:18px auto 40px;padding:0 16px;
+  display:flex;flex-direction:column;gap:14px}
+.missions{background:linear-gradient(180deg,#0f1c38,#0a1226);border:1px solid var(--line);
+  border-radius:14px;padding:14px 16px}
+.missions .mh{display:flex;justify-content:space-between;align-items:baseline}
+.missions .mh .t{font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:14px;color:var(--teal)}
+.missions .mh .c{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--sub)}
+.mission{display:flex;gap:8px;align-items:baseline;font-size:12.5px;padding:6px 4px;
+  border-bottom:1px dashed var(--line);transition:background .4s}
+.mission:last-child{border-bottom:0}
+.mission .chk{font-family:'JetBrains Mono',monospace;color:var(--sub);flex:0 0 auto}
+.mission.done .chk{color:var(--teal)}
+.mission.done .mt{color:var(--teal)}
+.mission.flash{background:rgba(94,234,212,.12);border-radius:8px}
+.toolbar{display:flex;gap:8px;justify-content:center;margin-top:8px}
+.toolbar .btn{font-size:12px;padding:6px 14px}
+
+.article-hero{text-align:center;padding-top:26px}
+.minisim{background:linear-gradient(180deg,var(--bg2),#0a1226);border:1px solid var(--line);
+  border-radius:16px;padding:16px;margin:18px 0}
+.minisim .readout{margin-top:10px}
+.relnav{display:flex;flex-wrap:wrap;gap:10px;margin:26px 0 0}
+.relnav a{flex:1 1 200px}

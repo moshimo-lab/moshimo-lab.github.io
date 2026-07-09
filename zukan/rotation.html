@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; base-uri 'none'; form-action 'none'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="description" content="1日12時間。台風は凶暴化、体重はちょっと軽くなる。回しすぎると地面がちぎれる?">
+<meta property="og:site_name" content="もしも地球ラボ">
+<meta property="og:title" content="もしも自転が2倍速くなったら|もしも図鑑|もしも地球ラボ">
+<meta property="og:description" content="1日12時間。台風は凶暴化、体重はちょっと軽くなる。回しすぎると地面がちぎれる?">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://moshimo-lab.github.io/assets/ogp.png">
+<title>もしも自転が2倍速くなったら|もしも図鑑|もしも地球ラボ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=JetBrains+Mono:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../assets/site.css">
+<script src="../assets/rotation.js" defer></script>
+</head>
+<body>
+<div class="stars"></div>
+<nav class="topnav">
+  <a class="brand" href="../index.html">🌍 もしも地球ラボ</a>
+  <div class="links">
+    <a href="../zukan/index.html" class="active">もしも図鑑</a>
+    <a href="../tera.html">テラちゃんについて</a>
+    <a href="../qa.html">地球のギモンQ&amp;A</a>
+    <a href="../omiyage.html">おみやげ</a>
+    <a href="../contact.html">お問い合わせ</a>
+  </div>
+</nav>
+
+<div class="wrap">
+  <div class="article-hero">
+    <div class="eyebrow">MOSHIMO ZUKAN // FILE 01</div>
+    <h1>🌀 もしも自転が2倍速くなったら</h1>
+    <p class="sub">1日12時間の世界へようこそ。まずは自分の手で回してみよう。</p>
+  </div>
+  
+  <div class="minisim">
+    <div class="stage">
+      <div class="earth-wrap small" id="earthWrap">
+      <div class="axis-line"></div>
+      <div class="atmosphere"></div>
+      <div class="earth" id="earth">
+        <div class="globe-strip" id="globeStrip">
+          <div class="hemi"><div class="land land1"></div><div class="land land2"></div><div class="land land3"></div><div class="clouds"></div></div>
+          <div class="hemi"><div class="land land1"></div><div class="land land2"></div><div class="land land3"></div><div class="clouds"></div></div>
+        </div>
+        <div class="heat-overlay" id="heatOverlay"></div>
+        <div class="ice-overlay" id="iceOverlay"></div>
+      </div>
+    </div>
+      <div class="mascot" id="mascot">
+      <div class="sat">
+        <div class="antenna"></div><div class="tip"></div>
+        <div class="wing l"><i></i><i></i><b></b></div>
+        <div class="wing r"><b></b><i></i><i></i></div>
+        <div class="mascot-body" id="mascotBody">
+          <div class="eye l"></div><div class="eye r"></div>
+          <div class="blush l"></div><div class="blush r"></div>
+          <div class="sweat"></div>
+        </div>
+        <div class="tail"></div>
+      </div>
+      <div class="speech" id="speech"><span class="name">テラちゃん</span><span id="speechLine">今日も平常運転だよ〜</span></div>
+    </div>
+    </div>
+    <div class="readout cols3">
+      <div class="card"><div class="k">1日の長さ</div><div class="v" id="dayLen">24.0h</div></div>
+      <div class="card"><div class="k">赤道での体重(60kg基準)</div><div class="v" id="weight">59.8kg</div></div>
+      <div class="card"><div class="k">人口予測</div><div class="v" id="pop">約80億</div></div>
+    </div>
+    <div class="slider-panel bare" id="panelRot">
+      <div class="label">自転速度</div>
+      <div class="value" id="valRot">1.00 倍</div>
+      <input type="range" id="rot" min="1" max="2000" value="100" aria-label="自転速度">
+      <div class="scale"><span>0.01倍</span><span>1倍(いま)</span><span class="warn">20倍</span></div>
+      <div class="why" id="whyRot">🔎 自転が速いほど1日が短くなるよ</div>
+    </div>
+  </div>
+  
+  <h2>2倍にすると、何が起きる?</h2>
+  <h3>① 1日が12時間になる</h3>
+  <p>昼が約6時間、夜が約6時間。太陽が昇ってから沈むまでがあっという間です。人間の体内時計はおよそ24時間周期にチューニングされているので、全人類が慢性的な時差ボケを抱えることになります。睡眠・食事・仕事のリズムは根本から作り直しです。</p>
+  <h3>② 台風が凶暴になる</h3>
+  <p>自転が生む「コリオリ力」は、台風や偏西風など大気の渦の源。自転が2倍になるとこの力も強まり、渦は巻きやすく、勢いも増します。天気図はいまよりずっと荒れた見た目になるはずです。</p>
+  <h3>③ 体重がちょっと軽くなる</h3>
+  <p>赤道では自転の遠心力が体を外へ引っぱっています。いまはその効果は体重の約0.3%ですが、遠心力は速度の2乗で効くため、自転2倍なら約4倍の1.4%。体重60kgの人なら約800g軽くなります。ダイエット効果としては微妙ですが、確実に変わります。</p>
+  <h3>④ 赤道がふくらみ、海が移動する</h3>
+  <p>地球は自転の遠心力ですでに赤道方向に少しふくらんだ形をしています。自転が速くなるとふくらみはさらに大きくなり、海水が赤道側へ引き寄せられて、極地方の海面は下がり、赤道地方は水没が進むと考えられます。</p>
+
+  <div class="note"><div class="nt">💡 豆知識:回しすぎるとちぎれる</div>
+  スライダーを17倍あたりまで上げると、赤道での遠心力が重力に追いつきます。そうなると赤道付近の物は「落ちない」どころか宇宙へ飛び出しはじめ、地球は自分で自分を分解してしまいます。実際、大昔の地球はいまより速く回っていました。約3億7000万年前(デボン紀)のサンゴの化石には1年分として約400本の成長線が刻まれていて、当時の1日は約22時間だったことがわかっています。月への潮汐ブレーキで、自転は少しずつ遅くなってきたのです。</div>
+  
+  <div class="sources"><div class="st">📚 出典・参考(ファクトチェック済み)</div><ul><li><a href="https://diamond.jp/articles/-/384551" rel="noopener noreferrer">サンゴ化石の成長線と1年400日(ダイヤモンド・オンライン)</a></li>
+<li><a href="https://sorae.info/astronomy/20230628-boring-billion.html" rel="noopener noreferrer">地質記録から探る自転周期の変化(sorae)</a></li></ul></div>
+  <div class="relnav">
+    <a class="btn primary" href="simulator.html">🎛️ 統合シミュレーターで全部いじる</a><a class="btn" href="tilt.html">📐 次の記事:もしも地軸が傾いてなかったら</a>
+  </div>
+</div>
+
+<footer class="site">
+  <div class="flinks">
+    <a href="../index.html">トップ</a><a href="../zukan/index.html">もしも図鑑</a><a href="../tera.html">テラちゃん</a><a href="../qa.html">Q&amp;A</a><a href="../omiyage.html">おみやげ</a><a href="../contact.html">お問い合わせ</a>
+  </div>
+  ※ 当サイトのシミュレーションはすべて簡略化した概算モデルです。実際の気候・人口動態はもっと複雑です。<br>
+  © もしも地球ラボ / OBSERVATION LOG by テラちゃん
+</footer>
+</body>
+</html>

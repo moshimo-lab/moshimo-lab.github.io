@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; base-uri 'none'; form-action 'none'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="description" content="四季が消えた世界。でも本当に怖いのは「傾きすぎ」のほうだった。">
+<meta property="og:site_name" content="もしも地球ラボ">
+<meta property="og:title" content="もしも地軸が傾いてなかったら|もしも図鑑|もしも地球ラボ">
+<meta property="og:description" content="四季が消えた世界。でも本当に怖いのは「傾きすぎ」のほうだった。">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://moshimo-lab.github.io/assets/ogp.png">
+<title>もしも地軸が傾いてなかったら|もしも図鑑|もしも地球ラボ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=JetBrains+Mono:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../assets/site.css">
+<script src="../assets/tilt.js" defer></script>
+</head>
+<body>
+<div class="stars"></div>
+<nav class="topnav">
+  <a class="brand" href="../index.html">🌍 もしも地球ラボ</a>
+  <div class="links">
+    <a href="../zukan/index.html" class="active">もしも図鑑</a>
+    <a href="../tera.html">テラちゃんについて</a>
+    <a href="../qa.html">地球のギモンQ&amp;A</a>
+    <a href="../omiyage.html">おみやげ</a>
+    <a href="../contact.html">お問い合わせ</a>
+  </div>
+</nav>
+
+<div class="wrap">
+  <div class="article-hero">
+    <div class="eyebrow">MOSHIMO ZUKAN // FILE 02</div>
+    <h1>📐 もしも地軸が傾いてなかったら</h1>
+    <p class="sub">四季が消えた世界と、「傾きすぎ」の本当の怖さ。</p>
+  </div>
+  
+  <div class="minisim">
+    <div class="stage">
+      <div class="earth-wrap small" id="earthWrap">
+      <div class="axis-line"></div>
+      <div class="atmosphere"></div>
+      <div class="earth" id="earth">
+        <div class="globe-strip" id="globeStrip">
+          <div class="hemi"><div class="land land1"></div><div class="land land2"></div><div class="land land3"></div><div class="clouds"></div></div>
+          <div class="hemi"><div class="land land1"></div><div class="land land2"></div><div class="land land3"></div><div class="clouds"></div></div>
+        </div>
+        <div class="heat-overlay" id="heatOverlay"></div>
+        <div class="ice-overlay" id="iceOverlay"></div>
+      </div>
+    </div>
+      <div class="mascot" id="mascot">
+      <div class="sat">
+        <div class="antenna"></div><div class="tip"></div>
+        <div class="wing l"><i></i><i></i><b></b></div>
+        <div class="wing r"><b></b><i></i><i></i></div>
+        <div class="mascot-body" id="mascotBody">
+          <div class="eye l"></div><div class="eye r"></div>
+          <div class="blush l"></div><div class="blush r"></div>
+          <div class="sweat"></div>
+        </div>
+        <div class="tail"></div>
+      </div>
+      <div class="speech" id="speech"><span class="name">テラちゃん</span><span id="speechLine">今日も平常運転だよ〜</span></div>
+    </div>
+    </div>
+    <div class="readout cols3">
+      <div class="card"><div class="k">季節差(体感)</div><div class="v" id="season">±20℃</div></div>
+      <div class="card"><div class="k">極夜が起きる緯度</div><div class="v" id="polar">66.6°〜</div></div>
+      <div class="card"><div class="k">人口予測</div><div class="v" id="pop">約80億</div></div>
+    </div>
+    <div class="slider-panel bare" id="panelTilt">
+      <div class="label">地軸の傾き</div>
+      <div class="value" id="valTilt">23.4°</div>
+      <input type="range" id="tilt" min="0" max="900" value="234" aria-label="地軸の傾き">
+      <div class="scale"><span>0°(傾きなし)</span><span>23.4°(いま)</span><span class="warn">90°(真横)</span></div>
+      <div class="why" id="whyTilt">🔎 今の23.4°くらいの傾きが、程よい四季を生み出しているよ</div>
+    </div>
+  </div>
+  
+  <h2>傾きゼロの世界で起きること</h2>
+  <h3>① 四季が消える</h3>
+  <p>春夏秋冬は「地軸が傾いたまま太陽の周りを回る」ことで、日の当たり方が1年かけて変わるから生まれます。傾きが0°なら、どの土地も1年中ずっと同じ季節。日本なら「永遠の春分の日」みたいな気候が続きます。</p>
+  <h3>② 気候が緯度で固定される</h3>
+  <p>赤道は永遠に暑く、極地は永遠に寒いまま。季節風や雨季・乾季のサイクルも消えるので、モンスーンに頼るアジアの農業や、季節移動する渡り鳥・回遊魚の暮らしは大きく組み替えを迫られます。</p>
+  <h3>③ でも、壊滅はしない</h3>
+  <p>意外かもしれませんが、傾きゼロは「不便だけど住める」世界です。1年中同じ気候なら農業の計画は立てやすい面もあります。人類は数十億人規模で生き残れるでしょう。本当に怖いのは、その逆です。</p>
+
+  <h2>本当に怖いのは「傾きすぎ」</h2>
+  <p>スライダーを右に倒してみてください。傾きが大きくなるほど夏と冬の差は激しくなり、90°(ほぼ横倒しの天王星に近い状態)に近づくと、極地では<strong>半年ずっと昼、半年ずっと夜</strong>。「極夜が起きる緯度」の数字がどんどん赤道へ近づいていくのがわかるはずです。灼熱と極寒を毎年往復する世界では、住める場所はほとんど残りません。</p>
+
+  <div class="note"><div class="nt">💡 豆知識:傾きを守っているのは月</div>
+  地球の傾き(23.4°)は、約45億年前に火星サイズの天体テイアが衝突した「巨大衝突説」で生まれたと考えられています。この衝突で月も生まれました。そして今度はその月が、重力でジャイロのように地球の傾きを支えてくれています。大きな月を持たない火星(傾き約25°)の自転軸は、シミュレーション研究によれば長い年月で数十度の幅で大きく変動してきたと考えられています。「もしも月がなかったら」…この続きは、次の図鑑記事で観測予定です。</div>
+  
+  <div class="sources"><div class="st">📚 出典・参考(ファクトチェック済み)</div><ul><li><a href="https://news.yahoo.co.jp/expert/articles/e29d22c383d7d02ec48ad85ec106acc85b395cdb" rel="noopener noreferrer">地軸はなぜ傾いているのか・巨大衝突説(Yahoo!ニュース エキスパート)</a></li>
+<li><a href="https://www.nao.ac.jp/astro/basic/mars.html" rel="noopener noreferrer">火星とは(国立天文台)</a></li>
+<li><a href="https://www.gfd-dennou.org/library/riron/mars/kikou/pub/kikou.htm" rel="noopener noreferrer">火星の気候変動・傾斜角の変化(GFD電脳倶楽部)</a></li></ul></div>
+  <div class="relnav">
+    <a class="btn primary" href="simulator.html">🎛️ 統合シミュレーターで全部いじる</a><a class="btn" href="distance.html">☀️ 次の記事:もしも太陽との距離が1.5倍だったら</a><a class="btn" href="rotation.html">🌀 前の記事:もしも自転が2倍速くなったら</a>
+  </div>
+</div>
+
+<footer class="site">
+  <div class="flinks">
+    <a href="../index.html">トップ</a><a href="../zukan/index.html">もしも図鑑</a><a href="../tera.html">テラちゃん</a><a href="../qa.html">Q&amp;A</a><a href="../omiyage.html">おみやげ</a><a href="../contact.html">お問い合わせ</a>
+  </div>
+  ※ 当サイトのシミュレーションはすべて簡略化した概算モデルです。実際の気候・人口動態はもっと複雑です。<br>
+  © もしも地球ラボ / OBSERVATION LOG by テラちゃん
+</footer>
+</body>
+</html>
