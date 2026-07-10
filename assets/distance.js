@@ -13,7 +13,7 @@ function update(){
   if(Math.abs(d-1)<0.03)near='(いまとおなじ)';
   else if(d<1)near='(いまより近い)';
   else near='(いまより遠い)';
-  valDist.innerHTML=d.toFixed(2)+' 倍'+near+'<span class="vsub">= '+d.toFixed(2)+' AU(天文単位)…太陽と地球のいまの距離が「1AU」だよ</span>';
+  valDist.innerHTML=d.toFixed(2)+' 倍'+near+'<span class="vsub">= '+d.toFixed(2)+' AU(天文単位)。太陽と地球の現在の距離が1AU</span>';
   // 距離レーン: 0.1〜5倍を対数で配置
   const pos=Math.max(0,Math.min(100,(Math.log10(d)+1)/Math.log10(50)*100));
   if(laneEarth)laneEarth.style.left=pos+'%';
@@ -39,7 +39,7 @@ function update(){
   let line='1AU。ちょうどいい席だね',face='happy';
   if(tempC>=100){line='海が沸いてる…!太陽、近すぎるよ…';face='hot';}
   else if(heat>.3){line='暑い…この席、太陽に近すぎない?';face='hot';}
-  else if(d>=1.4&&d<=1.65){line='ここ、火星の席だ…寒いよ〜。大気の毛布がほしい…';face='cold';}
+  else if(d>=1.4&&d<=1.65){line='ここ、火星の席だ…寒いよ〜。あったかい大気がほしい…';face='cold';}
   else if(tempC<=-40){line='海まで真っ白…雪玉になっちゃった…';face='cold';}
   else if(ice>.3){line='席替えしたら寒くなった…';face='cold';}
   speechLine.textContent=line;
@@ -49,7 +49,7 @@ function update(){
   else if(d<1.15)whyDist.textContent='🔎 今の距離(1AU)は、水が液体で存在できる"ハビタブルゾーン"のほぼ中心だよ';
   else if(d<=1.7)whyDist.textContent='🔎 このあたりが広い見積もりのハビタブルゾーンの外縁(約1.67AU)。大気しだいで住めるかどうかが決まる席だよ';
   else if(d<=3.2)whyDist.textContent='🔎 日射が'+f.toFixed(0)+'%まで減ったよ。CO2の温室効果でどこまで粘れるかの勝負になるよ';
-  else whyDist.textContent='🔎 日射が1/10以下。もう大気の毛布ではカバーしきれない距離だよ';
+  else whyDist.textContent='🔎 日射が1/10以下。もう大気の保温ではカバーしきれない距離だよ';
 }
 globeStrip.style.animation='slideGlobe 6s linear infinite';
 dist.addEventListener('input',update);update();

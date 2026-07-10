@@ -32,7 +32,7 @@ function update(){
     ovSun.style.left='calc(50% + '+(a*e)+'px)';
     ovEarth.style.left='calc(50% + '+a+'px)';
     ovNear.style.left='calc(50% + '+(a+12)+'px)';
-    ovFar.style.left='calc(50% - '+(a+38)+'px)';
+    ovFar.style.left='calc(50% - '+(a+62)+'px)';
     ovNear.style.opacity=e>0.04?1:0;ovFar.style.opacity=e>0.04?1:0;
   }
   panelOrb.classList.toggle('danger',e>=0.5);

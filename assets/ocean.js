@@ -40,7 +40,7 @@ function update(){
   setFace(face);
   if(p<15)whyOc.textContent='🔎 海が少ないと保温タンクが小さくなり、内陸は大陸性気候に。パンゲアの内部もこんな酷暑と乾燥だったと考えられているよ';
   else if(p<40)whyOc.textContent='🔎 海から遠いほど寒暖差が大きく雨も届きにくいよ。シベリアの年較差は60℃超だよ';
-  else if(p<=85)whyOc.textContent='🔎 海は大気の約1000倍の熱をためる巨大な毛布。今の7割が気候をなめらかにしているよ';
+  else if(p<=85)whyOc.textContent='🔎 海は大気の約1000倍の熱をたくわえる保温タンク。今の7割が気候をなめらかにしているよ';
   else whyOc.textContent='🔎 全部海だと気温はおだやか。でも陸がないと岩石の風化による養分やCO2調整の仕組みが弱まると考えられるよ';
 }
 globeStrip.style.animation='slideGlobe 6s linear infinite';

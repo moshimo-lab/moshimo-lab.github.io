@@ -28,15 +28,15 @@ function update(){
   if(iceOverlay)iceOverlay.style.opacity=ice;
   earthWrap.classList.toggle('extreme-heat',t>60);
   panelGh.classList.toggle('danger',t<=-10||t>=60);
-  let line='毛布がちょうどいい。おだやかな地球だね',face='happy';
-  if(g<0.05){line='毛布がない…地球が−18℃まで凍えていくよ…';face='cold';}
+  let line='温室効果、ちょうどいい効きぐあいだね',face='happy';
+  if(g<0.05){line='温室効果が消えた…−18℃まで凍えていくよ…';face='cold';}
   else if(t<0){line='温室効果が弱い…海まで凍っちゃいそう';face='cold';}
-  else if(t>=60){line='毛布が効きすぎ!金星みたいな灼熱だよ…';face='hot';}
-  else if(t>=25){line='ちょっと暑いね。毛布が厚すぎるかも';face='';}
+  else if(t>=60){line='効きすぎだよ!金星みたいな灼熱…';face='hot';}
+  else if(t>=25){line='ちょっと暑いね。効きが強すぎるかも';face='';}
   speechLine.textContent=line;
   setFace(face);
-  if(g<0.05)whyGh.textContent='🔎 温室効果ゼロだと平均−18℃。今の+15℃との差「33℃」が、大気の毛布の正体だよ';
-  else if(t>=60)whyGh.textContent='🔎 毛布が効きすぎると暴走温室に。金星が462℃なのは、この毛布の暴走が原因だよ';
+  if(g<0.05)whyGh.textContent='🔎 温室効果ゼロだと平均−18℃。今の+15℃との差「33℃」が温室効果の実力だよ';
+  else if(t>=60)whyGh.textContent='🔎 温室効果が効きすぎると暴走温室に。金星が462℃なのは、この暴走が原因だよ';
   else if(g<=1.2)whyGh.textContent='🔎 温室効果は、地球から逃げる熱をつかまえて温める「毛布」。ないと地球は凍りつくよ';
   else whyGh.textContent='🔎 温室効果は悪者じゃない。ただ「効きすぎ」は暑くなりすぎる。多すぎず少なすぎずが大事なんだ';
 }

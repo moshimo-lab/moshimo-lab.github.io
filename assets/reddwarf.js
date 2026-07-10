@@ -14,7 +14,7 @@ function update(){
   let lk,lkClass=false;
   if(d>=0.5){lk='なし';}
   else if(d>=0.2){lk='中くらい';}
-  else{lk='高い(まぶたの星)';lkClass=true;}
+  else{lk='高い(片面が永遠の昼)';lkClass=true;}
   lock.textContent=lk;
   // 寿命 ~ M/L = M^-2.5。太陽=100億年(=10 Ga)。
   const t=10*Math.pow(m,-2.5); // 十億年(Ga)
