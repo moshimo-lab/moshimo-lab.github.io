@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src https://formspree.io; base-uri 'none'; form-action https://formspree.io">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="description" content="宇宙の恒星の7割超は暗い赤色矮星。ハビタブルゾーンが主星に激近し、惑星は潮汐ロックで半分が永遠の昼になる。">
+<meta property="og:site_name" content="もしも地球ラボ">
+<meta property="og:title" content="もしも太陽が赤色矮星だったら|もしも図鑑|もしも地球ラボ">
+<meta property="og:description" content="宇宙の恒星の7割超は暗い赤色矮星。ハビタブルゾーンが主星に激近し、惑星は潮汐ロックで半分が永遠の昼になる。">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://moshimo-lab.pages.dev/assets/ogp.png">
+<title>もしも太陽が赤色矮星だったら|もしも図鑑|もしも地球ラボ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=JetBrains+Mono:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../assets/site.css">
+<script src="../assets/reddwarf.js" defer></script>
+</head>
+<body>
+<div class="stars"></div>
+<nav class="topnav">
+  <a class="brand" href="../index.html">🌍 もしも地球ラボ</a>
+  <div class="links">
+    <a href="../zukan/index.html" class="active">もしも図鑑</a>
+    <a href="../zukan/kotoba.html">用語じてん</a>
+    <a href="../tera.html">テラちゃんについて</a>
+    <a href="../qa.html">地球のギモンQ&amp;A</a>
+    <a href="../omiyage.html">おみやげ</a>
+    <a href="../contact.html">お問い合わせ</a>
+  </div>
+</nav>
+
+<div class="wrap">
+  <div class="article-hero">
+    <div class="eyebrow">MOSHIMO ZUKAN // FILE 10</div>
+    <h1>⭐ もしも太陽が赤色矮星だったら</h1>
+    <p class="sub">宇宙で一番ありふれた星、赤色矮星。その光で地球を照らすと、住める場所が主星のすぐ隣まで寄ってくる。</p>
+  </div>
+  
+  <div class="minisim">
+    <div class="stage">
+      <div class="earth-wrap small" id="earthWrap">
+      
+      <div class="atmosphere"></div>
+      <div class="earth" id="earth">
+        <div class="globe-strip" id="globeStrip">
+          <div class="hemi"><div class="land land1"></div><div class="land land2"></div><div class="land land3"></div><div class="clouds"></div></div>
+          <div class="hemi"><div class="land land1"></div><div class="land land2"></div><div class="land land3"></div><div class="clouds"></div></div>
+        </div>
+        <div class="heat-overlay" id="heatOverlay"></div>
+        <div class="ice-overlay" id="iceOverlay"></div>
+      </div>
+    </div>
+      <div class="mascot" id="mascot">
+      <div class="sat">
+        <div class="antenna"></div><div class="tip"></div>
+        <div class="wing l"><i></i><i></i><b></b></div>
+        <div class="wing r"><b></b><i></i><i></i></div>
+        <div class="mascot-body" id="mascotBody">
+          <div class="eye l"></div><div class="eye r"></div>
+          <div class="blush l"></div><div class="blush r"></div>
+          <div class="sweat"></div>
+        </div>
+        <div class="tail"></div>
+      </div>
+      <div class="speech" id="speech"><span class="name">テラちゃん</span><span id="speechLine">今日も平常運転だよ〜</span></div>
+    </div>
+    </div>
+    <div class="readout cols3">
+      <div class="card"><div class="k">住める距離(ハビタブルゾーン)</div><div class="v" id="hz">1.0 AU</div></div>
+      <div class="card"><div class="k">潮汐ロックのリスク</div><div class="v" id="lock">なし</div></div>
+      <div class="card"><div class="k">星の寿命</div><div class="v" id="life">約100億年</div></div>
+    </div>
+    <div class="slider-panel bare" id="panelRd">
+      <div class="label">主星の重さ(太陽=1.0)</div>
+      <div class="value" id="valRd">1.00 倍</div>
+      <input type="range" id="rd" min="8" max="120" value="100" aria-label="主星の重さ">
+      <div class="scale"><span class="warn">0.08倍(最小の赤色矮星)</span><span>1倍(太陽)</span></div>
+      <div class="why" id="whyRd">🔎 星は軽いほど暗い。暗い星のまわりでは「住める帯」が主星のすぐ近くまで寄ってくるよ</div>
+    </div>
+  </div>
+  
+  <h2>太陽を暗い星に取りかえると、何が起きる?</h2>
+  <h3>① そもそも赤色矮星って、宇宙で一番ありふれた星</h3>
+  <p>赤色矮星は、太陽よりずっと軽くて暗い、赤っぽい光の星です。地味な存在ですが、実は<strong>宇宙にある恒星の7割以上がこのタイプ</strong>。太陽のほうが少数派なんです。太陽にいちばん近い恒星プロキシマ・ケンタウリ(約4.2光年)も赤色矮星で、そのまわりには地球サイズの惑星プロキシマbが見つかっています。系外惑星さがしの主役は、今やこの暗い星たちです。</p>
+  <h3>② 暗い星だと、「住める帯」が主星のすぐ隣に寄る</h3>
+  <p>星が暗いと、暖かさが届く範囲(<a href="distance.html">ハビタブルゾーン</a>=水が液体でいられる帯)も主星のすぐ近くになります。スライダーで主星を軽く暗くしていくと、住める距離がぐんぐん主星へ寄っていくのがわかります。たとえば赤色矮星トラピスト1の惑星dは、主星からわずか約333万km——太陽と水星の距離の18分の1しかない超至近距離を回っています。それでいて凍りも沸きもしない「ちょうどいい」位置なのです。</p>
+  <h3>③ 近すぎると、惑星は「まぶたの星」になる</h3>
+  <p>主星に近すぎると、惑星は主星の強い重力で<a href="moon.html">潮汐ロック</a>されます。<a href="moon.html">月がいつも同じ顔を地球に向けている</a>のと同じで、惑星がいつも同じ面を主星に向けたまま回るようになる。すると片面は永遠の昼で灼熱、反対の面は永遠の夜で極寒——昼と夜の境目だけが薄明かりの帯になる、いわゆる「まぶたの惑星(eyeball planet)」です。ただし絶望的とは限りません。近年の気候モデルでは、昼側に厚い雲ができて熱を反射し、両面の温度差がかなり和らぐ可能性も示されています。</p>
+  <h3>④ 短気なフレア、でも桁違いに長生き</h3>
+  <p>赤色矮星のもう一つのクセは、気まぐれに強力なフレア(爆発的な増光)を起こすこと。プロキシマ・ケンタウリでは2019年、わずか7秒で紫外線が普段の約1万4000倍になる巨大フレアが観測されました。これが惑星の大気を吹き飛ばしかねないのが弱点です。一方で最大の長所は寿命。太陽の残り寿命が約50億年なのに対し、赤色矮星は<strong>何千億年〜何兆年</strong>も燃え続けます。生命がゆっくり進化する時間だけは、たっぷりあるのです。</p>
+
+  <div class="note"><div class="nt">💡 豆知識:太陽は「当たり」の星だったのかもしれない</div>
+  ありふれた赤色矮星ではなく、太陽のような中くらいの明るさの星のまわりだからこそ、地球は主星から1億5000万kmという<strong>ほどよく離れた距離</strong>にいられます。近すぎないから潮汐ロックされず、<a href="rotation.html">自転</a>して昼と夜が規則正しく訪れ、<a href="tilt.html">地軸を傾け</a>て四季をつくれる。宇宙の多数派に生まれていたら、この当たり前は手に入らなかったかもしれません。地味だけど、太陽は地球にとって「当たり」の星だったのです。</div>
+  
+  <div class="termmemo"><div class="tm">🔎 むずかしい言葉は「用語じてん」でチェック</div>
+  <div class="termchips"><a href="kotoba.html#reddwarf">赤色矮星</a><a href="kotoba.html#habitable">ハビタブルゾーン</a><a href="kotoba.html#tidal-lock">潮汐ロック</a><a href="kotoba.html#solar-wind">太陽風</a></div></div>
+  
+  <div class="sources"><div class="st">📚 出典・参考(ファクトチェック済み)</div><ul><li><a href="https://ja.wikipedia.org/wiki/%E8%B5%A4%E8%89%B2%E7%9F%AE%E6%98%9F%E7%B3%BB%E3%81%AE%E5%B1%85%E4%BD%8F%E5%8F%AF%E8%83%BD%E6%80%A7" rel="noopener noreferrer">宇宙の恒星の7割以上が赤色矮星・ハビタブルゾーンが主星に近い(Wikipedia:赤色矮星系の居住可能性)</a></li>
+<li><a href="https://ja.wikipedia.org/wiki/%E3%83%97%E3%83%AD%E3%82%AD%E3%82%B7%E3%83%9E%E3%83%BB%E3%82%B1%E3%83%B3%E3%82%BF%E3%82%A6%E3%83%AAb" rel="noopener noreferrer">プロキシマbは主星から約0.05AU・潮汐ロックの可能性(Wikipedia:プロキシマ・ケンタウリb)</a></li>
+<li><a href="https://ecotopia.earth/article-3772/" rel="noopener noreferrer">トラピスト1dは主星から約333万km(水星の18分の1)(ecotopia)</a></li>
+<li><a href="https://ja.wikipedia.org/wiki/%E3%83%8F%E3%83%93%E3%82%BF%E3%83%96%E3%83%AB%E3%82%BE%E3%83%BC%E3%83%B3" rel="noopener noreferrer">潮汐固定と昼側の雲で温度差が減る3次元気候モデル(Wikipedia:ハビタブルゾーン)</a></li>
+<li><a href="https://uranai.zenhp.co.jp/sekishokuwaihosnokanouseiwokaisetsu.html" rel="noopener noreferrer">プロキシマの巨大フレア・紫外線14000倍/赤色矮星は長寿命(赤色矮星と太陽の違い)</a></li></ul></div>
+  <div class="relnav">
+    <a class="btn primary" href="simulator.html">🎛️ 統合シミュレーターで全部いじる</a><a class="btn" href="oxygen.html">🔥 次の記事:もしも酸素が2倍だったら</a><a class="btn" href="ocean.html">🌊 前の記事:もしも陸と海が半々だったら</a>
+  </div>
+</div>
+
+<footer class="site">
+  <div class="flinks">
+    <a href="../index.html">トップ</a><a href="../zukan/index.html">もしも図鑑</a><a href="../zukan/kotoba.html">用語じてん</a><a href="../tera.html">テラちゃん</a><a href="../qa.html">Q&amp;A</a><a href="../omiyage.html">おみやげ</a><a href="../contact.html">お問い合わせ</a>
+  </div>
+  ※ 当サイトのシミュレーションはすべて簡略化した概算モデルです。実際の気候・人口動態はもっと複雑です。<br>
+  © もしも地球ラボ / OBSERVATION LOG by テラちゃん
+</footer>
+</body>
+</html>

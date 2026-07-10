@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src https://formspree.io; base-uri 'none'; form-action https://formspree.io">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="description" content="地面が動くのは地球だけの特技。止めれば地震は消えるが、CO₂で気温を保つ天然サーモスタットも止まる。">
+<meta property="og:site_name" content="もしも地球ラボ">
+<meta property="og:title" content="もしもプレートテクトニクスが止まったら|もしも図鑑|もしも地球ラボ">
+<meta property="og:description" content="地面が動くのは地球だけの特技。止めれば地震は消えるが、CO₂で気温を保つ天然サーモスタットも止まる。">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://moshimo-lab.pages.dev/assets/ogp.png">
+<title>もしもプレートテクトニクスが止まったら|もしも図鑑|もしも地球ラボ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=JetBrains+Mono:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../assets/site.css">
+<script src="../assets/plate.js" defer></script>
+</head>
+<body>
+<div class="stars"></div>
+<nav class="topnav">
+  <a class="brand" href="../index.html">🌍 もしも地球ラボ</a>
+  <div class="links">
+    <a href="../zukan/index.html" class="active">もしも図鑑</a>
+    <a href="../zukan/kotoba.html">用語じてん</a>
+    <a href="../tera.html">テラちゃんについて</a>
+    <a href="../qa.html">地球のギモンQ&amp;A</a>
+    <a href="../omiyage.html">おみやげ</a>
+    <a href="../contact.html">お問い合わせ</a>
+  </div>
+</nav>
+
+<div class="wrap">
+  <div class="article-hero">
+    <div class="eyebrow">MOSHIMO ZUKAN // FILE 12</div>
+    <h1>🌋 もしもプレートテクトニクスが止まったら</h1>
+    <p class="sub">地震も火山も消える、静かな星。でもそのとき、地球の「気温の自動調整」も一緒に止まってしまう。</p>
+  </div>
+  
+  <div class="minisim">
+    <div class="stage">
+      <div class="earth-wrap small" id="earthWrap">
+      
+      <div class="atmosphere"></div>
+      <div class="earth" id="earth">
+        <div class="globe-strip" id="globeStrip">
+          <div class="hemi"><div class="land land1"></div><div class="land land2"></div><div class="land land3"></div><div class="clouds"></div></div>
+          <div class="hemi"><div class="land land1"></div><div class="land land2"></div><div class="land land3"></div><div class="clouds"></div></div>
+        </div>
+        <div class="heat-overlay" id="heatOverlay"></div>
+        <div class="ice-overlay" id="iceOverlay"></div>
+      </div>
+    </div>
+      <div class="mascot" id="mascot">
+      <div class="sat">
+        <div class="antenna"></div><div class="tip"></div>
+        <div class="wing l"><i></i><i></i><b></b></div>
+        <div class="wing r"><b></b><i></i><i></i></div>
+        <div class="mascot-body" id="mascotBody">
+          <div class="eye l"></div><div class="eye r"></div>
+          <div class="blush l"></div><div class="blush r"></div>
+          <div class="sweat"></div>
+        </div>
+        <div class="tail"></div>
+      </div>
+      <div class="speech" id="speech"><span class="name">テラちゃん</span><span id="speechLine">今日も平常運転だよ〜</span></div>
+    </div>
+    </div>
+    <div class="readout cols3">
+      <div class="card"><div class="k">地震・火山</div><div class="v" id="quake">活発</div></div>
+      <div class="card"><div class="k">気温の自動調整</div><div class="v" id="thermo">効いている</div></div>
+      <div class="card"><div class="k">長い目での気候</div><div class="v" id="climate">安定</div></div>
+    </div>
+    <div class="slider-panel bare" id="panelPl">
+      <div class="label">プレートの動く速さ(いまの地球=1倍)</div>
+      <div class="value" id="valPl">1.00 倍</div>
+      <input type="range" id="pl" min="0" max="200" value="100" aria-label="プレートの動く速さ">
+      <div class="scale"><span class="warn">0倍(停止)</span><span>1倍(いま)</span><span>2倍</span></div>
+      <div class="why" id="whyPl">🔎 プレートが動くから地震や火山が起きるよ。でも実はそれが気候の調整にもつながっているんだ</div>
+    </div>
+  </div>
+  
+  <h2>大地の動きを止めると、何が起きる?</h2>
+  <h3>① 地面が動くのは、太陽系で地球だけの特技</h3>
+  <p>地球の表面は十数枚の硬い板(プレート)に分かれていて、その下のやわらかい層に乗って年に数cmずつ動いています。これがプレートテクトニクス。地震や火山、山脈は、このプレートがぶつかったりすれ違ったりする境目で起きています。実はこの「板が動く」仕組みが確認されているのは、<strong>今のところ太陽系で地球だけ</strong>。<a href="distance.html">火星</a>はプレートが動かなかったため火山が一か所に噴き続け、標高27kmの太陽系最大の火山オリンポス山ができました。</p>
+  <h3>② 止めると、まず地震と火山が消える</h3>
+  <p>スライダーでプレートの動きをゼロにすると、地震や噴火はやがて起きなくなります。災害がなくなって一見平和——でも、それは物語の半分でしかありません。プレートの動きは、地球にとってもっと大切な、別の仕事もしているのです。</p>
+  <h3>③ 本当に止まるのは「気温の自動調整」</h3>
+  <p>地球には、長い時間をかけて気温を一定に保つ<strong>天然のサーモスタット(自動温度調整)</strong>が備わっています。しくみはこうです。火山はCO₂(温室効果ガス)を大気に吐き出す。一方、雨は岩石を少しずつ溶かし(風化)、その過程で大気のCO₂を吸い取って海底に閉じ込める。気温が上がると風化が速まってCO₂が減り、冷える。気温が下がると風化が鈍ってCO₂がたまり、暖まる——という自動調整です。この火山と風化の両方を回しているのが、プレートの動き。止めれば火山がCO₂を補給しなくなり、<strong>長い目で見た気候の安定装置が止まってしまう</strong>のです。</p>
+  <h3>④ 大地は、生命の土台でもある</h3>
+  <p>プレートの動きは、山脈をつくって陸に起伏を生み、<a href="ocean.html">海と陸</a>の配置を長い時間かけて描きかえてきました。栄養を含む岩石を地表に押し上げ、超大陸パンゲアをつくっては引き裂き、生き物の進化の舞台を用意し続けています。地震という「こわい顔」の裏で、プレートテクトニクスは地球を住める星に保つ立役者。地球の「ちょうどよさ」は、足もとの動く大地にも支えられているのです。</p>
+
+  <div class="note"><div class="nt">💡 豆知識:大地が動くのに、水とCO₂が効いているらしい</div>
+  なぜ地球だけがプレートを動かせるのか、その理由はまだ完全には解けていません。有力なのは、プレートの下の層がほどよくやわらかいから、という説。近年の研究では、地球内部の<strong>二酸化炭素や微量の水</strong>がその層をやわらかくし、プレートを動きやすくしている可能性が示されています。地表の空気を調整するCO₂が、地下深くでは大地を動かす潤滑油にもなっているかもしれない——地球はどこまでも、絶妙なバランスの上に立っているのです。</div>
+  
+  <div class="termmemo"><div class="tm">🔎 むずかしい言葉は「用語じてん」でチェック</div>
+  <div class="termchips"><a href="kotoba.html#platetectonics">プレートテクトニクス</a><a href="kotoba.html#carbon-cycle">炭素循環(サーモスタット)</a><a href="kotoba.html#greenhouse">温室効果</a></div></div>
+  
+  <div class="sources"><div class="st">📚 出典・参考(ファクトチェック済み)</div><ul><li><a href="https://astronoo.com/ja/articles/pureto-tekutonikusu.html" rel="noopener noreferrer">プレートは年数cm動き地震・火山・超大陸サイクルを生む・地球型惑星で唯一(Astronoo)</a></li>
+<li><a href="https://astronoo.com/ja/articles/pureto-tekutonikusu.html" rel="noopener noreferrer">火山のCO2放出と珪酸塩風化が天然の地球化学サーモスタットを生む(Astronoo)</a></li>
+<li><a href="https://astronoo.com/ja/articles/tanso-saikuru.html" rel="noopener noreferrer">火山脱ガスとケイ酸塩風化のフィードバックが惑星のサーモスタットとして働く(炭素サイクル/Astronoo)</a></li>
+<li><a href="https://ja.wikipedia.org/wiki/%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88%E3%83%86%E3%82%AF%E3%83%88%E3%83%8B%E3%82%AF%E3%82%B9" rel="noopener noreferrer">プレートテクトニクスが確認されるのは地球のみ・火星オリンポス山は標高27km(Wikipedia:プレートテクトニクス)</a></li>
+<li><a href="https://www.kyoto-u.ac.jp/ja/research-news/2017-02-03" rel="noopener noreferrer">アセノスフェアが二酸化炭素で部分溶融しプレート運動を起こす(京都大学)</a></li></ul></div>
+  <div class="relnav">
+    <a class="btn primary" href="simulator.html">🎛️ 統合シミュレーターで全部いじる</a><a class="btn" href="oxygen.html">🔥 前の記事:もしも酸素が2倍だったら</a>
+  </div>
+</div>
+
+<footer class="site">
+  <div class="flinks">
+    <a href="../index.html">トップ</a><a href="../zukan/index.html">もしも図鑑</a><a href="../zukan/kotoba.html">用語じてん</a><a href="../tera.html">テラちゃん</a><a href="../qa.html">Q&amp;A</a><a href="../omiyage.html">おみやげ</a><a href="../contact.html">お問い合わせ</a>
+  </div>
+  ※ 当サイトのシミュレーションはすべて簡略化した概算モデルです。実際の気候・人口動態はもっと複雑です。<br>
+  © もしも地球ラボ / OBSERVATION LOG by テラちゃん
+</footer>
+</body>
+</html>

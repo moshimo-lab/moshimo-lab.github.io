@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src https://formspree.io; base-uri 'none'; form-action https://formspree.io">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="description" content="今の空気は酸素21%。増やすと巨大昆虫の世界へ。実は石炭紀に酸素35%・翼70cmのトンボが実在した。">
+<meta property="og:site_name" content="もしも地球ラボ">
+<meta property="og:title" content="もしも酸素が2倍だったら|もしも図鑑|もしも地球ラボ">
+<meta property="og:description" content="今の空気は酸素21%。増やすと巨大昆虫の世界へ。実は石炭紀に酸素35%・翼70cmのトンボが実在した。">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://moshimo-lab.pages.dev/assets/ogp.png">
+<title>もしも酸素が2倍だったら|もしも図鑑|もしも地球ラボ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=JetBrains+Mono:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../assets/site.css">
+<script src="../assets/oxygen.js" defer></script>
+</head>
+<body>
+<div class="stars"></div>
+<nav class="topnav">
+  <a class="brand" href="../index.html">🌍 もしも地球ラボ</a>
+  <div class="links">
+    <a href="../zukan/index.html" class="active">もしも図鑑</a>
+    <a href="../zukan/kotoba.html">用語じてん</a>
+    <a href="../tera.html">テラちゃんについて</a>
+    <a href="../qa.html">地球のギモンQ&amp;A</a>
+    <a href="../omiyage.html">おみやげ</a>
+    <a href="../contact.html">お問い合わせ</a>
+  </div>
+</nav>
+
+<div class="wrap">
+  <div class="article-hero">
+    <div class="eyebrow">MOSHIMO ZUKAN // FILE 11</div>
+    <h1>🔥 もしも酸素が2倍だったら</h1>
+    <p class="sub">巨大トンボが飛び、山火事が止まらない。SFみたいなその世界は、3億年前の地球がほぼ実現していた。</p>
+  </div>
+  
+  <div class="minisim">
+    <div class="stage">
+      <div class="earth-wrap small" id="earthWrap">
+      
+      <div class="atmosphere"></div>
+      <div class="earth" id="earth">
+        <div class="globe-strip" id="globeStrip">
+          <div class="hemi"><div class="land land1"></div><div class="land land2"></div><div class="land land3"></div><div class="clouds"></div></div>
+          <div class="hemi"><div class="land land1"></div><div class="land land2"></div><div class="land land3"></div><div class="clouds"></div></div>
+        </div>
+        <div class="heat-overlay" id="heatOverlay"></div>
+        <div class="ice-overlay" id="iceOverlay"></div>
+      </div>
+    </div>
+      <div class="mascot" id="mascot">
+      <div class="sat">
+        <div class="antenna"></div><div class="tip"></div>
+        <div class="wing l"><i></i><i></i><b></b></div>
+        <div class="wing r"><b></b><i></i><i></i></div>
+        <div class="mascot-body" id="mascotBody">
+          <div class="eye l"></div><div class="eye r"></div>
+          <div class="blush l"></div><div class="blush r"></div>
+          <div class="sweat"></div>
+        </div>
+        <div class="tail"></div>
+      </div>
+      <div class="speech" id="speech"><span class="name">テラちゃん</span><span id="speechLine">今日も平常運転だよ〜</span></div>
+    </div>
+    </div>
+    <div class="readout cols3">
+      <div class="card"><div class="k">昆虫が育てる大きさ(目安)</div><div class="v" id="bug">ふつう</div></div>
+      <div class="card"><div class="k">山火事の燃えやすさ</div><div class="v" id="fire">ふつう</div></div>
+      <div class="card"><div class="k">人間の呼吸</div><div class="v" id="breath">快適</div></div>
+    </div>
+    <div class="slider-panel bare" id="panelOx">
+      <div class="label">大気の酸素濃度(いまの地球=21%)</div>
+      <div class="value" id="valOx">21%</div>
+      <input type="range" id="ox" min="0" max="50" value="21" aria-label="酸素濃度">
+      <div class="scale"><span class="warn">10%(息苦しい)</span><span>21%(いま)</span><span class="warn">35%(石炭紀)</span></div>
+      <div class="why" id="whyOx">🔎 昆虫は肺ではなく体の管(気管)で酸素を取り込むよ。だから空気の酸素が濃いほど大きくなれるんだ</div>
+    </div>
+  </div>
+  
+  <h2>空気の酸素を増やすと、何が起きる?</h2>
+  <h3>① まず、昆虫が大きくなれる</h3>
+  <p>私たちは肺で酸素を血に取り込みますが、昆虫には肺がなく、体じゅうに張りめぐらせた細い管(気管)から酸素を直接しみ込ませています。この方式は効率が悪く、酸素が届く範囲がせいぜい数mm〜cm。だから昆虫の体はそれ以上大きくなれない——ふつうの空気なら。ところが酸素を濃くすると管の奥まで酸素が届くようになり、<strong>もっと大きな体でも呼吸が回る</strong>。スライダーで酸素を上げると、昆虫の育てる大きさが伸びていきます。</p>
+  <h3>② その世界は、3億年前に実在した</h3>
+  <p>これはSFではありません。今から約3億年前の<strong>石炭紀</strong>、地球の酸素濃度は現在の21%をはるかに超える<strong>約35%</strong>に達していました。原因は、繁栄した巨大シダの森。当時は枯れた木を分解する菌類がまだ十分に進化しておらず、木が腐らずに炭素をため込んだまま埋もれていったため、光合成で出た酸素が使われずに空気にたまり続けたのです(この埋もれた木が、のちの石炭になりました)。その超高酸素のもとで、翼を広げると約70cmもある史上最大級のトンボ<strong>メガネウラ</strong>や、体長2mの巨大ヤスデ<strong>アースロプレウラ</strong>が実際に飛び、這っていました。</p>
+  <h3>③ でも、山火事が止まらなくなる</h3>
+  <p>いいことばかりではありません。酸素はものが燃えるのを助ける気体。濃度が高いと、いったん火がつくと<strong>ちょっとやそっとでは消えない</strong>。石炭紀の高酸素の森では、一度の落雷から凄まじい規模の山火事が燃え広がったと考えられています。スライダーを35%側に振ると、山火事の燃えやすさが跳ね上がるのはこのためです。豊かさと危うさは、同じ酸素の裏表なのです。</p>
+  <h3>④ 濃すぎる酸素は、人間にも毒になる</h3>
+  <p>「酸素が濃いほど健康そう」と思いきや、逆です。高濃度の酸素を長く吸い続けると、肺や神経がダメージを受ける<strong>酸素中毒</strong>が起きることが知られています。医療現場で酸素の量を慎重に管理するのはこのため。多すぎても少なすぎてもダメで、今の21%は生き物にとって絶妙な設定なのです。そして石炭紀の楽園も永遠ではなく、やがて木を分解する菌類が進化して酸素は約23%まで下がり、巨大昆虫の時代は静かに幕を閉じました。</p>
+
+  <div class="note"><div class="nt">💡 豆知識:あなたが使う石炭・石油は、腐らなかった森の遺産</div>
+  石炭紀という名前は、この時代の森が<strong>石炭</strong>になって地層に大量に残っていることに由来します。菌類が木を分解できなかったという「不具合」がなければ、これほどの石炭は生まれませんでした。つまり私たちが燃やしてきた化石燃料は、3億年前に腐りそこねた森の落とし物。<a href="ocean.html">陸と海の記事</a>で触れた「岩石の風化によるCO₂調整」とあわせて、地球の炭素は気の遠くなる時間をかけてぐるぐる巡っているのです。</div>
+  
+  <div class="termmemo"><div class="tm">🔎 むずかしい言葉は「用語じてん」でチェック</div>
+  <div class="termchips"><a href="kotoba.html#oxygen">酸素濃度</a><a href="kotoba.html#carboniferous">石炭紀</a><a href="kotoba.html#atmosphere">大気</a></div></div>
+  
+  <div class="sources"><div class="st">📚 出典・参考(ファクトチェック済み)</div><ul><li><a href="https://jspp.org/hiroba/q_and_a/detail.html?id=1093" rel="noopener noreferrer">石炭紀の酸素濃度は約35%・現代は21%(日本植物生理学会 みんなのひろば)</a></li>
+<li><a href="https://ja.wikipedia.org/wiki/%E3%83%A1%E3%82%AC%E3%83%8D%E3%82%A6%E3%83%A9" rel="noopener noreferrer">節足動物は気管で酸素を拡散・拡散範囲は数mm-cmで体サイズが制限される(Wikipedia:メガネウラ)</a></li>
+<li><a href="https://jfs.or.jp/jfs-cs/earth-histry-coal-01/" rel="noopener noreferrer">高酸素環境が巨大昆虫を可能にし山火事が激化(日本鋳造工学会)</a></li>
+<li><a href="https://dinoworldblog.com/carboniferous-period-high-oxygen-giant-insects/" rel="noopener noreferrer">石炭紀末に菌類が進化し酸素は約23%へ低下(石炭紀とは)</a></li>
+<li><a href="https://ja.wikipedia.org/wiki/%E7%9F%B3%E7%82%AD%E7%B4%80" rel="noopener noreferrer">森林の繁栄で炭素が石炭として固定・酸素濃度35%(Wikipedia:石炭紀)</a></li></ul></div>
+  <div class="relnav">
+    <a class="btn primary" href="simulator.html">🎛️ 統合シミュレーターで全部いじる</a><a class="btn" href="plate.html">🌋 次の記事:もしもプレートテクトニクスが止まったら</a><a class="btn" href="reddwarf.html">⭐ 前の記事:もしも太陽が赤色矮星だったら</a>
+  </div>
+</div>
+
+<footer class="site">
+  <div class="flinks">
+    <a href="../index.html">トップ</a><a href="../zukan/index.html">もしも図鑑</a><a href="../zukan/kotoba.html">用語じてん</a><a href="../tera.html">テラちゃん</a><a href="../qa.html">Q&amp;A</a><a href="../omiyage.html">おみやげ</a><a href="../contact.html">お問い合わせ</a>
+  </div>
+  ※ 当サイトのシミュレーションはすべて簡略化した概算モデルです。実際の気候・人口動態はもっと複雑です。<br>
+  © もしも地球ラボ / OBSERVATION LOG by テラちゃん
+</footer>
+</body>
+</html>
