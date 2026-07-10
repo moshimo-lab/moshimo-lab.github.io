@@ -22,7 +22,7 @@
 }
 *{box-sizing:border-box}
 html,body{margin:0;min-height:100%;background:var(--bg);color:var(--text);
-  font-family:'Noto Sans JP',sans-serif;overflow-x:hidden;line-height:1.7;}
+  font-family:'Noto Sans JP',sans-serif;overflow-x:hidden;overflow-x:clip;line-height:1.7;}
 a{color:var(--teal);text-decoration:none}
 a:hover{text-decoration:underline}
 :focus-visible{outline:2px solid var(--teal);outline-offset:2px;border-radius:4px}
@@ -330,6 +330,20 @@ details .tera{margin-top:8px;font-family:'Zen Maru Gothic',sans-serif;font-size:
 .mission.flash{background:rgba(94,234,212,.12);border-radius:8px}
 .toolbar{display:flex;gap:8px;justify-content:center;margin-top:8px}
 .toolbar .btn{font-size:12px;padding:6px 14px}
+/* --- スマホ: 固定パネルを圧縮して、下のスライダー操作スペースを確保 --- */
+@media (max-width:600px){
+  .sticky-panel{padding:4px 12px 8px}
+  .sticky-panel .stage{gap:8px;padding:2px 0}
+  .sticky-panel .earth-wrap{width:84px;height:84px}
+  .sticky-panel .mascot{transform:scale(.82);transform-origin:top center;margin:-4px 0 -18px}
+  .sticky-panel .speech{width:118px;font-size:10.5px}
+  .sticky-panel .readout{grid-template-columns:repeat(4,1fr);gap:5px;margin-top:2px}
+  .sticky-panel .card{padding:4px 2px;border-radius:8px}
+  .sticky-panel .card .k{font-size:8px}
+  .sticky-panel .card .v{font-size:12px}
+  .sticky-panel .presets{margin-top:5px}
+  .sticky-panel .preset{font-size:10.5px;padding:4px 10px}
+}
 
 .article-hero{text-align:center;padding-top:26px}
 .minisim{background:linear-gradient(180deg,var(--bg2),#0a1226);border:1px solid var(--line);
@@ -343,3 +357,21 @@ details .tera{margin-top:8px;font-family:'Zen Maru Gothic',sans-serif;font-size:
 .earth-wrap.unstable{animation:tiltWobble 5s ease-in-out infinite}
 @keyframes tiltWobble{0%,100%{transform:rotate(8deg)}50%{transform:rotate(42deg)}}
 @media (prefers-reduced-motion: reduce){.earth-wrap.unstable{animation:none;transform:rotate(23.4deg)}}
+
+.kotoba-term .yomi{font-size:11px;color:var(--sub);font-weight:400;margin-left:6px;
+  font-family:'Zen Maru Gothic',sans-serif}
+.kotoba-body .short{font-weight:700;color:var(--text);margin-bottom:6px}
+.kotoba-body .more{color:var(--sub)}
+.kotoba-body .golink{display:inline-block;margin-top:10px;font-size:12px}
+.kotoba-index{display:flex;flex-wrap:wrap;gap:6px;margin:14px 0 20px}
+.kotoba-index a{font-size:12px;padding:5px 10px;border:1px solid var(--line);border-radius:999px;
+  color:var(--sub);background:var(--bg2)}
+.kotoba-index a:hover{color:var(--teal);border-color:var(--teal);text-decoration:none}
+.termmemo{background:linear-gradient(180deg,var(--bg2),#0a1226);border:1px dashed var(--line);
+  border-radius:14px;padding:12px 15px;margin:18px 0}
+.termmemo .tm{font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:13px;
+  color:var(--teal);margin-bottom:8px}
+.termchips{display:flex;flex-wrap:wrap;gap:6px}
+.termchips a{font-size:12px;padding:5px 10px;border:1px solid var(--line);border-radius:999px;
+  color:var(--sub);background:var(--bg)}
+.termchips a:hover{color:var(--teal);border-color:var(--teal);text-decoration:none}

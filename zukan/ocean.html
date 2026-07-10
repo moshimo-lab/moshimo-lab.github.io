@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src https://formspree.io; base-uri 'none'; form-action https://formspree.io">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="description" content="地球は海71%・陸29%。海は大気の約1000倍の熱をためる巨大な毛布。減らすと寒暖差が牙をむく。">
+<meta property="og:site_name" content="もしも地球ラボ">
+<meta property="og:title" content="もしも陸と海が半々だったら|もしも図鑑|もしも地球ラボ">
+<meta property="og:description" content="地球は海71%・陸29%。海は大気の約1000倍の熱をためる巨大な毛布。減らすと寒暖差が牙をむく。">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://moshimo-lab.github.io/assets/ogp.png">
+<title>もしも陸と海が半々だったら|もしも図鑑|もしも地球ラボ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=JetBrains+Mono:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../assets/site.css">
+<script src="../assets/ocean.js" defer></script>
+</head>
+<body>
+<div class="stars"></div>
+<nav class="topnav">
+  <a class="brand" href="../index.html">🌍 もしも地球ラボ</a>
+  <div class="links">
+    <a href="../zukan/index.html" class="active">もしも図鑑</a>
+    <a href="../zukan/kotoba.html">用語じてん</a>
+    <a href="../tera.html">テラちゃんについて</a>
+    <a href="../qa.html">地球のギモンQ&amp;A</a>
+    <a href="../omiyage.html">おみやげ</a>
+    <a href="../contact.html">お問い合わせ</a>
+  </div>
+</nav>
+
+<div class="wrap">
+  <div class="article-hero">
+    <div class="eyebrow">MOSHIMO ZUKAN // FILE 09</div>
+    <h1>🌊 もしも陸と海が半々だったら</h1>
+    <p class="sub">地球は海が7割の「水の惑星」。その配分を変えると、気候のなめらかさが変わりはじめる。</p>
+  </div>
+  
+  <div class="minisim">
+    <div class="stage">
+      <div class="earth-wrap small" id="earthWrap">
+      
+      <div class="atmosphere"></div>
+      <div class="earth" id="earth">
+        <div class="globe-strip" id="globeStrip">
+          <div class="hemi"><div class="land land1"></div><div class="land land2"></div><div class="land land3"></div><div class="clouds"></div></div>
+          <div class="hemi"><div class="land land1"></div><div class="land land2"></div><div class="land land3"></div><div class="clouds"></div></div>
+        </div>
+        <div class="heat-overlay" id="heatOverlay"></div>
+        <div class="ice-overlay" id="iceOverlay"></div>
+      </div>
+    </div>
+      <div class="mascot" id="mascot">
+      <div class="sat">
+        <div class="antenna"></div><div class="tip"></div>
+        <div class="wing l"><i></i><i></i><b></b></div>
+        <div class="wing r"><b></b><i></i><i></i></div>
+        <div class="mascot-body" id="mascotBody">
+          <div class="eye l"></div><div class="eye r"></div>
+          <div class="blush l"></div><div class="blush r"></div>
+          <div class="sweat"></div>
+        </div>
+        <div class="tail"></div>
+      </div>
+      <div class="speech" id="speech"><span class="name">テラちゃん</span><span id="speechLine">今日も平常運転だよ〜</span></div>
+    </div>
+    </div>
+    <div class="readout cols3">
+      <div class="card"><div class="k">海の割合</div><div class="v" id="sea">71%</div></div>
+      <div class="card"><div class="k">季節の寒暖差(体感の目安)</div><div class="v" id="swing">おだやか</div></div>
+      <div class="card"><div class="k">内陸の乾燥ぐあい</div><div class="v" id="dry">うるおい十分</div></div>
+    </div>
+    <div class="slider-panel bare" id="panelOc">
+      <div class="label">海が地球表面をおおう割合</div>
+      <div class="value" id="valOc">71%</div>
+      <input type="range" id="oc" min="0" max="100" value="71" aria-label="海の割合">
+      <div class="scale"><span class="warn">0%(全部陸)</span><span>71%(いま)</span><span class="warn">100%(全部海)</span></div>
+      <div class="why" id="whyOc">🔎 海は「温まりにくく冷めにくい」巨大な毛布。今の7割が気候をなめらかにしているよ</div>
+    </div>
+  </div>
+  
+  <h2>陸と海の配分を変えると、何が起きる?</h2>
+  <h3>① 海は、大気の約1000倍をためる「熱の貯金箱」</h3>
+  <p>地球の表面はいま、海が約71%、陸が約29%。この海が、気候の陰の主役です。水は「温まりにくく、冷めにくい」性質を持ち、地球表面の7割を占める海は<strong>大気のおよそ1000倍もの熱容量</strong>を持っています。夏に受けた熱を溜め込み、冬にゆっくり吐き出す——巨大な保温タンクのおかげで、地球の気温は昼夜でも季節でも、角がとれてなめらかになっています。</p>
+  <h3>② 海を減らすと、季節が牙をむく(大陸性気候)</h3>
+  <p>スライダーで海を減らすと、この保温タンクが小さくなります。海から遠い内陸ほど、夏はカラカラに暑く冬は凍える<strong>大陸性気候</strong>になり、一年の寒暖差(年較差)が広がります。実例はシベリア。海から遠く離れたベルホヤンスクやオイミャコンでは、夏は30℃を超え冬は−50℃を下回り、年較差が60℃を超えます。一方イギリスは高緯度でも海と暖流のおかげで冬でも凍りにくい。同じ地球でも、海の近さで気候はこれだけ変わります。</p>
+  <h3>③ 内陸ほど、雨が届かなくなる</h3>
+  <p>雨のもとになる水蒸気は、海から蒸発して風で運ばれます。だから海から遠いほど水蒸気が届きにくく、大陸の内部には乾燥地帯や砂漠が広がりやすい。海が減った世界では、この「内陸の乾き」がさらに手前まで迫ってきます。かつて全大陸がひとつに集まっていた超大陸<strong>パンゲア</strong>の内部は、海岸から数千km離れた極端な内陸で、酷暑と乾燥の激しい世界だったと考えられています。</p>
+  <h3>④ 逆に全部海にすると、おだやかだけど…</h3>
+  <p>では海100%の「水の惑星」なら天国かというと、そう単純でもありません。気温の変化はきわめておだやかになりますが、陸がないと岩石が雨で削れて出る養分の供給が乏しくなり、大気中のCO₂を長期的に調整する仕組み(岩石の風化)も弱まると考えられます。陸には陸の役割がある。<strong>海7割・陸3割という今の配分は、なめらかさと多様さのちょうどいい折り合い</strong>なのかもしれません。</p>
+
+  <div class="note"><div class="nt">💡 豆知識:海に沈めても、水はあふれない。もう一つの「ちょうどよさ」</div>
+  もし地球の陸をぜんぶ削ってツルツルの球にならしたら、地球は深さ約2.7kmの海にすっぽり覆われる——という試算があります。地表の凸凹(高い山や深い海溝)があるからこそ、陸が水面から顔を出していられるのです。<a href="gravity.html">重力</a>が大気をつなぎとめ、<a href="magnet.html">磁場</a>が太陽風を防ぎ、そして海が熱をならす。地球の住みやすさは、たった一つの奇跡ではなく、いくつもの「ちょうどよさ」の重ね合わせでできているのです。</div>
+  
+  <div class="termmemo"><div class="tm">🔎 むずかしい言葉は「用語じてん」でチェック</div>
+  <div class="termchips"><a href="kotoba.html#heat-capacity">熱容量</a><a href="kotoba.html#continental-climate">大陸性気候</a></div></div>
+  
+  <div class="sources"><div class="st">📚 出典・参考(ファクトチェック済み)</div><ul><li><a href="https://www.data.jma.go.jp/kaiyou/data/db/climate/knowledge/glb_warm/ohc.html" rel="noopener noreferrer">海洋は地球表面の約71%(気象庁 気候と海洋の知識)</a></li>
+<li><a href="https://www.data.jma.go.jp/kaiyou/data/db/climate/knowledge/glb/glb_sst.html" rel="noopener noreferrer">地球表面の7割を占める海洋は大気のおよそ1000倍の熱容量(気象庁)</a></li>
+<li><a href="https://alivevulnerable.com/basic/land-ocean/" rel="noopener noreferrer">陸地:海洋=約29:71(地理ラボ 詳しすぎる高校地理)</a></li>
+<li><a href="https://ja.wikipedia.org/wiki/%E5%B9%B4%E8%BC%83%E5%B7%AE" rel="noopener noreferrer">年較差は海洋性で小さく内陸性で大きい・シベリアで60℃超(Wikipedia:年較差)</a></li>
+<li><a href="https://kotobank.jp/word/%E5%A4%A7%E9%99%B8%E6%80%A7%E6%B0%97%E5%80%99-92253" rel="noopener noreferrer">大陸性気候・内陸ほど気温の年較差が大きく降水が少ない(コトバンク)</a></li></ul></div>
+  <div class="relnav">
+    <a class="btn primary" href="simulator.html">🎛️ 統合シミュレーターで全部いじる</a><a class="btn" href="orbit.html">🥚 前の記事:もしも公転軌道がもっと楕円だったら</a>
+  </div>
+</div>
+
+<footer class="site">
+  <div class="flinks">
+    <a href="../index.html">トップ</a><a href="../zukan/index.html">もしも図鑑</a><a href="../zukan/kotoba.html">用語じてん</a><a href="../tera.html">テラちゃん</a><a href="../qa.html">Q&amp;A</a><a href="../omiyage.html">おみやげ</a><a href="../contact.html">お問い合わせ</a>
+  </div>
+  ※ 当サイトのシミュレーションはすべて簡略化した概算モデルです。実際の気候・人口動態はもっと複雑です。<br>
+  © もしも地球ラボ / OBSERVATION LOG by テラちゃん
+</footer>
+</body>
+</html>

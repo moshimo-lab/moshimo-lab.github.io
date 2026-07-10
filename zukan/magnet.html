@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src https://formspree.io; base-uri 'none'; form-action https://formspree.io">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="description" content="太陽風から大気と生命を守る見えないバリア。消えると火星化が始まる。でも数日で終わる話じゃない。">
+<meta property="og:site_name" content="もしも地球ラボ">
+<meta property="og:title" content="もしも磁場が消えたら|もしも図鑑|もしも地球ラボ">
+<meta property="og:description" content="太陽風から大気と生命を守る見えないバリア。消えると火星化が始まる。でも数日で終わる話じゃない。">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://moshimo-lab.github.io/assets/ogp.png">
+<title>もしも磁場が消えたら|もしも図鑑|もしも地球ラボ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=JetBrains+Mono:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../assets/site.css">
+<script src="../assets/magnet.js" defer></script>
+</head>
+<body>
+<div class="stars"></div>
+<nav class="topnav">
+  <a class="brand" href="../index.html">🌍 もしも地球ラボ</a>
+  <div class="links">
+    <a href="../zukan/index.html" class="active">もしも図鑑</a>
+    <a href="../zukan/kotoba.html">用語じてん</a>
+    <a href="../tera.html">テラちゃんについて</a>
+    <a href="../qa.html">地球のギモンQ&amp;A</a>
+    <a href="../omiyage.html">おみやげ</a>
+    <a href="../contact.html">お問い合わせ</a>
+  </div>
+</nav>
+
+<div class="wrap">
+  <div class="article-hero">
+    <div class="eyebrow">MOSHIMO ZUKAN // FILE 07</div>
+    <h1>🧲 もしも磁場が消えたら</h1>
+    <p class="sub">目に見えないバリアが止まった日。オーロラが赤道まで降り、火星の未来が見えてくる。</p>
+  </div>
+  
+  <div class="minisim">
+    <div class="stage">
+      <div class="earth-wrap small" id="earthWrap">
+      
+      <div class="atmosphere"></div>
+      <div class="earth" id="earth">
+        <div class="globe-strip" id="globeStrip">
+          <div class="hemi"><div class="land land1"></div><div class="land land2"></div><div class="land land3"></div><div class="clouds"></div></div>
+          <div class="hemi"><div class="land land1"></div><div class="land land2"></div><div class="land land3"></div><div class="clouds"></div></div>
+        </div>
+        <div class="heat-overlay" id="heatOverlay"></div>
+        <div class="ice-overlay" id="iceOverlay"></div>
+      </div>
+    </div>
+      <div class="mascot" id="mascot">
+      <div class="sat">
+        <div class="antenna"></div><div class="tip"></div>
+        <div class="wing l"><i></i><i></i><b></b></div>
+        <div class="wing r"><b></b><i></i><i></i></div>
+        <div class="mascot-body" id="mascotBody">
+          <div class="eye l"></div><div class="eye r"></div>
+          <div class="blush l"></div><div class="blush r"></div>
+          <div class="sweat"></div>
+        </div>
+        <div class="tail"></div>
+      </div>
+      <div class="speech" id="speech"><span class="name">テラちゃん</span><span id="speechLine">今日も平常運転だよ〜</span></div>
+    </div>
+    </div>
+    <div class="readout cols3">
+      <div class="card"><div class="k">見えないバリア(いま=100%)</div><div class="v" id="shield">100%</div></div>
+      <div class="card"><div class="k">オーロラが降りる緯度</div><div class="v" id="aurora">67°〜</div></div>
+      <div class="card"><div class="k">大気の運命(長い目で)</div><div class="v" id="fate">がっちり保持</div></div>
+    </div>
+    <div class="slider-panel bare" id="panelMag">
+      <div class="label">地球磁場の強さ(いま=1倍)</div>
+      <div class="value" id="valMag">1.00 倍</div>
+      <input type="range" id="mag" min="0" max="200" value="100" aria-label="磁場の強さ">
+      <div class="scale"><span class="warn">0倍(磁場なし)</span><span>1倍(いま)</span><span>2倍</span></div>
+      <div class="why" id="whyMag">🔎 地磁気は太陽風をそらす「見えないバリア」。大気と生命を守っているよ</div>
+    </div>
+  </div>
+  
+  <h2>磁場を消すと、何が起きる?</h2>
+  <h3>① まず「見えないバリア」が止まる</h3>
+  <p>地球の中心では、溶けた鉄の対流が発電機(ダイナモ)のように働いて、地球全体を包む磁場をつくっています。この地磁気は、太陽から絶えず吹きつける電気を帯びた粒子の風「太陽風」を受け流す<strong>見えないバリア(磁気圏)</strong>の正体です。磁場が消えると、このバリアがなくなります。</p>
+  <h3>② オーロラが、赤道まで降りてくる</h3>
+  <p>オーロラは、太陽風の粒子が磁場に導かれて極地方の大気に飛び込み、光る現象です。いつも高緯度でしか見られないのは、磁場が粒子を極へ集めているから。バリアが弱れば、その光のカーテンは低い緯度まで降りてきます。実際、磁場が消えなくても<strong>強い太陽嵐</strong>が起きるとこれは起こります。1989年3月の大磁気嵐では、オーロラがテキサスやフロリダでも見え、カナダ・ケベック州では送電網が9時間止まり、約600万人が停電に見舞われました。磁場が常時弱い世界では、こうした通信・送電トラブルが日常になります。</p>
+  <h3>③ でも、人類が一晩で消えるわけではない</h3>
+  <p>「磁場が消えたら生命が即滅亡」というほど単純ではありません。地球には大気そのものによる分厚い放射線の盾もあり、地磁気は過去に何度も弱まったり逆転したりしてきました。いちばん最近の逆転は約77万年前で、その地層が日本の千葉県市原市に世界一よく残っているため、この時代は「チバニアン(千葉の時代)」と名づけられています。逆転のたびに生命が絶滅した証拠は見つかっていません。ただし逆転の最中は磁場が弱まるので、そのぶん宇宙放射線は増えたと考えられています。</p>
+  <h3>④ 本当の怖さは「何億年もかけた大気の流出」</h3>
+  <p>磁場を失った惑星の末路は、すぐ隣にあります。<a href="distance.html">火星</a>です。火星はかつて地球程度の厚い大気(0.5気圧以上)と海を持っていたと考えられていますが、約40億年前に磁場を失いました。以来、太陽風に少しずつ大気を剥ぎ取られ続け、いまや気圧は地球の170分の1、平均−63℃の乾いた星になっています。磁場の役目は「今日の命を守る」より「何億年ぶんの空気を守り続ける」ことの方が大きい。テラちゃんの仲間、NASAの探査機メイブンは、火星のこの大気流出を今も観測しています。</p>
+
+  <div class="note"><div class="nt">💡 豆知識:方位磁針のNは、地球のS極を指している</div>
+  方位磁針のN極が北を指すのは、北極側に地球磁石の<strong>S極</strong>があるから(異なる極どうしが引き合う)。つまり「北極=N」というイメージとは逆なんです。そして重要なのは、磁場を生むのは重力と同じく<strong>惑星のサイズと中身</strong>だということ。<a href="gravity.html">重力の記事</a>で見たように、小さな惑星は熱を早く失って中心核が固まり、ダイナモが止まりやすい。火星が磁場を失った一因も、これだと考えられています。地球の「ちょうどよさ」は、ここでもつながっているのです。</div>
+  
+  <div class="termmemo"><div class="tm">🔎 むずかしい言葉は「用語じてん」でチェック</div>
+  <div class="termchips"><a href="kotoba.html#magnetic-field">磁場(磁気圏)</a><a href="kotoba.html#solar-wind">太陽風</a><a href="kotoba.html#aurora">オーロラ</a></div></div>
+  
+  <div class="sources"><div class="st">📚 出典・参考(ファクトチェック済み)</div><ul><li><a href="https://www.nipr.ac.jp/info/notice/20200902.html" rel="noopener noreferrer">チバニアン・約77万年前の直近の地磁気逆転(国立極地研究所)</a></li>
+<li><a href="https://www.pref.chiba.lg.jp/kyouiku/bunkazai/chibanian/index.html" rel="noopener noreferrer">誕生!チバニアン・地磁気逆転の記録(千葉県)</a></li>
+<li><a href="https://ja.wikipedia.org/wiki/1989%E5%B9%B43%E6%9C%88%E3%81%AE%E7%A3%81%E6%B0%97%E5%B5%90" rel="noopener noreferrer">1989年3月の磁気嵐・ケベック州大停電(Wikipedia)</a></li>
+<li><a href="https://www.isee.nagoya-u.ac.jp/50naze/space_weather/28.html" rel="noopener noreferrer">オーロラと停電・日本は磁気緯度が低い(名古屋大学 宇宙天気50のなぜ)</a></li>
+<li><a href="https://academist-cf.com/journal/?p=5937" rel="noopener noreferrer">磁場を持たない火星に太陽風が直接吹きつけ大気が流出(academist Journal)</a></li>
+<li><a href="https://www.astroarts.co.jp/article/hl/a/9723_mars" rel="noopener noreferrer">火星の大気流出とMAVEN・磁気圏が太陽風から大気を守る(アストロアーツ)</a></li></ul></div>
+  <div class="relnav">
+    <a class="btn primary" href="simulator.html">🎛️ 統合シミュレーターで全部いじる</a><a class="btn" href="orbit.html">🥚 次の記事:もしも公転軌道がもっと楕円だったら</a><a class="btn" href="gravity.html">🏋️ 前の記事:もしも重力が2倍だったら</a>
+  </div>
+</div>
+
+<footer class="site">
+  <div class="flinks">
+    <a href="../index.html">トップ</a><a href="../zukan/index.html">もしも図鑑</a><a href="../zukan/kotoba.html">用語じてん</a><a href="../tera.html">テラちゃん</a><a href="../qa.html">Q&amp;A</a><a href="../omiyage.html">おみやげ</a><a href="../contact.html">お問い合わせ</a>
+  </div>
+  ※ 当サイトのシミュレーションはすべて簡略化した概算モデルです。実際の気候・人口動態はもっと複雑です。<br>
+  © もしも地球ラボ / OBSERVATION LOG by テラちゃん
+</footer>
+</body>
+</html>

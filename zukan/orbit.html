@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src https://formspree.io; base-uri 'none'; form-action https://formspree.io">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="description" content="地球の軌道はほぼ真円(離心率0.017)。のばすと近日点と遠日点で日射が激変。氷期のリズムもここに隠れている。">
+<meta property="og:site_name" content="もしも地球ラボ">
+<meta property="og:title" content="もしも公転軌道がもっと楕円だったら|もしも図鑑|もしも地球ラボ">
+<meta property="og:description" content="地球の軌道はほぼ真円(離心率0.017)。のばすと近日点と遠日点で日射が激変。氷期のリズムもここに隠れている。">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://moshimo-lab.github.io/assets/ogp.png">
+<title>もしも公転軌道がもっと楕円だったら|もしも図鑑|もしも地球ラボ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=JetBrains+Mono:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../assets/site.css">
+<script src="../assets/orbit.js" defer></script>
+</head>
+<body>
+<div class="stars"></div>
+<nav class="topnav">
+  <a class="brand" href="../index.html">🌍 もしも地球ラボ</a>
+  <div class="links">
+    <a href="../zukan/index.html" class="active">もしも図鑑</a>
+    <a href="../zukan/kotoba.html">用語じてん</a>
+    <a href="../tera.html">テラちゃんについて</a>
+    <a href="../qa.html">地球のギモンQ&amp;A</a>
+    <a href="../omiyage.html">おみやげ</a>
+    <a href="../contact.html">お問い合わせ</a>
+  </div>
+</nav>
+
+<div class="wrap">
+  <div class="article-hero">
+    <div class="eyebrow">MOSHIMO ZUKAN // FILE 08</div>
+    <h1>🥚 もしも公転軌道がもっと楕円だったら</h1>
+    <p class="sub">地球の軌道は、実はほぼ真円。それをタマゴ型にのばすと、季節の「もう一つの作り方」が現れる。</p>
+  </div>
+  
+  <div class="minisim">
+    <div class="stage">
+      <div class="earth-wrap small" id="earthWrap">
+      
+      <div class="atmosphere"></div>
+      <div class="earth" id="earth">
+        <div class="globe-strip" id="globeStrip">
+          <div class="hemi"><div class="land land1"></div><div class="land land2"></div><div class="land land3"></div><div class="clouds"></div></div>
+          <div class="hemi"><div class="land land1"></div><div class="land land2"></div><div class="land land3"></div><div class="clouds"></div></div>
+        </div>
+        <div class="heat-overlay" id="heatOverlay"></div>
+        <div class="ice-overlay" id="iceOverlay"></div>
+      </div>
+    </div>
+      <div class="mascot" id="mascot">
+      <div class="sat">
+        <div class="antenna"></div><div class="tip"></div>
+        <div class="wing l"><i></i><i></i><b></b></div>
+        <div class="wing r"><b></b><i></i><i></i></div>
+        <div class="mascot-body" id="mascotBody">
+          <div class="eye l"></div><div class="eye r"></div>
+          <div class="blush l"></div><div class="blush r"></div>
+          <div class="sweat"></div>
+        </div>
+        <div class="tail"></div>
+      </div>
+      <div class="speech" id="speech"><span class="name">テラちゃん</span><span id="speechLine">今日も平常運転だよ〜</span></div>
+    </div>
+    </div>
+    <div class="readout cols3">
+      <div class="card"><div class="k">近日点↔遠日点の日射差</div><div class="v" id="fluxgap">約7%</div></div>
+      <div class="card"><div class="k">近⇔遠 気温差(概算)</div><div class="v" id="tgap">約5℃</div></div>
+      <div class="card"><div class="k">軌道のかたち</div><div class="v" id="shape">ほぼ真円</div></div>
+    </div>
+    <div class="slider-panel bare" id="panelOrb">
+      <div class="label">軌道の離心率(いまの地球=0.017)</div>
+      <div class="value" id="valOrb">0.017</div>
+      <input type="range" id="orb" min="0" max="80" value="17" aria-label="軌道の離心率">
+      <div class="scale"><span>0(真円)</span><span>0.017(いま)</span><span class="warn">0.8(彗星並み)</span></div>
+      <div class="why" id="whyOrb">🔎 地球の軌道は離心率0.017の、ほとんど真円。だから距離による季節差は小さいよ</div>
+    </div>
+  </div>
+  
+  <h2>軌道をタマゴ型にのばすと、何が起きる?</h2>
+  <h3>① そもそも地球の軌道は「ほぼ真円」</h3>
+  <p>「地球は楕円軌道を回っている」とよく言われますが、その楕円の潰れ具合(離心率)はわずか0.017。絵に描くとほとんど真円で、太陽の位置が中心からほんの少しズレているだけです。だから太陽との距離は年間で3%ほどしか変わらず、受け取る日射の差も約7%にとどまります。<strong>いまの四季は、この距離の差ではなく、<a href="tilt.html">地軸の傾き</a>がほぼ全部つくっています</strong>。証拠に、地球が太陽にいちばん近づくのは1月上旬——北半球が真冬のときです。</p>
+  <h3>② のばすほど、「距離でつくる季節」が強くなる</h3>
+  <p>スライダーで離心率を上げると、近日点(いちばん近い)と遠日点(いちばん遠い)の距離差が開きます。近いときは日射が増えて暑く、遠いときは減って寒い——傾きとは別に、<strong>惑星全体が同時に暑くなったり寒くなったりする季節</strong>が生まれます。火星の離心率は0.093と地球の約5.5倍で、このため火星の南半球の夏は北半球より暑いなど、距離由来の季節差がはっきり出ています。</p>
+  <h3>③ 氷期のリズムは、この「のび縮み」に隠れている</h3>
+  <p>地球の離心率は一定ではありません。木星や土星の重力に引かれて、約10万年周期でゆっくり「のびたり真円に戻ったり」を繰り返しています。地軸の傾き(約4万年周期)や首振り運動(約2万年周期)と合わさって高緯度に届く日射を変動させ、氷期と間氷期のリズムをつくる——これが<strong>ミランコビッチ・サイクル</strong>です。海底の地層に残る過去の気温変動には、たしかにこれらの周期が刻まれています。あなたが動かしたスライダーは、100万年ぶんの気候のダイヤルでもあるのです。</p>
+  <h3>④ 極端にのばすと、季節が凶暴になる</h3>
+  <p>離心率を彗星並み(0.8前後)まで上げると、近日点では灼熱、遠日点では極寒という、往復びんたのような1年になります。生命にとっては相当に過酷ですが、それでも「距離が変わるだけ」なら、公転の途中に穏やかな季節も挟まります。<a href="tilt.html">傾きすぎ</a>の記事で見た「半年ずっと昼/半年ずっと夜」とはまた違う、もう一つの厳しさの作り方です。地球が住みやすいのは、傾きも軌道も「ほどほど」だからなのです。</p>
+
+  <div class="note"><div class="nt">💡 豆知識:「10万年問題」という未解決の謎</div>
+  過去100万年の氷期は約10万年周期で訪れていて、これは離心率の変動周期とぴったり一致します。ところが不思議なことに、離心率が日射量そのものに与える影響は、傾きや歳差に比べてずっと小さい(数%程度)。「効き目が弱いはずの10万年周期が、なぜ氷期のリズムを支配しているのか?」——これは<strong>10万年問題</strong>と呼ばれ、今も完全には解けていない現役の謎です。ほぼ真円のこの軌道に、まだ宿題が残っているのです。</div>
+  
+  <div class="termmemo"><div class="tm">🔎 むずかしい言葉は「用語じてん」でチェック</div>
+  <div class="termchips"><a href="kotoba.html#eccentricity">離心率</a><a href="kotoba.html#revolution">公転</a><a href="kotoba.html#milankovitch">ミランコビッチ・サイクル</a></div></div>
+  
+  <div class="sources"><div class="st">📚 出典・参考(ファクトチェック済み)</div><ul><li><a href="https://ja.wikipedia.org/wiki/%E5%9C%B0%E7%90%83" rel="noopener noreferrer">地球の軌道離心率0.0167・光量にして約7%の変動(Wikipedia:地球)</a></li>
+<li><a href="https://astro-dic.jp/milankovitch-cycle/" rel="noopener noreferrer">ミランコビッチサイクル・離心率10万年/傾き4万年/歳差2.6万年(天文学辞典)</a></li>
+<li><a href="https://ja.wikipedia.org/wiki/10%E4%B8%87%E5%B9%B4%E5%95%8F%E9%A1%8C" rel="noopener noreferrer">10万年問題・離心率の日射寄与は歳差や傾きの1〜2%(Wikipedia)</a></li>
+<li><a href="https://ja.wikipedia.org/wiki/%E7%81%AB%E6%98%9F" rel="noopener noreferrer">火星の離心率0.0934・近日点/遠日点の差(Wikipedia:火星)</a></li>
+<li><a href="https://eco.mtk.nao.ac.jp/koyomi/wiki/A5B1A5D7A5E9A1BCA4CECBA1C2A7.html" rel="noopener noreferrer">ケプラーの法則・最近距離a(1-e)/最遠距離a(1+e)(国立天文台 暦Wiki)</a></li></ul></div>
+  <div class="relnav">
+    <a class="btn primary" href="simulator.html">🎛️ 統合シミュレーターで全部いじる</a><a class="btn" href="ocean.html">🌊 次の記事:もしも陸と海が半々だったら</a><a class="btn" href="magnet.html">🧲 前の記事:もしも磁場が消えたら</a>
+  </div>
+</div>
+
+<footer class="site">
+  <div class="flinks">
+    <a href="../index.html">トップ</a><a href="../zukan/index.html">もしも図鑑</a><a href="../zukan/kotoba.html">用語じてん</a><a href="../tera.html">テラちゃん</a><a href="../qa.html">Q&amp;A</a><a href="../omiyage.html">おみやげ</a><a href="../contact.html">お問い合わせ</a>
+  </div>
+  ※ 当サイトのシミュレーションはすべて簡略化した概算モデルです。実際の気候・人口動態はもっと複雑です。<br>
+  © もしも地球ラボ / OBSERVATION LOG by テラちゃん
+</footer>
+</body>
+</html>
