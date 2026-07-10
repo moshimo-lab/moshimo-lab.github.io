@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src https://formspree.io; base-uri 'none'; form-action https://formspree.io">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="description" content="固体が液体より軽い物質は、ごくわずか。もし氷が沈む普通の物質だったら、湖は底から凍り、魚は冬を越せない。">
+<meta property="og:site_name" content="もしも地球ラボ">
+<meta property="og:title" content="もしも氷が水に沈んだら|もしも図鑑|もしも地球ラボ">
+<meta property="og:description" content="固体が液体より軽い物質は、ごくわずか。もし氷が沈む普通の物質だったら、湖は底から凍り、魚は冬を越せない。">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://moshimo-lab.pages.dev/assets/ogp.png?v=202607101025">
+<title>もしも氷が水に沈んだら|もしも図鑑|もしも地球ラボ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=JetBrains+Mono:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../assets/site.css?v=202607101025">
+<script src="../assets/ice.js?v=202607101025" defer></script>
+</head>
+<body>
+<div class="stars"></div>
+<nav class="topnav">
+  <a class="brand" href="../index.html">🌍 もしも地球ラボ</a>
+  <div class="links">
+    <a href="../zukan/index.html" class="active">もしも図鑑</a>
+    <a href="../zukan/kotoba.html">用語じてん</a>
+    <a href="../tera.html">テラちゃんについて</a>
+    <a href="../qa.html">地球のギモンQ&amp;A</a>
+    <a href="../omiyage.html">おみやげ</a>
+    <a href="../contact.html">お問い合わせ</a>
+  </div>
+</nav>
+
+<div class="wrap">
+  <div class="article-hero">
+    <div class="eyebrow">MOSHIMO ZUKAN // FILE 17</div>
+    <h1>🧊 もしも氷が水に沈んだら</h1>
+    <p class="sub">氷が水に浮くのは、実は自然界の大例外。この「当たり前」が消えると、湖の生き物は冬を越せなくなる。</p>
+  </div>
+  
+  <div class="minisim">
+    <div class="stage">
+      <div class="earth-wrap small" id="earthWrap">
+      
+      <div class="atmosphere"></div>
+      <div class="earth" id="earth">
+        <div class="globe-strip" id="globeStrip">
+          <div class="hemi"><div class="land land1"></div><div class="land land2"></div><div class="land land3"></div><div class="clouds"></div></div>
+          <div class="hemi"><div class="land land1"></div><div class="land land2"></div><div class="land land3"></div><div class="clouds"></div></div>
+        </div>
+        <div class="heat-overlay" id="heatOverlay"></div>
+        <div class="ice-overlay" id="iceOverlay"></div>
+      </div>
+    </div>
+      <div class="mascot" id="mascot">
+      <div class="sat">
+        <div class="antenna"></div><div class="tip"></div>
+        <div class="wing l"><i></i><i></i><b></b></div>
+        <div class="wing r"><b></b><i></i><i></i></div>
+        <div class="mascot-body" id="mascotBody">
+          <div class="eye l"></div><div class="eye r"></div>
+          <div class="blush l"></div><div class="blush r"></div>
+          <div class="sweat"></div>
+        </div>
+        <div class="tail"></div>
+      </div>
+      <div class="speech" id="speech"><span class="name">テラちゃん</span><span id="speechLine">今日も平常運転だよ〜</span></div>
+    </div>
+    </div>
+    <div class="readout cols3">
+      <div class="card"><div class="k">氷は水に…</div><div class="v" id="ifloat">浮く</div></div>
+      <div class="card"><div class="k">冬の湖の凍り方</div><div class="v" id="ilake">表面にフタ</div></div>
+      <div class="card"><div class="k">水の中の生き物</div><div class="v" id="ifish">冬を越せる</div></div>
+    </div>
+    <div class="slider-panel bare" id="panelIce">
+      <div class="label">氷の密度(液体の水=1.00)</div>
+      <div class="value" id="valIce">0.92(いまの氷)</div>
+      <input type="range" id="ice" min="80" max="110" value="92" aria-label="氷の密度">
+      <div class="scale"><span>0.80(軽い)</span><span>0.92(いま)</span><span class="warn">1.10(水より重い)</span></div>
+      <div class="why" id="whyIce">🔎 いまの氷の密度は約0.92。水(1.00)より軽いから浮くよ。固体が液体より軽いのは、自然界ではとてもめずらしいんだ</div>
+    </div>
+  </div>
+  
+  <h2>氷を「沈む物質」に変えると、何が起きる?</h2>
+  <h3>① そもそも「氷が浮く」ことが、大例外</h3>
+  <p>グラスの氷が浮くのを、私たちは当たり前だと思っています。しかし自然界では、<strong>固体が液体より軽い物質はごくわずかな例外</strong>で、ほとんどの物質は固体になると縮んで重くなり、沈みます。水が例外なのは、水分子どうしをつなぐ「水素結合」が、氷になるときに<strong>すき間の多い結晶構造</strong>を作るから。氷の密度は約0.92で、液体の水(1.00)より約8%も軽いのです。ペットボトルの水を凍らせると膨らむのも、同じ理由です。</p>
+  <h3>② もし沈んだら:湖が「底から」凍っていく</h3>
+  <p>スライダーで氷の密度を1.00より重くしてみてください。冬の湖で起きることが一変します。今の世界では、氷は湖面に浮いて<strong>フタ</strong>になり、それより下の水を冷気から守ります。しかも水は約4℃でいちばん重くなる性質があるため、湖底には4℃前後の水がたまり、魚たちはそこで冬を越せます。ところが氷が沈む世界では、できた氷が次々と底に沈み、湖は<strong>底から丸ごと凍りついていきます</strong>。文部科学省の資料も、もし固体の水が液体より重ければ「湖の水はどこも0℃になって凍ってしまい、魚も生きていられない」と説明しています。</p>
+  <h3>③ 春が来ても、湖はよみがえらない</h3>
+  <p>さらに深刻なのは、その後です。底まで凍った湖は、春になっても簡単には解けません。太陽の光は水面近くで吸収されてしまい、湖底の氷までは届きにくいからです。毎年の冬のたびに氷が積み残されていけば、湖や浅い海は生き物の住めない場所になっていく——氷が浮くという小さな例外が、水の中の生態系全体を冬から守っている、と言えるのです。</p>
+  <h3>④ 「水そのものが、ちょうどいい」</h3>
+  <p>このサイトでは、距離や傾きや大気など、地球の「設定」のちょうどよさを見てきました。この記事の主役はもっと足元にあります。<strong>水という物質そのものが、生命にとって都合のよい例外だらけ</strong>なのです。氷が浮くこと。4℃で最も重くなること。<a href="ocean.html">温まりにくく冷めにくいこと(大きな熱容量)</a>。蒸発するときに大きな熱を奪うこと(汗が体を冷やす仕組み)。地球の住みやすさは、宇宙の設定だけでなく、コップの中の化学にも支えられています。</p>
+
+  <div class="note"><div class="nt">💡 豆知識:氷山の一角は、本当に「一角」</div>
+  氷の密度(約0.92)と海水の密度の差から、氷山は全体の約1割だけを海面の上に出し、9割は水面下に隠れています。「氷山の一角」ということわざは、物理的にかなり正確なたとえなのです。ちなみに固体が液体より軽いという水の性質は完全な唯一無二ではなく、シリコンなど、氷と同じようにすき間の多い結晶を作るごく一部の物質にも見られます。例外には例外の仲間がいる——化学の世界も、なかなか奥が深いのです。</div>
+  
+  <div class="termmemo"><div class="tm">🔎 むずかしい言葉は「用語じてん」でチェック</div>
+  <div class="termchips"><a href="kotoba.html#density">密度</a><a href="kotoba.html#heat-capacity">熱容量</a></div></div>
+  
+  <div class="sources"><div class="st">📚 出典・参考(ファクトチェック済み)</div><ul><li><a href="https://www.mext.go.jp/b_menu/shingi/gijyutu/gijyutu0/shiryo/attach/1331537.htm" rel="noopener noreferrer">氷と水の密度比は約10対11・氷が沈むなら湖は全体が凍り魚は生きられない・春も光が湖底に届かない(文部科学省「水の性質と役割」)</a></li>
+<li><a href="https://rdc.mayekawa.co.jp/column/02-1.shtml" rel="noopener noreferrer">水は4℃(3.98℃)で密度最大・湖底は約4℃に保たれ水生生物が越冬できる(前川製作所 技術研究所)</a></li>
+<li><a href="https://yukinokagakukan.kagashi-ss.com/oshiete/4%E2%84%83%E3%81%AE%E3%83%8A%E3%82%BE/" rel="noopener noreferrer">氷の水素結合はすき間の多い結晶構造を作る・シリコンなど一部の物質にも同じ性質(中谷宇吉郎 雪の科学館)</a></li>
+<li><a href="https://www.kodomonokagaku.com/read/hatena/5042/" rel="noopener noreferrer">氷の比重は0.92・氷山は約1割だけ海面上に出る(子供の科学/文部科学省)</a></li>
+<li><a href="https://www.nims.go.jp/chikara/column/icewater.html" rel="noopener noreferrer">水の密度・比熱・気化熱など特異な性質の一覧(NIMS 物質・材料研究機構)</a></li></ul></div>
+  <div class="relnav">
+    <a class="btn primary" href="simulator.html">🎛️ 統合シミュレーターで全部いじる</a><a class="btn" href="impact.html">☄️ 次の記事:もしも小惑星の衝突が今も頻繁だったら</a><a class="btn" href="jupiter.html">🪐 前の記事:もしも木星がなかったら</a>
+  </div>
+</div>
+
+<footer class="site">
+  <div class="flinks">
+    <a href="../index.html">トップ</a><a href="../zukan/index.html">もしも図鑑</a><a href="../zukan/kotoba.html">用語じてん</a><a href="../tera.html">テラちゃん</a><a href="../qa.html">Q&amp;A</a><a href="../omiyage.html">おみやげ</a><a href="../contact.html">お問い合わせ</a>
+  </div>
+  ※ 当サイトのシミュレーションはすべて簡略化した概算モデルです。実際の気候・人口動態はもっと複雑です。<br>
+  © もしも地球ラボ / OBSERVATION LOG by テラちゃん
+</footer>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src https://formspree.io; base-uri 'none'; form-action https://formspree.io">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="description" content="太陽系最大の惑星が消えたら。「地球を守る盾」説と、それを見直す近年の研究。答えがまだ動いている話。">
+<meta property="og:site_name" content="もしも地球ラボ">
+<meta property="og:title" content="もしも木星がなかったら|もしも図鑑|もしも地球ラボ">
+<meta property="og:description" content="太陽系最大の惑星が消えたら。「地球を守る盾」説と、それを見直す近年の研究。答えがまだ動いている話。">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://moshimo-lab.pages.dev/assets/ogp.png?v=202607101025">
+<title>もしも木星がなかったら|もしも図鑑|もしも地球ラボ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=JetBrains+Mono:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../assets/site.css?v=202607101025">
+<script src="../assets/jupiter.js?v=202607101025" defer></script>
+</head>
+<body>
+<div class="stars"></div>
+<nav class="topnav">
+  <a class="brand" href="../index.html">🌍 もしも地球ラボ</a>
+  <div class="links">
+    <a href="../zukan/index.html" class="active">もしも図鑑</a>
+    <a href="../zukan/kotoba.html">用語じてん</a>
+    <a href="../tera.html">テラちゃんについて</a>
+    <a href="../qa.html">地球のギモンQ&amp;A</a>
+    <a href="../omiyage.html">おみやげ</a>
+    <a href="../contact.html">お問い合わせ</a>
+  </div>
+</nav>
+
+<div class="wrap">
+  <div class="article-hero">
+    <div class="eyebrow">MOSHIMO ZUKAN // FILE 16</div>
+    <h1>🪐 もしも木星がなかったら</h1>
+    <p class="sub">「木星は地球を守る盾」——長く信じられてきたこの定説が、いま揺らいでいる。揺らぐこと自体が、科学の面白さだ。</p>
+  </div>
+  
+  <div class="minisim">
+    <div class="stage">
+      <div class="earth-wrap small" id="earthWrap">
+      
+      <div class="atmosphere"></div>
+      <div class="earth" id="earth">
+        <div class="globe-strip" id="globeStrip">
+          <div class="hemi"><div class="land land1"></div><div class="land land2"></div><div class="land land3"></div><div class="clouds"></div></div>
+          <div class="hemi"><div class="land land1"></div><div class="land land2"></div><div class="land land3"></div><div class="clouds"></div></div>
+        </div>
+        <div class="heat-overlay" id="heatOverlay"></div>
+        <div class="ice-overlay" id="iceOverlay"></div>
+      </div>
+    </div>
+      <div class="mascot" id="mascot">
+      <div class="sat">
+        <div class="antenna"></div><div class="tip"></div>
+        <div class="wing l"><i></i><i></i><b></b></div>
+        <div class="wing r"><b></b><i></i><i></i></div>
+        <div class="mascot-body" id="mascotBody">
+          <div class="eye l"></div><div class="eye r"></div>
+          <div class="blush l"></div><div class="blush r"></div>
+          <div class="sweat"></div>
+        </div>
+        <div class="tail"></div>
+      </div>
+      <div class="speech" id="speech"><span class="name">テラちゃん</span><span id="speechLine">今日も平常運転だよ〜</span></div>
+    </div>
+    </div>
+    <div class="readout cols3">
+      <div class="card"><div class="k">木星の重力のとどく範囲</div><div class="v" id="jreach">1.0 倍</div></div>
+      <div class="card"><div class="k">小惑星帯のようす</div><div class="v" id="jbelt">いまの姿</div></div>
+      <div class="card"><div class="k">地球への彗星・小惑星</div><div class="v" id="jrisk">研究者も議論中</div></div>
+    </div>
+    <div class="slider-panel bare" id="panelJp">
+      <div class="label">木星の重さ(いま=1.0)</div>
+      <div class="value" id="valJp">1.00 倍</div>
+      <input type="range" id="jp" min="0" max="200" value="100" aria-label="木星の重さ">
+      <div class="scale"><span class="warn">0倍(木星なし)</span><span>1倍(いま)</span><span>2倍</span></div>
+      <div class="why" id="whyJp">🔎 木星は全惑星を合わせたより重い、太陽系の重力の大黒柱。その影響は太陽系全体におよぶよ</div>
+    </div>
+  </div>
+  
+  <h2>太陽系最大の惑星を消すと、何が起きる?</h2>
+  <h3>① 「太陽系の掃除屋」という定説があった</h3>
+  <p>木星は太陽系で圧倒的に大きな惑星で、その強い重力は太陽系全体に影響を及ぼしています。そこから生まれたのが「<strong>太陽系の掃除屋</strong>」という異名です。外からやってくる彗星を強い重力で受け止めたり弾き飛ばしたりして、内側の地球を衝突から守ってきた——「木星がなければ、地球に衝突する天体は1000倍になっていた」という見積もりまで語られてきました。1994年にシューメーカー・レヴィ第9彗星が木星に衝突する様子が観測されたことも、この「盾」のイメージを強くしました。</p>
+  <h3>② ところが近年、この定説が揺らいでいる</h3>
+  <p>コンピューターの性能が上がり、太陽系の天体の動きを精密に計算できるようになると、意外な結果が出始めます。近年のシミュレーションでは、<strong>木星は内側に入り込む彗星の数を有意には減らしていない</strong>とする報告が現れ、議論を呼んでいるのです。研究者の言葉を借りれば、木星は「盾」であると同時に、遠くの天体の軌道を変えて<strong>内側へ送り込む案内所</strong>でもある。実際、1770年に史上もっとも地球に近づいた彗星のひとつレクセル彗星は、その少し前に木星に接近して軌道を変えられ、地球のそばへ送り込まれた天体でした。守っているのか、投げ込んでいるのか——差し引きの答えは、まだ研究の最前線で動いています。</p>
+  <h3>③ はっきりしているのは「小惑星帯の生みの親」であること</h3>
+  <p>一方で、動かない事実もあります。火星と木星の間に広がる<strong>小惑星帯</strong>は、木星の強い重力に軌道をかき乱されて、天体どうしが合体して惑星に成長することを妨げられた「惑星になりそこねた材料」だと考えられています。もし木星がなかったら、あの場所にもう1つ岩石惑星が育っていたかもしれません。スライダーで木星を消すと、小惑星帯の運命が変わるのはこのためです。</p>
+  <h3>④ そして、地球の水の「配達人」だったかもしれない</h3>
+  <p>さらに近年のシミュレーション研究では、木星と土星の重力の連携が、誕生直後の太陽系で微惑星の軌道をかき乱し、その結果として<strong>水を豊富に含んだ天体が地球へ届けられた</strong>——地球誕生から1000〜2000万年のうちに水がもたらされた——というシナリオも提唱されています。つまり木星は、盾かどうかは議論中でも、地球の海の成立に一枚かんでいた可能性がある。消してしまうと、そもそも今の地球が存在したかどうかすら怪しくなるのです。</p>
+
+  <div class="note"><div class="nt">💡 豆知識:「答えが動いている」ことこそ、科学の現在地</div>
+  この記事には、他の記事のようなスッキリした結論がありません。それは手抜きではなく、<strong>本当にまだ決着がついていない</strong>からです。かつての定説が新しい計算で見直され、また新しい観測で書き換えられていく——教科書の内容も、こうやって静かに更新され続けています。このシミュレーターの数値も同じで、正解を当てるためではなく、「もしも」を想像して楽しむための道具です。10年後、木星の評価がどうなっているか。それを見届けられるのも、科学の楽しみのひとつです。</div>
+  
+  <div class="termmemo"><div class="tm">🔎 むずかしい言葉は「用語じてん」でチェック</div>
+  <div class="termchips"><a href="kotoba.html#gravity">重力</a><a href="kotoba.html#revolution">公転</a><a href="kotoba.html#lhb">後期重爆撃期</a></div></div>
+  
+  <div class="sources"><div class="st">📚 出典・参考(ファクトチェック済み)</div><ul><li><a href="https://ja.wikipedia.org/wiki/%E6%9C%A8%E6%98%9F" rel="noopener noreferrer">「太陽系の掃除屋」の異名と、内側に入る彗星を有意に減らさないとする近年のシミュレーション・議論(Wikipedia:木星)</a></li>
+<li><a href="https://www.gizmodo.jp/2020/01/jupiter-is-flinging-comets-toward-earth.html" rel="noopener noreferrer">木星は盾でもあり天体を内側へ送り込む存在でもある・レクセル彗星の例(ギズモード・ジャパン)</a></li>
+<li><a href="https://astro-dic.jp/asteroid-belt/" rel="noopener noreferrer">小惑星帯は木星の重力で合体成長を妨げられた微惑星(天文学辞典)</a></li>
+<li><a href="https://www.astroarts.co.jp/article/hl/a/12984_solarsystem" rel="noopener noreferrer">木星と土星の共鳴が地球型惑星と小惑星帯を形作り、形成後1000〜2000万年で地球に水が届いた(アストロアーツ)</a></li></ul></div>
+  <div class="relnav">
+    <a class="btn primary" href="simulator.html">🎛️ 統合シミュレーターで全部いじる</a><a class="btn" href="ice.html">🧊 次の記事:もしも氷が水に沈んだら</a><a class="btn" href="reverse.html">🔄 前の記事:もしも地球が逆回転したら</a>
+  </div>
+</div>
+
+<footer class="site">
+  <div class="flinks">
+    <a href="../index.html">トップ</a><a href="../zukan/index.html">もしも図鑑</a><a href="../zukan/kotoba.html">用語じてん</a><a href="../tera.html">テラちゃん</a><a href="../qa.html">Q&amp;A</a><a href="../omiyage.html">おみやげ</a><a href="../contact.html">お問い合わせ</a>
+  </div>
+  ※ 当サイトのシミュレーションはすべて簡略化した概算モデルです。実際の気候・人口動態はもっと複雑です。<br>
+  © もしも地球ラボ / OBSERVATION LOG by テラちゃん
+</footer>
+</body>
+</html>
