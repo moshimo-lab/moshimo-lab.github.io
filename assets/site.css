@@ -354,6 +354,32 @@ details .tera{margin-top:8px;font-family:'Zen Maru Gothic',sans-serif;font-size:
 .mini-moon{width:26px;height:26px;border-radius:50%;flex:0 0 auto;align-self:flex-start;margin-top:8px;
   background:radial-gradient(circle at 35% 30%, #fffbe8 0%, #ffe9a8 55%, #b39440 100%);
   box-shadow:0 0 14px rgba(255,233,168,.5);transition:transform .3s ease,opacity .3s ease}
+/* --- 子ども向けビジュアル: 距離レーン+見かけの太陽 --- */
+.kidviz{display:flex;gap:14px;align-items:stretch;margin:12px 0 4px}
+.dist-lane{flex:1;position:relative;background:linear-gradient(90deg,rgba(255,209,102,.12),rgba(11,18,32,0));
+  border:1px solid var(--line);border-radius:12px;padding:10px 14px 20px;min-width:0}
+.dist-lane .lane-cap{font-size:10.5px;color:var(--sub);margin-bottom:8px}
+.lane-row{position:relative;height:34px}
+.sunball{position:absolute;left:0;top:50%;transform:translateY(-50%);width:30px;height:30px;border-radius:50%;
+  background:radial-gradient(circle at 35% 30%,#fff6d8 0%,#ffd166 55%,#e08a2e 100%);
+  box-shadow:0 0 18px rgba(255,209,102,.65)}
+.lane-track{position:absolute;left:40px;right:12px;top:50%;height:2px;background:var(--line)}
+.lane-tick{position:absolute;top:-7px;width:2px;height:16px;background:rgba(94,234,212,.55)}
+.lane-tick::after{content:"いま";position:absolute;top:17px;left:50%;transform:translateX(-50%);
+  font-size:9px;color:var(--teal);white-space:nowrap}
+.lane-earth{position:absolute;top:50%;width:16px;height:16px;border-radius:50%;
+  transform:translate(-50%,-50%);transition:left .15s ease;
+  background:radial-gradient(circle at 35% 30%,#bfe3ff 0%,#4fb3ff 55%,#0a2f63 100%);
+  box-shadow:0 0 10px rgba(79,179,255,.6)}
+.skysun{flex:0 0 96px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;
+  border:1px solid var(--line);border-radius:12px;background:var(--bg2);padding:8px 6px}
+.skysun-stagebox{width:80px;height:56px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.skysun-circle{width:34px;height:34px;border-radius:50%;transition:width .15s ease,height .15s ease;
+  background:radial-gradient(circle at 35% 30%,#fff6d8 0%,#ffd166 55%,#e08a2e 100%);
+  box-shadow:0 0 16px rgba(255,209,102,.7)}
+.skysun-cap{font-size:9.5px;color:var(--sub);text-align:center;line-height:1.4}
+.value .vsub{display:block;font-size:10.5px;color:var(--sub);font-weight:400;font-family:'Noto Sans JP',sans-serif;margin-top:1px}
+@media (max-width:420px){.skysun{flex-basis:84px}.skysun-stagebox{width:70px}}
 .earth-wrap.unstable{animation:tiltWobble 5s ease-in-out infinite}
 @keyframes tiltWobble{0%,100%{transform:rotate(8deg)}50%{transform:rotate(42deg)}}
 @media (prefers-reduced-motion: reduce){.earth-wrap.unstable{animation:none;transform:rotate(23.4deg)}}

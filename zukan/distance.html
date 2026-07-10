@@ -74,11 +74,27 @@
       <div class="card"><div class="k">平均気温</div><div class="v" id="temp">約15℃</div></div>
       <div class="card"><div class="k">海のようす</div><div class="v" id="ocean">液体</div></div>
     </div>
+    <div class="kidviz">
+      <div class="dist-lane">
+        <div class="lane-cap">☀️太陽から、地球はどのくらいはなれてる?</div>
+        <div class="lane-row">
+          <div class="sunball"></div>
+          <div class="lane-track">
+            <div class="lane-tick" id="laneTick"></div>
+            <div class="lane-earth" id="laneEarth"></div>
+          </div>
+        </div>
+      </div>
+      <div class="skysun">
+        <div class="skysun-stagebox"><div class="skysun-circle" id="skySun"></div></div>
+        <div class="skysun-cap">地球から見える<br>太陽の大きさ</div>
+      </div>
+    </div>
     <div class="slider-panel bare" id="panelDist">
       <div class="label">太陽との距離</div>
-      <div class="value" id="valDist">1.00 AU</div>
+      <div class="value" id="valDist">1.00 倍(いまとおなじ)<span class="vsub" id="valDistSub">= 1.00 AU(天文単位)</span></div>
       <input type="range" id="dist" min="10" max="500" value="100" aria-label="太陽との距離">
-      <div class="scale"><span class="warn">0.1AU</span><span>1AU(いま)</span><span class="warn">5.0AU</span></div>
+      <div class="scale"><span class="warn">0.1倍(ちかい!)</span><span>1倍(いま)</span><span class="warn">5倍(とおい!)</span></div>
       <div class="why" id="whyDist">🔎 今の距離(1AU)は、水が液体で存在できる"ハビタブルゾーン"のほぼ中心だよ</div>
     </div>
   </div>

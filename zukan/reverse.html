@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src https://formspree.io; base-uri 'none'; form-action https://formspree.io">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="description" content="自転を逆にすると太陽は西から昇る。研究者の気候シミュでは、サハラが緑化しアメリカ大陸が砂漠になった。">
+<meta property="og:site_name" content="もしも地球ラボ">
+<meta property="og:title" content="もしも地球が逆回転したら|もしも図鑑|もしも地球ラボ">
+<meta property="og:description" content="自転を逆にすると太陽は西から昇る。研究者の気候シミュでは、サハラが緑化しアメリカ大陸が砂漠になった。">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://moshimo-lab.pages.dev/assets/ogp.png">
+<title>もしも地球が逆回転したら|もしも図鑑|もしも地球ラボ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=JetBrains+Mono:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../assets/site.css">
+<script src="../assets/reverse.js" defer></script>
+</head>
+<body>
+<div class="stars"></div>
+<nav class="topnav">
+  <a class="brand" href="../index.html">🌍 もしも地球ラボ</a>
+  <div class="links">
+    <a href="../zukan/index.html" class="active">もしも図鑑</a>
+    <a href="../zukan/kotoba.html">用語じてん</a>
+    <a href="../tera.html">テラちゃんについて</a>
+    <a href="../qa.html">地球のギモンQ&amp;A</a>
+    <a href="../omiyage.html">おみやげ</a>
+    <a href="../contact.html">お問い合わせ</a>
+  </div>
+</nav>
+
+<div class="wrap">
+  <div class="article-hero">
+    <div class="eyebrow">MOSHIMO ZUKAN // FILE 15</div>
+    <h1>🔄 もしも地球が逆回転したら</h1>
+    <p class="sub">太陽が西から昇り、風と海流が逆転する。すると——サハラ砂漠が、緑によみがえる。</p>
+  </div>
+  
+  <div class="minisim">
+    <div class="stage">
+      <div class="earth-wrap small" id="earthWrap">
+      
+      <div class="atmosphere"></div>
+      <div class="earth" id="earth">
+        <div class="globe-strip" id="globeStrip">
+          <div class="hemi"><div class="land land1"></div><div class="land land2"></div><div class="land land3"></div><div class="clouds"></div></div>
+          <div class="hemi"><div class="land land1"></div><div class="land land2"></div><div class="land land3"></div><div class="clouds"></div></div>
+        </div>
+        <div class="heat-overlay" id="heatOverlay"></div>
+        <div class="ice-overlay" id="iceOverlay"></div>
+      </div>
+    </div>
+      <div class="mascot" id="mascot">
+      <div class="sat">
+        <div class="antenna"></div><div class="tip"></div>
+        <div class="wing l"><i></i><i></i><b></b></div>
+        <div class="wing r"><b></b><i></i><i></i></div>
+        <div class="mascot-body" id="mascotBody">
+          <div class="eye l"></div><div class="eye r"></div>
+          <div class="blush l"></div><div class="blush r"></div>
+          <div class="sweat"></div>
+        </div>
+        <div class="tail"></div>
+      </div>
+      <div class="speech" id="speech"><span class="name">テラちゃん</span><span id="speechLine">今日も平常運転だよ〜</span></div>
+    </div>
+    </div>
+    <div class="readout cols3">
+      <div class="card"><div class="k">太陽が昇る方角</div><div class="v" id="sunrise">東から</div></div>
+      <div class="card"><div class="k">風と海流の向き</div><div class="v" id="flow">いつも通り</div></div>
+      <div class="card"><div class="k">サハラ砂漠は…</div><div class="v" id="sahara">砂漠のまま</div></div>
+    </div>
+    <div class="slider-panel bare" id="panelRv">
+      <div class="label">自転の向き（左いっぱい＝逆回転）</div>
+      <div class="value" id="valRv">順回転（いまの地球）</div>
+      <input type="range" id="rv" min="0" max="1" value="1" step="1" aria-label="自転の向き">
+      <div class="scale"><span class="warn">逆回転</span><span>順回転（いま）</span></div>
+      <div class="why" id="whyRv">🔎 自転の向きは、風や海流の向きを決めているよ。向きが変わると、地球の気候地図がまるごと描きかわるんだ</div>
+    </div>
+  </div>
+  
+  <h2>自転をひっくり返すと、何が起きる?</h2>
+  <h3>① まず、太陽が西から昇る</h3>
+  <p>地球が今と逆向きに回りだしたら、いちばんわかりやすい変化はこれ。<strong>太陽が西から昇り、東に沈む</strong>ようになります。時計でいえば、ニューヨークがロンドンより時間が進む——今とは東西が逆の世界です。でも本当におもしろいのは、空ではなく地上で起きる大変化のほうです。</p>
+  <h3>② 風と海流が逆転し、気候の地図が描きかわる</h3>
+  <p>自転の向きは、地球上を動くものを曲げる力(コリオリの力)の向きを決めています。だから自転を逆にすると、貿易風や偏西風といった<strong>風の向きも、それに押される海流の向きも、まるごと逆転</strong>します。風と海が世界中の熱と水を運ぶ経路が変わるので、どこが暖かく・どこに雨が降るか、という気候の地図そのものが描きかわるのです。実際にドイツの研究チームが、地球を逆回転させた世界を最新の気候モデルで7000年ぶんシミュレーションしています。</p>
+  <h3>③ そして——サハラ砂漠が、緑になる</h3>
+  <p>そのシミュレーションでいちばん驚かれた結果が、これ。<strong>世界最大のサハラ砂漠が消え、北アフリカと中東が緑と雨の土地によみがえった</strong>のです。かわりに、南米のブラジル・アルゼンチンやアメリカ南東部が、新しい砂漠になりました。砂漠は「その土地が暑いからできる」のではなく、風と海流がどう水を運ぶかで決まる——逆回転の地球は、その事実をあざやかに見せてくれます。研究者も「なぜ現実のサハラは砂漠で、逆回転だと砂漠でないのか」を考えさせられた、と語っています。</p>
+  <h3>④ 大西洋の海の流れも止まる</h3>
+  <p>変化は海の底にも及びます。今の地球では、大西洋を南北に巡る大きな海の流れ(大西洋の深層循環)が熱を運んでいますが、逆回転の世界ではこれが弱まり、かわりに太平洋に強い循環が生まれるとシミュレーションは示しました。さらにインド洋では、いまの地球では決して優勢になれない<strong>シアノバクテリア(藍藻)が大繁殖</strong>するという、生き物の世界の異変まで現れました。自転の向きひとつで、空も、海も、大陸の緑も、住む生き物さえも変わる。地球の姿は、回る向きの上に成り立っているのです。</p>
+
+  <div class="note"><div class="nt">💡 豆知識:「逆回転させる」には、地球を壊すしかない?</div>
+  研究者いわく、現実に地球の自転を逆にできるほどの小惑星衝突が起きたら「たぶん地球はもう残っていない」。だから彼らは天体をぶつける代わりに、コンピューターの中でコリオリの力や太陽の通り道だけをそっと反転させ、地球本体は壊さずに"逆回転の地球"を作りました。大陸の形も海の大きさもそのままに、回る向きだけを変える——だからこそ、純粋に「自転の向きが気候に何をしているか」だけを取り出して観察できたのです。想像の実験は、時に本物より雄弁です。</div>
+  
+  <div class="termmemo"><div class="tm">🔎 むずかしい言葉は「用語じてん」でチェック</div>
+  <div class="termchips"><a href="kotoba.html#rotation">自転</a><a href="kotoba.html#coriolis">コリオリの力</a><a href="kotoba.html#ocean">海洋循環</a></div></div>
+  
+  <div class="sources"><div class="st">📚 出典・参考(ファクトチェック済み)</div><ul><li><a href="https://eos.org/articles/reversing-earths-spin-moves-deserts-reshapes-ocean-currents" rel="noopener noreferrer">逆回転地球シミュレーション: コリオリ力を反転、太陽の日周運動も反転、7000年計算(Eos/AGU)</a></li>
+<li><a href="https://mpimet.mpg.de/en/communication/news/project-retrograde-imagine-earth-rotated-in-the-opposite-direction" rel="noopener noreferrer">RETROではサハラ・アラビア砂漠が緑化、南米が地球最大の砂漠に(マックス・プランク気象研究所 Project Retrograde)</a></li>
+<li><a href="https://www.space.com/40416-what-if-earth-rotation-reversed.html" rel="noopener noreferrer">大西洋の深層循環が崩壊し太平洋に強い循環、インド洋でシアノバクテリア繁殖(Space.com)</a></li>
+<li><a href="https://www.researchgate.net/publication/328256251_The_climate_of_a_retrograde_rotating_Earth" rel="noopener noreferrer">逆回転で東西の温度勾配が逆転、サハラ緑化・アメリカ砂漠化、査読論文(Earth System Dynamics)</a></li>
+<li><a href="https://www.rd.ntt/se/media/article/0033.html" rel="noopener noreferrer">自転の向きが貿易風・偏西風と海洋の風成循環の向きを決める(NTT研究所 Beyond Our Planet)</a></li></ul></div>
+  <div class="relnav">
+    <a class="btn primary" href="simulator.html">🎛️ 統合シミュレーターで全部いじる</a><a class="btn" href="moonhalf.html">🌕 前の記事:もしも月が半分の距離にあったら</a>
+  </div>
+</div>
+
+<footer class="site">
+  <div class="flinks">
+    <a href="../index.html">トップ</a><a href="../zukan/index.html">もしも図鑑</a><a href="../zukan/kotoba.html">用語じてん</a><a href="../tera.html">テラちゃん</a><a href="../qa.html">Q&amp;A</a><a href="../omiyage.html">おみやげ</a><a href="../contact.html">お問い合わせ</a>
+  </div>
+  ※ 当サイトのシミュレーションはすべて簡略化した概算モデルです。実際の気候・人口動態はもっと複雑です。<br>
+  © もしも地球ラボ / OBSERVATION LOG by テラちゃん
+</footer>
+</body>
+</html>
