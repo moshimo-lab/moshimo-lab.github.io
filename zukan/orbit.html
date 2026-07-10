@@ -11,13 +11,13 @@
 <meta property="og:description" content="地球の軌道はほぼ真円(離心率0.017)。のばすと近日点と遠日点で日射が激変。氷期のリズムもここに隠れている。">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
-<meta property="og:image" content="https://moshimo-lab.pages.dev/assets/ogp.png?v=202607100824">
+<meta property="og:image" content="https://moshimo-lab.pages.dev/assets/ogp.png?v=202607100920">
 <title>もしも公転軌道がもっと楕円だったら|もしも図鑑|もしも地球ラボ</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=JetBrains+Mono:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
-<link rel="stylesheet" href="../assets/site.css?v=202607100824">
-<script src="../assets/orbit.js?v=202607100824" defer></script>
+<link rel="stylesheet" href="../assets/site.css?v=202607100920">
+<script src="../assets/orbit.js?v=202607100920" defer></script>
 </head>
 <body>
 <div class="stars"></div>
@@ -73,6 +73,16 @@
       <div class="card"><div class="k">近日点↔遠日点の日射差</div><div class="v" id="fluxgap">約7%</div></div>
       <div class="card"><div class="k">近⇔遠 気温差(概算)</div><div class="v" id="tgap">約5℃</div></div>
       <div class="card"><div class="k">軌道のかたち</div><div class="v" id="shape">ほぼ真円</div></div>
+    </div>
+    <div class="orbit-viz">
+      <div class="lane-cap">🥚軌道のかたち(上から見たところ)</div>
+      <div class="orbit-stage">
+        <div class="ov-oval" id="ovOval"></div>
+        <div class="ov-sun" id="ovSun"></div>
+        <div class="ov-earth" id="ovEarth"></div>
+        <div class="ov-lab near" id="ovNear">ちかい!</div>
+        <div class="ov-lab" id="ovFar">とおい</div>
+      </div>
     </div>
     <div class="slider-panel bare" id="panelOrb">
       <div class="label">軌道の離心率(いまの地球=0.017)</div>

@@ -3,6 +3,7 @@ const $=id=>document.getElementById(id);
 const orb=$('orb'),valOrb=$('valOrb'),fluxgap=$('fluxgap'),tgap=$('tgap'),shape=$('shape');
 const globeStrip=$('globeStrip'),earthWrap=$('earthWrap'),speechLine=$('speechLine');
 const mascot=$('mascot'),panelOrb=$('panelOrb'),whyOrb=$('whyOrb');
+const ovOval=$('ovOval'),ovSun=$('ovSun'),ovEarth=$('ovEarth'),ovNear=$('ovNear'),ovFar=$('ovFar');
 function update(){
   const e=orb.value/100; // 0〜0.80
   valOrb.textContent=e.toFixed(3);
@@ -24,6 +25,16 @@ function update(){
   else if(e>=0.1)sp='ゆるいタマゴ型';
   else if(e>=0.05)sp='わずかに楕円';
   shape.textContent=sp;
+  // 楕円ビジュアル: 半長径a=80px固定、b=a√(1-e²)。太陽は焦点(中心からa·e)に。
+  if(ovOval){
+    const a=60,bb=a*Math.sqrt(1-e*e);
+    ovOval.style.width=(2*a)+'px';ovOval.style.height=(2*bb)+'px';
+    ovSun.style.left='calc(50% + '+(a*e)+'px)';
+    ovEarth.style.left='calc(50% + '+a+'px)';
+    ovNear.style.left='calc(50% + '+(a+12)+'px)';
+    ovFar.style.left='calc(50% - '+(a+38)+'px)';
+    ovNear.style.opacity=e>0.04?1:0;ovFar.style.opacity=e>0.04?1:0;
+  }
   panelOrb.classList.toggle('danger',e>=0.5);
   let line='ほとんど真円。おだやかな軌道だね',face='happy';
   if(e>=0.6){line='ぐわんぐわん!近づくと灼熱、離れると極寒だよ〜!';face='hot';}

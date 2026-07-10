@@ -3,6 +3,7 @@ const $=id=>document.getElementById(id);
 const mh=$('mh'),valMh=$('valMh'),tide=$('tide'),moonsize=$('moonsize'),shore=$('shore');
 const globeStrip=$('globeStrip'),earthWrap=$('earthWrap'),speechLine=$('speechLine');
 const miniMoon=$('miniMoon'),mascot=$('mascot'),panelMh=$('panelMh'),whyMh=$('whyMh');
+const laneMoon=$('laneMoon'),laneTickMh=$('laneTickMh');
 function update(){
   const d=mh.value/100; // 月までの距離(いま=1)
   valMh.textContent=d.toFixed(2)+' 倍';
@@ -12,6 +13,14 @@ function update(){
   // 見かけの大きさ ∝ 1/d
   const sz=1/d;
   moonsize.textContent=sz.toFixed(1)+' 倍';
+  // レーン: 0.3〜2.0倍を線形配置。月ドットは近いほど大きく
+  if(laneMoon){
+    const pos=Math.max(0,Math.min(100,(d-0.3)/1.7*100));
+    laneMoon.style.left=pos+'%';
+    const mpx=Math.max(9,Math.min(26,14/d));
+    laneMoon.style.width=mpx+'px';laneMoon.style.height=mpx+'px';
+  }
+  if(laneTickMh)laneTickMh.style.left=((1-0.3)/1.7*100)+'%';
   // 見た目の月サイズ・位置(近いほど大きく)
   if(miniMoon){
     const px=Math.max(10,Math.min(60,26*sz));

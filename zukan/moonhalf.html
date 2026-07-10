@@ -11,13 +11,13 @@
 <meta property="og:description" content="潮汐力は距離の3乗に反比例。月が半分の距離なら潮は8倍。実は大昔、月はもっと近かった。">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
-<meta property="og:image" content="https://moshimo-lab.pages.dev/assets/ogp.png?v=202607100824">
+<meta property="og:image" content="https://moshimo-lab.pages.dev/assets/ogp.png?v=202607100920">
 <title>もしも月が半分の距離にあったら|もしも図鑑|もしも地球ラボ</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=JetBrains+Mono:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
-<link rel="stylesheet" href="../assets/site.css?v=202607100824">
-<script src="../assets/moonhalf.js?v=202607100824" defer></script>
+<link rel="stylesheet" href="../assets/site.css?v=202607100920">
+<script src="../assets/moonhalf.js?v=202607100920" defer></script>
 </head>
 <body>
 <div class="stars"></div>
@@ -74,6 +74,18 @@
       <div class="card"><div class="k">潮の満ち引きの大きさ</div><div class="v" id="tide">1.0 倍</div></div>
       <div class="card"><div class="k">空に見える月の大きさ</div><div class="v" id="moonsize">1.0 倍</div></div>
       <div class="card"><div class="k">海辺のようす</div><div class="v" id="shore">いつも通り</div></div>
+    </div>
+    <div class="kidviz">
+      <div class="dist-lane">
+        <div class="lane-cap">🌍地球から、月はどのくらいはなれてる?</div>
+        <div class="lane-row">
+          <div class="earthball"></div>
+          <div class="lane-track">
+            <div class="lane-tick" id="laneTickMh"></div>
+            <div class="lane-moon" id="laneMoon"></div>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="slider-panel bare" id="panelMh">
       <div class="label">月までの距離(いまの地球=1.0)</div>
