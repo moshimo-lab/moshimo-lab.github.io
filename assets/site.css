@@ -337,3 +337,9 @@ details .tera{margin-top:8px;font-family:'Zen Maru Gothic',sans-serif;font-size:
 .minisim .readout{margin-top:10px}
 .relnav{display:flex;flex-wrap:wrap;gap:10px;margin:26px 0 0}
 .relnav a{flex:1 1 200px}
+.mini-moon{width:26px;height:26px;border-radius:50%;flex:0 0 auto;align-self:flex-start;margin-top:8px;
+  background:radial-gradient(circle at 35% 30%, #fffbe8 0%, #ffe9a8 55%, #b39440 100%);
+  box-shadow:0 0 14px rgba(255,233,168,.5);transition:transform .3s ease,opacity .3s ease}
+.earth-wrap.unstable{animation:tiltWobble 5s ease-in-out infinite}
+@keyframes tiltWobble{0%,100%{transform:rotate(8deg)}50%{transform:rotate(42deg)}}
+@media (prefers-reduced-motion: reduce){.earth-wrap.unstable{animation:none;transform:rotate(23.4deg)}}

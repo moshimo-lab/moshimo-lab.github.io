@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src https://formspree.io; base-uri 'none'; form-action https://formspree.io">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="description" content="体重2倍、木も山も低くなり、ロケットは飛ばせない。でも大気だけはがっちり守れる。">
+<meta property="og:site_name" content="もしも地球ラボ">
+<meta property="og:title" content="もしも重力が2倍だったら|もしも図鑑|もしも地球ラボ">
+<meta property="og:description" content="体重2倍、木も山も低くなり、ロケットは飛ばせない。でも大気だけはがっちり守れる。">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://moshimo-lab.github.io/assets/ogp.png">
+<title>もしも重力が2倍だったら|もしも図鑑|もしも地球ラボ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=JetBrains+Mono:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../assets/site.css">
+<script src="../assets/gravity.js" defer></script>
+</head>
+<body>
+<div class="stars"></div>
+<nav class="topnav">
+  <a class="brand" href="../index.html">🌍 もしも地球ラボ</a>
+  <div class="links">
+    <a href="../zukan/index.html" class="active">もしも図鑑</a>
+    <a href="../tera.html">テラちゃんについて</a>
+    <a href="../qa.html">地球のギモンQ&amp;A</a>
+    <a href="../omiyage.html">おみやげ</a>
+    <a href="../contact.html">お問い合わせ</a>
+  </div>
+</nav>
+
+<div class="wrap">
+  <div class="article-hero">
+    <div class="eyebrow">MOSHIMO ZUKAN // FILE 06</div>
+    <h1>🏋️ もしも重力が2倍だったら</h1>
+    <p class="sub">体重も2倍、山は半分、宇宙はずっと遠くなる。ずんぐりした世界へようこそ。</p>
+  </div>
+  
+  <div class="minisim">
+    <div class="stage">
+      <div class="earth-wrap small" id="earthWrap">
+      
+      <div class="atmosphere"></div>
+      <div class="earth" id="earth">
+        <div class="globe-strip" id="globeStrip">
+          <div class="hemi"><div class="land land1"></div><div class="land land2"></div><div class="land land3"></div><div class="clouds"></div></div>
+          <div class="hemi"><div class="land land1"></div><div class="land land2"></div><div class="land land3"></div><div class="clouds"></div></div>
+        </div>
+        <div class="heat-overlay" id="heatOverlay"></div>
+        <div class="ice-overlay" id="iceOverlay"></div>
+      </div>
+    </div>
+      <div class="mascot" id="mascot">
+      <div class="sat">
+        <div class="antenna"></div><div class="tip"></div>
+        <div class="wing l"><i></i><i></i><b></b></div>
+        <div class="wing r"><b></b><i></i><i></i></div>
+        <div class="mascot-body" id="mascotBody">
+          <div class="eye l"></div><div class="eye r"></div>
+          <div class="blush l"></div><div class="blush r"></div>
+          <div class="sweat"></div>
+        </div>
+        <div class="tail"></div>
+      </div>
+      <div class="speech" id="speech"><span class="name">テラちゃん</span><span id="speechLine">今日も平常運転だよ〜</span></div>
+    </div>
+    </div>
+    <div class="readout cols3">
+      <div class="card"><div class="k">体重(60kg基準)</div><div class="v" id="weight">60.0kg</div></div>
+      <div class="card"><div class="k">山の高さの上限目安</div><div class="v" id="mountain">約8,850m</div></div>
+      <div class="card"><div class="k">人口予測</div><div class="v" id="pop">約80億</div></div>
+    </div>
+    <div class="slider-panel bare" id="panelGrav">
+      <div class="label">重力(地球=1G)</div>
+      <div class="value" id="valGrav">1.00 G</div>
+      <input type="range" id="grav" min="10" max="300" value="100" aria-label="重力">
+      <div class="scale"><span class="warn">0.1G</span><span>1G(いま)</span><span class="warn">3.0G</span></div>
+      <div class="why" id="whyGrav">🔎 今の重力が、大気をつなぎとめ、生き物や山の大きさを決めているよ</div>
+    </div>
+  </div>
+  
+  <h2>2Gにすると、何が起きる?</h2>
+  <h3>① 全人類、常時リュック60kg</h3>
+  <p>体重60kgの人は、感覚的には120kgを支えて生きることになります。立つ・歩く・階段を上る、すべてが筋トレ。心臓は血液を「2倍重い体」の上まで押し上げねばならず、骨も血管も設計変更が必要です。進化の時間があれば、生き物は低く、脚が太く、ずんぐりした姿に寄っていくと考えられます。キリンのような「高さで勝負」する動物は、かなり苦しい戦略になります。</p>
+  <h3>② 山も木も、低くなる</h3>
+  <p>山の高さには限界があります。高くなりすぎると、自分の重さで根元の岩が耐えられなくなるからです。この限界はざっくり重力に反比例します。上の「山の高さの上限目安」を見てください──重力を火星並みの0.38Gにすると2万mを超えるはず。実際、重力が地球の約1/3の火星には、高さ約22km(エベレストの約2.5倍)のオリンポス山がそびえています。火星に巨大な山ができたのは、重力が小さいことに加えてプレート運動がなく同じ場所で噴火が続いたため、と考えられています。</p>
+  <h3>③ 宇宙が、とても遠くなる</h3>
+  <p>地球から宇宙へ出るには秒速11.2kmが必要ですが、同じ大きさのまま重力2倍の地球では約1.4倍の秒速16km級が必要になります。ロケットの燃料は雪だるま式に増えるので、人工衛星もGPSも気象観測も月面着陸も、実現は桁違いに難しくなったはず。テラちゃんのモデルになった観測衛星たちも、空に上がれなかったかもしれません。</p>
+  <h3>④ いいこともある:大気の毛布をがっちり保持</h3>
+  <p>重力は大気を地球につなぎとめる力でもあります。強い重力は大気を逃がさないので、温室効果の毛布は安泰。逆にスライダーを0.3G以下にしてみてください──長い年月で大気が宇宙へ逃げ、火星のように寒く薄い空気の惑星に近づいていくのが、人口予測の数字にも表れます。</p>
+
+  <div class="note"><div class="nt">💡 豆知識:「山の高さ上限」は太陽系で実証済み</div>
+  上の目安の式(エベレスト8,850m×1G÷重力)に火星の0.38Gを入れると約2万3,000m──実際のオリンポス山(約22km)とほぼ一致します。ざっくりした概算式でも、太陽系のスケール感はけっこう説明できてしまうのです。ただし山の高さは岩の強度や火山活動にもよるので、あくまで「目安」。この几帳面さも観測係の約束です。</div>
+  
+  <div class="sources"><div class="st">📚 出典・参考(ファクトチェック済み)</div><ul><li><a href="https://ja.wikipedia.org/wiki/%E5%A4%AA%E9%99%BD%E7%B3%BB%E3%81%AE%E5%A4%A9%E4%BD%93%E3%81%A7%E6%9C%80%E3%82%82%E9%AB%98%E3%81%84%E5%B1%B1%E3%81%AE%E4%B8%80%E8%A6%A7" rel="noopener noreferrer">オリンポス山(Wikipedia:太陽系の惑星で最も高い山・高さ21.9km)</a></li>
+<li><a href="https://natgeo.nikkeibp.co.jp/atcl/news/23/080700410/" rel="noopener noreferrer">巨大火山の理由=重力が約1/3+プレート移動なし(ナショナルジオグラフィック日本版)</a></li>
+<li><a href="https://enceladus47.wixsite.com/olympus-mons-guide/information" rel="noopener noreferrer">オリンポス山の基本情報・麓から約22km(Olympus Mons Guide/研究文献まとめ)</a></li></ul></div>
+  <div class="relnav">
+    <a class="btn primary" href="simulator.html">🎛️ 統合シミュレーターで全部いじる</a><a class="btn" href="atmosphere.html">🌫️ 前の記事:もしも大気が金星並みに濃かったら</a>
+  </div>
+</div>
+
+<footer class="site">
+  <div class="flinks">
+    <a href="../index.html">トップ</a><a href="../zukan/index.html">もしも図鑑</a><a href="../tera.html">テラちゃん</a><a href="../qa.html">Q&amp;A</a><a href="../omiyage.html">おみやげ</a><a href="../contact.html">お問い合わせ</a>
+  </div>
+  ※ 当サイトのシミュレーションはすべて簡略化した概算モデルです。実際の気候・人口動態はもっと複雑です。<br>
+  © もしも地球ラボ / OBSERVATION LOG by テラちゃん
+</footer>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src https://formspree.io; base-uri 'none'; form-action https://formspree.io">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="description" content="大気92倍=水深920m相当の圧力、そして気温460℃。金星はすぐ隣にある実例だった。">
+<meta property="og:site_name" content="もしも地球ラボ">
+<meta property="og:title" content="もしも大気が金星並みに濃かったら|もしも図鑑|もしも地球ラボ">
+<meta property="og:description" content="大気92倍=水深920m相当の圧力、そして気温460℃。金星はすぐ隣にある実例だった。">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://moshimo-lab.github.io/assets/ogp.png">
+<title>もしも大気が金星並みに濃かったら|もしも図鑑|もしも地球ラボ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=JetBrains+Mono:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../assets/site.css">
+<script src="../assets/atmosphere.js" defer></script>
+</head>
+<body>
+<div class="stars"></div>
+<nav class="topnav">
+  <a class="brand" href="../index.html">🌍 もしも地球ラボ</a>
+  <div class="links">
+    <a href="../zukan/index.html" class="active">もしも図鑑</a>
+    <a href="../tera.html">テラちゃんについて</a>
+    <a href="../qa.html">地球のギモンQ&amp;A</a>
+    <a href="../omiyage.html">おみやげ</a>
+    <a href="../contact.html">お問い合わせ</a>
+  </div>
+</nav>
+
+<div class="wrap">
+  <div class="article-hero">
+    <div class="eyebrow">MOSHIMO ZUKAN // FILE 05</div>
+    <h1>🌫️ もしも大気が金星並みに濃かったら</h1>
+    <p class="sub">温室効果が暴走した「地球の姉妹星」の実例つき。毛布は厚すぎても危ない。</p>
+  </div>
+  
+  <div class="minisim">
+    <div class="stage">
+      <div class="earth-wrap small" id="earthWrap">
+      
+      <div class="atmosphere"></div>
+      <div class="earth" id="earth">
+        <div class="globe-strip" id="globeStrip">
+          <div class="hemi"><div class="land land1"></div><div class="land land2"></div><div class="land land3"></div><div class="clouds"></div></div>
+          <div class="hemi"><div class="land land1"></div><div class="land land2"></div><div class="land land3"></div><div class="clouds"></div></div>
+        </div>
+        <div class="heat-overlay" id="heatOverlay"></div>
+        <div class="ice-overlay" id="iceOverlay"></div>
+      </div>
+    </div>
+      <div class="mascot" id="mascot">
+      <div class="sat">
+        <div class="antenna"></div><div class="tip"></div>
+        <div class="wing l"><i></i><i></i><b></b></div>
+        <div class="wing r"><b></b><i></i><i></i></div>
+        <div class="mascot-body" id="mascotBody">
+          <div class="eye l"></div><div class="eye r"></div>
+          <div class="blush l"></div><div class="blush r"></div>
+          <div class="sweat"></div>
+        </div>
+        <div class="tail"></div>
+      </div>
+      <div class="speech" id="speech"><span class="name">テラちゃん</span><span id="speechLine">今日も平常運転だよ〜</span></div>
+    </div>
+    </div>
+    <div class="readout cols3">
+      <div class="card"><div class="k">平均気温</div><div class="v" id="temp">約15℃</div></div>
+      <div class="card"><div class="k">温室効果の上乗せ</div><div class="v" id="green">+33℃</div></div>
+      <div class="card"><div class="k">気圧のたとえ</div><div class="v" id="pressure">地上と同じ</div></div>
+    </div>
+    <div class="slider-panel bare" id="panelAtm">
+      <div class="label">大気の濃さ(地球=1倍)</div>
+      <div class="value" id="valAtm">1.00 倍</div>
+      <input type="range" id="atm" min="0" max="1000" value="600" aria-label="大気の濃さ">
+      <div class="scale"><span class="warn">0.001倍(ほぼ真空)</span><span class="warn">100倍(金星超え)</span></div>
+      <div class="why" id="whyAtm">🔎 今の大気が、程よい温室効果でちょうどいい気温を保っているよ</div>
+    </div>
+  </div>
+  
+  <h2>大気92倍の世界=金星に、実例がある</h2>
+  <h3>① 気温は460℃、温室効果の暴走</h3>
+  <p>地球のすぐ内側を回る金星は、大きさも質量も地球そっくりの「姉妹星」。ところが大気の約96%が二酸化炭素で、猛烈な温室効果により地表は約460℃に保たれています。鉛(融点327℃)が溶ける温度です。このサイトのモデルで大気を90倍にすると約480℃──ざっくりした概算式でも、実際の金星(約460℃)にかなり近い数字が出るのを確かめてみてください(太陽との距離や重力まで含めて再現する<a href="simulator.html">統合シミュレーター</a>の金星プリセットでは、さらに実測に近づきます)。</p>
+  <h3>② 気圧92倍=水深920mの世界</h3>
+  <p>金星の地表気圧は約92気圧。これは地球の海の水深920mに相当する圧力です。金星に降りた探査機の多くは、地表に着く前に押し潰されるか、着いても1時間ほどしか通信できませんでした。深海探査艇なみの装甲がないと立っていられない世界です。</p>
+  <h3>③ でも上空50kmは、意外と地球</h3>
+  <p>おもしろいのはここから。金星も高度50〜55kmあたりまで上がると、気圧も気温も地球の地上に近くなります。太陽系で「もっとも地球に似た環境」は、実は金星の雲の上なのです。ここに浮遊都市を浮かべて住もうという構想が、大まじめに提案されています。</p>
+  <h3>④ 逆に薄くすると、火星になる</h3>
+  <p>スライダーを左に振ってみてください。大気が薄いと温室効果の毛布がなくなり、気温はどんどん下がります。大気が地球の1%未満しかない火星の平均気温は約−63℃。<a href="distance.html">「もしも太陽との距離が1.5倍だったら」</a>で見たとおり、惑星の運命は「太陽からの距離×大気の厚さ」のかけ算で決まるのです。</p>
+
+  <div class="note"><div class="nt">💡 豆知識:金星の空は、自転の60倍の速さで回っている</div>
+  金星の自転は1周に約243日と超スローなのに、上空の大気は約4日で金星を一周しています。自転の60倍の速さで大気だけが回る「スーパーローテーション」という現象で、なぜこんなことが起きるのか、完全には解明されていません。地球のすぐ隣に、まだこんな大きな謎が残っているのです。</div>
+  
+  <div class="sources"><div class="st">📚 出典・参考(ファクトチェック済み)</div><ul><li><a href="https://ja.wikipedia.org/wiki/%E9%87%91%E6%98%9F" rel="noopener noreferrer">金星(Wikipedia:92気圧=水深920m相当・約460℃・高度50km付近の環境)</a></li>
+<li><a href="https://ja.wikipedia.org/wiki/%E9%87%91%E6%98%9F%E3%81%AE%E5%A4%A7%E6%B0%97" rel="noopener noreferrer">金星の大気(Wikipedia:高度50〜65kmは地球に近い環境・浮遊都市構想)</a></li>
+<li><a href="https://www.isas.jaxa.jp/topics/002334.html" rel="noopener noreferrer">金星大気の熱構造・スーパーローテーション(JAXA宇宙科学研究所)</a></li>
+<li><a href="https://www-old.eps.s.u-tokyo.ac.jp/physics/aos/planet.html" rel="noopener noreferrer">金星の気象・スーパーローテーション(東京大学 地球惑星物理学科)</a></li></ul></div>
+  <div class="relnav">
+    <a class="btn primary" href="simulator.html">🎛️ 統合シミュレーターで全部いじる</a><a class="btn" href="gravity.html">🏋️ 次の記事:もしも重力が2倍だったら</a><a class="btn" href="moon.html">🌙 前の記事:もしも月がなかったら</a>
+  </div>
+</div>
+
+<footer class="site">
+  <div class="flinks">
+    <a href="../index.html">トップ</a><a href="../zukan/index.html">もしも図鑑</a><a href="../tera.html">テラちゃん</a><a href="../qa.html">Q&amp;A</a><a href="../omiyage.html">おみやげ</a><a href="../contact.html">お問い合わせ</a>
+  </div>
+  ※ 当サイトのシミュレーションはすべて簡略化した概算モデルです。実際の気候・人口動態はもっと複雑です。<br>
+  © もしも地球ラボ / OBSERVATION LOG by テラちゃん
+</footer>
+</body>
+</html>
