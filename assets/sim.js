@@ -80,7 +80,11 @@ function update(){
   const g=grav.value/100;                    // 0.1 - 3.0G
 
   valRot.textContent=r.toFixed(2)+' 倍';
-  valDist.textContent=d.toFixed(2)+' AU';
+  let dnear='';
+  if(Math.abs(d-1)<0.03)dnear='(いまとおなじ)';
+  else if(d<1)dnear='(いまより近い)';
+  else dnear='(いまより遠い)';
+  valDist.innerHTML=d.toFixed(2)+' 倍'+dnear+'<span class="vsub">= '+d.toFixed(2)+' AU(天文単位)</span>';
   valTilt.textContent=t.toFixed(1)+'°';
   valAtm.textContent=(a<0.01?a.toExponential(1):a.toFixed(2))+' 倍';
   valGrav.textContent=g.toFixed(2)+' G';
