@@ -378,6 +378,7 @@ details .tera{margin-top:8px;font-family:'Zen Maru Gothic',sans-serif;font-size:
   background:radial-gradient(circle at 35% 30%,#fff6d8 0%,#ffd166 55%,#e08a2e 100%);
   box-shadow:0 0 16px rgba(255,209,102,.7)}
 .skysun-cap{font-size:9.5px;color:var(--sub);text-align:center;line-height:1.4}
+.skysun-val{color:var(--gold);font-size:12px;font-family:'JetBrains Mono',monospace}
 .value .vsub{display:block;font-size:10.5px;color:var(--sub);font-weight:400;font-family:'Noto Sans JP',sans-serif;margin-top:1px}
 @media (max-width:420px){.skysun{flex-basis:84px}.skysun-stagebox{width:70px}}
 .earth-wrap.unstable{animation:tiltWobble 5s ease-in-out infinite}

@@ -1,7 +1,7 @@
 
 const $=id=>document.getElementById(id);
 const dist=$('dist'),valDist=$('valDist'),flux=$('flux'),temp=$('temp'),ocean=$('ocean');
-const laneEarth=$('laneEarth'),laneTick=$('laneTick'),skySun=$('skySun');
+const laneEarth=$('laneEarth'),laneTick=$('laneTick'),skySun=$('skySun'),skySunVal=$('skySunVal');
 const globeStrip=$('globeStrip'),earthWrap=$('earthWrap'),speechLine=$('speechLine');
 const mascot=$('mascot'),panelDist=$('panelDist'),whyDist=$('whyDist');
 const heatOverlay=$('heatOverlay'),iceOverlay=$('iceOverlay');
@@ -20,6 +20,7 @@ function update(){
   if(laneTick)laneTick.style.left=((0+1)/Math.log10(50)*100)+'%';
   // 地球から見える太陽: 見かけの大きさ∝1/距離
   if(skySun){const s=Math.max(7,Math.min(78,34/d));skySun.style.width=s+'px';skySun.style.height=s+'px';}
+  if(skySunVal)skySunVal.textContent=(1/d).toFixed(1)+'倍';
   const f=100/(d*d);
   flux.textContent=(f>=100?f.toFixed(0):f.toFixed(1))+'%';
   const tempC=255/Math.sqrt(d)+33-273; // 大気は地球のまま(=1倍)
