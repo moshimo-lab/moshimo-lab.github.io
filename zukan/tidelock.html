@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src https://formspree.io; base-uri 'none'; form-action https://formspree.io">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="description" content="地球が太陽に潮汐ロックされたら、片面は永遠の昼、片面は永遠の夜。境目の「永遠の黄昏」だけが住めるかも。">
+<meta property="og:site_name" content="もしも地球ラボ">
+<meta property="og:title" content="もしも地球が太陽に片面を向けたまま止まったら|もしも図鑑|もしも地球ラボ">
+<meta property="og:description" content="地球が太陽に潮汐ロックされたら、片面は永遠の昼、片面は永遠の夜。境目の「永遠の黄昏」だけが住めるかも。">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://moshimo-lab.pages.dev/assets/ogp.png?v=202607101300">
+<title>もしも地球が太陽に片面を向けたまま止まったら|もしも図鑑|もしも地球ラボ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=JetBrains+Mono:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../assets/site.css?v=202607101300">
+<script src="../assets/tidelock.js?v=202607101300" defer></script>
+</head>
+<body>
+<div class="stars"></div>
+<nav class="topnav">
+  <a class="brand" href="../index.html">🌍 もしも地球ラボ</a>
+  <div class="links">
+    <a href="../zukan/index.html" class="active">もしも図鑑</a>
+    <a href="../zukan/kotoba.html">用語じてん</a>
+    <a href="../tera.html">テラちゃんについて</a>
+    <a href="../qa.html">地球のギモンQ&amp;A</a>
+    <a href="../omiyage.html">おみやげ</a>
+    <a href="../contact.html">お問い合わせ</a>
+  </div>
+</nav>
+
+<div class="wrap">
+  <div class="article-hero">
+    <div class="eyebrow">MOSHIMO ZUKAN // FILE 32</div>
+    <h1>🌓 もしも地球が太陽に片面を向けたまま止まったら</h1>
+    <p class="sub">片側は永遠の昼で灼熱、反対側は永遠の夜で極寒。でもその境目の「永遠の夕暮れ」に、生命の居場所があるかもしれない。</p>
+  </div>
+  
+  <div class="minisim">
+    <div class="stage">
+      <div class="earth-wrap small" id="earthWrap">
+      
+      <div class="atmosphere"></div>
+      <div class="earth" id="earth">
+        <div class="globe-strip" id="globeStrip">
+          <div class="hemi"><div class="land land1"></div><div class="land land2"></div><div class="land land3"></div><div class="clouds"></div></div>
+          <div class="hemi"><div class="land land1"></div><div class="land land2"></div><div class="land land3"></div><div class="clouds"></div></div>
+        </div>
+        <div class="heat-overlay" id="heatOverlay"></div>
+        <div class="ice-overlay" id="iceOverlay"></div>
+      </div>
+    </div>
+      <div class="mascot" id="mascot">
+      <div class="sat">
+        <div class="antenna"></div><div class="tip"></div>
+        <div class="wing l"><i></i><i></i><b></b></div>
+        <div class="wing r"><b></b><i></i><i></i></div>
+        <div class="mascot-body" id="mascotBody">
+          <div class="eye l"></div><div class="eye r"></div>
+          <div class="blush l"></div><div class="blush r"></div>
+          <div class="sweat"></div>
+        </div>
+        <div class="tail"></div>
+      </div>
+      <div class="speech" id="speech"><span class="name">テラちゃん</span><span id="speechLine">今日も平常運転だよ〜</span></div>
+    </div>
+    </div>
+    <div class="readout cols3">
+      <div class="card"><div class="k">昼の面</div><div class="v" id="tlday">昼と夜がめぐる</div></div>
+      <div class="card"><div class="k">夜の面</div><div class="v" id="tlnight">昼と夜がめぐる</div></div>
+      <div class="card"><div class="k">住めそうな場所</div><div class="v" id="tllive">ほぼ全体</div></div>
+    </div>
+    <div class="slider-panel bare" id="panelTl">
+      <div class="label">潮汐ロックの進みぐあい</div>
+      <div class="value" id="valTl">0%(いまの地球:自転する)</div>
+      <input type="range" id="tl" min="0" max="100" value="0" aria-label="潮汐ロックの進みぐあい">
+      <div class="scale"><span>0%(自転する)</span><span class="warn">100%(片面を向け固定)</span></div>
+      <div class="why" id="whyTl">🔎 主星に近すぎると、惑星は同じ面を向けたまま止まる「潮汐ロック」になるよ。月が地球にいつも同じ面を向けているのと同じだよ</div>
+    </div>
+  </div>
+  
+  <h2>地球が太陽に片面を向けたまま止まると、何が起きる?</h2>
+  <h3>① 昼の面は灼熱、夜の面は極寒</h3>
+  <p>地球が<a href="rotation.html">自転</a>をやめ、太陽に同じ面を向けたまま止まったら——太陽の側はいつまでも昼で、日ざしが照りつづける<strong>永遠の昼</strong>。灼熱の世界です。反対側はいつまでも夜で、太陽の光がまったく届かない<strong>永遠の夜</strong>。凍りつく極寒の世界になります。ひとつの惑星に、灼熱の地獄と極寒の地獄が背中合わせに広がる。スライダーでロックを進めると、昼の面と夜の面がこの両極端に分かれていきます。</p>
+  <h3>② これは、月ですでに起きている</h3>
+  <p>「片面を向けたまま」なんて起こるの?と思うかもしれませんが、実は<strong>身近な月がまさにこの状態</strong>です。月は自転周期と公転周期がほぼ同じ約27.3日なので、地球にいつも同じ面(表)を向けていて、私たちは月の裏側を地上から見ることができません。これが<strong>潮汐ロック(自転と公転の同期)</strong>です。主星に近い天体ほど起こりやすく、<a href="reddwarf.html">赤色矮星</a>のそばを回る惑星の多くも、この状態だと考えられています。</p>
+  <h3>③ 「永遠の夕暮れ」に、生命の居場所?</h3>
+  <p>昼は灼熱、夜は極寒——では生命はまったく住めないのでしょうか。ここに、近年の研究が面白い答えを出しました。昼の面と夜の面のちょうど境目には、太陽がいつも地平線近くに見える<strong>「永遠の夕暮れ(ターミネーターゾーン)」</strong>という細い帯があります。この帯では、灼熱と極寒がほどよく混ざり合い、水が液体でいられる<strong>ちょうどよい気温が保たれる</strong>可能性があるのです。惑星全体が住めなくても、この夕暮れのリングにだけ生命の居場所がある——そんな世界も考えられています。</p>
+  <h3>④ 自転が、地球に昼と夜を配っている</h3>
+  <p>この記事の裏返しの教訓は、こうです。地球が灼熱にも極寒にも偏らず、どこでも生き物が暮らせるのは、<strong>自転して昼と夜を規則正しく配っているから</strong>。太陽の熱を全身にまんべんなく浴び、夜のあいだに冷ます。あたりまえの「1日」のくり返しが、実は地球の表面をまるごと居住可能にしている立役者なのです。<a href="moon.html">月</a>のおかげで自転が安定していることも、あわせて思い出してみてください。</p>
+
+  <div class="note"><div class="nt">💡 豆知識:潮汐ロックは「近さ」で決まる</div>
+  潮汐ロックが起きるかどうかは、主星との距離が大きく効きます。潮汐力は距離が近いほど急激に強まるため、主星のすぐそばを回る惑星ほどロックされやすいのです。<a href="distance.html">太陽から1.5億km</a>も離れた地球は、太陽に潮汐ロックされる心配はまずありません。皮肉なことに、暗い<a href="reddwarf.html">赤色矮星</a>のまわりでは「水が液体でいられる距離」が主星のすぐ近くになるため、住みやすい距離とロックされやすい距離が重なってしまう。宇宙で生命の住める場所を探すのは、思ったより難しいのです。</div>
+  
+  <div class="termmemo"><div class="tm">🔎 むずかしい言葉は「用語じてん」でチェック</div>
+  <div class="termchips"><a href="kotoba.html#tidal-lock">潮汐ロック</a><a href="kotoba.html#reddwarf">赤色矮星</a><a href="kotoba.html#habitable">ハビタブルゾーン</a></div></div>
+  
+  <div class="sources"><div class="st">📚 出典・参考(ファクトチェック済み)</div><ul><li><a href="https://para-verse.net/tidal-locking-theory/" rel="noopener noreferrer">潮汐ロックで主星に同じ面を向けると永遠の昼(灼熱)と永遠の夜(極寒)に分かれる(パラバース)</a></li>
+<li><a href="https://astropics.bookbright.co.jp/terminator-zones-on-distant-planets-could-harbor-life" rel="noopener noreferrer">昼夜境界のターミネーターゾーンで水が液体でいられ生命が居住可能な可能性(アストロピクス/UCアーバイン研究)</a></li>
+<li><a href="https://astro-dic.jp/tidal-lock/" rel="noopener noreferrer">月は自転・公転周期が約27.3日で同期し常に同じ面を地球に向ける(天文学辞典:潮汐ロック)</a></li>
+<li><a href="https://ja.wikipedia.org/wiki/%E8%87%AA%E8%BB%A2%E3%81%A8%E5%85%AC%E8%BB%A2%E3%81%AE%E5%90%8C%E6%9C%9F" rel="noopener noreferrer">赤色矮星のハビタブルゾーンの惑星の多くが潮汐ロックを受ける(自転と公転の同期/Wikipedia)</a></li>
+<li><a href="https://nazology.kusuguru.co.jp/archives/123610" rel="noopener noreferrer">永遠の黄昏の領域で生命が維持できる条件を検討した研究(ナゾロジー)</a></li></ul></div>
+  <div class="relnav">
+    <a class="btn primary" href="simulator.html">🎛️ 統合シミュレーターで全部いじる</a><a class="btn" href="lightning.html">⚡ 次の記事:もしも一日中ずっと雷が鳴っていたら</a><a class="btn" href="twomoons.html">🌗 前の記事:もしも月がふたつあったら</a>
+  </div>
+</div>
+
+<footer class="site">
+  <div class="flinks">
+    <a href="../index.html">トップ</a><a href="../zukan/index.html">もしも図鑑</a><a href="../zukan/kotoba.html">用語じてん</a><a href="../tera.html">テラちゃん</a><a href="../qa.html">Q&amp;A</a><a href="../omiyage.html">おみやげ</a><a href="../contact.html">お問い合わせ</a>
+  </div>
+  ※ 当サイトのシミュレーションはすべて簡略化した概算モデルです。実際の気候・人口動態はもっと複雑です。<br>
+  © もしも地球ラボ / OBSERVATION LOG by テラちゃん
+</footer>
+</body>
+</html>

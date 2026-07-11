@@ -435,6 +435,103 @@ details .tera{margin-top:8px;font-family:'Zen Maru Gothic',sans-serif;font-size:
   box-shadow:0 0 8px rgba(79,179,255,.6)}
 .ov-lab{position:absolute;top:50%;transform:translateY(-50%);font-size:9px;color:var(--sub);white-space:nowrap}
 .ov-lab.near{color:var(--gold)}
+/* 日食くらべ(bigmoon) */
+.eclipse-row{display:flex;gap:12px;align-items:stretch;margin:12px 0 4px}
+.ec-item{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;
+  border:1px solid var(--line);border-radius:12px;background:var(--bg2);padding:10px 6px;min-width:0}
+.ec-stage{height:70px;display:flex;align-items:center;justify-content:center}
+.ec-circle{border-radius:50%;transition:width .15s ease,height .15s ease}
+.ec-circle.sun{width:34px;height:34px;
+  background:radial-gradient(circle at 35% 30%,#fff6d8 0%,#ffd166 55%,#e08a2e 100%);
+  box-shadow:0 0 16px rgba(255,209,102,.7)}
+.ec-circle.moon{width:34px;height:34px;
+  background:radial-gradient(circle at 35% 30%,#e8edf5 0%,#aeb9cc 55%,#5d6b85 100%);
+  box-shadow:0 0 10px rgba(174,185,204,.5)}
+.ec-cap{font-size:9.5px;color:var(--sub);text-align:center;line-height:1.4}
+.ec-vs{align-self:center;color:var(--sub);font-weight:900;font-size:12px}
+/* 空の色バンド(sky) */
+.skyband-wrap{border:1px solid var(--line);border-radius:12px;background:var(--bg2);
+  padding:10px 14px 8px;margin:12px 0 4px}
+.skyband-wrap .lane-cap{font-size:10.5px;color:var(--sub);margin-bottom:6px}
+.skyband{position:relative;height:56px;border-radius:10px;overflow:hidden;
+  transition:background .25s ease;border:1px solid rgba(255,255,255,.06)}
+.skysun-mini{position:absolute;right:14%;top:50%;transform:translate(50%,-50%);
+  width:24px;height:24px;border-radius:50%;transition:background .25s ease;
+  background:radial-gradient(circle at 35% 30%,#fff6d8 0%,#ffd166 55%,#e08a2e 100%)}
+.skyband-labels{display:flex;justify-content:space-between;font-size:9px;color:var(--sub);margin-top:4px}
+/* 公転レーン(year) */
+.rev-wrap{border:1px solid var(--line);border-radius:12px;background:var(--bg2);
+  padding:10px 14px 8px;margin:12px 0 4px}
+.rev-wrap .lane-cap{font-size:10.5px;color:var(--sub);margin-bottom:4px}
+.rev-stage{position:relative;height:120px}
+.rev-orbit{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+  width:100px;height:100px;border:2px dashed rgba(94,234,212,.5);border-radius:50%}
+.rev-center{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+  width:22px;height:22px;border-radius:50%;
+  background:radial-gradient(circle at 35% 30%,#fff6d8 0%,#ffd166 55%,#e08a2e 100%);
+  box-shadow:0 0 14px rgba(255,209,102,.65)}
+.rev-spin{position:absolute;left:50%;top:50%;width:100px;height:100px;
+  transform:translate(-50%,-50%);animation:revolve 4s linear infinite;transform-origin:center}
+@keyframes revolve{from{transform:translate(-50%,-50%) rotate(0deg)}to{transform:translate(-50%,-50%) rotate(360deg)}}
+.rev-earth{position:absolute;left:50%;top:-6.5px;transform:translateX(-50%);
+  width:13px;height:13px;border-radius:50%;
+  background:radial-gradient(circle at 35% 30%,#bfe3ff 0%,#4fb3ff 55%,#0a2f63 100%);
+  box-shadow:0 0 8px rgba(79,179,255,.6)}
+@media (prefers-reduced-motion: reduce){.rev-spin{animation:none}}
+/* サイズ比較(planetsize) */
+.sizecompare{border:1px solid var(--line);border-radius:12px;background:var(--bg2);padding:10px 14px 8px;margin:12px 0 4px}
+.sizecompare .lane-cap{font-size:10.5px;color:var(--sub);margin-bottom:6px}
+.sizecompare-stage{position:relative;height:120px;display:flex;align-items:center;justify-content:center}
+.sc-ref{position:absolute;width:54px;height:54px;border-radius:50%;border:2px dashed rgba(94,234,212,.6);box-sizing:border-box}
+.sc-ball{border-radius:50%;transition:width .15s ease,height .15s ease;
+  background:radial-gradient(circle at 35% 30%,#bfe3ff 0%,#4fb3ff 55%,#0a2f63 100%);
+  box-shadow:0 0 16px rgba(79,179,255,.5)}
+.sizecompare-labels{display:flex;justify-content:space-between;font-size:9.5px;color:var(--sub);margin-top:4px}
+/* 方位磁針(flip) */
+.compass-viz{border:1px solid var(--line);border-radius:12px;background:var(--bg2);padding:10px 14px 10px;margin:12px 0 4px}
+.compass-viz .lane-cap{font-size:10.5px;color:var(--sub);margin-bottom:6px}
+.compass{position:relative;width:96px;height:96px;margin:0 auto;border-radius:50%;
+  border:2px solid var(--line);background:radial-gradient(circle at 50% 50%,#0e1730,#0b1220)}
+.compass-dial{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:space-between;
+  padding:4px 0;font-size:11px;font-weight:900;color:var(--sub);pointer-events:none}
+.compass-dial span{color:var(--sub)}
+.compass-needle{position:absolute;left:50%;top:50%;width:4px;height:74px;transform-origin:center;transform:translate(-50%,-50%);
+  transition:transform .25s ease;border-radius:2px;
+  background:linear-gradient(180deg,#ff5c4a 0%,#ff5c4a 50%,#e8edf5 50%,#e8edf5 100%)}
+/* 海面レーン(water) */
+.sealevel-viz{border:1px solid var(--line);border-radius:12px;background:var(--bg2);padding:10px 14px 8px;margin:12px 0 4px}
+.sealevel-viz .lane-cap{font-size:10.5px;color:var(--sub);margin-bottom:6px}
+.sealevel-stage{position:relative;height:80px;border-radius:8px;overflow:hidden;
+  background:linear-gradient(180deg,#0e1730 0%,#12233f 100%)}
+.sl-land{position:absolute;left:0;right:0;bottom:0;height:100%;
+  background:linear-gradient(180deg,transparent 38%,#3a6b3f 38%,#5a8a4a 60%,#7a5a3a 100%);
+  clip-path:polygon(0 62%,12% 50%,25% 66%,38% 44%,52% 60%,66% 40%,80% 58%,92% 48%,100% 64%,100% 100%,0 100%)}
+.sl-water{position:absolute;left:0;right:0;bottom:0;transition:height .18s ease;
+  background:linear-gradient(180deg,rgba(79,179,255,.45) 0%,rgba(30,110,200,.7) 100%);
+  border-top:1.5px solid rgba(150,210,255,.8)}
+/* 風の帯(wind) */
+.wind-viz{border:1px solid var(--line);border-radius:12px;background:var(--bg2);padding:10px 14px 8px;margin:12px 0 4px}
+.wind-viz .lane-cap{font-size:10.5px;color:var(--sub);margin-bottom:6px}
+.wind-stage{position:relative;height:66px;border-radius:8px;overflow:hidden;
+  background:linear-gradient(180deg,#12233f 0%,#0e1730 100%)}
+.wind-band{position:absolute;left:-40%;width:180%;height:12px;border-radius:8px;
+  background:linear-gradient(90deg,transparent,rgba(94,234,212,.55),transparent);
+  animation:windflow 3s linear infinite}
+.wind-band.b1{top:12px;animation-delay:0s}
+.wind-band.b2{top:28px;animation-delay:.6s;background:linear-gradient(90deg,transparent,rgba(120,190,255,.5),transparent)}
+.wind-band.b3{top:44px;animation-delay:1.2s}
+@keyframes windflow{from{transform:translateX(-30%)}to{transform:translateX(30%)}}
+@media (prefers-reduced-motion: reduce){.wind-band{animation:none}}
+/* 時代トラック(dinosaur) */
+.era-viz{border:1px solid var(--line);border-radius:12px;background:var(--bg2);padding:10px 14px 8px;margin:12px 0 4px}
+.era-viz .lane-cap{font-size:10.5px;color:var(--sub);margin-bottom:8px}
+.era-track{position:relative;height:16px;margin:0 4px;
+  background:linear-gradient(90deg,#4fb3ff 0%,#ffd166 55%,#ff7a4d 100%);border-radius:8px}
+.era-marker{position:absolute;top:50%;width:16px;height:16px;border-radius:50%;
+  transform:translate(-50%,-50%);transition:left .15s ease;background:#fff;
+  border:3px solid #16233f;box-shadow:0 0 8px rgba(255,255,255,.6)}
+.era-tick{position:absolute;top:-4px;width:2px;height:24px;background:rgba(255,255,255,.5)}
+.era-labels{display:flex;justify-content:space-between;font-size:9px;color:var(--sub);margin-top:6px}
 .earth-wrap.unstable{animation:tiltWobble 5s ease-in-out infinite}
 @keyframes tiltWobble{0%,100%{transform:rotate(8deg)}50%{transform:rotate(42deg)}}
 @media (prefers-reduced-motion: reduce){.earth-wrap.unstable{animation:none;transform:rotate(23.4deg)}}

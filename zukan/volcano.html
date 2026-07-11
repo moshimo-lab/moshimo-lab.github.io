@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src https://formspree.io; base-uri 'none'; form-action https://formspree.io">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="description" content="噴火が増えると短期は日傘効果で寒冷化(火山の冬)、長期はCO₂で温暖化。火山は両方向のスイッチを持つ。">
+<meta property="og:site_name" content="もしも地球ラボ">
+<meta property="og:title" content="もしも火山だらけの地球だったら|もしも図鑑|もしも地球ラボ">
+<meta property="og:description" content="噴火が増えると短期は日傘効果で寒冷化(火山の冬)、長期はCO₂で温暖化。火山は両方向のスイッチを持つ。">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://moshimo-lab.pages.dev/assets/ogp.png?v=202607101300">
+<title>もしも火山だらけの地球だったら|もしも図鑑|もしも地球ラボ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=JetBrains+Mono:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../assets/site.css?v=202607101300">
+<script src="../assets/volcano.js?v=202607101300" defer></script>
+</head>
+<body>
+<div class="stars"></div>
+<nav class="topnav">
+  <a class="brand" href="../index.html">🌍 もしも地球ラボ</a>
+  <div class="links">
+    <a href="../zukan/index.html" class="active">もしも図鑑</a>
+    <a href="../zukan/kotoba.html">用語じてん</a>
+    <a href="../tera.html">テラちゃんについて</a>
+    <a href="../qa.html">地球のギモンQ&amp;A</a>
+    <a href="../omiyage.html">おみやげ</a>
+    <a href="../contact.html">お問い合わせ</a>
+  </div>
+</nav>
+
+<div class="wrap">
+  <div class="article-hero">
+    <div class="eyebrow">MOSHIMO ZUKAN // FILE 28</div>
+    <h1>🌋 もしも火山だらけの地球だったら</h1>
+    <p class="sub">噴火が増えると、地球はまず寒くなる。でも長い目で見ると、今度は暖まる。火山は冷房と暖房、両方のスイッチを持っている。</p>
+  </div>
+  
+  <div class="minisim">
+    <div class="stage">
+      <div class="earth-wrap small" id="earthWrap">
+      
+      <div class="atmosphere"></div>
+      <div class="earth" id="earth">
+        <div class="globe-strip" id="globeStrip">
+          <div class="hemi"><div class="land land1"></div><div class="land land2"></div><div class="land land3"></div><div class="clouds"></div></div>
+          <div class="hemi"><div class="land land1"></div><div class="land land2"></div><div class="land land3"></div><div class="clouds"></div></div>
+        </div>
+        <div class="heat-overlay" id="heatOverlay"></div>
+        <div class="ice-overlay" id="iceOverlay"></div>
+      </div>
+    </div>
+      <div class="mascot" id="mascot">
+      <div class="sat">
+        <div class="antenna"></div><div class="tip"></div>
+        <div class="wing l"><i></i><i></i><b></b></div>
+        <div class="wing r"><b></b><i></i><i></i></div>
+        <div class="mascot-body" id="mascotBody">
+          <div class="eye l"></div><div class="eye r"></div>
+          <div class="blush l"></div><div class="blush r"></div>
+          <div class="sweat"></div>
+        </div>
+        <div class="tail"></div>
+      </div>
+      <div class="speech" id="speech"><span class="name">テラちゃん</span><span id="speechLine">今日も平常運転だよ〜</span></div>
+    </div>
+    </div>
+    <div class="readout cols3">
+      <div class="card"><div class="k">空にただようちり</div><div class="v" id="vdust">ふつう</div></div>
+      <div class="card"><div class="k">数年後の気温(日傘効果)</div><div class="v" id="vshort">安定</div></div>
+      <div class="card"><div class="k">数百年後の気温(CO₂)</div><div class="v" id="vlong">安定</div></div>
+    </div>
+    <div class="slider-panel bare" id="panelVo">
+      <div class="label">噴火の多さ(いまの地球=1倍)</div>
+      <div class="value" id="valVo">1 倍</div>
+      <input type="range" id="vo" min="0" max="300" value="100" aria-label="噴火の多さ">
+      <div class="scale"><span>0倍(静穏)</span><span>1倍(いま)</span><span class="warn">3倍(火山だらけ)</span></div>
+      <div class="why" id="whyVo">🔎 噴火のちりは太陽の光をさえぎって地球を冷やすよ。でも火山が出すCO₂は、長い時間をかけて地球を暖めるんだ</div>
+    </div>
+  </div>
+  
+  <h2>噴火を増やしていくと、何が起きる?</h2>
+  <h3>① まず、地球は「冷える」</h3>
+  <p>火山が大噴火すると、噴煙は空の高いところ(成層圏)まで届き、細かいちり(硫酸のエアロゾル)が地球全体に広がります。このちりが太陽の光をさえぎる<strong>日傘</strong>のように働いて、地表に届く日ざしを減らし、地球を冷やすのです。これは「火山の冬」と呼ばれます。スライダーで噴火を増やすと、まず「数年後の気温」が下がっていくのはこのためです。</p>
+  <h3>② それは実際に起きた——ピナトゥボ噴火</h3>
+  <p>これは理論だけの話ではありません。1991年、フィリピンのピナトゥボ山が20世紀最大級の大噴火を起こしました。噴き上げられたちりは<strong>約3週間で地球をぐるりと取り巻き</strong>、その影響で1992〜93年の世界の平均気温は約<strong>0.4〜0.5℃低下</strong>しました。日本でも1993年は記録的な冷夏となり、米が不作になって外国から輸入する事態になりました(「平成の米騒動」)。たった一度の噴火が、地球全体の気温と食卓を動かしたのです。</p>
+  <h3>③ ところが長い目で見ると、今度は「暖まる」</h3>
+  <p>ここが火山の面白いところです。ちりは数年で地上に落ちてしまいますが、火山が同時に吐き出す<strong>CO₂</strong>(二酸化炭素)は大気に長くとどまります。CO₂は<a href="greenhouse.html">温室効果</a>を持つので、噴火が続けば続くほど、今度はじわじわと地球を<strong>暖める</strong>方向に効いてきます。つまり火山は、短期的には日傘で冷やし、長期的にはCO₂で暖める——<strong>冷房と暖房、両方のスイッチを持っている</strong>のです。スライダーの「数年後」と「数百年後」で気温が逆向きに動くのを見比べてみてください。</p>
+  <h3>④ 火山は、地球にとって悪者ではない</h3>
+  <p>噴火は災害ですが、火山は地球の歴史でずっと大切な役割も果たしてきました。<a href="snowball.html">全球凍結</a>から地球を救い出したのも火山のCO₂でしたし、火山ガスは大昔の<a href="atmosphere.html">大気</a>や海の水のもとにもなりました。<a href="plate.html">プレートの動き</a>が生む火山は、地球という星が"生きている"証拠でもあります。噴火の火は、こわいけれど、地球のエネルギーそのものなのです。</p>
+
+  <div class="note"><div class="nt">💡 豆知識:噴火で夕焼けが赤くなる</div>
+  大きな噴火のあと、世界中で<a href="sky.html">夕焼け</a>がいつもより赤く、美しくなることが知られています。空にただよう火山のちりが夕方の光をより強く散らすためで、有名な絵画の燃えるような夕焼けの空は、遠くの火山噴火が描かせたのではないか、と言われることもあります。空を冷やすちりが、同時に空を彩る絵の具にもなる——火山は、こんなところでも二つの顔を持っているのです。</div>
+  
+  <div class="termmemo"><div class="tm">🔎 むずかしい言葉は「用語じてん」でチェック</div>
+  <div class="termchips"><a href="kotoba.html#greenhouse">温室効果</a><a href="kotoba.html#carbon-cycle">炭素循環(サーモスタット)</a><a href="kotoba.html#platetectonics">プレートテクトニクス</a></div></div>
+  
+  <div class="sources"><div class="st">📚 出典・参考(ファクトチェック済み)</div><ul><li><a href="https://www.saibouken.or.jp/archives/7656" rel="noopener noreferrer">ピナトゥボ噴火の硫酸エアロゾルが3週間で地球を取り巻き、1992〜93年の世界平均気温が0.4℃低下(災害防止研究所)</a></li>
+<li><a href="https://mygreengrowers.com/blog/volcanic-activity/" rel="noopener noreferrer">ピナツボ噴火で1992〜93年の世界の平均気温が約0.5℃低下・日本で冷害(グリーングロワーズ)</a></li>
+<li><a href="https://www.mri-jma.go.jp/Topics/R03/031126/slide/03.pdf" rel="noopener noreferrer">火山噴火→成層圏の硫酸エアロゾル増加→日射減少・寒冷化のメカニズム(気象研究所)</a></li>
+<li><a href="https://ja.wikipedia.org/wiki/%E3%83%94%E3%83%8A%E3%83%88%E3%82%A5%E3%83%9C%E5%B1%B1" rel="noopener noreferrer">ピナトゥボは20世紀陸上最大級の噴火・噴煙は高度34kmに到達(Wikipedia:ピナトゥボ山)</a></li>
+<li><a href="https://omnh.jp/tokuten/2011kaseki/virtual/history/precambrian02.html" rel="noopener noreferrer">火山のCO₂放出は長期的な温暖化に寄与し全球凍結からの脱出にも関与(大阪市立自然史博物館)</a></li></ul></div>
+  <div class="relnav">
+    <a class="btn primary" href="simulator.html">🎛️ 統合シミュレーターで全部いじる</a><a class="btn" href="wind.html">💨 次の記事:もしも地球に風が吹かなかったら</a><a class="btn" href="water.html">💧 前の記事:もしも地球の水が増えたり減ったりしたら</a>
+  </div>
+</div>
+
+<footer class="site">
+  <div class="flinks">
+    <a href="../index.html">トップ</a><a href="../zukan/index.html">もしも図鑑</a><a href="../zukan/kotoba.html">用語じてん</a><a href="../tera.html">テラちゃん</a><a href="../qa.html">Q&amp;A</a><a href="../omiyage.html">おみやげ</a><a href="../contact.html">お問い合わせ</a>
+  </div>
+  ※ 当サイトのシミュレーションはすべて簡略化した概算モデルです。実際の気候・人口動態はもっと複雑です。<br>
+  © もしも地球ラボ / OBSERVATION LOG by テラちゃん
+</footer>
+</body>
+</html>

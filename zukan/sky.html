@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src https://formspree.io; base-uri 'none'; form-action https://formspree.io">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="description" content="空が青いのはレイリー散乱のおかげ。空気を減らすと空は黒く、増やすと夕焼けだらけに。火星の夕焼けは青い。">
+<meta property="og:site_name" content="もしも地球ラボ">
+<meta property="og:title" content="もしも空が青くなかったら|もしも図鑑|もしも地球ラボ">
+<meta property="og:description" content="空が青いのはレイリー散乱のおかげ。空気を減らすと空は黒く、増やすと夕焼けだらけに。火星の夕焼けは青い。">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://moshimo-lab.pages.dev/assets/ogp.png?v=202607101300">
+<title>もしも空が青くなかったら|もしも図鑑|もしも地球ラボ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=JetBrains+Mono:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../assets/site.css?v=202607101300">
+<script src="../assets/sky.js?v=202607101300" defer></script>
+</head>
+<body>
+<div class="stars"></div>
+<nav class="topnav">
+  <a class="brand" href="../index.html">🌍 もしも地球ラボ</a>
+  <div class="links">
+    <a href="../zukan/index.html" class="active">もしも図鑑</a>
+    <a href="../zukan/kotoba.html">用語じてん</a>
+    <a href="../tera.html">テラちゃんについて</a>
+    <a href="../qa.html">地球のギモンQ&amp;A</a>
+    <a href="../omiyage.html">おみやげ</a>
+    <a href="../contact.html">お問い合わせ</a>
+  </div>
+</nav>
+
+<div class="wrap">
+  <div class="article-hero">
+    <div class="eyebrow">MOSHIMO ZUKAN // FILE 23</div>
+    <h1>🪟 もしも空が青くなかったら</h1>
+    <p class="sub">空の青は、空気が光を「散らす」から生まれる色。空気の量を変えると、昼の空も、夕焼けも、まるごと塗り替わる。</p>
+  </div>
+  
+  <div class="minisim">
+    <div class="stage">
+      <div class="earth-wrap small" id="earthWrap">
+      
+      <div class="atmosphere"></div>
+      <div class="earth" id="earth">
+        <div class="globe-strip" id="globeStrip">
+          <div class="hemi"><div class="land land1"></div><div class="land land2"></div><div class="land land3"></div><div class="clouds"></div></div>
+          <div class="hemi"><div class="land land1"></div><div class="land land2"></div><div class="land land3"></div><div class="clouds"></div></div>
+        </div>
+        <div class="heat-overlay" id="heatOverlay"></div>
+        <div class="ice-overlay" id="iceOverlay"></div>
+      </div>
+    </div>
+      <div class="mascot" id="mascot">
+      <div class="sat">
+        <div class="antenna"></div><div class="tip"></div>
+        <div class="wing l"><i></i><i></i><b></b></div>
+        <div class="wing r"><b></b><i></i><i></i></div>
+        <div class="mascot-body" id="mascotBody">
+          <div class="eye l"></div><div class="eye r"></div>
+          <div class="blush l"></div><div class="blush r"></div>
+          <div class="sweat"></div>
+        </div>
+        <div class="tail"></div>
+      </div>
+      <div class="speech" id="speech"><span class="name">テラちゃん</span><span id="speechLine">今日も平常運転だよ〜</span></div>
+    </div>
+    </div>
+    <div class="readout cols3">
+      <div class="card"><div class="k">昼の空の色</div><div class="v" id="dayc">青</div></div>
+      <div class="card"><div class="k">夕焼けの色</div><div class="v" id="sunsetc">赤〜オレンジ</div></div>
+      <div class="card"><div class="k">昼でも星が…</div><div class="v" id="stars">見えない</div></div>
+    </div>
+    <div class="kidviz">
+      <div class="dist-lane">
+        <div class="lane-cap">🪟いまの設定の空(左=昼 → 右=夕方)</div>
+        <div class="skyband" id="skyBand"><div class="skysun-mini" id="skySunMini"></div></div>
+      </div>
+    </div>
+    <div class="slider-panel bare" id="panelSk">
+      <div class="label">空気の量(いまの地球=1.0)</div>
+      <div class="value" id="valSk">1.00 倍</div>
+      <input type="range" id="sk" min="0" max="300" value="100" aria-label="空気の量">
+      <div class="scale"><span class="warn">0倍(空気なし)</span><span>1倍(いま)</span><span class="warn">3倍(濃い)</span></div>
+      <div class="why" id="whySk">🔎 空気の分子は、波長の短い青い光をよく散らす(レイリー散乱)。散らばった青が四方から目に届くから、空は青いんだ</div>
+    </div>
+  </div>
+  
+  <h2>空気の量を変えると、空の色はどうなる?</h2>
+  <h3>① 空の青は「散らばった光」の色</h3>
+  <p>太陽の光にはすべての色が混ざっています。その光が空気の分子(窒素や酸素)にぶつかると、四方八方にはね散らされます——これが<strong>散乱</strong>です。ポイントは、色によって散らされやすさが違うこと。<strong>波長の短い青い光は、波長の長い赤い光よりずっと強く散乱されます</strong>(レイリー散乱)。だから昼間、空のあちこちから散らばった青い光が目に届き、空全体が青く見えるのです。青は「空にもともとある色」ではなく、「空気が散らした光の色」なのです。</p>
+  <h3>② 夕焼けが赤いのも、同じ理屈の裏側</h3>
+  <p>夕方、太陽が低くなると、光は大気の中を昼よりずっと<strong>長い距離</strong>通ってきます。その道中で青い光はすっかり散らされ尽くし、散乱されにくい赤やオレンジだけが目に届く——これが夕焼けです。スライダーで空気を濃くすると、この「散らされ尽くし」が昼間から起こるようになり、太陽は低い位置でなくても赤っぽく、空は白っぽくかすんでいきます。逆に空気を減らすと、散らす相手がいなくなり、空の青はどんどん暗く、深くなっていきます。</p>
+  <h3>③ 空気ゼロなら、昼でも空は真っ黒</h3>
+  <p>スライダーを0にしてみてください。散乱する空気がなければ、太陽のある方向だけがまぶしく、<strong>空そのものは昼でも真っ黒</strong>です。月面で撮影された写真の空が真っ暗なのは、まさにこれ。しかも星は太陽と同時に見えます。「青い空」は当たり前の風景ではなく、ほどよい厚さの大気を持つ惑星だけの特権なのです。ちなみに高い山や飛行機から空を見ると、通ってくる空気が少ないぶん、空はより濃く、紫がかって見えます。実は太陽光の中で最も散乱されやすいのは紫で、地上に届く前に上空で散らされ尽くしているのです。</p>
+  <h3>④ 火星の夕焼けは、青い</h3>
+  <p>おとなりの火星では、この物語がひっくり返ります。火星の大気はとても薄く、かわりに空に細かい砂ぼこり(ダスト)が漂っています。この粒は空気の分子よりずっと大きいため、光の散らし方のルールが変わり(ミー散乱)、<strong>赤い光のほうが散らされやすくなる</strong>のです。その結果、火星の昼の空は赤っぽく、そして夕方には——散らされにくい青が残って、<strong>青い夕焼け</strong>が沈みます。探査車が実際に撮影したその写真は、「空の色は惑星の大気が決める」ことの、何よりの証拠です。</p>
+
+  <div class="note"><div class="nt">💡 豆知識:大噴火の年は、夕焼けが燃える</div>
+  1883年のクラカタウ火山の大噴火のあと、ヨーロッパでは数年にわたって異常に赤い夕焼けが続き、画家が何百枚もスケッチに残したと伝えられています。噴火で成層圏まで巻き上げられた微粒子が、散乱をさらに強めたためです。空の色は、大気の「量」だけでなく「中身」にも敏感なセンサー。夕焼けの色が いつもと違う日は、空が地球のどこかの出来事を報せているのかもしれません。なお、このシミュレーターの色はイメージをつかむための簡略表現です。</div>
+  
+  <div class="termmemo"><div class="tm">🔎 むずかしい言葉は「用語じてん」でチェック</div>
+  <div class="termchips"><a href="kotoba.html#scattering">光の散乱</a><a href="kotoba.html#atmosphere">大気</a></div></div>
+  
+  <div class="sources"><div class="st">📚 出典・参考(ファクトチェック済み)</div><ul><li><a href="https://official.rikanenpyo.jp/posts/6656" rel="noopener noreferrer">波長の短い青い光ほど強く散乱され空は青く、夕方は光路が長く青が散乱し尽くされ赤が残る(理科年表オフィシャルサイト)</a></li>
+<li><a href="https://nazology.kusuguru.co.jp/archives/108145" rel="noopener noreferrer">最も散乱されやすいのは紫で上層で散乱しきる・高所では空が濃く見える(ナゾロジー)</a></li>
+<li><a href="https://www.jstage.jst.go.jp/article/pesj/68/3/68_180/_pdf/-char/ja" rel="noopener noreferrer">火星ではダストによるミー散乱が支配的で、夕方は青が残り青い夕焼けになる(日本物理教育学会誌/群馬大学)</a></li>
+<li><a href="https://kodomokagaku.or.jp/news/walkingscience2015-04.pdf" rel="noopener noreferrer">火星の大気は薄くレイリー散乱よりダストのミー散乱が効く(こども科学財団 科学の散歩道)</a></li>
+<li><a href="https://xn--29sob207cg49a.com/space/why-sky-is-blue-sunset-red-rayleigh-2026/" rel="noopener noreferrer">クラカタウ噴火後、数年にわたり異常に赤い夕焼けが観測された(宇宙旅行.com)</a></li></ul></div>
+  <div class="relnav">
+    <a class="btn primary" href="simulator.html">🎛️ 統合シミュレーターで全部いじる</a><a class="btn" href="year.html">⏳ 次の記事:もしも1年の長さが違ったら</a><a class="btn" href="bigmoon.html">🌗 前の記事:もしも月がもっと大きかったら</a>
+  </div>
+</div>
+
+<footer class="site">
+  <div class="flinks">
+    <a href="../index.html">トップ</a><a href="../zukan/index.html">もしも図鑑</a><a href="../zukan/kotoba.html">用語じてん</a><a href="../tera.html">テラちゃん</a><a href="../qa.html">Q&amp;A</a><a href="../omiyage.html">おみやげ</a><a href="../contact.html">お問い合わせ</a>
+  </div>
+  ※ 当サイトのシミュレーションはすべて簡略化した概算モデルです。実際の気候・人口動態はもっと複雑です。<br>
+  © もしも地球ラボ / OBSERVATION LOG by テラちゃん
+</footer>
+</body>
+</html>

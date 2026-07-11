@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src https://formspree.io; base-uri 'none'; form-action https://formspree.io">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="description" content="約3〜2億年前、全大陸はパンゲアとして1つだった。もし今もそうなら、内陸は巨大砂漠に。大陸配置が気候を決める。">
+<meta property="og:site_name" content="もしも地球ラボ">
+<meta property="og:title" content="もしも超大陸パンゲアが今もあったら|もしも図鑑|もしも地球ラボ">
+<meta property="og:description" content="約3〜2億年前、全大陸はパンゲアとして1つだった。もし今もそうなら、内陸は巨大砂漠に。大陸配置が気候を決める。">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://moshimo-lab.pages.dev/assets/ogp.png?v=202607101300">
+<title>もしも超大陸パンゲアが今もあったら|もしも図鑑|もしも地球ラボ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=JetBrains+Mono:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../assets/site.css?v=202607101300">
+<script src="../assets/pangaea.js?v=202607101300" defer></script>
+</head>
+<body>
+<div class="stars"></div>
+<nav class="topnav">
+  <a class="brand" href="../index.html">🌍 もしも地球ラボ</a>
+  <div class="links">
+    <a href="../zukan/index.html" class="active">もしも図鑑</a>
+    <a href="../zukan/kotoba.html">用語じてん</a>
+    <a href="../tera.html">テラちゃんについて</a>
+    <a href="../qa.html">地球のギモンQ&amp;A</a>
+    <a href="../omiyage.html">おみやげ</a>
+    <a href="../contact.html">お問い合わせ</a>
+  </div>
+</nav>
+
+<div class="wrap">
+  <div class="article-hero">
+    <div class="eyebrow">MOSHIMO ZUKAN // FILE 21</div>
+    <h1>🗺️ もしも超大陸パンゲアが今もあったら</h1>
+    <p class="sub">すべての大陸がひとつに集まった世界。内陸は海から遠ざかり、酷暑と乾燥の「メガモンスーン」が吹き荒れる。</p>
+  </div>
+  
+  <div class="minisim">
+    <div class="stage">
+      <div class="earth-wrap small" id="earthWrap">
+      
+      <div class="atmosphere"></div>
+      <div class="earth" id="earth">
+        <div class="globe-strip" id="globeStrip">
+          <div class="hemi"><div class="land land1"></div><div class="land land2"></div><div class="land land3"></div><div class="clouds"></div></div>
+          <div class="hemi"><div class="land land1"></div><div class="land land2"></div><div class="land land3"></div><div class="clouds"></div></div>
+        </div>
+        <div class="heat-overlay" id="heatOverlay"></div>
+        <div class="ice-overlay" id="iceOverlay"></div>
+      </div>
+    </div>
+      <div class="mascot" id="mascot">
+      <div class="sat">
+        <div class="antenna"></div><div class="tip"></div>
+        <div class="wing l"><i></i><i></i><b></b></div>
+        <div class="wing r"><b></b><i></i><i></i></div>
+        <div class="mascot-body" id="mascotBody">
+          <div class="eye l"></div><div class="eye r"></div>
+          <div class="blush l"></div><div class="blush r"></div>
+          <div class="sweat"></div>
+        </div>
+        <div class="tail"></div>
+      </div>
+      <div class="speech" id="speech"><span class="name">テラちゃん</span><span id="speechLine">今日も平常運転だよ〜</span></div>
+    </div>
+    </div>
+    <div class="readout cols3">
+      <div class="card"><div class="k">大陸のまとまり</div><div class="v" id="pcont">バラバラ(いま)</div></div>
+      <div class="card"><div class="k">内陸の気候</div><div class="v" id="pinland">海の恵みが届く</div></div>
+      <div class="card"><div class="k">季節の変化</div><div class="v" id="pseason">おだやか</div></div>
+    </div>
+    <div class="slider-panel bare" id="panelPg">
+      <div class="label">大陸が1つに集まる度合い</div>
+      <div class="value" id="valPg">0%(いまの地球)</div>
+      <input type="range" id="pg" min="0" max="100" value="0" aria-label="大陸の集まり具合">
+      <div class="scale"><span>0%(バラバラ)</span><span class="warn">100%(超大陸パンゲア)</span></div>
+      <div class="why" id="whyPg">🔎 大陸がバラバラだと、どこも海から近く、雨や穏やかな気候の恵みを受けられるよ</div>
+    </div>
+  </div>
+  
+  <h2>大陸をひとつに集めると、何が起きる?</h2>
+  <h3>① 海から遠い土地が、生まれてしまう</h3>
+  <p>雨や穏やかな気候は、海からの水分と、<a href="ocean.html">海の大きな熱容量</a>がもたらします。だから大陸が今のようにバラバラに散らばっていると、どの土地もどこかの海から比較的近く、その恵みを受けられます。ところが大陸をひとつに集めると、<strong>中心部は四方の海から数千km離れた「究極の内陸」</strong>になります。そこには海からの水分も、海の穏やかさも届きません。スライダーで大陸を集めていくと、内陸の気候が牙をむきはじめます。</p>
+  <h3>② それは空想ではない——超大陸パンゲア</h3>
+  <p>今から約3〜2億年前、地球の大陸は本当にひとつに集まっていました。超大陸<strong>パンゲア</strong>です。そのまわりを超海洋パンサラッサが取り囲んでいました。研究者の気候シミュレーションによると、パンゲアの内部では夏と冬で風向きが大きく入れ替わる巨大な季節風<strong>「メガモンスーン」</strong>が吹き、夏は酷暑、冬は極端な乾燥という、振れ幅のはげしい気候だったと考えられています。大陸のまん中には、生き物が暮らしにくい広大な乾燥地帯が広がっていたのです。</p>
+  <h3>③ 大陸の配置が、気候を決めている</h3>
+  <p>この記事のいちばん大事なところは、これです。<strong>同じ地球でも、大陸の置き方が変わるだけで気候はまるごと変わる</strong>。以前の<a href="ocean.html">「陸と海の割合」</a>の記事では海と陸の"比率"を見ましたが、今回効いてくるのは"配置"です。陸地の総量は同じでも、散らばっているか一か所に固まっているかで、雨の降り方も気温の振れ幅もまったく違う世界になる。地球の住みやすさは、大陸がほどよく分かれている今の配置にも支えられているのです。</p>
+  <h3>④ そして大陸は、今も動いている</h3>
+  <p>パンゲアは遠い過去の話ではありません。大陸は<a href="plate.html">プレートの動き</a>に乗って、今も年に数cmずつ移動し続けています。研究者たちは、はるか未来——約2億5000万年後——に大陸が再び集まって新しい超大陸(パンゲア・ウルティマなどと呼ばれます)ができると予測しています。ある研究では、その超大陸は火山活動の活発化と強い日射により酷暑の星となり、哺乳類には非常に厳しい環境になるかもしれない、とされています。地図はゆっくりと、しかし確実に描き変わり続けているのです。</p>
+
+  <div class="note"><div class="nt">💡 豆知識:大陸移動説は、はじめ笑われていた</div>
+  「昔は大陸がひとつだった」と最初に唱えたのは、ドイツのヴェーゲナーという研究者でした(1912年)。南アメリカとアフリカの海岸線がパズルのように合うことなどが根拠でしたが、大陸を動かす力を説明できず、当時は"ありえない空想"として長く相手にされませんでした。彼の死後、海底の調査から<a href="plate.html">プレートテクトニクス</a>が確立し、ようやく正しさが認められます。今回の全球凍結や木星の記事と同じで、<strong>定説は時間をかけて更新されていく</strong>。それもまた、科学の面白さです。</div>
+  
+  <div class="termmemo"><div class="tm">🔎 むずかしい言葉は「用語じてん」でチェック</div>
+  <div class="termchips"><a href="kotoba.html#continental-climate">大陸性気候</a><a href="kotoba.html#platetectonics">プレートテクトニクス</a><a href="kotoba.html#heat-capacity">熱容量</a></div></div>
+  
+  <div class="sources"><div class="st">📚 出典・参考(ファクトチェック済み)</div><ul><li><a href="https://www.titech.ac.jp/news/2022/064529" rel="noopener noreferrer">約3〜2億年前の超大陸パンゲアと超海洋パンサラッサ、比熱差でメガモンスーンが発達、内陸は酷暑と乾燥(東京工業大学/ELSI)</a></li>
+<li><a href="https://ja.wikipedia.org/wiki/%E3%83%91%E3%83%B3%E3%82%B2%E3%82%A2%E5%A4%A7%E9%99%B8" rel="noopener noreferrer">パンゲアはペルム紀〜三畳紀の超大陸、ヴェーゲナーが1912年に命名、後にプレートテクトニクスで再評価(Wikipedia:パンゲア大陸)</a></li>
+<li><a href="https://forbesjapan.com/articles/detail/66384" rel="noopener noreferrer">約2億5000万年後にパンゲア・ウルティマが形成される可能性、火山と日射で酷暑・哺乳類に過酷(Forbes JAPAN/ブリストル大学)</a></li>
+<li><a href="https://ja.wikipedia.org/wiki/%E3%83%91%E3%83%B3%E3%82%B2%E3%82%A2%E3%83%BB%E3%82%A6%E3%83%AB%E3%83%86%E3%82%A3%E3%83%9E%E5%A4%A7%E9%99%B8" rel="noopener noreferrer">次の超大陸の候補(パンゲア・ウルティマ/アメイジア)と超大陸サイクル(Wikipedia:パンゲア・ウルティマ大陸)</a></li></ul></div>
+  <div class="relnav">
+    <a class="btn primary" href="simulator.html">🎛️ 統合シミュレーターで全部いじる</a><a class="btn" href="bigmoon.html">🌗 次の記事:もしも月がもっと大きかったら</a><a class="btn" href="sungone.html">🌑 前の記事:もしも太陽が今この瞬間、消えたら</a>
+  </div>
+</div>
+
+<footer class="site">
+  <div class="flinks">
+    <a href="../index.html">トップ</a><a href="../zukan/index.html">もしも図鑑</a><a href="../zukan/kotoba.html">用語じてん</a><a href="../tera.html">テラちゃん</a><a href="../qa.html">Q&amp;A</a><a href="../omiyage.html">おみやげ</a><a href="../contact.html">お問い合わせ</a>
+  </div>
+  ※ 当サイトのシミュレーションはすべて簡略化した概算モデルです。実際の気候・人口動態はもっと複雑です。<br>
+  © もしも地球ラボ / OBSERVATION LOG by テラちゃん
+</footer>
+</body>
+</html>

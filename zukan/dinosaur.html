@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src https://formspree.io; base-uri 'none'; form-action https://formspree.io">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="description" content="恐竜時代(中生代)は今より約6〜14℃暖かくCO₂は4〜10倍。極地に氷がなく、南極にも森があった温室地球。">
+<meta property="og:site_name" content="もしも地球ラボ">
+<meta property="og:title" content="もしも今が恐竜時代の環境だったら|もしも図鑑|もしも地球ラボ">
+<meta property="og:description" content="恐竜時代(中生代)は今より約6〜14℃暖かくCO₂は4〜10倍。極地に氷がなく、南極にも森があった温室地球。">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://moshimo-lab.pages.dev/assets/ogp.png?v=202607101300">
+<title>もしも今が恐竜時代の環境だったら|もしも図鑑|もしも地球ラボ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=JetBrains+Mono:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../assets/site.css?v=202607101300">
+<script src="../assets/dinosaur.js?v=202607101300" defer></script>
+</head>
+<body>
+<div class="stars"></div>
+<nav class="topnav">
+  <a class="brand" href="../index.html">🌍 もしも地球ラボ</a>
+  <div class="links">
+    <a href="../zukan/index.html" class="active">もしも図鑑</a>
+    <a href="../zukan/kotoba.html">用語じてん</a>
+    <a href="../tera.html">テラちゃんについて</a>
+    <a href="../qa.html">地球のギモンQ&amp;A</a>
+    <a href="../omiyage.html">おみやげ</a>
+    <a href="../contact.html">お問い合わせ</a>
+  </div>
+</nav>
+
+<div class="wrap">
+  <div class="article-hero">
+    <div class="eyebrow">MOSHIMO ZUKAN // FILE 30</div>
+    <h1>🦕 もしも今が恐竜時代の環境だったら</h1>
+    <p class="sub">極地にも氷がなく、平均気温は今より10℃以上高い。恐竜が見上げた空は、CO₂が今の何倍もある「温室地球」だった。</p>
+  </div>
+  
+  <div class="minisim">
+    <div class="stage">
+      <div class="earth-wrap small" id="earthWrap">
+      
+      <div class="atmosphere"></div>
+      <div class="earth" id="earth">
+        <div class="globe-strip" id="globeStrip">
+          <div class="hemi"><div class="land land1"></div><div class="land land2"></div><div class="land land3"></div><div class="clouds"></div></div>
+          <div class="hemi"><div class="land land1"></div><div class="land land2"></div><div class="land land3"></div><div class="clouds"></div></div>
+        </div>
+        <div class="heat-overlay" id="heatOverlay"></div>
+        <div class="ice-overlay" id="iceOverlay"></div>
+      </div>
+    </div>
+      <div class="mascot" id="mascot">
+      <div class="sat">
+        <div class="antenna"></div><div class="tip"></div>
+        <div class="wing l"><i></i><i></i><b></b></div>
+        <div class="wing r"><b></b><i></i><i></i></div>
+        <div class="mascot-body" id="mascotBody">
+          <div class="eye l"></div><div class="eye r"></div>
+          <div class="blush l"></div><div class="blush r"></div>
+          <div class="sweat"></div>
+        </div>
+        <div class="tail"></div>
+      </div>
+      <div class="speech" id="speech"><span class="name">テラちゃん</span><span id="speechLine">今日も平常運転だよ〜</span></div>
+    </div>
+    </div>
+    <div class="readout cols3">
+      <div class="card"><div class="k">世界の平均気温</div><div class="v" id="dtemp">約15℃(いま)</div></div>
+      <div class="card"><div class="k">大気のCO₂</div><div class="v" id="dco2">1倍(いま)</div></div>
+      <div class="card"><div class="k">極地の氷</div><div class="v" id="dice">あり</div></div>
+    </div>
+    <div class="era-viz">
+      <div class="lane-cap">⏳時代をさかのぼってみよう</div>
+      <div class="era-track">
+        <div class="era-tick" id="eraTick"></div>
+        <div class="era-marker" id="eraMarker"></div>
+      </div>
+      <div class="era-labels"><span>いま</span><span>白亜紀</span><span>ジュラ紀</span><span>三畳紀</span></div>
+    </div>
+    <div class="slider-panel bare" id="panelDn">
+      <div class="label">時代(左=いま / 右=恐竜時代へ)</div>
+      <div class="value" id="valDn">現代</div>
+      <input type="range" id="dn" min="0" max="100" value="0" aria-label="時代">
+      <div class="scale"><span>現代</span><span class="warn">恐竜全盛(約1億年前)</span></div>
+      <div class="why" id="whyDn">🔎 恐竜時代は火山活動が活発でCO₂が多く、地球全体が今よりずっと暖かい「温室地球」だったよ</div>
+    </div>
+  </div>
+  
+  <h2>時代を恐竜時代までさかのぼると、何が起きる?</h2>
+  <h3>① 今より、はるかに暖かい</h3>
+  <p>恐竜が栄えた<strong>中生代</strong>(約2億5千万〜6600万年前)は、地球の歴史でもとくに暖かい時代でした。とりわけ恐竜が大繁栄した白亜紀の前半は、地球全体の平均気温が現在より<strong>約6〜14℃も高かった</strong>と推定されています。今の地球の平均が約15℃ですから、それより一段も二段も暖かい世界。スライダーを恐竜時代へ動かすと、気温がぐんぐん上がっていきます。</p>
+  <h3>② 極地にも、氷がなかった</h3>
+  <p>これほど暖かいと、地球の姿そのものが変わります。中生代には<strong>北極にも南極にも氷床(氷河)がない</strong>、「氷のない地球」が続きました。南極大陸にはワニや恐竜が住み、温帯の森が広がっていたことが化石からわかっています。当時の南極の海水温は約17℃——今の南極海(約2℃)とは別世界です。極地の氷がないぶん海の水が増え、<strong>海面は今より高かった</strong>と考えられています。</p>
+  <h3>③ 空気も、今と違った</h3>
+  <p>恐竜が吸っていた空気は、今とかなり違います。大気中の<strong>CO₂は現在の4〜10倍も高かった</strong>とされ、これが強い<a href="greenhouse.html">温室効果</a>を生んで温暖な気候を支えていました。原因は、<a href="pangaea.html">超大陸パンゲア</a>の分裂にともなう活発な<a href="volcano.html">火山活動</a>。火山が吐き出した大量のCO₂が、地球を「温室」にしていたのです。高いCO₂のもとで植物は生い茂り、それを食べる巨大な草食恐竜を支えました。</p>
+  <h3>④ 「暖かい地球」は、生き物にとって良い?悪い?</h3>
+  <p>恐竜時代の温暖な地球は、恐竜や巨大な爬虫類にとっては暮らしやすい楽園でした。ただし、それが人間にとっても良い環境とは限りません。今の私たちの社会や農業は、氷河のある現在の気候に合わせて作られています。大事なのは「暖かいほど良い/悪い」ではなく、<strong>生き物はその時代の環境に合わせて栄える</strong>ということ。恐竜には恐竜の、私たちには私たちの「ちょうどいい地球」がある——時代をさかのぼる旅は、そのことを教えてくれます。</p>
+
+  <div class="note"><div class="nt">💡 豆知識:このシミュレーションは「想像を助ける地図」です</div>
+  恐竜時代の気温やCO₂の値は、地層や化石から復元した推定で、研究によって幅があります。このシミュレーターは正確な再現ではなく、「今とはまるで違う地球があった」ことをイメージするための地図として楽しんでください。ちなみに、白亜紀の終わりに恐竜を絶滅させたのは、<a href="impact.html">巨大な小惑星の衝突</a>でした。温室地球で栄えた恐竜の時代は、空から降ってきた一撃で幕を閉じたのです。地球の環境は、こうして何度も大きく移り変わってきました。</div>
+  
+  <div class="termmemo"><div class="tm">🔎 むずかしい言葉は「用語じてん」でチェック</div>
+  <div class="termchips"><a href="kotoba.html#greenhouse">温室効果</a><a href="kotoba.html#carboniferous">石炭紀</a><a href="kotoba.html#lhb">後期重爆撃期</a></div></div>
+  
+  <div class="sources"><div class="st">📚 出典・参考(ファクトチェック済み)</div><ul><li><a href="https://omnh.jp/tokuten/2011kaseki/virtual/history/mesozoic01.html" rel="noopener noreferrer">白亜紀前半は地球全体の平均気温が現在より10〜14℃高く両極に氷床がなかった(大阪市立自然史博物館 大化石展)</a></li>
+<li><a href="https://www.dinosaur.pref.fukui.jp/dino/faq/r02061.html" rel="noopener noreferrer">中生代は温暖で極域に氷河がない温室地球・海底火山のCO₂が温暖化の原因(福井県立恐竜博物館 Q&A)</a></li>
+<li><a href="https://www.nikkei.com/article/DGKKZO90543700U5A810C1MY1000/" rel="noopener noreferrer">白亜紀のCO₂濃度は現在の4〜10倍・最も温暖な時代(日本経済新聞)</a></li>
+<li><a href="https://ippjapan.org/archives/1751" rel="noopener noreferrer">中生代白亜紀の南極海水温は約17℃(現在は約2℃)・氷がなかった(平和政策研究所)</a></li>
+<li><a href="https://note.com/gifted_bear994/n/n464a5ea7c3c5" rel="noopener noreferrer">白亜紀温室は平均気温が現在より6〜8℃高く極地でも氷がなくワニや恐竜が生息(スン博士/note)</a></li></ul></div>
+  <div class="relnav">
+    <a class="btn primary" href="simulator.html">🎛️ 統合シミュレーターで全部いじる</a><a class="btn" href="twomoons.html">🌗 次の記事:もしも月がふたつあったら</a><a class="btn" href="wind.html">💨 前の記事:もしも地球に風が吹かなかったら</a>
+  </div>
+</div>
+
+<footer class="site">
+  <div class="flinks">
+    <a href="../index.html">トップ</a><a href="../zukan/index.html">もしも図鑑</a><a href="../zukan/kotoba.html">用語じてん</a><a href="../tera.html">テラちゃん</a><a href="../qa.html">Q&amp;A</a><a href="../omiyage.html">おみやげ</a><a href="../contact.html">お問い合わせ</a>
+  </div>
+  ※ 当サイトのシミュレーションはすべて簡略化した概算モデルです。実際の気候・人口動態はもっと複雑です。<br>
+  © もしも地球ラボ / OBSERVATION LOG by テラちゃん
+</footer>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src https://formspree.io; base-uri 'none'; form-action https://formspree.io">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="description" content="太陽が消えても、光も重力も8分19秒は届き続ける。誰も気づかない8分間のあと、地球に何が起きるか。">
+<meta property="og:site_name" content="もしも地球ラボ">
+<meta property="og:title" content="もしも太陽が今この瞬間、消えたら|もしも図鑑|もしも地球ラボ">
+<meta property="og:description" content="太陽が消えても、光も重力も8分19秒は届き続ける。誰も気づかない8分間のあと、地球に何が起きるか。">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://moshimo-lab.pages.dev/assets/ogp.png?v=202607101300">
+<title>もしも太陽が今この瞬間、消えたら|もしも図鑑|もしも地球ラボ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=JetBrains+Mono:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../assets/site.css?v=202607101300">
+<script src="../assets/sungone.js?v=202607101300" defer></script>
+</head>
+<body>
+<div class="stars"></div>
+<nav class="topnav">
+  <a class="brand" href="../index.html">🌍 もしも地球ラボ</a>
+  <div class="links">
+    <a href="../zukan/index.html" class="active">もしも図鑑</a>
+    <a href="../zukan/kotoba.html">用語じてん</a>
+    <a href="../tera.html">テラちゃんについて</a>
+    <a href="../qa.html">地球のギモンQ&amp;A</a>
+    <a href="../omiyage.html">おみやげ</a>
+    <a href="../contact.html">お問い合わせ</a>
+  </div>
+</nav>
+
+<div class="wrap">
+  <div class="article-hero">
+    <div class="eyebrow">MOSHIMO ZUKAN // FILE 20</div>
+    <h1>🌑 もしも太陽が今この瞬間、消えたら</h1>
+    <p class="sub">最初の8分19秒、地球の誰も気づかない。空はいつも通り明るい。そのあいだ、私たちは「もう存在しない太陽」を見ている。</p>
+  </div>
+  
+  <div class="minisim">
+    <div class="stage">
+      <div class="earth-wrap small" id="earthWrap">
+      
+      <div class="atmosphere"></div>
+      <div class="earth" id="earth">
+        <div class="globe-strip" id="globeStrip">
+          <div class="hemi"><div class="land land1"></div><div class="land land2"></div><div class="land land3"></div><div class="clouds"></div></div>
+          <div class="hemi"><div class="land land1"></div><div class="land land2"></div><div class="land land3"></div><div class="clouds"></div></div>
+        </div>
+        <div class="heat-overlay" id="heatOverlay"></div>
+        <div class="ice-overlay" id="iceOverlay"></div>
+      </div>
+    </div>
+      <div class="mascot" id="mascot">
+      <div class="sat">
+        <div class="antenna"></div><div class="tip"></div>
+        <div class="wing l"><i></i><i></i><b></b></div>
+        <div class="wing r"><b></b><i></i><i></i></div>
+        <div class="mascot-body" id="mascotBody">
+          <div class="eye l"></div><div class="eye r"></div>
+          <div class="blush l"></div><div class="blush r"></div>
+          <div class="sweat"></div>
+        </div>
+        <div class="tail"></div>
+      </div>
+      <div class="speech" id="speech"><span class="name">テラちゃん</span><span id="speechLine">今日も平常運転だよ〜</span></div>
+    </div>
+    </div>
+    <div class="readout cols3">
+      <div class="card"><div class="k">経過時間</div><div class="v" id="elapsed">0秒</div></div>
+      <div class="card"><div class="k">空のようす</div><div class="v" id="sky">いつも通り</div></div>
+      <div class="card"><div class="k">地球の動き</div><div class="v" id="orbit">太陽をまわる</div></div>
+    </div>
+    <div class="slider-panel bare" id="panelSg">
+      <div class="label">太陽が消えてからの経過時間</div>
+      <div class="value" id="valSg">0秒(消えた瞬間)</div>
+      <input type="range" id="sg" min="0" max="100" value="0" aria-label="経過時間">
+      <div class="scale"><span>消えた瞬間</span><span class="warn">8分19秒</span><span class="warn">数か月後</span></div>
+      <div class="why" id="whySg">🔎 光も重力も、伝わる速さは「秒速約30万km」。太陽まで約1億5000万km離れているから、変化が届くのに8分19秒かかるよ</div>
+    </div>
+  </div>
+  
+  <h2>太陽が消えた瞬間から、順番に見ていこう</h2>
+  <h3>① 最初の8分19秒:誰も、何も気づかない</h3>
+  <p>太陽がこの瞬間に忽然と消えたとしても、地球はしばらく<strong>まったくいつも通り</strong>です。空は青く、太陽はまぶしく輝いて見えます。理由は、光の速さが有限だから。太陽から地球までの約1億5000万kmを光が渡るには<strong>約8分19秒</strong>かかります。つまり私たちがいつも見ている太陽は、常に8分19秒前の姿。消えた事実が光として届くまで、地球の誰一人それを知りません。私たちは、すでに存在しない太陽を見つめ続けることになります。</p>
+  <h3>② 8分19秒後:光と、そして「引力」が同時に消える</h3>
+  <p>スライダーを進めて8分19秒に達すると、空から太陽が消え、世界は暗転します。そして同じ瞬間に、もう一つ大事なことが起こります。<strong>地球を軌道につなぎとめていた太陽の引力も、消える</strong>のです。ここは少し意外かもしれません。かつて重力は「瞬時に伝わる」と考えられていましたが、現在の物理学では、重力の変化も<strong>光と同じ速さで伝わる</strong>とされています。実際、2017年に観測された重力波は、光とほぼ同時に地球へ届き、この考えを裏づけました。だから光が消える瞬間まで、地球はいつも通り太陽のまわりを回り続けます。</p>
+  <h3>③ 引力が消えると、地球はまっすぐ飛んでいく</h3>
+  <p>太陽の引力を失った地球は、それまで円を描かせていた"ひも"を切られたボールのように、その瞬間の進行方向へ<strong>まっすぐ飛び出して</strong>いきます。行き先は、暗い宇宙の彼方。もう二度と決まった軌道には戻れません。ただし慌てる必要はありません。地球はしばらく、慣性でそのまま宇宙を旅していくだけで、バラバラになったりはしません。変わるのは、行き先です。</p>
+  <h3>④ そして、静かに冷えていく</h3>
+  <p>光を失った地球で本当にこわいのは、暗さより<strong>寒さ</strong>です。熱源を断たれた地表の温度は下がりはじめ、数日から数週間で氷点下へ。やがて海の表面も凍っていきます。ただし地球には<a href="ocean.html">海の巨大な熱</a>や、地下からの熱があるため、全部がすぐに凍りつくわけではありません。深い海の底や地熱のそばでは、太陽なしでも生きられる生き物がしばらく残るかもしれない、とも考えられています。太陽のありがたさは、消えてはじめて骨身にしみるのです。</p>
+
+  <div class="note"><div class="nt">💡 豆知識:これは「起こりえない」ことの実験</div>
+  安心してください。恒星が理由もなく忽然と消える、such なことは物理的に起こりません。この記事は、実際の予測ではなく、<strong>「光や重力が伝わるのに時間がかかる」という宇宙のルールを体感するための思考実験</strong>です。8分19秒という数字を通じて、私たちが見ている星空がすべて「過去の光」であること——夜空で輝くあの星が、今はもう存在しないかもしれないこと——が、少しだけ実感できます。「もしも」は、本当の宇宙のしくみをのぞく窓なのです。</div>
+  
+  <div class="termmemo"><div class="tm">🔎 むずかしい言葉は「用語じてん」でチェック</div>
+  <div class="termchips"><a href="kotoba.html#lightspeed">光の速さ(光速)</a><a href="kotoba.html#gravity">重力</a><a href="kotoba.html#gravitational-wave">重力波</a></div></div>
+  
+  <div class="sources"><div class="st">📚 出典・参考(ファクトチェック済み)</div><ul><li><a href="https://www.optics-words.com/kogaku_kiso/speed_of_light.html" rel="noopener noreferrer">太陽の光が地球に届くまで約8分19秒・私たちが見る太陽は約8分前の姿(光学技術の基礎/理科年表)</a></li>
+<li><a href="https://www.kids.isas.jaxa.jp/faq/solar/000130.html" rel="noopener noreferrer">地球-太陽の距離約1億4960万km、光は約8分19秒で到達(JAXA宇宙科学研究所キッズ)</a></li>
+<li><a href="https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q10248049205" rel="noopener noreferrer">重力の変化も光と同じ速さで伝わり、太陽が消えれば約8分後に重力もなくなる(Yahoo!知恵袋・物理解説)</a></li>
+<li><a href="https://ja.wikipedia.org/wiki/GW170817" rel="noopener noreferrer">2017年、重力波GW170817がガンマ線とほぼ同時に到来し重力波の伝播速度が光速に一致すると確認(Wikipedia:GW170817)</a></li></ul></div>
+  <div class="relnav">
+    <a class="btn primary" href="simulator.html">🎛️ 統合シミュレーターで全部いじる</a><a class="btn" href="pangaea.html">🗺️ 次の記事:もしも超大陸パンゲアが今もあったら</a><a class="btn" href="snowball.html">⛄ 前の記事:もしも地球がまるごと凍ったら</a>
+  </div>
+</div>
+
+<footer class="site">
+  <div class="flinks">
+    <a href="../index.html">トップ</a><a href="../zukan/index.html">もしも図鑑</a><a href="../zukan/kotoba.html">用語じてん</a><a href="../tera.html">テラちゃん</a><a href="../qa.html">Q&amp;A</a><a href="../omiyage.html">おみやげ</a><a href="../contact.html">お問い合わせ</a>
+  </div>
+  ※ 当サイトのシミュレーションはすべて簡略化した概算モデルです。実際の気候・人口動態はもっと複雑です。<br>
+  © もしも地球ラボ / OBSERVATION LOG by テラちゃん
+</footer>
+</body>
+</html>

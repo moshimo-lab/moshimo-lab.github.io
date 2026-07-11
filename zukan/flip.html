@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src https://formspree.io; base-uri 'none'; form-action https://formspree.io">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="description" content="地磁気のN極とS極は過去に何度も逆転した。方位磁針が南を指す世界。でも生き物への影響は意外と限定的。">
+<meta property="og:site_name" content="もしも地球ラボ">
+<meta property="og:title" content="もしも北と南の極が入れかわったら|もしも図鑑|もしも地球ラボ">
+<meta property="og:description" content="地磁気のN極とS極は過去に何度も逆転した。方位磁針が南を指す世界。でも生き物への影響は意外と限定的。">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://moshimo-lab.pages.dev/assets/ogp.png?v=202607101300">
+<title>もしも北と南の極が入れかわったら|もしも図鑑|もしも地球ラボ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=JetBrains+Mono:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../assets/site.css?v=202607101300">
+<script src="../assets/flip.js?v=202607101300" defer></script>
+</head>
+<body>
+<div class="stars"></div>
+<nav class="topnav">
+  <a class="brand" href="../index.html">🌍 もしも地球ラボ</a>
+  <div class="links">
+    <a href="../zukan/index.html" class="active">もしも図鑑</a>
+    <a href="../zukan/kotoba.html">用語じてん</a>
+    <a href="../tera.html">テラちゃんについて</a>
+    <a href="../qa.html">地球のギモンQ&amp;A</a>
+    <a href="../omiyage.html">おみやげ</a>
+    <a href="../contact.html">お問い合わせ</a>
+  </div>
+</nav>
+
+<div class="wrap">
+  <div class="article-hero">
+    <div class="eyebrow">MOSHIMO ZUKAN // FILE 26</div>
+    <h1>🧭 もしも北と南の極が入れかわったら</h1>
+    <p class="sub">方位磁針のNが南を指す日。地球の磁石は、過去に何度も逆転してきた。次はいつ来てもおかしくない。</p>
+  </div>
+  
+  <div class="minisim">
+    <div class="stage">
+      <div class="earth-wrap small" id="earthWrap">
+      
+      <div class="atmosphere"></div>
+      <div class="earth" id="earth">
+        <div class="globe-strip" id="globeStrip">
+          <div class="hemi"><div class="land land1"></div><div class="land land2"></div><div class="land land3"></div><div class="clouds"></div></div>
+          <div class="hemi"><div class="land land1"></div><div class="land land2"></div><div class="land land3"></div><div class="clouds"></div></div>
+        </div>
+        <div class="heat-overlay" id="heatOverlay"></div>
+        <div class="ice-overlay" id="iceOverlay"></div>
+      </div>
+    </div>
+      <div class="mascot" id="mascot">
+      <div class="sat">
+        <div class="antenna"></div><div class="tip"></div>
+        <div class="wing l"><i></i><i></i><b></b></div>
+        <div class="wing r"><b></b><i></i><i></i></div>
+        <div class="mascot-body" id="mascotBody">
+          <div class="eye l"></div><div class="eye r"></div>
+          <div class="blush l"></div><div class="blush r"></div>
+          <div class="sweat"></div>
+        </div>
+        <div class="tail"></div>
+      </div>
+      <div class="speech" id="speech"><span class="name">テラちゃん</span><span id="speechLine">今日も平常運転だよ〜</span></div>
+    </div>
+    </div>
+    <div class="readout cols3">
+      <div class="card"><div class="k">方位磁針のNが指す向き</div><div class="v" id="fdir">北</div></div>
+      <div class="card"><div class="k">地磁気の強さ</div><div class="v" id="fstr">100%</div></div>
+      <div class="card"><div class="k">見えないバリア</div><div class="v" id="fshield">しっかり</div></div>
+    </div>
+    <div class="compass-viz">
+      <div class="lane-cap">🧭方位磁針はどっちを向く?</div>
+      <div class="compass"><div class="compass-dial">N<br><span>S</span></div><div class="compass-needle" id="fNeedle"></div></div>
+      <div class="lane-cap" id="fPhase" style="text-align:center;margin-top:6px">いまの地球:Nは北</div>
+    </div>
+    <div class="slider-panel bare" id="panelFl">
+      <div class="label">逆転の進みぐあい</div>
+      <div class="value" id="valFl">0%(いまの向き)</div>
+      <input type="range" id="fl" min="0" max="100" value="0" aria-label="逆転の進みぐあい">
+      <div class="scale"><span>0%(いま)</span><span class="warn">50%(逆転の最中)</span><span>100%(逆転完了)</span></div>
+      <div class="why" id="whyFl">🔎 地球の中心では溶けた鉄が対流して、地球を大きな磁石にしているよ。その向きは数万〜数十万年ごとに逆転してきたんだ</div>
+    </div>
+  </div>
+  
+  <h2>地球の磁石をひっくり返すと、何が起きる?</h2>
+  <h3>① まず、方位磁針のNが南を指すようになる</h3>
+  <p>地球は、中心にある溶けた鉄の対流(ダイナモ作用)によって、全体が大きな一本の棒磁石のようになっています。方位磁針のNが北を指すのは、このおかげ。もしこの磁石の向きが逆転すれば、<strong>方位磁針のNは南を指す</strong>ようになります。スライダーを動かすと、コンパスの針がゆっくり回って向きを変えていきます。地図の「北」の概念そのものが引っくり返る、不思議な世界です。</p>
+  <h3>② これは空想ではなく、何度も起きた事実</h3>
+  <p>地磁気の逆転は、地球の歴史で<strong>何度も繰り返し起きてきた事実</strong>です。過去1億7000万年の間だけでも500回以上逆転したことが、岩石に残された過去の磁気の記録からわかっています。直近の逆転は約<strong>77万年前</strong>。その時代の地層が世界で最もよく残っているのが千葉県市原市で、この地層を根拠に約77万4千年前〜12万9千年前が「<strong>チバニアン(千葉の時代)</strong>」と名づけられました。地質時代の名前に日本の地名がついた、初めての快挙です。</p>
+  <h3>③ 逆転は、一瞬では起こらない</h3>
+  <p>SF映画のように、ある日いきなり極が入れかわるわけではありません。チバニアンの地層の研究では、直近の逆転では<strong>約2万年もの間、地磁気が不安定な期間</strong>が続いたことがわかっています。逆転の途中では地磁気の強さが今の10分の1ほどまで弱まり、磁極が一つでなく複数あらわれると考えられています。その間、世界のあちこちでオーロラが見られるかもしれません。スライダーの真ん中(50%)が、この「地磁気が弱く乱れた不安定な時期」にあたります。</p>
+  <h3>④ 生き物への影響は、意外と限定的</h3>
+  <p>「バリアが弱まったら危険では?」と思うかもしれません。確かに逆転中は<a href="magnet.html">磁気のバリア</a>が弱まり、<a href="atmosphere.html">大気</a>に届く宇宙線が増えます。ただし、バリアが完全に消えるわけではなく、大気そのものも宇宙線を防いでくれるため、<strong>生物への影響は限定的</strong>と考えられています。実際、過去の逆転が生物の大量絶滅を引き起こした明確な証拠は見つかっていません。むしろ困るのは現代文明のほう——方位磁針に頼る仕組みや、人工衛星・送電網が、弱った磁場と増えた宇宙線の影響を受けやすくなります。</p>
+
+  <div class="note"><div class="nt">💡 豆知識:今は「磁石が強い時代」</div>
+  意外なことに、地球の過去1億年ほどの地磁気の強さの平均は、今の50〜60%程度だったとわかっています。つまり<strong>私たちは、地球の歴史の中でたまたま磁石が強い時代に生きている</strong>のです。近年、地磁気がゆっくり弱まっているというニュースを見かけますが、長い目で見れば「強すぎた状態からふつうに戻りつつある」とも言えます。次の逆転がいつ来るのかは誰にもわかりません。ただ、それは災害というより、地球が何度も繰り返してきた"衣替え"のようなものなのです。</div>
+  
+  <div class="termmemo"><div class="tm">🔎 むずかしい言葉は「用語じてん」でチェック</div>
+  <div class="termchips"><a href="kotoba.html#geomagnetism">地磁気</a><a href="kotoba.html#magnetic-field">磁場(磁気圏)</a><a href="kotoba.html#chibanian">チバニアン</a></div></div>
+  
+  <div class="sources"><div class="st">📚 出典・参考(ファクトチェック済み)</div><ul><li><a href="https://scienceportal.jst.go.jp/newsflash/20200907_01/" rel="noopener noreferrer">地磁気の向きは数万〜数十万年ごとに逆転・直近は約77万年前・外核の鉄の対流が起源(サイエンスポータル/JST)</a></li>
+<li><a href="https://www.nipr.ac.jp/info/notice/20200902.html" rel="noopener noreferrer">直近の地磁気逆転(松山-ブルン)では約2万年間地磁気が不安定だった(国立極地研究所)</a></li>
+<li><a href="https://yumenavi.info/vue/lecture.html?gnkcd=g011145" rel="noopener noreferrer">過去1億7千万年で500回以上逆転・逆転中は強度が今の1/10・シールドは機能し生物への影響は限定的・過去1億年の平均強度は現在の50〜60%(夢ナビ講義)</a></li>
+<li><a href="https://www.pref.chiba.lg.jp/kyouiku/bunkazai/chibanian/index.html" rel="noopener noreferrer">チバニアン: 約77万4千年前〜12万9千年前・千葉県市原市の地層が国際標準模式地に認定(千葉県公式)</a></li>
+<li><a href="https://news.yahoo.co.jp/expert/articles/4668cf79313b6671677d6bb671e8fd11c043e17d" rel="noopener noreferrer">現在の地磁気の不安定化や減衰は過去の逆転イベントと比べ大きくない(Yahoo!ニュース エキスパート/石田雅彦)</a></li></ul></div>
+  <div class="relnav">
+    <a class="btn primary" href="simulator.html">🎛️ 統合シミュレーターで全部いじる</a><a class="btn" href="water.html">💧 次の記事:もしも地球の水が増えたり減ったりしたら</a><a class="btn" href="planetsize.html">🌍 前の記事:もしも地球がもっと大きかったら</a>
+  </div>
+</div>
+
+<footer class="site">
+  <div class="flinks">
+    <a href="../index.html">トップ</a><a href="../zukan/index.html">もしも図鑑</a><a href="../zukan/kotoba.html">用語じてん</a><a href="../tera.html">テラちゃん</a><a href="../qa.html">Q&amp;A</a><a href="../omiyage.html">おみやげ</a><a href="../contact.html">お問い合わせ</a>
+  </div>
+  ※ 当サイトのシミュレーションはすべて簡略化した概算モデルです。実際の気候・人口動態はもっと複雑です。<br>
+  © もしも地球ラボ / OBSERVATION LOG by テラちゃん
+</footer>
+</body>
+</html>

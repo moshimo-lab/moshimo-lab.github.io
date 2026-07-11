@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src https://formspree.io; base-uri 'none'; form-action https://formspree.io">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="description" content="雷は空気の窒素を固定し、原始地球では生命の材料アミノ酸を作った可能性が。ミラーの実験の話も。">
+<meta property="og:site_name" content="もしも地球ラボ">
+<meta property="og:title" content="もしも一日中ずっと雷が鳴っていたら|もしも図鑑|もしも地球ラボ">
+<meta property="og:description" content="雷は空気の窒素を固定し、原始地球では生命の材料アミノ酸を作った可能性が。ミラーの実験の話も。">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://moshimo-lab.pages.dev/assets/ogp.png?v=202607101300">
+<title>もしも一日中ずっと雷が鳴っていたら|もしも図鑑|もしも地球ラボ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=JetBrains+Mono:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../assets/site.css?v=202607101300">
+<script src="../assets/lightning.js?v=202607101300" defer></script>
+</head>
+<body>
+<div class="stars"></div>
+<nav class="topnav">
+  <a class="brand" href="../index.html">🌍 もしも地球ラボ</a>
+  <div class="links">
+    <a href="../zukan/index.html" class="active">もしも図鑑</a>
+    <a href="../zukan/kotoba.html">用語じてん</a>
+    <a href="../tera.html">テラちゃんについて</a>
+    <a href="../qa.html">地球のギモンQ&amp;A</a>
+    <a href="../omiyage.html">おみやげ</a>
+    <a href="../contact.html">お問い合わせ</a>
+  </div>
+</nav>
+
+<div class="wrap">
+  <div class="article-hero">
+    <div class="eyebrow">MOSHIMO ZUKAN // FILE 33</div>
+    <h1>⚡ もしも一日中ずっと雷が鳴っていたら</h1>
+    <p class="sub">こわい雷は、実は生命の材料を作る「天然の実験室」かもしれない。稲妻は、いのちの火花でもあった。</p>
+  </div>
+  
+  <div class="minisim">
+    <div class="stage">
+      <div class="earth-wrap small" id="earthWrap">
+      
+      <div class="atmosphere"></div>
+      <div class="earth" id="earth">
+        <div class="globe-strip" id="globeStrip">
+          <div class="hemi"><div class="land land1"></div><div class="land land2"></div><div class="land land3"></div><div class="clouds"></div></div>
+          <div class="hemi"><div class="land land1"></div><div class="land land2"></div><div class="land land3"></div><div class="clouds"></div></div>
+        </div>
+        <div class="heat-overlay" id="heatOverlay"></div>
+        <div class="ice-overlay" id="iceOverlay"></div>
+      </div>
+    </div>
+      <div class="mascot" id="mascot">
+      <div class="sat">
+        <div class="antenna"></div><div class="tip"></div>
+        <div class="wing l"><i></i><i></i><b></b></div>
+        <div class="wing r"><b></b><i></i><i></i></div>
+        <div class="mascot-body" id="mascotBody">
+          <div class="eye l"></div><div class="eye r"></div>
+          <div class="blush l"></div><div class="blush r"></div>
+          <div class="sweat"></div>
+        </div>
+        <div class="tail"></div>
+      </div>
+      <div class="speech" id="speech"><span class="name">テラちゃん</span><span id="speechLine">今日も平常運転だよ〜</span></div>
+    </div>
+    </div>
+    <div class="readout cols3">
+      <div class="card"><div class="k">雷の多さ</div><div class="v" id="ltfreq">ふつう</div></div>
+      <div class="card"><div class="k">空気の窒素を土にする力</div><div class="v" id="ltfix">少し</div></div>
+      <div class="card"><div class="k">生命の材料づくり</div><div class="v" id="ltlife">わずかに</div></div>
+    </div>
+    <div class="slider-panel bare" id="panelLt">
+      <div class="label">雷の多さ(いまの地球=1倍)</div>
+      <div class="value" id="valLt">1 倍</div>
+      <input type="range" id="lt" min="0" max="300" value="100" aria-label="雷の多さ">
+      <div class="scale"><span>0倍(雷なし)</span><span>1倍(いま)</span><span class="warn">3倍(雷だらけ)</span></div>
+      <div class="why" id="whyLt">🔎 雷は一瞬で空気を超高温にして、ふつうは結びつかない空気中の窒素どうしを反応させるよ。これが生き物の栄養や材料になるんだ</div>
+    </div>
+  </div>
+  
+  <h2>雷を増やしていくと、何が起きる?</h2>
+  <h3>① 雷は、空気の窒素を「使える形」に変える</h3>
+  <p>空気の約8割は窒素ですが、この窒素はとても安定していて、そのままでは生き物が利用できません。ところが雷が落ちると、その一瞬で空気は超高温になり、ふだんは決して結びつかない<strong>窒素と酸素が反応</strong>します。こうしてできた物質は雨に溶けて地上に降り、植物の栄養(天然の肥料)になります。これを<strong>窒素固定</strong>といいます。雷は、こわいだけの存在ではなく、空気の栄養を大地に配る役割も持っているのです。スライダーで雷を増やすと、この働きが強まります。</p>
+  <h3>② 原始地球では、雷が「生命の材料」を作ったかもしれない</h3>
+  <p>もっと壮大な話があります。今から70年ほど前の1953年、ミラーという研究者が有名な実験をしました。大昔の地球の空気(と当時考えられていたガス)をフラスコに閉じこめ、<strong>雷に見立てた放電</strong>を流し続けたのです。すると、わずか1週間ほどで、フラスコの中に<strong>アミノ酸</strong>——生き物のからだを作るタンパク質の材料——ができていました。「生命の材料は、雷のような刺激で意外と簡単にできる」。これは当時、世界に衝撃を与えました(ミラーの実験)。</p>
+  <h3>③ ただし、話はそう単純ではない</h3>
+  <p>ここは正直にお伝えします。ミラーの実験が想定した大昔の空気は、その後の研究で「実際とは少し違ったらしい」とわかってきました。今では、原始地球の空気はCO₂や窒素が多かったと考えられていて、その場合ミラーの実験ほど簡単にはアミノ酸ができません。とはいえ、「<strong>生命の材料は雷などのエネルギーで作られうる</strong>」という基本の結論は、今も揺らいでいません。生命の材料がどこで生まれたのかは、雷・<a href="impact.html">隕石の衝突</a>・深海など、いくつもの説が今なお研究されている、わくわくする謎なのです。</p>
+  <h3>④ 一日中の雷は、こわい?ありがたい?</h3>
+  <p>もし本当に一日中ずっと雷が鳴り続けたら、それは災害だらけの、暮らしにくい世界でしょう。山火事も増えるかもしれません。でもその同じ稲妻が、大昔の地球では大気に栄養を配り、ひょっとすると生命の最初の材料を作った可能性がある。<strong>こわい雷と、いのちの火花は、同じもの</strong>だったのかもしれない——空を裂く光を見上げるとき、そんな地球の物語を思い出してみてください。</p>
+
+  <div class="note"><div class="nt">💡 豆知識:雷は地球で毎秒たくさん光っている</div>
+  雷は特別な天気のときだけのものに思えますが、地球全体で見ると、実は<strong>いつもどこかで光っています</strong>。地球のどこかしらで絶え間なく雷が発生していて、その回数は1秒あたり数十回にもなると見積もられています。あなたが晴れた空を見上げているその瞬間も、地球の反対側では雷が鳴り、空気の栄養を作り続けている。地球は、いつでもどこかで"いのちの実験"を続けている星なのです。</div>
+  
+  <div class="termmemo"><div class="tm">🔎 むずかしい言葉は「用語じてん」でチェック</div>
+  <div class="termchips"><a href="kotoba.html#nitrogen-fixation">窒素固定</a><a href="kotoba.html#miller-experiment">ミラーの実験</a><a href="kotoba.html#atmosphere">大気</a></div></div>
+  
+  <div class="sources"><div class="st">📚 出典・参考(ファクトチェック済み)</div><ul><li><a href="https://astro-dic.jp/millers-experiment/" rel="noopener noreferrer">ミラーの実験(1953)は原始大気を模した気体に放電し数種類のアミノ酸を合成した(天文学辞典:ミラーの実験)</a></li>
+<li><a href="https://www.sci.kyushu-u.ac.jp/koho/qrinews/qrinews_170929.html" rel="noopener noreferrer">雷を模した放電で1週間後にアミノ酸ができた・現在の原始大気像はCO₂やNOxが多い酸化的環境という見方が主流(九州大学 理学研究院)</a></li>
+<li><a href="https://www.s-yamaga.jp/nanimono/seimei/seimeinotanjo-01.htm" rel="noopener noreferrer">原始大気の想定は変わったが「生命体の基本素材は比較的容易に得られる」という結論は揺らいでいない(生命の誕生/s-yamaga)</a></li>
+<li><a href="https://scienceportal.jst.go.jp/clip/20151009_01.html" rel="noopener noreferrer">生命の材料の起源は原始地球での自然発生・隕石による供給など複数のシナリオが議論されている(サイエンスポータル/JST)</a></li></ul></div>
+  <div class="relnav">
+    <a class="btn primary" href="simulator.html">🎛️ 統合シミュレーターで全部いじる</a><a class="btn" href="tidelock.html">🌓 前の記事:もしも地球が太陽に片面を向けたまま止まったら</a>
+  </div>
+</div>
+
+<footer class="site">
+  <div class="flinks">
+    <a href="../index.html">トップ</a><a href="../zukan/index.html">もしも図鑑</a><a href="../zukan/kotoba.html">用語じてん</a><a href="../tera.html">テラちゃん</a><a href="../qa.html">Q&amp;A</a><a href="../omiyage.html">おみやげ</a><a href="../contact.html">お問い合わせ</a>
+  </div>
+  ※ 当サイトのシミュレーションはすべて簡略化した概算モデルです。実際の気候・人口動態はもっと複雑です。<br>
+  © もしも地球ラボ / OBSERVATION LOG by テラちゃん
+</footer>
+</body>
+</html>

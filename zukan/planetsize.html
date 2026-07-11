@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src https://formspree.io; base-uri 'none'; form-action https://formspree.io">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="description" content="地球のサイズを変えると重力も変わる。小さいと空気が逃げて火星に、大きいと重力に押しつぶされる。">
+<meta property="og:site_name" content="もしも地球ラボ">
+<meta property="og:title" content="もしも地球がもっと大きかったら|もしも図鑑|もしも地球ラボ">
+<meta property="og:description" content="地球のサイズを変えると重力も変わる。小さいと空気が逃げて火星に、大きいと重力に押しつぶされる。">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://moshimo-lab.pages.dev/assets/ogp.png?v=202607101300">
+<title>もしも地球がもっと大きかったら|もしも図鑑|もしも地球ラボ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=JetBrains+Mono:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../assets/site.css?v=202607101300">
+<script src="../assets/planetsize.js?v=202607101300" defer></script>
+</head>
+<body>
+<div class="stars"></div>
+<nav class="topnav">
+  <a class="brand" href="../index.html">🌍 もしも地球ラボ</a>
+  <div class="links">
+    <a href="../zukan/index.html" class="active">もしも図鑑</a>
+    <a href="../zukan/kotoba.html">用語じてん</a>
+    <a href="../tera.html">テラちゃんについて</a>
+    <a href="../qa.html">地球のギモンQ&amp;A</a>
+    <a href="../omiyage.html">おみやげ</a>
+    <a href="../contact.html">お問い合わせ</a>
+  </div>
+</nav>
+
+<div class="wrap">
+  <div class="article-hero">
+    <div class="eyebrow">MOSHIMO ZUKAN // FILE 25</div>
+    <h1>🌍 もしも地球がもっと大きかったら</h1>
+    <p class="sub">惑星のサイズは、重力と空気の運命を決める。小さすぎれば空気は逃げ、大きすぎれば重さに押しつぶされる。</p>
+  </div>
+  
+  <div class="minisim">
+    <div class="stage">
+      <div class="earth-wrap small" id="earthWrap">
+      
+      <div class="atmosphere"></div>
+      <div class="earth" id="earth">
+        <div class="globe-strip" id="globeStrip">
+          <div class="hemi"><div class="land land1"></div><div class="land land2"></div><div class="land land3"></div><div class="clouds"></div></div>
+          <div class="hemi"><div class="land land1"></div><div class="land land2"></div><div class="land land3"></div><div class="clouds"></div></div>
+        </div>
+        <div class="heat-overlay" id="heatOverlay"></div>
+        <div class="ice-overlay" id="iceOverlay"></div>
+      </div>
+    </div>
+      <div class="mascot" id="mascot">
+      <div class="sat">
+        <div class="antenna"></div><div class="tip"></div>
+        <div class="wing l"><i></i><i></i><b></b></div>
+        <div class="wing r"><b></b><i></i><i></i></div>
+        <div class="mascot-body" id="mascotBody">
+          <div class="eye l"></div><div class="eye r"></div>
+          <div class="blush l"></div><div class="blush r"></div>
+          <div class="sweat"></div>
+        </div>
+        <div class="tail"></div>
+      </div>
+      <div class="speech" id="speech"><span class="name">テラちゃん</span><span id="speechLine">今日も平常運転だよ〜</span></div>
+    </div>
+    </div>
+    <div class="readout cols3">
+      <div class="card"><div class="k">地表の重力</div><div class="v" id="psgrav">1.0 G</div></div>
+      <div class="card"><div class="k">空気の保ちやすさ</div><div class="v" id="psair">ちょうどいい</div></div>
+      <div class="card"><div class="k">地表のようす</div><div class="v" id="psland">緑と海の星</div></div>
+    </div>
+    <div class="sizecompare">
+      <div class="lane-cap">🌍地球の大きさをくらべてみよう</div>
+      <div class="sizecompare-stage">
+        <div class="sc-ref" title="いまの地球"></div>
+        <div class="sc-ball" id="scBall"></div>
+      </div>
+      <div class="sizecompare-labels"><span>点線=いまの地球</span><span id="scLabel">直径 1.0倍</span></div>
+    </div>
+    <div class="slider-panel bare" id="panelPs">
+      <div class="label">地球の直径(いま=1.0)</div>
+      <div class="value" id="valPs">1.00 倍</div>
+      <input type="range" id="ps" min="30" max="250" value="100" aria-label="地球の直径">
+      <div class="scale"><span class="warn">0.3倍(火星より小)</span><span>1倍(いま)</span><span class="warn">2.5倍(スーパーアース)</span></div>
+      <div class="why" id="whyPs">🔎 惑星が大きいほど重力が強くなり、空気(大気)を強くつなぎとめられるよ。小さいと空気は宇宙へ逃げてしまうんだ</div>
+    </div>
+  </div>
+  
+  <h2>地球の大きさを変えると、何が起きる?</h2>
+  <h3>① 大きさは、そのまま「重力」を変える</h3>
+  <p>惑星が大きくなると、含まれる物質が増えて重くなり、地表を引っぱる<a href="gravity.html">重力</a>も強くなります。同じ材料でできているとすると、直径を2倍にすれば地表の重力もおよそ2倍。逆に小さくすれば重力は弱まります。スライダーで地球の直径を変えると、まず地表の重力の数字が動くのはこのためです。重力は、体重やジャンプ力だけでなく、もっと大事なあるものの運命を握っています。</p>
+  <h3>② 小さすぎると、空気が宇宙へ逃げていく</h3>
+  <p>その「あるもの」とは<a href="atmosphere.html">大気</a>です。惑星の重力は、空気を地表につなぎとめる力でもあります。重力が弱いと、空気の分子がだんだん宇宙へ逃げ出してしまう。これがまさに<a href="magnet.html">火星</a>に起きたことです。火星の重力は地球の約0.38倍、質量は約10分の1しかなく、そのため大気を保てず、今では気圧が地球の約1%以下という薄い空気の星になりました。スライダーを小さい側に振ると、地球も同じ運命——薄い大気の寒い星——に近づいていきます。</p>
+  <h3>③ 大きすぎると、今度は重さに苦しむ</h3>
+  <p>では大きいほど良いかというと、そうでもありません。地球より大きな岩石惑星は<strong>スーパーアース</strong>と呼ばれます。大きくなるほど重力が強まり、直径2倍なら体重も2倍相当。生き物にとっては、立つのも歩くのも重労働の世界です。強い重力は分厚い大気を引きとめるので、地表は高い気圧と強い<a href="greenhouse.html">温室効果</a>で高温になりがち。大きければ大きいほど住みやすい、というわけではないのです。</p>
+  <h3>④ 地球のサイズは「ほどよい中庸」</h3>
+  <p>まとめると、惑星は<strong>小さすぎれば空気を失って凍え、大きすぎれば重力と分厚い大気に苦しむ</strong>。地球のサイズは、空気を宇宙に逃がさずつなぎとめられ、かつ重力で押しつぶされもしない、ちょうど中間のサイズなのです。距離や傾きだけでなく、惑星そのものの「大きさ」もまた、地球の住みやすさを支える設定のひとつでした。</p>
+
+  <div class="note"><div class="nt">💡 豆知識:重力を振りきる「脱出速度」</div>
+  空気が逃げるかどうかは、<strong>脱出速度</strong>という考え方で説明できます。惑星の重力を振りきって宇宙へ飛び出すのに必要な速さのことで、地球では秒速約11.2km。重力が強い(=大きい)惑星ほどこの速度は大きく、空気の分子は振りきれずにとどまります。逆に重力の弱い小さな惑星では、あたためられて素早く動く軽い分子(水素やヘリウム)から順に、脱出速度を超えて逃げ出してしまう。惑星が「どんな空気を保てるか」は、その大きさが静かに決めているのです。</div>
+  
+  <div class="termmemo"><div class="tm">🔎 むずかしい言葉は「用語じてん」でチェック</div>
+  <div class="termchips"><a href="kotoba.html#gravity">重力</a><a href="kotoba.html#atmosphere">大気</a><a href="kotoba.html#escape-velocity">脱出速度</a></div></div>
+  
+  <div class="sources"><div class="st">📚 出典・参考(ファクトチェック済み)</div><ul><li><a href="https://ja.wikipedia.org/wiki/%E7%81%AB%E6%98%9F" rel="noopener noreferrer">火星は重力が地球の約0.38倍・質量は約10分の1で大気を保てず気圧は地球の約1%以下(Wikipedia:火星)</a></li>
+<li><a href="https://www.kids.isas.jaxa.jp/zukan/solarsystem/mars01.html" rel="noopener noreferrer">火星が小さく重力が小さいために大気をつかまえておけない・気圧は地球の約1%(JAXA宇宙科学研究所キッズ)</a></li>
+<li><a href="https://academist-cf.com/journal/?p=5937" rel="noopener noreferrer">火星は地球の10分の1の質量・低重力で大気が宇宙へ流出しやすい(academist Journal)</a></li>
+<li><a href="https://astro-dic.jp/planetary-atmosphere/" rel="noopener noreferrer">天体の質量が小さく重力が小さいと大気の保持は難しい(天文学辞典:惑星大気)</a></li>
+<li><a href="https://xn--29sob207cg49a.com/space/mars-environment-conditions-2026/" rel="noopener noreferrer">火星の表面重力は地球の約0.38倍・体重60kgが約23kgに(宇宙旅行.com)</a></li></ul></div>
+  <div class="relnav">
+    <a class="btn primary" href="simulator.html">🎛️ 統合シミュレーターで全部いじる</a><a class="btn" href="flip.html">🧭 次の記事:もしも北と南の極が入れかわったら</a><a class="btn" href="year.html">⏳ 前の記事:もしも1年の長さが違ったら</a>
+  </div>
+</div>
+
+<footer class="site">
+  <div class="flinks">
+    <a href="../index.html">トップ</a><a href="../zukan/index.html">もしも図鑑</a><a href="../zukan/kotoba.html">用語じてん</a><a href="../tera.html">テラちゃん</a><a href="../qa.html">Q&amp;A</a><a href="../omiyage.html">おみやげ</a><a href="../contact.html">お問い合わせ</a>
+  </div>
+  ※ 当サイトのシミュレーションはすべて簡略化した概算モデルです。実際の気候・人口動態はもっと複雑です。<br>
+  © もしも地球ラボ / OBSERVATION LOG by テラちゃん
+</footer>
+</body>
+</html>

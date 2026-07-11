@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src https://formspree.io; base-uri 'none'; form-action https://formspree.io">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="description" content="貿易風や偏西風は自転(コリオリの力)が生む。風が熱を運ばないと、赤道と極の温度差は約40℃→80℃に。">
+<meta property="og:site_name" content="もしも地球ラボ">
+<meta property="og:title" content="もしも地球に風が吹かなかったら|もしも図鑑|もしも地球ラボ">
+<meta property="og:description" content="貿易風や偏西風は自転(コリオリの力)が生む。風が熱を運ばないと、赤道と極の温度差は約40℃→80℃に。">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://moshimo-lab.pages.dev/assets/ogp.png?v=202607101300">
+<title>もしも地球に風が吹かなかったら|もしも図鑑|もしも地球ラボ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=JetBrains+Mono:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../assets/site.css?v=202607101300">
+<script src="../assets/wind.js?v=202607101300" defer></script>
+</head>
+<body>
+<div class="stars"></div>
+<nav class="topnav">
+  <a class="brand" href="../index.html">🌍 もしも地球ラボ</a>
+  <div class="links">
+    <a href="../zukan/index.html" class="active">もしも図鑑</a>
+    <a href="../zukan/kotoba.html">用語じてん</a>
+    <a href="../tera.html">テラちゃんについて</a>
+    <a href="../qa.html">地球のギモンQ&amp;A</a>
+    <a href="../omiyage.html">おみやげ</a>
+    <a href="../contact.html">お問い合わせ</a>
+  </div>
+</nav>
+
+<div class="wrap">
+  <div class="article-hero">
+    <div class="eyebrow">MOSHIMO ZUKAN // FILE 29</div>
+    <h1>💨 もしも地球に風が吹かなかったら</h1>
+    <p class="sub">貿易風も偏西風も、地球の自転が生んでいる。もし風が熱を運ばなければ、赤道と極の温度差は倍にふくらむ。</p>
+  </div>
+  
+  <div class="minisim">
+    <div class="stage">
+      <div class="earth-wrap small" id="earthWrap">
+      
+      <div class="atmosphere"></div>
+      <div class="earth" id="earth">
+        <div class="globe-strip" id="globeStrip">
+          <div class="hemi"><div class="land land1"></div><div class="land land2"></div><div class="land land3"></div><div class="clouds"></div></div>
+          <div class="hemi"><div class="land land1"></div><div class="land land2"></div><div class="land land3"></div><div class="clouds"></div></div>
+        </div>
+        <div class="heat-overlay" id="heatOverlay"></div>
+        <div class="ice-overlay" id="iceOverlay"></div>
+      </div>
+    </div>
+      <div class="mascot" id="mascot">
+      <div class="sat">
+        <div class="antenna"></div><div class="tip"></div>
+        <div class="wing l"><i></i><i></i><b></b></div>
+        <div class="wing r"><b></b><i></i><i></i></div>
+        <div class="mascot-body" id="mascotBody">
+          <div class="eye l"></div><div class="eye r"></div>
+          <div class="blush l"></div><div class="blush r"></div>
+          <div class="sweat"></div>
+        </div>
+        <div class="tail"></div>
+      </div>
+      <div class="speech" id="speech"><span class="name">テラちゃん</span><span id="speechLine">今日も平常運転だよ〜</span></div>
+    </div>
+    </div>
+    <div class="readout cols3">
+      <div class="card"><div class="k">地球規模の風</div><div class="v" id="wdwind">よく吹く</div></div>
+      <div class="card"><div class="k">熱の運ばれ方</div><div class="v" id="wdheat">よく混ざる</div></div>
+      <div class="card"><div class="k">赤道と極の温度差</div><div class="v" id="wdgap">約40℃</div></div>
+    </div>
+    <div class="wind-viz">
+      <div class="lane-cap">💨風は熱を運んでいる(帯の流れる速さ=風の強さ)</div>
+      <div class="wind-stage" id="windStage">
+        <div class="wind-band b1"></div>
+        <div class="wind-band b2"></div>
+        <div class="wind-band b3"></div>
+      </div>
+    </div>
+    <div class="slider-panel bare" id="panelWd">
+      <div class="label">風の強さ(いまの地球=1倍)</div>
+      <div class="value" id="valWd">1.0 倍</div>
+      <input type="range" id="wd" min="0" max="250" value="100" aria-label="風の強さ">
+      <div class="scale"><span class="warn">0倍(無風)</span><span>1倍(いま)</span><span>2.5倍</span></div>
+      <div class="why" id="whyWd">🔎 風は熱を運ぶ宅配便。赤道の熱を極へ、極の冷気を赤道へ運んで、地球の温度をならしているんだ</div>
+    </div>
+  </div>
+  
+  <h2>地球の風を止めると、何が起きる?</h2>
+  <h3>① そもそも、風は自転から生まれている</h3>
+  <p>地球規模で吹く風——赤道近くの<strong>貿易風</strong>や、日本の上空を吹く<strong>偏西風</strong>——は、ただの空気の移動ではありません。太陽に暖められた赤道の空気が上昇し、極へ向かって流れる大きな循環(ハドレー循環など)に、<a href="reverse.html">地球の自転が生むコリオリの力</a>が加わって、東西に曲げられることで生まれます。つまり地球の風の骨格は、<strong>自転が描いている</strong>のです。だから<a href="rotation.html">自転</a>の記事とも深くつながっています。</p>
+  <h3>② 風は、熱を運ぶ「宅配便」</h3>
+  <p>この風たちには、とても大事な仕事があります。<strong>熱を運ぶこと</strong>です。赤道はいつも太陽に強く照らされて暑く、極は寒い。もし何もしなければ、その差はどんどん開いていきます。ところが風が、赤道のあり余る熱を極へ、極の冷気を赤道へと運び、地球全体の温度をならしているのです。海流も、実はこの風に押されて生まれます。風は、地球の熱をならす巨大な宅配便なのです。</p>
+  <h3>③ 風が止まると、赤道と極の差が倍になる</h3>
+  <p>では風が熱を運ばなくなったら? スライダーで風を弱めると、「赤道と極の温度差」が広がっていきます。研究者の見積もりでは、今の赤道と極の温度差は約40℃ですが、<strong>大気による熱の輸送がなければ、その差は約80℃にも開く</strong>と考えられています。赤道はもっと灼熱に、極はもっと極寒に。地球の気候は、今よりずっと極端で住みにくいものになってしまうのです。</p>
+  <h3>④ 風は、気候をならす名脇役</h3>
+  <p>ふだん風は、天気を気にするときくらいしか意識されません。でもその正体は、自転が生み、熱をならし、海流を動かし、雨を運ぶ——地球の気候を支える名脇役です。<a href="ocean.html">海</a>が熱をたくわえてゆっくり気候をならすのに対し、風は熱をすばやく運んでならす。<strong>ゆっくりの海と、すばやい風</strong>。この二つのチームプレーが、地球をおだやかな星に保っているのです。</p>
+
+  <div class="note"><div class="nt">💡 豆知識:「貿易風」の名前の由来</div>
+  貿易風という名前は、風で進む帆船の時代に、この安定した風がインド洋などの<strong>交易(貿易)</strong>に使われたことに由来します。決まった向きに安定して吹く風は、エンジンのない船にとって頼れる道でした。地球の自転が生んだ風の道が、人類の交易の歴史を運んでいた——空の上の物理と、海の上の歴史が、一本の風でつながっているのです。</div>
+  
+  <div class="termmemo"><div class="tm">🔎 むずかしい言葉は「用語じてん」でチェック</div>
+  <div class="termchips"><a href="kotoba.html#coriolis">コリオリの力</a><a href="kotoba.html#rotation">自転</a><a href="kotoba.html#ocean">海洋循環</a></div></div>
+  
+  <div class="sources"><div class="st">📚 出典・参考(ファクトチェック済み)</div><ul><li><a href="https://ja.wikipedia.org/wiki/%E8%B2%BF%E6%98%93%E9%A2%A8" rel="noopener noreferrer">貿易風・偏西風はハドレー循環とコリオリの力で生まれる恒常風(貿易風/Wikipedia)</a></li>
+<li><a href="https://tigakutasu.com/kisokyousitukazetotaiki/" rel="noopener noreferrer">大気大循環が熱を輸送・輸送がなければ赤道と極の温度差は約40℃から約80℃に開く(ちがくたす 地学基礎)</a></li>
+<li><a href="https://www.s-yamaga.jp/nanimono/taikitoumi/taikinodaijunkan.htm" rel="noopener noreferrer">ハドレー循環と3つの循環セル・コリオリの力による風の東西成分(大気の大循環/s-yamaga)</a></li>
+<li><a href="https://www-old.eps.s.u-tokyo.ac.jp/epphys/aos/ocean.html" rel="noopener noreferrer">風成循環はコリオリ効果により風向と直交方向に海水を動かす(東京大学地球惑星物理学科)</a></li>
+<li><a href="https://alivevulnerable.com/basic/permanent-wind/" rel="noopener noreferrer">恒常風の向きは地球の自転(コリオリの力)と南北の温度差で決まる(地理ラボ)</a></li></ul></div>
+  <div class="relnav">
+    <a class="btn primary" href="simulator.html">🎛️ 統合シミュレーターで全部いじる</a><a class="btn" href="dinosaur.html">🦕 次の記事:もしも今が恐竜時代の環境だったら</a><a class="btn" href="volcano.html">🌋 前の記事:もしも火山だらけの地球だったら</a>
+  </div>
+</div>
+
+<footer class="site">
+  <div class="flinks">
+    <a href="../index.html">トップ</a><a href="../zukan/index.html">もしも図鑑</a><a href="../zukan/kotoba.html">用語じてん</a><a href="../tera.html">テラちゃん</a><a href="../qa.html">Q&amp;A</a><a href="../omiyage.html">おみやげ</a><a href="../contact.html">お問い合わせ</a>
+  </div>
+  ※ 当サイトのシミュレーションはすべて簡略化した概算モデルです。実際の気候・人口動態はもっと複雑です。<br>
+  © もしも地球ラボ / OBSERVATION LOG by テラちゃん
+</footer>
+</body>
+</html>

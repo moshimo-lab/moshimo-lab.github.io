@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src https://formspree.io; base-uri 'none'; form-action https://formspree.io">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="description" content="月がふたつあると夜は明るく、潮は複雑に。でも月どうしが引っぱり合い、軌道が不安定になる可能性も。">
+<meta property="og:site_name" content="もしも地球ラボ">
+<meta property="og:title" content="もしも月がふたつあったら|もしも図鑑|もしも地球ラボ">
+<meta property="og:description" content="月がふたつあると夜は明るく、潮は複雑に。でも月どうしが引っぱり合い、軌道が不安定になる可能性も。">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://moshimo-lab.pages.dev/assets/ogp.png?v=202607101300">
+<title>もしも月がふたつあったら|もしも図鑑|もしも地球ラボ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=JetBrains+Mono:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../assets/site.css?v=202607101300">
+<script src="../assets/twomoons.js?v=202607101300" defer></script>
+</head>
+<body>
+<div class="stars"></div>
+<nav class="topnav">
+  <a class="brand" href="../index.html">🌍 もしも地球ラボ</a>
+  <div class="links">
+    <a href="../zukan/index.html" class="active">もしも図鑑</a>
+    <a href="../zukan/kotoba.html">用語じてん</a>
+    <a href="../tera.html">テラちゃんについて</a>
+    <a href="../qa.html">地球のギモンQ&amp;A</a>
+    <a href="../omiyage.html">おみやげ</a>
+    <a href="../contact.html">お問い合わせ</a>
+  </div>
+</nav>
+
+<div class="wrap">
+  <div class="article-hero">
+    <div class="eyebrow">MOSHIMO ZUKAN // FILE 31</div>
+    <h1>🌗 もしも月がふたつあったら</h1>
+    <p class="sub">夜はもっと明るく、潮の満ち引きは複雑に。でも、ふたつの月は互いを引っぱり合い、軌道はいつか乱れるかもしれない。</p>
+  </div>
+  
+  <div class="minisim">
+    <div class="stage">
+      <div class="earth-wrap small" id="earthWrap">
+      
+      <div class="atmosphere"></div>
+      <div class="earth" id="earth">
+        <div class="globe-strip" id="globeStrip">
+          <div class="hemi"><div class="land land1"></div><div class="land land2"></div><div class="land land3"></div><div class="clouds"></div></div>
+          <div class="hemi"><div class="land land1"></div><div class="land land2"></div><div class="land land3"></div><div class="clouds"></div></div>
+        </div>
+        <div class="heat-overlay" id="heatOverlay"></div>
+        <div class="ice-overlay" id="iceOverlay"></div>
+      </div>
+    </div>
+      <div class="mini-moon" id="miniMoonA"></div>
+      <div class="mini-moon" id="miniMoonB"></div>
+      <div class="mascot" id="mascot">
+      <div class="sat">
+        <div class="antenna"></div><div class="tip"></div>
+        <div class="wing l"><i></i><i></i><b></b></div>
+        <div class="wing r"><b></b><i></i><i></i></div>
+        <div class="mascot-body" id="mascotBody">
+          <div class="eye l"></div><div class="eye r"></div>
+          <div class="blush l"></div><div class="blush r"></div>
+          <div class="sweat"></div>
+        </div>
+        <div class="tail"></div>
+      </div>
+      <div class="speech" id="speech"><span class="name">テラちゃん</span><span id="speechLine">今日も平常運転だよ〜</span></div>
+    </div>
+    </div>
+    <div class="readout cols3">
+      <div class="card"><div class="k">夜の明るさ</div><div class="v" id="tmnight">1.0 倍</div></div>
+      <div class="card"><div class="k">潮の満ち引き</div><div class="v" id="tmtide">シンプル</div></div>
+      <div class="card"><div class="k">軌道の安定</div><div class="v" id="tmstable">安定</div></div>
+    </div>
+    <div class="slider-panel bare" id="panelTm">
+      <div class="label">2つ目の月の大きさ(いまの月=1.0)</div>
+      <div class="value" id="valTm">0(月はひとつ)</div>
+      <input type="range" id="tm" min="0" max="150" value="0" aria-label="2つ目の月の大きさ">
+      <div class="scale"><span>0(月ひとつ)</span><span>1倍(同じ大きさ)</span><span class="warn">1.5倍</span></div>
+      <div class="why" id="whyTm">🔎 月がもうひとつあると、夜は明るく、潮の満ち引きは2つの月の合わせ技で複雑になるよ</div>
+    </div>
+  </div>
+  
+  <h2>月をもうひとつ増やすと、何が起きる?</h2>
+  <h3>① 夜が、もっと明るくなる</h3>
+  <p>いちばんわかりやすい変化は、夜の明るさです。月はそれ自身が光っているのではなく、太陽の光を反射して輝いています。だから月がふたつあれば、反射する光も増えて、<strong>夜空はより明るく</strong>なります。ふたつの満月が同時に空にのぼる夜は、今よりずっと明るく、星は少し見えにくくなるかもしれません。スライダーで2つ目の月を大きくすると、夜の明るさが増していきます。</p>
+  <h3>② 潮の満ち引きが、複雑になる</h3>
+  <p><a href="moonhalf.html">潮の満ち引き</a>は月の引力が生んでいます。月がふたつになると、それぞれの月が海を引っぱるので、潮は<strong>2つの月の引力の"合わせ技"</strong>で決まる、複雑なリズムになります。ふたつの月が空の同じ方向に並べば潮は大きく、反対方向に離れれば打ち消し合って小さくなる。今のような規則正しい満ち引きではなく、日によって大きく変わる潮になるでしょう。海辺の生き物にとっては、なかなか予測のむずかしい世界です。</p>
+  <h3>③ ふたつの月は、互いに引っぱり合う</h3>
+  <p>ここが月ふたつのいちばん難しいところです。ふたつの月は地球を回るだけでなく、<strong>月どうしも引力で引っぱり合います</strong>。この影響が積み重なると、軌道が少しずつ乱れて、いつか片方が地球に落ちてきたり、宇宙へはじき飛ばされたりする可能性があります。スライダーで2つ目の月を大きくするほど、「軌道の安定」が下がっていくのはこのためです。ただし、木星のガリレオ衛星のように、うまくリズムが噛み合う(共鳴する)と、複数の月が安定して回り続けられる場合もあります。バランスは、とても繊細なのです。</p>
+  <h3>④ ひとつの月の「ちょうどよさ」</h3>
+  <p>今の地球には、ほどよい大きさの月がひとつだけあります。この1個の月が、<a href="moon.html">地球の地軸を安定させ</a>、規則正しい潮を生み、夜をほのかに照らしてくれています。月がふたつあったら、もっとにぎやかで美しい夜空になったかもしれませんが、そのぶん潮も軌道も複雑で不安定になったはず。「ひとつだけ」というのも、実は地球の落ち着いた環境を支える、ひそかな"ちょうどよさ"なのかもしれません。</p>
+
+  <div class="note"><div class="nt">💡 豆知識:大昔、地球には月がふたつあった?</div>
+  実は「かつて地球には小さな2つ目の月があった」とする仮説があります。その小さな月が、ゆっくり近づいてきた大きな月と衝突し、静かに"合体"した——その名残が、月の表と裏で地形が大きく違う理由ではないか、というのです(裏側は表より地殻が厚い)。まだ議論中の説ですが、もし本当なら、地球はかつて本当にふたつの月を持ち、それが今のひとつになった、ということになります。夜空を見上げるとき、月がたどってきた長い歴史に思いをはせてみてください。</div>
+  
+  <div class="termmemo"><div class="tm">🔎 むずかしい言葉は「用語じてん」でチェック</div>
+  <div class="termchips"><a href="kotoba.html#tidal-force">潮汐力(起潮力)</a><a href="kotoba.html#moon-origin">月のでき方(ジャイアント・インパクト説)</a><a href="kotoba.html#revolution">公転</a></div></div>
+  
+  <div class="sources"><div class="st">📚 出典・参考(ファクトチェック済み)</div><ul><li><a href="https://ja.wikipedia.org/wiki/%E6%BD%AE%E6%B1%90" rel="noopener noreferrer">月は太陽光を反射して光る・潮汐力は月の引力が生む(潮汐/Wikipedia)</a></li>
+<li><a href="https://eco.mtk.nao.ac.jp/koyomi/wiki/C4ACBCAE2FC4ACBCAECBE0BBA4.html" rel="noopener noreferrer">多数の衛星は相互に影響し共鳴により軌道が安定する場合がある・ガリレオ衛星の例(国立天文台暦計算室)</a></li>
+<li><a href="https://ja.wikipedia.org/wiki/%E6%9C%88" rel="noopener noreferrer">月の表と裏で地殻の厚さが異なる・2つ目の月の合体説(ジャイアント・インパクト説関連/Wikipedia:月)</a></li>
+<li><a href="https://eco.mtk.nao.ac.jp/koyomi/wiki/C4ACBCAE2FC4ACBCAECBE0BBA4.html" rel="noopener noreferrer">土星の衛星は2:1の共鳴関係で楕円軌道が保たれる例(国立天文台暦計算室)</a></li></ul></div>
+  <div class="relnav">
+    <a class="btn primary" href="simulator.html">🎛️ 統合シミュレーターで全部いじる</a><a class="btn" href="tidelock.html">🌓 次の記事:もしも地球が太陽に片面を向けたまま止まったら</a><a class="btn" href="dinosaur.html">🦕 前の記事:もしも今が恐竜時代の環境だったら</a>
+  </div>
+</div>
+
+<footer class="site">
+  <div class="flinks">
+    <a href="../index.html">トップ</a><a href="../zukan/index.html">もしも図鑑</a><a href="../zukan/kotoba.html">用語じてん</a><a href="../tera.html">テラちゃん</a><a href="../qa.html">Q&amp;A</a><a href="../omiyage.html">おみやげ</a><a href="../contact.html">お問い合わせ</a>
+  </div>
+  ※ 当サイトのシミュレーションはすべて簡略化した概算モデルです。実際の気候・人口動態はもっと複雑です。<br>
+  © もしも地球ラボ / OBSERVATION LOG by テラちゃん
+</footer>
+</body>
+</html>

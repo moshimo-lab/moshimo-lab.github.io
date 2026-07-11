@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src https://formspree.io; base-uri 'none'; form-action https://formspree.io">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="description" content="地球の水を全部集めると直径約1400kmの球。この絶妙な量が陸と海を分ける。増えれば水没、減れば干上がる。">
+<meta property="og:site_name" content="もしも地球ラボ">
+<meta property="og:title" content="もしも地球の水が増えたり減ったりしたら|もしも図鑑|もしも地球ラボ">
+<meta property="og:description" content="地球の水を全部集めると直径約1400kmの球。この絶妙な量が陸と海を分ける。増えれば水没、減れば干上がる。">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://moshimo-lab.pages.dev/assets/ogp.png?v=202607101300">
+<title>もしも地球の水が増えたり減ったりしたら|もしも図鑑|もしも地球ラボ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=JetBrains+Mono:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../assets/site.css?v=202607101300">
+<script src="../assets/water.js?v=202607101300" defer></script>
+</head>
+<body>
+<div class="stars"></div>
+<nav class="topnav">
+  <a class="brand" href="../index.html">🌍 もしも地球ラボ</a>
+  <div class="links">
+    <a href="../zukan/index.html" class="active">もしも図鑑</a>
+    <a href="../zukan/kotoba.html">用語じてん</a>
+    <a href="../tera.html">テラちゃんについて</a>
+    <a href="../qa.html">地球のギモンQ&amp;A</a>
+    <a href="../omiyage.html">おみやげ</a>
+    <a href="../contact.html">お問い合わせ</a>
+  </div>
+</nav>
+
+<div class="wrap">
+  <div class="article-hero">
+    <div class="eyebrow">MOSHIMO ZUKAN // FILE 27</div>
+    <h1>💧 もしも地球の水が増えたり減ったりしたら</h1>
+    <p class="sub">「水の惑星」の水を全部集めても、意外なほど小さな球にしかならない。その絶妙な量が、陸と海を分けている。</p>
+  </div>
+  
+  <div class="minisim">
+    <div class="stage">
+      <div class="earth-wrap small" id="earthWrap">
+      
+      <div class="atmosphere"></div>
+      <div class="earth" id="earth">
+        <div class="globe-strip" id="globeStrip">
+          <div class="hemi"><div class="land land1"></div><div class="land land2"></div><div class="land land3"></div><div class="clouds"></div></div>
+          <div class="hemi"><div class="land land1"></div><div class="land land2"></div><div class="land land3"></div><div class="clouds"></div></div>
+        </div>
+        <div class="heat-overlay" id="heatOverlay"></div>
+        <div class="ice-overlay" id="iceOverlay"></div>
+      </div>
+    </div>
+      <div class="mascot" id="mascot">
+      <div class="sat">
+        <div class="antenna"></div><div class="tip"></div>
+        <div class="wing l"><i></i><i></i><b></b></div>
+        <div class="wing r"><b></b><i></i><i></i></div>
+        <div class="mascot-body" id="mascotBody">
+          <div class="eye l"></div><div class="eye r"></div>
+          <div class="blush l"></div><div class="blush r"></div>
+          <div class="sweat"></div>
+        </div>
+        <div class="tail"></div>
+      </div>
+      <div class="speech" id="speech"><span class="name">テラちゃん</span><span id="speechLine">今日も平常運転だよ〜</span></div>
+    </div>
+    </div>
+    <div class="readout cols3">
+      <div class="card"><div class="k">海が地表をおおう割合</div><div class="v" id="wsea">71%</div></div>
+      <div class="card"><div class="k">陸地のようす</div><div class="v" id="wland">海と陸のバランス</div></div>
+      <div class="card"><div class="k">世界のかたち</div><div class="v" id="wworld">いまの地球</div></div>
+    </div>
+    <div class="sealevel-viz">
+      <div class="lane-cap">🌊水の量で、陸と海はどう変わる?</div>
+      <div class="sealevel-stage">
+        <div class="sl-land"></div>
+        <div class="sl-water" id="slWater"></div>
+      </div>
+      <div class="sizecompare-labels"><span id="slLabel">水の量 1.0倍</span><span>海面の高さ</span></div>
+    </div>
+    <div class="slider-panel bare" id="panelWt">
+      <div class="label">地球の水の量(いま=1.0)</div>
+      <div class="value" id="valWt">1.00 倍(いまの地球)</div>
+      <input type="range" id="wt" min="0" max="300" value="100" aria-label="水の量">
+      <div class="scale"><span class="warn">0倍(水なし)</span><span>1倍(いま)</span><span class="warn">3倍(水浸し)</span></div>
+      <div class="why" id="whyWt">🔎 地球の水を全部集めても、直径約1400kmの球にしかならないよ。地球(直径約1万3000km)にくらべると、意外なほど小さいんだ</div>
+    </div>
+  </div>
+  
+  <h2>地球の水を増やしたり減らしたりすると、何が起きる?</h2>
+  <h3>① まず、「水の惑星」の水は意外と少ない</h3>
+  <p>地球は表面の約71%が海におおわれた「水の惑星」です。ところが、その水を全部集めて一つの球にしても、直径は<strong>わずか約1400km</strong>ほど。直径約1万3000kmの地球にくらべると、驚くほど小さな水の玉にしかなりません。海が広く見えるのは、水がたっぷりあるからではなく、地表に<strong>薄く広がっている</strong>から。海の平均の深さは約3700mで、地球のサイズからすればガラスの表面をぬらす水滴くらいの薄さなのです。</p>
+  <h3>② 少し減らすだけで、広大な陸が現れる</h3>
+  <p>水が地表に薄く広がっているということは、水位の変化に敏感だということです。スライダーで水を減らしていくと、浅い海の底がどんどん顔を出し、大陸はつながり、陸地が一気に広がります。実際、氷期には海の水が氷として陸に固定され、海面が今より100m以上低かった時代がありました。そのとき日本列島は大陸と陸続きで、人や動物が歩いて渡れたと考えられています。水の量が少し変わるだけで、世界地図は描きかわるのです。</p>
+  <h3>③ 増やすと、陸が沈んで「水の世界」へ</h3>
+  <p>逆にスライダーで水を増やすと、低い土地から順に沈んでいきます。さらに増やせば、高い山の頂上だけが島として残る<strong>水の世界(ウォーターワールド)</strong>へ。陸上の生き物にとっては住む場所が消えていく事態です。宇宙には、地表のほとんどが深い海におおわれた「海洋惑星」も存在すると考えられています。地球が今のように<strong>陸と海の両方を持てている</strong>のは、水の量がほどよく調整されているからなのです。</p>
+  <h3>④ 陸と海、両方あることの意味</h3>
+  <p>陸と海が両方あることには、大きな意味があります。<a href="plate.html">陸の岩石の風化</a>は大気のCO₂を調整して気候を安定させ、<a href="ocean.html">広い海</a>は熱をたくわえて気温をなめらかにする。もし水が多すぎて陸がなければ岩石の風化による気候調整が働きにくく、少なすぎて海がなければ気候はとげとげしくなります。生命は海で生まれ、やがて陸へ上がりました。その進化の舞台も、陸と海が両方あってこそ。水の"量"は、地球の物語そのものを左右してきたのです。</p>
+
+  <div class="note"><div class="nt">💡 豆知識:飲める水は、そのうちのほんのひとしずく</div>
+  地球の水の総量は約14億km³。しかしその約97.5%は塩からい海水で、真水(淡水)はわずか約2.5%。しかもその淡水の大半は南極や北極の氷や、地下深くの地下水です。川や湖など、私たちが実際に手軽に使える水は、地球全体の水のたった約0.01%しかありません。「水の惑星」に暮らしていても、飲める水はほんのひとしずく。水を大切にする理由は、こんな数字にも表れています。</div>
+  
+  <div class="termmemo"><div class="tm">🔎 むずかしい言葉は「用語じてん」でチェック</div>
+  <div class="termchips"><a href="kotoba.html#ocean">海洋循環</a><a href="kotoba.html#heat-capacity">熱容量</a><a href="kotoba.html#carbon-cycle">炭素循環(サーモスタット)</a></div></div>
+  
+  <div class="sources"><div class="st">📚 出典・参考(ファクトチェック済み)</div><ul><li><a href="https://air-mag.jp/life_earth.html" rel="noopener noreferrer">地球の水を集めると直径約1385kmの球・地球の直径は約12742km・淡水は約2.5%・利用可能な水は約0.01%(Life 水を知る/USGS)</a></li>
+<li><a href="https://www.mlit.go.jp/mizukokudo/mizsei/mizukokudo_mizsei_tk2_000020.html" rel="noopener noreferrer">地球の水の総量は約14億km³・海水97.5%・淡水2.5%・利用可能な地表水は約0.01%(国土交通省 世界の水資源)</a></li>
+<li><a href="https://www.zenken-net.co.jp/about/water/water1-2.html" rel="noopener noreferrer">地球表面の約71%が海・海洋70.5%陸地29.4%・水の総量約14億km³(ゼンケン 地球の水について)</a></li>
+<li><a href="https://www.oa.u-tokyo.ac.jp/column/trivia/0035/index.html" rel="noopener noreferrer">海の平均の深さは約3700m・地球上の水の97.4%は海(東京大学 大気海洋研究所コラム)</a></li>
+<li><a href="https://www.kaijipr.or.jp/mamejiten/shizen/shizen_7.html" rel="noopener noreferrer">海の水の総量は約13億3800万km³・地球表面の70%が海・約20億年前から量はほぼ不変(日本海事広報協会)</a></li></ul></div>
+  <div class="relnav">
+    <a class="btn primary" href="simulator.html">🎛️ 統合シミュレーターで全部いじる</a><a class="btn" href="volcano.html">🌋 次の記事:もしも火山だらけの地球だったら</a><a class="btn" href="flip.html">🧭 前の記事:もしも北と南の極が入れかわったら</a>
+  </div>
+</div>
+
+<footer class="site">
+  <div class="flinks">
+    <a href="../index.html">トップ</a><a href="../zukan/index.html">もしも図鑑</a><a href="../zukan/kotoba.html">用語じてん</a><a href="../tera.html">テラちゃん</a><a href="../qa.html">Q&amp;A</a><a href="../omiyage.html">おみやげ</a><a href="../contact.html">お問い合わせ</a>
+  </div>
+  ※ 当サイトのシミュレーションはすべて簡略化した概算モデルです。実際の気候・人口動態はもっと複雑です。<br>
+  © もしも地球ラボ / OBSERVATION LOG by テラちゃん
+</footer>
+</body>
+</html>

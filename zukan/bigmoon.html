@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src https://formspree.io; base-uri 'none'; form-action https://formspree.io">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="description" content="皆既日食が見られるのは「400倍の偶然」のおかげ。月の大きさを変えると、日食も、潮も、夜も変わる。">
+<meta property="og:site_name" content="もしも地球ラボ">
+<meta property="og:title" content="もしも月がもっと大きかったら|もしも図鑑|もしも地球ラボ">
+<meta property="og:description" content="皆既日食が見られるのは「400倍の偶然」のおかげ。月の大きさを変えると、日食も、潮も、夜も変わる。">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://moshimo-lab.pages.dev/assets/ogp.png?v=202607101300">
+<title>もしも月がもっと大きかったら|もしも図鑑|もしも地球ラボ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=JetBrains+Mono:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../assets/site.css?v=202607101300">
+<script src="../assets/bigmoon.js?v=202607101300" defer></script>
+</head>
+<body>
+<div class="stars"></div>
+<nav class="topnav">
+  <a class="brand" href="../index.html">🌍 もしも地球ラボ</a>
+  <div class="links">
+    <a href="../zukan/index.html" class="active">もしも図鑑</a>
+    <a href="../zukan/kotoba.html">用語じてん</a>
+    <a href="../tera.html">テラちゃんについて</a>
+    <a href="../qa.html">地球のギモンQ&amp;A</a>
+    <a href="../omiyage.html">おみやげ</a>
+    <a href="../contact.html">お問い合わせ</a>
+  </div>
+</nav>
+
+<div class="wrap">
+  <div class="article-hero">
+    <div class="eyebrow">MOSHIMO ZUKAN // FILE 22</div>
+    <h1>🌗 もしも月がもっと大きかったら</h1>
+    <p class="sub">太陽は月の400倍大きく、400倍遠い——だから空でぴったり同じ大きさ。この奇跡の一致を、スライダーで崩してみよう。</p>
+  </div>
+  
+  <div class="minisim">
+    <div class="stage">
+      <div class="earth-wrap small" id="earthWrap">
+      
+      <div class="atmosphere"></div>
+      <div class="earth" id="earth">
+        <div class="globe-strip" id="globeStrip">
+          <div class="hemi"><div class="land land1"></div><div class="land land2"></div><div class="land land3"></div><div class="clouds"></div></div>
+          <div class="hemi"><div class="land land1"></div><div class="land land2"></div><div class="land land3"></div><div class="clouds"></div></div>
+        </div>
+        <div class="heat-overlay" id="heatOverlay"></div>
+        <div class="ice-overlay" id="iceOverlay"></div>
+      </div>
+    </div>
+      <div class="mini-moon" id="miniMoon"></div>
+      <div class="mascot" id="mascot">
+      <div class="sat">
+        <div class="antenna"></div><div class="tip"></div>
+        <div class="wing l"><i></i><i></i><b></b></div>
+        <div class="wing r"><b></b><i></i><i></i></div>
+        <div class="mascot-body" id="mascotBody">
+          <div class="eye l"></div><div class="eye r"></div>
+          <div class="blush l"></div><div class="blush r"></div>
+          <div class="sweat"></div>
+        </div>
+        <div class="tail"></div>
+      </div>
+      <div class="speech" id="speech"><span class="name">テラちゃん</span><span id="speechLine">今日も平常運転だよ〜</span></div>
+    </div>
+    </div>
+    <div class="readout cols3">
+      <div class="card"><div class="k">日食のタイプ</div><div class="v" id="eclipse">皆既も金環も</div></div>
+      <div class="card"><div class="k">潮の満ち引き</div><div class="v" id="btide">1.0 倍</div></div>
+      <div class="card"><div class="k">満月の夜の明るさ</div><div class="v" id="bnight">1.0 倍</div></div>
+    </div>
+    <div class="kidviz">
+      <div class="dist-lane">
+        <div class="lane-cap">🌗地球から見た大きさくらべ(日食チェック)</div>
+        <div class="eclipse-row">
+          <div class="ec-item"><div class="ec-circle sun"></div><div class="ec-cap">太陽</div></div>
+          <div class="ec-vs">vs</div>
+          <div class="ec-item"><div class="ec-circle moon" id="ecMoon"></div><div class="ec-cap">月</div></div>
+          <div class="ec-verdict" id="ecVerdict">ほぼ同じ大きさ!</div>
+        </div>
+      </div>
+    </div>
+    <div class="slider-panel bare" id="panelBm">
+      <div class="label">月の大きさ(いま=1.0)</div>
+      <div class="value" id="valBm">1.00 倍</div>
+      <input type="range" id="bm" min="20" max="300" value="100" aria-label="月の大きさ">
+      <div class="scale"><span class="warn">0.2倍(小さい)</span><span>1倍(いま)</span><span class="warn">3倍(大きい)</span></div>
+      <div class="why" id="whyBm">🔎 太陽は月の約400倍大きくて、約400倍遠い。だから空では同じ大きさに見える——完全な偶然だよ</div>
+    </div>
+  </div>
+  
+  <h2>月の大きさを変えると、何が起きる?</h2>
+  <h3>① まず知ってほしい、「400倍の偶然」</h3>
+  <p>太陽の直径は約140万kmで、月(約3500km)の<strong>約400倍</strong>。ところが地球からの距離も、太陽(約1億5000万km)は月(約38万km)の<strong>約400倍</strong>。大きさの差と距離の差がぴったり打ち消し合って、空に浮かぶ太陽と月は<strong>ほぼ同じ大きさ</strong>に見えます。これはただの偶然です。でもこの偶然のおかげで、月が太陽をすっぽり隠す<strong>皆既日食</strong>と、月からリング状に太陽がはみ出す<strong>金環日食</strong>の、両方を楽しめる星に私たちは住んでいるのです。</p>
+  <h3>② 大きくすると:皆既日食「だけ」の世界に</h3>
+  <p>スライダーで月を大きくしてみてください。国立天文台の解説にあるとおり、月が今より大きい(または近い)と、日食は<strong>皆既のみ</strong>になります。太陽は毎回完全に隠れ、金環日食のリングは二度と見られません。しかも大きな月は太陽のまわりに広がる淡い大気「コロナ」まで深く覆い隠してしまうため、皆既日食の一番の見どころも減ってしまうかもしれません。さらに、<a href="moonhalf.html">潮汐の記事</a>で見たとおり月の重力の影響も増すので、潮の満ち引きは月の質量(大きさの3乗)に比例して激しくなります。</p>
+  <h3>③ 小さくすると:皆既日食が消える</h3>
+  <p>逆に月を小さくすると、月は太陽を隠しきれなくなり、日食は<strong>金環のみ</strong>に。空が夜のように暗くなる皆既の体験は、地球から失われます。実は月は地球の直径の約4分の1もある、太陽系でも異例に大きな衛星です。もし地球の衛星がありふれた小さなものだったら、皆既日食を知らない文明が育っていたかもしれません。日食は古来、人類が宇宙に興味を持つ大きなきっかけでした。その入り口が、なかった世界です。</p>
+  <h3>④ 実は「今だけ」の風景でもある</h3>
+  <p>もうひとつ大事なことがあります。この400倍の一致は、<strong>時間の上でも偶然</strong>だということ。月は誕生直後、今よりずっと地球の近くにあり、空には巨大な月がかかっていました。そして<a href="moonhalf.html">今も年に数cmずつ遠ざかっている</a>ため、はるか未来には月の見かけが小さくなりすぎて、皆既日食は二度と起こらなくなると考えられています。皆既と金環の両方が見られるのは、長い地球の歴史の中の「特別な時代」。私たちは、ちょうどいい大きさの月を、ちょうどいい時代に見上げているのです。</p>
+
+  <div class="note"><div class="nt">💡 豆知識:月が2倍明るくても、夜は昼にならない</div>
+  満月の明るさは月の見かけの面積、つまり大きさの2乗でざっくり増えます。月が2倍の大きさなら、満月の夜は約4倍明るい計算です。それでも太陽の明るさには遠く及びません——満月は太陽の約40万分の1程度の明るさしかないからです。月あかりが増えた世界で困るのは人間より、月の満ち欠けを頼りに行動する夜の生き物たちかもしれません。なお、このシミュレーターは大きさの効果をつかむための概算モデルです。</div>
+  
+  <div class="termmemo"><div class="tm">🔎 むずかしい言葉は「用語じてん」でチェック</div>
+  <div class="termchips"><a href="kotoba.html#tidal-force">潮汐力(起潮力)</a><a href="kotoba.html#tidal-lock">潮汐ロック</a><a href="kotoba.html#revolution">公転</a></div></div>
+  
+  <div class="sources"><div class="st">📚 出典・参考(ファクトチェック済み)</div><ul><li><a href="https://eco.mtk.nao.ac.jp/koyomi/wiki/C6FCBFA92FBCEFCEE0.html" rel="noopener noreferrer">月の400倍大きな太陽が400倍遠くにある偶然・月が大きい/近いと皆既のみ、小さい/遠いと金環のみ(国立天文台 暦Wiki)</a></li>
+<li><a href="http://www.science.pref.fukuoka.jp/tenmon/home_c/home_c12.html" rel="noopener noreferrer">太陽の直径は月の約400倍・距離も約400倍・月の直径約3500km(福岡県青少年科学館)</a></li>
+<li><a href="https://www.kwasan.kyoto-u.ac.jp/~isobe/etc/etc/120521-kinkan.html" rel="noopener noreferrer">45億年前の月は距離が今の1/20で20倍の大きさに見えた・将来は皆既日食が見られなくなる・月は地球の1/4という異例の大きさ(京都大学花山天文台)</a></li>
+<li><a href="https://www.nao.ac.jp/news/blog/2023/20230413-eclipse.html" rel="noopener noreferrer">太陽と月の視直径は偶然ほぼ同じ・月の距離は公転中に約1割変化し皆既と金環を分ける(国立天文台)</a></li></ul></div>
+  <div class="relnav">
+    <a class="btn primary" href="simulator.html">🎛️ 統合シミュレーターで全部いじる</a><a class="btn" href="sky.html">🪟 次の記事:もしも空が青くなかったら</a><a class="btn" href="pangaea.html">🗺️ 前の記事:もしも超大陸パンゲアが今もあったら</a>
+  </div>
+</div>
+
+<footer class="site">
+  <div class="flinks">
+    <a href="../index.html">トップ</a><a href="../zukan/index.html">もしも図鑑</a><a href="../zukan/kotoba.html">用語じてん</a><a href="../tera.html">テラちゃん</a><a href="../qa.html">Q&amp;A</a><a href="../omiyage.html">おみやげ</a><a href="../contact.html">お問い合わせ</a>
+  </div>
+  ※ 当サイトのシミュレーションはすべて簡略化した概算モデルです。実際の気候・人口動態はもっと複雑です。<br>
+  © もしも地球ラボ / OBSERVATION LOG by テラちゃん
+</footer>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src https://formspree.io; base-uri 'none'; form-action https://formspree.io">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="description" content="約7億年前、地球は赤道まで凍った(全球凍結)。白い星はさらに冷える。抜け出せたのは火山のCO₂のおかげ。">
+<meta property="og:site_name" content="もしも地球ラボ">
+<meta property="og:title" content="もしも地球がまるごと凍ったら|もしも図鑑|もしも地球ラボ">
+<meta property="og:description" content="約7億年前、地球は赤道まで凍った(全球凍結)。白い星はさらに冷える。抜け出せたのは火山のCO₂のおかげ。">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://moshimo-lab.pages.dev/assets/ogp.png?v=202607101300">
+<title>もしも地球がまるごと凍ったら|もしも図鑑|もしも地球ラボ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=JetBrains+Mono:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../assets/site.css?v=202607101300">
+<script src="../assets/snowball.js?v=202607101300" defer></script>
+</head>
+<body>
+<div class="stars"></div>
+<nav class="topnav">
+  <a class="brand" href="../index.html">🌍 もしも地球ラボ</a>
+  <div class="links">
+    <a href="../zukan/index.html" class="active">もしも図鑑</a>
+    <a href="../zukan/kotoba.html">用語じてん</a>
+    <a href="../tera.html">テラちゃんについて</a>
+    <a href="../qa.html">地球のギモンQ&amp;A</a>
+    <a href="../omiyage.html">おみやげ</a>
+    <a href="../contact.html">お問い合わせ</a>
+  </div>
+</nav>
+
+<div class="wrap">
+  <div class="article-hero">
+    <div class="eyebrow">MOSHIMO ZUKAN // FILE 19</div>
+    <h1>⛄ もしも地球がまるごと凍ったら</h1>
+    <p class="sub">赤道まで氷に覆われた「白い地球」。これは空想ではなく、実際に何度か起きたとされる出来事だ。</p>
+  </div>
+  
+  <div class="minisim">
+    <div class="stage">
+      <div class="earth-wrap small" id="earthWrap">
+      
+      <div class="atmosphere"></div>
+      <div class="earth" id="earth">
+        <div class="globe-strip" id="globeStrip">
+          <div class="hemi"><div class="land land1"></div><div class="land land2"></div><div class="land land3"></div><div class="clouds"></div></div>
+          <div class="hemi"><div class="land land1"></div><div class="land land2"></div><div class="land land3"></div><div class="clouds"></div></div>
+        </div>
+        <div class="heat-overlay" id="heatOverlay"></div>
+        <div class="ice-overlay" id="iceOverlay"></div>
+      </div>
+    </div>
+      <div class="mascot" id="mascot">
+      <div class="sat">
+        <div class="antenna"></div><div class="tip"></div>
+        <div class="wing l"><i></i><i></i><b></b></div>
+        <div class="wing r"><b></b><i></i><i></i></div>
+        <div class="mascot-body" id="mascotBody">
+          <div class="eye l"></div><div class="eye r"></div>
+          <div class="blush l"></div><div class="blush r"></div>
+          <div class="sweat"></div>
+        </div>
+        <div class="tail"></div>
+      </div>
+      <div class="speech" id="speech"><span class="name">テラちゃん</span><span id="speechLine">今日も平常運転だよ〜</span></div>
+    </div>
+    </div>
+    <div class="readout cols3">
+      <div class="card"><div class="k">地球の白さ(反射率)</div><div class="v" id="albedo">ふつう</div></div>
+      <div class="card"><div class="k">気温の向かう先</div><div class="v" id="strend">安定</div></div>
+      <div class="card"><div class="k">氷におおわれた範囲</div><div class="v" id="scover">高緯度だけ</div></div>
+    </div>
+    <div class="slider-panel bare" id="panelSb">
+      <div class="label">地球をおおう氷の割合</div>
+      <div class="value" id="valSb">10%(いまの地球)</div>
+      <input type="range" id="sb" min="0" max="100" value="10" aria-label="氷の割合">
+      <div class="scale"><span>0%</span><span>10%(いま)</span><span class="warn">100%(全球凍結)</span></div>
+      <div class="why" id="whySb">🔎 白い氷は太陽光をはね返すよ。氷が増えるほど寒くなり、その寒さがまた氷を増やす——これが暴走のもとだよ</div>
+    </div>
+  </div>
+  
+  <h2>地球の氷を増やしていくと、何が起きる?</h2>
+  <h3>① 白は、太陽光をはね返す</h3>
+  <p>雪や氷が白いのには、気候にとって大きな意味があります。白い面は太陽の光をよく<strong>はね返す</strong>(反射率=アルベドが高い)ので、そこに届いたエネルギーは地面を温めずに宇宙へ逃げていきます。氷が増えるほど地球は太陽の熱を受け取れなくなり、さらに冷える。冷えればまた氷が増える——。この「寒さが寒さを呼ぶ」暴走を、<strong>アイス・アルベド・フィードバック</strong>と呼びます。スライダーで氷を増やしていくと、あるところから気温が坂道を転がるように下がりはじめるのは、このためです。</p>
+  <h3>② 暴走が止まらないと「白い地球」になる</h3>
+  <p>いったん氷が地球のある範囲を超えて広がると、フィードバックが止まらなくなり、氷は赤道へ向かってなだれ込みます。行き着く先が、赤道の海まで凍りつく<strong>全球凍結(スノーボールアース)</strong>です。証拠はアフリカ南部ナミビアなどの地層に残されており、当時の赤道付近だった場所にまで氷河が作った跡が見つかっています。もっとも新しい大規模な全球凍結は約7億年前(スターチアン氷河時代)で、地球はおよそ5000万年以上ものあいだ凍りついていたと考える研究もあります。</p>
+  <h3>③ どうやって抜け出したのか——火山という非常口</h3>
+  <p>いったん凍ったら、なぜ今の地球は青いのでしょう。鍵は<a href="plate.html">火山</a>でした。全球凍結の間も、海底や陸上の火山は<strong>CO₂を吐き出し続けます</strong>。ところが地表が氷に閉ざされていると、ふだんCO₂を吸収する岩石の風化がほとんど働きません。行き場を失ったCO₂は大気にたまり続け、数百万年かけて強烈な<a href="greenhouse.html">温室効果</a>を作り出します。やがてそれが限界を超えると、今度は一気に氷が解けはじめる。解ければ黒い地表が顔を出し、太陽光を吸ってさらに温まる——同じフィードバックが、今度は逆回転で猛烈な温暖化を引き起こしたのです。</p>
+  <h3>④ 凍結が、生命を進化させたのかもしれない</h3>
+  <p>全球凍結は生命にとって大災害だったはずですが、興味深いことに、この時代のあとに生物は大きく多様化しています。原生代末の全球凍結を抜けた先に、多細胞生物が花開くエディアカラ紀・カンブリア紀が続くのです。極限まで追い詰められた環境が、かえって生命の進化を加速させたのではないか——そう考える研究者もいます。<strong>凍りつくことすら、地球の物語の一章だった</strong>のかもしれません。</p>
+
+  <div class="note"><div class="nt">💡 豆知識:このサイトの伏線が、ここで回収される</div>
+  全球凍結は、これまでの記事のしくみが総動員される舞台です。<a href="ocean.html">氷アルベド</a>による暴走、<a href="plate.html">プレートと火山</a>によるCO₂の供給、<a href="greenhouse.html">温室効果</a>による脱出、そして<a href="atmosphere.html">大気</a>のはたらき。地球の気候は、いくつものしくみが押し合いへし合いする、ひとつの巨大なシーソーなのです。なお、このシミュレーターは暴走のイメージをつかむための簡略モデルで、実際の全球凍結の開始・終了には、まだ研究者が議論を続けている謎が多く残っています。</div>
+  
+  <div class="termmemo"><div class="tm">🔎 むずかしい言葉は「用語じてん」でチェック</div>
+  <div class="termchips"><a href="kotoba.html#albedo">アルベド(反射率)</a><a href="kotoba.html#greenhouse">温室効果</a><a href="kotoba.html#carbon-cycle">炭素循環(サーモスタット)</a></div></div>
+  
+  <div class="sources"><div class="st">📚 出典・参考(ファクトチェック済み)</div><ul><li><a href="https://ja.wikipedia.org/wiki/%E3%82%B9%E3%83%8E%E3%83%BC%E3%83%9C%E3%83%BC%E3%83%AB%E3%82%A2%E3%83%BC%E3%82%B9" rel="noopener noreferrer">氷床は反射率(アルベド)が高く、一定範囲が氷に覆われると寒冷化が加速する正のフィードバック(Wikipedia:スノーボールアース)</a></li>
+<li><a href="https://innovatopia.jp/energy/energy-news/11588/" rel="noopener noreferrer">約7億1700万年前に全球凍結、CO₂放出減少が原因、状態が約5600万年続いた(シドニー大学の研究/イノベトピア)</a></li>
+<li><a href="https://omnh.jp/tokuten/2011kaseki/virtual/history/precambrian02.html" rel="noopener noreferrer">凍結中も火山活動でCO₂が増え、温室効果が限界を超えると解凍する・ナミビアの地層に証拠(大阪市立自然史博物館 特別展)</a></li>
+<li><a href="https://jfs.or.jp/jfs-cs/earth-snowbowl01/" rel="noopener noreferrer">全球凍結の発生・終焉・生物の生存に関する諸説(日本鋳造工学会)</a></li>
+<li><a href="https://sorae.info/astronomy/20240225-snowball-earth.html" rel="noopener noreferrer">約7億年前スターティアン氷期の原因をシミュレーションで調査(sorae)</a></li></ul></div>
+  <div class="relnav">
+    <a class="btn primary" href="simulator.html">🎛️ 統合シミュレーターで全部いじる</a><a class="btn" href="sungone.html">🌑 次の記事:もしも太陽が今この瞬間、消えたら</a><a class="btn" href="impact.html">☄️ 前の記事:もしも小惑星の衝突が今も頻繁だったら</a>
+  </div>
+</div>
+
+<footer class="site">
+  <div class="flinks">
+    <a href="../index.html">トップ</a><a href="../zukan/index.html">もしも図鑑</a><a href="../zukan/kotoba.html">用語じてん</a><a href="../tera.html">テラちゃん</a><a href="../qa.html">Q&amp;A</a><a href="../omiyage.html">おみやげ</a><a href="../contact.html">お問い合わせ</a>
+  </div>
+  ※ 当サイトのシミュレーションはすべて簡略化した概算モデルです。実際の気候・人口動態はもっと複雑です。<br>
+  © もしも地球ラボ / OBSERVATION LOG by テラちゃん
+</footer>
+</body>
+</html>
