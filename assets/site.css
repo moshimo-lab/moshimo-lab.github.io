@@ -279,6 +279,21 @@ footer.site{position:relative;z-index:1;text-align:center;color:var(--sub);font-
 footer.site .flinks{margin-bottom:8px;font-family:'Noto Sans JP',sans-serif;font-size:13px}
 footer.site .flinks a{margin:0 8px;color:var(--sub)}
 
+/* ===== 図鑑の絞りこみ ===== */
+.zukan-filter{margin:6px 0 14px}
+.zukan-filter input[type=search]{width:100%;box-sizing:border-box;background:var(--bg2);border:1px solid var(--line);
+  border-radius:10px;color:var(--text);padding:10px 12px;font-family:'Noto Sans JP',sans-serif;font-size:15px;margin-bottom:10px}
+.zukan-filter input[type=search]:focus{outline:none;border-color:var(--teal)}
+.zukan-filter input[type=search]::placeholder{color:var(--sub)}
+.cat-chips{display:flex;flex-wrap:wrap;gap:6px}
+.cat-chip{font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:13px;border:1px solid var(--line);
+  color:var(--sub);background:var(--bg2);border-radius:99px;padding:6px 13px;cursor:pointer;
+  transition:border-color .2s,color .2s,background .2s}
+.cat-chip:hover{border-color:var(--teal);color:var(--teal)}
+.cat-chip.on{border-color:var(--teal);color:#04211c;background:var(--teal)}
+.filter-count{margin-top:8px;font-size:12.5px;color:var(--sub);min-height:1em}
+.zcard.hide{display:none}
+
 @media (max-width:560px){
   .stage{gap:12px}
   .earth-wrap{width:110px;height:110px}
@@ -574,6 +589,38 @@ details .tera{margin-top:8px;font-family:'Zen Maru Gothic',sans-serif;font-size:
   background:repeating-linear-gradient(90deg,rgba(120,255,190,0) 0 10px,rgba(120,255,190,.55) 14px 20px,rgba(120,255,190,0) 24px 34px),
     linear-gradient(180deg,rgba(255,120,150,.35) 0%,rgba(120,255,190,.55) 70%,rgba(120,255,190,.15) 100%)}
 .au-ground{position:absolute;left:0;right:0;bottom:0;height:14px;background:linear-gradient(180deg,#16233f,#0b1220)}
+/* ジャンプくらべ(jump) */
+.jump-viz{border:1px solid var(--line);border-radius:12px;background:var(--bg2);padding:10px 14px 8px;margin:12px 0 4px}
+.jump-viz .lane-cap{font-size:11.5px;color:var(--sub);margin-bottom:6px}
+.jump-stage{position:relative;height:130px;border-radius:8px;overflow:hidden;background:linear-gradient(180deg,#050a18 0%,#101c36 100%)}
+.jump-ground{position:absolute;left:0;right:0;bottom:0;height:12px;background:linear-gradient(180deg,#233250,#0b1220)}
+.jump-bar{position:absolute;left:34%;bottom:12px;width:46px;height:17px;border-radius:8px 8px 0 0;
+  background:linear-gradient(180deg,rgba(94,234,212,.9),rgba(94,234,212,.18));
+  box-shadow:0 0 12px rgba(94,234,212,.3);transition:height .25s ease}
+.jump-fig{position:absolute;left:calc(34% + 10px);bottom:29px;font-size:20px;transition:bottom .25s ease;z-index:2}
+.jump-earthline{position:absolute;left:10%;right:10%;bottom:29px;border-top:1.5px dashed rgba(255,209,102,.6)}
+.jump-earthline span{position:absolute;right:0;top:-16px;font-size:9.5px;color:var(--gold)}
+/* 地球の中へ(hole) */
+.depth-viz{border:1px solid var(--line);border-radius:12px;background:var(--bg2);padding:10px 14px 8px;margin:12px 0 4px}
+.depth-viz .lane-cap{font-size:11.5px;color:var(--sub);margin-bottom:6px}
+.depth-stage{position:relative;height:170px;border-radius:8px;overflow:hidden}
+.depth-band{position:absolute;left:0;right:0}
+.db-crust{top:0;height:7%;background:linear-gradient(180deg,#3d5533,#4a3b2a)}
+.db-mantle{top:7%;height:38%;background:linear-gradient(180deg,#7a3d1e,#b3541e)}
+.db-outer{top:45%;height:32%;background:linear-gradient(180deg,#d98324,#f2b134)}
+.db-inner{top:77%;height:23%;background:linear-gradient(180deg,#f7d774,#fff3c4)}
+.depth-band span{position:absolute;left:8px;top:4px;font-size:9.5px;color:rgba(255,255,255,.9);text-shadow:0 1px 2px rgba(0,0,0,.6)}
+.db-inner span{color:#7a5b00;text-shadow:none}
+.depth-marker{position:absolute;left:50%;top:0;transform:translate(-50%,-50%);width:14px;height:14px;border-radius:50%;
+  background:var(--teal);border:2px solid #052;box-shadow:0 0 10px rgba(94,234,212,.85);transition:top .15s ease;z-index:2}
+/* 宇宙への道(walk) */
+.trip-viz{border:1px solid var(--line);border-radius:12px;background:var(--bg2);padding:10px 14px 8px;margin:12px 0 4px}
+.trip-viz .lane-cap{font-size:11.5px;color:var(--sub);margin-bottom:6px}
+.trip-lane{position:relative;height:74px;background:linear-gradient(90deg,#16233f,#050a18);border-radius:8px}
+.trip-stop{position:absolute;top:40%;transform:translate(-50%,-50%);font-size:18px}
+.trip-stop span{position:absolute;top:20px;left:50%;transform:translateX(-50%);font-size:9px;color:var(--sub);white-space:nowrap}
+.ts-earth{left:7%} .ts-space{left:26%} .ts-moon{left:54%} .ts-sun{left:89%}
+.trip-marker{position:absolute;top:6%;left:24%;font-size:14px;transform:translateX(-50%);transition:left .3s ease;z-index:2}
 
 .kotoba-term .yomi{font-size:12px;color:var(--sub);font-weight:400;margin-left:6px;
   font-family:'Zen Maru Gothic',sans-serif}

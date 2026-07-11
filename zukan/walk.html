@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src https://formspree.io; base-uri 'none'; form-action https://formspree.io">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="description" content="目的地(宇宙・月・太陽)をえらぶと、歩き・車・光での所要時間がわかる。宇宙は車で1時間、月まで歩くと11年。">
+<meta property="og:site_name" content="もしも地球ラボ">
+<meta property="og:title" content="もしも歩いて宇宙まで行けたら|もしも図鑑|もしも地球ラボ">
+<meta property="og:description" content="目的地(宇宙・月・太陽)をえらぶと、歩き・車・光での所要時間がわかる。宇宙は車で1時間、月まで歩くと11年。">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://moshimo-lab.pages.dev/assets/ogp.png?v=202607110120">
+<title>もしも歩いて宇宙まで行けたら|もしも図鑑|もしも地球ラボ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=JetBrains+Mono:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../assets/site.css?v=202607110120">
+<script src="../assets/walk.js?v=202607110120" defer></script>
+</head>
+<body>
+<div class="stars"></div>
+<nav class="topnav">
+  <a class="brand" href="../index.html">🌍 もしも地球ラボ</a>
+  <div class="links">
+    <a href="../zukan/index.html" class="active">もしも図鑑</a>
+    <a href="../zukan/kotoba.html">用語じてん</a>
+    <a href="../tera.html">テラちゃんについて</a>
+    <a href="../qa.html">地球のギモンQ&amp;A</a>
+    <a href="../omiyage.html">おみやげ</a>
+    <a href="../contact.html">お問い合わせ</a>
+  </div>
+</nav>
+
+<div class="wrap">
+  <div class="article-hero">
+    <div class="eyebrow">MOSHIMO ZUKAN // FILE 42</div>
+    <h1>🚀 もしも歩いて宇宙まで行けたら</h1>
+    <p class="sub">宇宙の入り口は、たったの100km上。まっすぐ上に道があれば、車で1時間。でも月は? 太陽は? 「宇宙の遠さ」を体で測ってみよう。</p>
+  </div>
+  
+  <div class="minisim">
+    <div class="stage">
+      <div class="earth-wrap small" id="earthWrap">
+      
+      <div class="atmosphere"></div>
+      <div class="earth" id="earth">
+        <div class="globe-strip" id="globeStrip">
+          <div class="hemi"><div class="land land1"></div><div class="land land2"></div><div class="land land3"></div><div class="clouds"></div></div>
+          <div class="hemi"><div class="land land1"></div><div class="land land2"></div><div class="land land3"></div><div class="clouds"></div></div>
+        </div>
+        <div class="heat-overlay" id="heatOverlay"></div>
+        <div class="ice-overlay" id="iceOverlay"></div>
+      </div>
+    </div>
+      <div class="mascot" id="mascot">
+      <div class="sat">
+        <div class="antenna"></div><div class="tip"></div>
+        <div class="wing l"><i></i><i></i><b></b></div>
+        <div class="wing r"><b></b><i></i><i></i></div>
+        <div class="mascot-body" id="mascotBody">
+          <div class="eye l"></div><div class="eye r"></div>
+          <div class="blush l"></div><div class="blush r"></div>
+          <div class="sweat"></div>
+        </div>
+        <div class="tail"></div>
+      </div>
+      <div class="speech" id="speech"><span class="name">テラちゃん</span><span id="speechLine">今日も平常運転だよ〜</span></div>
+    </div>
+    </div>
+    <div class="readout cols3">
+      <div class="card"><div class="k">歩いて(時速4km)</div><div class="v" id="wkwalk">—</div></div>
+      <div class="card"><div class="k">車で(時速100km)</div><div class="v" id="wkcar">—</div></div>
+      <div class="card"><div class="k">光なら</div><div class="v" id="wklight">—</div></div>
+    </div>
+    <div class="trip-viz">
+      <div class="lane-cap">🚶宇宙への道のり(距離の縮尺はイメージ)</div>
+      <div class="trip-lane">
+        <div class="trip-stop ts-earth">🌍<span>地球</span></div>
+        <div class="trip-stop ts-space">🛰️<span>宇宙の入り口(100km)</span></div>
+        <div class="trip-stop ts-moon">🌙<span>月(38万km)</span></div>
+        <div class="trip-stop ts-sun">☀️<span>太陽(1.5億km)</span></div>
+        <div class="trip-marker" id="tripMarker">🚶</div>
+      </div>
+    </div>
+    <div class="slider-panel bare" id="panelWk">
+      <div class="label">目的地</div>
+      <div class="value" id="valWk">宇宙の入り口(高度100km)</div>
+      <input type="range" id="wk" min="0" max="2" value="0" step="1" aria-label="目的地">
+      <div class="scale"><span>宇宙(100km)</span><span>月</span><span>太陽</span></div>
+      <div class="why" id="whyWk">🔎 高度100kmから先が宇宙(カーマン・ライン)。飛行機が飛べなくなる高さを目安に決められた、世界共通の「宇宙の入り口」だよ</div>
+    </div>
+  </div>
+  
+  <h2>目的地を変えると、旅はどうなる?</h2>
+  <h3>① 宇宙は、上に100km</h3>
+  <p>「宇宙」は、どこから始まるのでしょうか。空気は上にいくほどうすくなるだけで、はっきりした境目はありません。そこで世界では、<strong>高度100kmから先を宇宙</strong>とする共通の線が決められています。これが<strong>カーマン・ライン</strong>。飛行機が翼で飛べるのは、だいたいこの高さまでだからです。100kmといえば、東京から箱根くらいの距離。<strong>まっすぐ上に道があれば、車で約1時間、歩いても丸1日</strong>で宇宙に着いてしまいます。宇宙は、意外なほどすぐ上にあるのです。</p>
+  <h3>② 月までは、歩いて11年</h3>
+  <p>ところが「上」ではなく「先」を目指すと、話は一変します。月までの距離は約<strong>38万4400km</strong>——地球を30個ならべた距離です。時速4kmで歩き続けると<strong>約11年</strong>。小学生が出発したら、着くころには大人です。車でノンストップでも約160日。それをアポロの宇宙船は<strong>約3日</strong>で駆け抜けました。歩けば11年の道のりを3日で行く——「人類が月に行った」のすごさが、足の速さで測るとよくわかります。</p>
+  <h3>③ 太陽までは、歩いて4300年</h3>
+  <p>次の目的地、太陽まではさらにケタがちがいます。距離は約<strong>1億4960万km</strong>。歩くと<strong>約4300年</strong>——縄文時代に出発した人が、まだ着いていない計算です。車で約170年、新幹線でも約57年、ジェット機でさえ約19年かかります。そして宇宙でいちばん速い旅人・光ですら、太陽から地球まで<strong>8分19秒</strong>。つまり、いま見ている太陽は8分前の姿です。この「地球と太陽の距離」は宇宙のものさし(1天文単位)として使われるほど、基本の長さになっています。</p>
+  <h3>④ そして星へ——ものさしが変わる旅</h3>
+  <p>太陽系の外に目を向けると、もう「km」では書ききれません。太陽にいちばん近い恒星でも、光の速さで4年以上かかる距離。そこで宇宙では、光が1年かけて進む距離「光年」がものさしになります。夜空の星の光は、何年も何百年も前に出発した光。<a href="sungone.html">太陽が消えても8分は気づけない</a>という話と同じで、星空とは、じつは「過去の光の展覧会」なのです。歩いて1日の宇宙の入り口から、光でも何年もかかる星々まで——宇宙の遠さは、ものさしを取りかえながら味わうのがコツです。</p>
+
+  <div class="note"><div class="nt">💡 豆知識:宇宙は「近い」のに、ロケットはなぜ大変?</div>
+  上に100kmなら車で1時間の距離なのに、ロケット打ち上げが大仕事なのはなぜでしょう。じつは大変なのは「高さ」ではなく「速さ」です。宇宙にとどまって地球を回り続けるには、横方向に秒速約7.9km(時速約2万8000km)という猛スピードが必要で、ロケットの仕事のほとんどはこの加速に使われます。国際宇宙ステーションが落ちてこないのは、高いからではなく、速いから。宇宙の入り口は近くても、「宇宙にいつづける」には、とんでもない全力疾走が必要なのです。</div>
+  
+  <div class="termmemo"><div class="tm">🔎 むずかしい言葉は「用語じてん」でチェック</div>
+  <div class="termchips"><a href="kotoba.html#karman-line">カーマン・ライン</a><a href="kotoba.html#lightspeed">光の速さ(光速)</a><a href="kotoba.html#escape-velocity">脱出速度</a></div></div>
+  
+  <div class="sources"><div class="st">📚 出典・参考(ファクトチェック済み)</div><ul><li><a href="https://ja.wikipedia.org/wiki/%E3%82%AB%E3%83%BC%E3%83%9E%E3%83%B3%E3%83%BB%E3%83%A9%E3%82%A4%E3%83%B3" rel="noopener noreferrer">カーマン・ライン:海抜高度100km。国際航空連盟(FAI)がここから先を宇宙空間と定義(Wikipedia)</a></li>
+<li><a href="https://www.teikokushoin.co.jp/junior/faq/detail/106/" rel="noopener noreferrer">宇宙空間の境界:国際航空連盟が地上から100kmを大気圏との境界と定義(帝国書院)</a></li>
+<li><a href="https://www.kids.isas.jaxa.jp/faq/solar/000130.html" rel="noopener noreferrer">地球-太陽の距離は約1億4960万km、光は約8分19秒で到達(JAXA宇宙科学研究所キッズ)</a></li>
+<li><a href="https://ja.wikipedia.org/wiki/%E6%9C%88" rel="noopener noreferrer">月までの平均距離は約38万4400km(Wikipedia:月)</a></li>
+<li><a href="https://ja.wikipedia.org/wiki/%E5%AE%87%E5%AE%99%E9%80%9F%E5%BA%A6" rel="noopener noreferrer">第一宇宙速度:地球を回り続けるには秒速約7.9kmが必要(Wikipedia:宇宙速度)</a></li></ul></div>
+  <div class="relnav">
+    <a class="btn primary" href="simulator.html">🎛️ 統合シミュレーターで全部いじる</a><a class="btn" href="hole.html">🕳️ 前の記事:もしも地球のまんなかまで穴をほったら</a>
+  </div>
+</div>
+
+<footer class="site">
+  <div class="flinks">
+    <a href="../index.html">トップ</a><a href="../zukan/index.html">もしも図鑑</a><a href="../zukan/kotoba.html">用語じてん</a><a href="../tera.html">テラちゃん</a><a href="../qa.html">Q&amp;A</a><a href="../omiyage.html">おみやげ</a><a href="../contact.html">お問い合わせ</a>
+  </div>
+  ※ 当サイトのシミュレーションはすべて簡略化した概算モデルです。実際の気候・人口動態はもっと複雑です。<br>
+  © もしも地球ラボ / OBSERVATION LOG by テラちゃん
+</footer>
+</body>
+</html>

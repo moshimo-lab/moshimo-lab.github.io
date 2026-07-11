@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src https://formspree.io; base-uri 'none'; form-action https://formspree.io">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="description" content="スライダーで星をえらぶと、ジャンプの高さ・体重計の数字・ボールの落ち方が変わる。月では約3m、木星では20cm。">
+<meta property="og:site_name" content="もしも地球ラボ">
+<meta property="og:title" content="もしもとなりの星でジャンプしたら|もしも図鑑|もしも地球ラボ">
+<meta property="og:description" content="スライダーで星をえらぶと、ジャンプの高さ・体重計の数字・ボールの落ち方が変わる。月では約3m、木星では20cm。">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://moshimo-lab.pages.dev/assets/ogp.png?v=202607110120">
+<title>もしもとなりの星でジャンプしたら|もしも図鑑|もしも地球ラボ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=JetBrains+Mono:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../assets/site.css?v=202607110120">
+<script src="../assets/jump.js?v=202607110120" defer></script>
+</head>
+<body>
+<div class="stars"></div>
+<nav class="topnav">
+  <a class="brand" href="../index.html">🌍 もしも地球ラボ</a>
+  <div class="links">
+    <a href="../zukan/index.html" class="active">もしも図鑑</a>
+    <a href="../zukan/kotoba.html">用語じてん</a>
+    <a href="../tera.html">テラちゃんについて</a>
+    <a href="../qa.html">地球のギモンQ&amp;A</a>
+    <a href="../omiyage.html">おみやげ</a>
+    <a href="../contact.html">お問い合わせ</a>
+  </div>
+</nav>
+
+<div class="wrap">
+  <div class="article-hero">
+    <div class="eyebrow">MOSHIMO ZUKAN // FILE 40</div>
+    <h1>🦘 もしもとなりの星でジャンプしたら</h1>
+    <p class="sub">同じ足の力でも、星がちがえばジャンプはまるで別もの。月なら6倍、木星なら階段1段分。きみの体で太陽系をめぐってみよう。</p>
+  </div>
+  
+  <div class="minisim">
+    <div class="stage">
+      <div class="earth-wrap small" id="earthWrap">
+      
+      <div class="atmosphere"></div>
+      <div class="earth" id="earth">
+        <div class="globe-strip" id="globeStrip">
+          <div class="hemi"><div class="land land1"></div><div class="land land2"></div><div class="land land3"></div><div class="clouds"></div></div>
+          <div class="hemi"><div class="land land1"></div><div class="land land2"></div><div class="land land3"></div><div class="clouds"></div></div>
+        </div>
+        <div class="heat-overlay" id="heatOverlay"></div>
+        <div class="ice-overlay" id="iceOverlay"></div>
+      </div>
+    </div>
+      <div class="mascot" id="mascot">
+      <div class="sat">
+        <div class="antenna"></div><div class="tip"></div>
+        <div class="wing l"><i></i><i></i><b></b></div>
+        <div class="wing r"><b></b><i></i><i></i></div>
+        <div class="mascot-body" id="mascotBody">
+          <div class="eye l"></div><div class="eye r"></div>
+          <div class="blush l"></div><div class="blush r"></div>
+          <div class="sweat"></div>
+        </div>
+        <div class="tail"></div>
+      </div>
+      <div class="speech" id="speech"><span class="name">テラちゃん</span><span id="speechLine">今日も平常運転だよ〜</span></div>
+    </div>
+    </div>
+    <div class="readout cols3">
+      <div class="card"><div class="k">ジャンプの高さ(地球で50cmの人)</div><div class="v" id="jpjump">50cm</div></div>
+      <div class="card"><div class="k">体重計の数字(地球で30kgの人)</div><div class="v" id="jpweight">30kg</div></div>
+      <div class="card"><div class="k">1mからボールを落とすと</div><div class="v" id="jpfall">約0.45秒</div></div>
+    </div>
+    <div class="jump-viz">
+      <div class="lane-cap">🦘ジャンプくらべ(点線=地球でのジャンプ)</div>
+      <div class="jump-stage">
+        <div class="jump-earthline"><span>地球(50cm)</span></div>
+        <div class="jump-bar" id="jumpBar"></div>
+        <div class="jump-fig" id="jumpFig">🧑‍🚀</div>
+        <div class="jump-ground"></div>
+      </div>
+    </div>
+    <div class="slider-panel bare" id="panelJp">
+      <div class="label">立っている星</div>
+      <div class="value" id="valJp">地球</div>
+      <input type="range" id="jp" min="0" max="5" value="3" step="1" aria-label="立っている星">
+      <div class="scale"><span>月</span><span>地球</span><span>木星</span></div>
+      <div class="why" id="whyJp">🔎 ジャンプの高さは重力に反比例。重力が半分なら2倍跳べる、シンプルなルールだよ</div>
+    </div>
+  </div>
+  
+  <h2>星をえらんで、ジャンプしてみよう</h2>
+  <h3>① 重力がちがうと、ジャンプが変わる</h3>
+  <p>月の重力は地球の<strong>約6分の1</strong>。月の重さが地球の約100分の1、大きさ(半径)が約4分の1しかないためです。重力が小さいと、けり出した体はゆっくりとしか落ちてきません。だから同じ足の力でも、<strong>地球で50cm跳べる人は、月では約3m</strong>跳べる計算になります。アポロの宇宙飛行士たちが、100kgを超える宇宙服を着たまま軽やかにはねていたのは、このためです。</p>
+  <h3>② 体重計の数字も変わる</h3>
+  <p>星が変わると、体重計の数字も変わります。地球で30kgの人は、<strong>月では約5kg、火星では約11kg、木星では約76kg</strong>。ただし、体そのものが増えたり減ったりしたわけではありません。変わったのは「星が体を引っぱる力」だけです。体をつくる中身の量(質量)はどの星でも同じで、体重計が測っているのは<strong>引っぱられる強さ</strong>のほう。ジャンプ台としての星を取りかえると、この数字だけが変わるのです。</p>
+  <h3>③ 重力を決めるのは「重さ」と「大きさ」のバランス</h3>
+  <p>意外な星もあります。木星は地球の約300倍も重い巨大惑星なのに、重力は約2.5倍どまり。<strong>半径が11倍もあって、表面が中心から遠い</strong>ためです。海王星にいたっては、地球の17倍の重さなのに重力は約1.1倍。逆に土星は、水に浮くほど密度が小さいため、重力は地球とほぼ同じです。重力は「重いほど強く、大きい(表面が遠い)ほど弱く」——このバランスで決まります。太陽系のジャンプ台めぐりは、そのまま星のつくりの勉強になるのです。</p>
+  <h3>④ ジャンプでわかる、地球の「ちょうどよさ」</h3>
+  <p>もし低重力の星でくらしたら、はじめは楽しくても、体には課題が出てきます。宇宙飛行士の研究から、<strong>重力が小さい環境が続くと骨や筋肉が弱りやすい</strong>ことがわかっているからです。反対に木星のような高重力では、立って歩くだけでひと苦労。<a href="gravity.html">重力が2倍の地球</a>の記事で見たとおり、重力は強すぎても弱すぎても大変です。50cmのジャンプがちょうど気持ちいい今の地球は、体にとってなかなかの優良物件といえます。</p>
+
+  <div class="note"><div class="nt">💡 豆知識:いちばん跳べる星、教えます</div>
+  もっと小さな星ならもっと跳べます。準惑星の冥王星なら約7.6m、小惑星帯でいちばん大きなケレスなら約16m。ビルの5階に届くスーパージャンプです。ただし小さすぎる星では、勢いあまって星の重力を振り切ってしまうかもしれません。天体には「これより速く飛び出すと、もう帰ってこられない速さ」(脱出速度)があり、小さな星ほどその速さは小さくなるからです。ジャンプで宇宙の旅に出たくない人は、着地の練習をしっかりどうぞ。</div>
+  
+  <div class="termmemo"><div class="tm">🔎 むずかしい言葉は「用語じてん」でチェック</div>
+  <div class="termchips"><a href="kotoba.html#gravity">重力</a><a href="kotoba.html#density">密度</a><a href="kotoba.html#escape-velocity">脱出速度</a></div></div>
+  
+  <div class="sources"><div class="st">📚 出典・参考(ファクトチェック済み)</div><ul><li><a href="https://moonstation.jp/faq-items/f316" rel="noopener noreferrer">月の重力が地球の1/6になる理由:月の大きさは地球の約1/4、重さは約1/100(月探査情報ステーション)</a></li>
+<li><a href="https://mathwords.net/tukijuryoku" rel="noopener noreferrer">月では地球で50cmのジャンプが約3mに。月の重力加速度は約1.6m/s²(数学・物理解説サイト)</a></li>
+<li><a href="https://sorae.info/astronomy/20210724-solar-system-gravity.html" rel="noopener noreferrer">太陽系12天体の重力加速度比較(NASAデータ準拠)。天王星など密度と表面重力の関係(sorae)</a></li>
+<li><a href="https://nazology.net/archives/88006" rel="noopener noreferrer">地球で50cm跳べる場合:水星約1.2m・金星約60cm・月約2.7m・木星約20cm(階段1段分)・冥王星約7.6m・ケレス約16m(ナゾロジー)</a></li>
+<li><a href="https://xn--29sob207cg49a.com/space/gravity-on-other-planets-2026/" rel="noopener noreferrer">各天体での体重換算:60kgの人は月10.2kg・火星22.8kg・木星151.8kg。木星の表面重力は約2.5G(宇宙旅行.com)</a></li></ul></div>
+  <div class="relnav">
+    <a class="btn primary" href="simulator.html">🎛️ 統合シミュレーターで全部いじる</a><a class="btn" href="hole.html">🕳️ 次の記事:もしも地球のまんなかまで穴をほったら</a><a class="btn" href="aurora.html">🌌 前の記事:もしもオーロラが世界中で見られたら</a>
+  </div>
+</div>
+
+<footer class="site">
+  <div class="flinks">
+    <a href="../index.html">トップ</a><a href="../zukan/index.html">もしも図鑑</a><a href="../zukan/kotoba.html">用語じてん</a><a href="../tera.html">テラちゃん</a><a href="../qa.html">Q&amp;A</a><a href="../omiyage.html">おみやげ</a><a href="../contact.html">お問い合わせ</a>
+  </div>
+  ※ 当サイトのシミュレーションはすべて簡略化した概算モデルです。実際の気候・人口動態はもっと複雑です。<br>
+  © もしも地球ラボ / OBSERVATION LOG by テラちゃん
+</footer>
+</body>
+</html>

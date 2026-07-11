@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src https://formspree.io; base-uri 'none'; form-action https://formspree.io">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="description" content="スライダーで深さを変えると、まわりの岩・温度が変わる。中心は約5500℃の鉄のかたまり。穴に飛びこめば裏側まで約40分。">
+<meta property="og:site_name" content="もしも地球ラボ">
+<meta property="og:title" content="もしも地球のまんなかまで穴をほったら|もしも図鑑|もしも地球ラボ">
+<meta property="og:description" content="スライダーで深さを変えると、まわりの岩・温度が変わる。中心は約5500℃の鉄のかたまり。穴に飛びこめば裏側まで約40分。">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://moshimo-lab.pages.dev/assets/ogp.png?v=202607110120">
+<title>もしも地球のまんなかまで穴をほったら|もしも図鑑|もしも地球ラボ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=JetBrains+Mono:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../assets/site.css?v=202607110120">
+<script src="../assets/hole.js?v=202607110120" defer></script>
+</head>
+<body>
+<div class="stars"></div>
+<nav class="topnav">
+  <a class="brand" href="../index.html">🌍 もしも地球ラボ</a>
+  <div class="links">
+    <a href="../zukan/index.html" class="active">もしも図鑑</a>
+    <a href="../zukan/kotoba.html">用語じてん</a>
+    <a href="../tera.html">テラちゃんについて</a>
+    <a href="../qa.html">地球のギモンQ&amp;A</a>
+    <a href="../omiyage.html">おみやげ</a>
+    <a href="../contact.html">お問い合わせ</a>
+  </div>
+</nav>
+
+<div class="wrap">
+  <div class="article-hero">
+    <div class="eyebrow">MOSHIMO ZUKAN // FILE 41</div>
+    <h1>🕳️ もしも地球のまんなかまで穴をほったら</h1>
+    <p class="sub">足もとの地面の下には、6371kmの未知の世界。人類が掘れたのは、たったの12km——想像のエレベーターで、地球のまんなかへ。</p>
+  </div>
+  
+  <div class="minisim">
+    <div class="stage">
+      <div class="earth-wrap small" id="earthWrap">
+      
+      <div class="atmosphere"></div>
+      <div class="earth" id="earth">
+        <div class="globe-strip" id="globeStrip">
+          <div class="hemi"><div class="land land1"></div><div class="land land2"></div><div class="land land3"></div><div class="clouds"></div></div>
+          <div class="hemi"><div class="land land1"></div><div class="land land2"></div><div class="land land3"></div><div class="clouds"></div></div>
+        </div>
+        <div class="heat-overlay" id="heatOverlay"></div>
+        <div class="ice-overlay" id="iceOverlay"></div>
+      </div>
+    </div>
+      <div class="mascot" id="mascot">
+      <div class="sat">
+        <div class="antenna"></div><div class="tip"></div>
+        <div class="wing l"><i></i><i></i><b></b></div>
+        <div class="wing r"><b></b><i></i><i></i></div>
+        <div class="mascot-body" id="mascotBody">
+          <div class="eye l"></div><div class="eye r"></div>
+          <div class="blush l"></div><div class="blush r"></div>
+          <div class="sweat"></div>
+        </div>
+        <div class="tail"></div>
+      </div>
+      <div class="speech" id="speech"><span class="name">テラちゃん</span><span id="speechLine">今日も平常運転だよ〜</span></div>
+    </div>
+    </div>
+    <div class="readout cols3">
+      <div class="card"><div class="k">いまいる層</div><div class="v" id="hllayer">地表</div></div>
+      <div class="card"><div class="k">まわりの温度(ざっくり)</div><div class="v" id="hltemp">15℃</div></div>
+      <div class="card"><div class="k">まわりのようす</div><div class="v" id="hllook">緑と空</div></div>
+    </div>
+    <div class="depth-viz">
+      <div class="lane-cap">🕳️地球の中のエレベーター(断面・概念図)</div>
+      <div class="depth-stage">
+        <div class="depth-band db-crust"><span>地殻(〜約40km)</span></div>
+        <div class="depth-band db-mantle"><span>マントル(〜2900km)</span></div>
+        <div class="depth-band db-outer"><span>外核(〜5100km)</span></div>
+        <div class="depth-band db-inner"><span>内核(〜中心6371km)</span></div>
+        <div class="depth-marker" id="depthMarker"></div>
+      </div>
+    </div>
+    <div class="slider-panel bare" id="panelHl">
+      <div class="label">もぐる深さ</div>
+      <div class="value" id="valHl">0km(地表)</div>
+      <input type="range" id="hl" min="0" max="100" value="0" aria-label="もぐる深さ">
+      <div class="scale"><span>地表</span><span>マントル</span><span class="warn">中心6371km</span></div>
+      <div class="why" id="whyHl">🔎 深くなるほど熱くなるよ。約12kmのコラ半島の穴でも、底は約200℃だったんだ</div>
+    </div>
+  </div>
+  
+  <h2>深さを変えると、まわりはどうなる?</h2>
+  <h3>① 世界一深い穴でも、まだ皮一枚</h3>
+  <p>「まっすぐ掘ったら、どこに出るんだろう」——だれもが一度は考える穴。人類は本気で挑戦したことがあります。旧ソ連が20年以上かけて掘った<strong>コラ半島超深度掘削坑</strong>は、深さ<strong>1万2262m</strong>。今も破られていない世界記録です。それでも地球の中心までの距離6371kmと比べれば、<strong>わずか0.2%</strong>。地下の温度が予想を超えて約180℃に達し、機械が耐えられずに計画は中止されました。それより深い世界のことは、地球をつたわる地震の波を聴診器のかわりにして調べています。</p>
+  <h3>② 地球はゆで卵——まずは白身のマントルへ</h3>
+  <p>地球の中身は、たとえるなら、ゆで卵に似ています。うすい殻が<strong>地殻</strong>(厚さ5〜70km)、たっぷりの白身が<strong>マントル</strong>(深さ約2900kmまで)、まんなかの黄身が<strong>核</strong>です。マントルは岩石の層で、地球の体積の大部分をしめる主役。固体なのに、何万年という長い時間でみると熱でゆっくり流れていて、この流れが<a href="plate.html">プレートを動かし</a>、山や火山を作る原動力になっています。エレベーターの窓の外は、赤く熱い岩の世界が2900kmぶん続きます。</p>
+  <h3>③ 鉄の海と、鉄の玉——核</h3>
+  <p>深さ2900kmで景色は一変します。ここからは岩ではなく金属、<strong>どろどろにとけた鉄とニッケルの海(外核)</strong>です。この鉄の海が流れることで電気が生まれ、地球はひとつの大きな磁石になっています。方位磁針が北を指すのも、オーロラが光るのも、じつはこの<a href="magnet.html">足もと2900kmの海</a>のおかげ。さらに深さ約5100kmから中心までは、猛烈な圧力で鉄が固まった<strong>内核</strong>です。中心の温度は<strong>約5000〜6000℃</strong>——太陽の表面と同じくらいの熱さが、いまこの瞬間も足の下にあります。</p>
+  <h3>④ 飛びこんだら、40分で地球の裏側へ</h3>
+  <p>最後に名物の思考実験を。もし熱にも圧力にも耐えられる貫通トンネルがあって、そこに飛びこんだら——重力にぐんぐん加速され、約19分後、時速2万kmを超えるスピードで無重力の中心を通過。そこからは逆に減速していき、<strong>合計約40分(計算のしかたで38〜42分)で反対側の地面にぴたりと到着</strong>します。ただし着いた瞬間にどこかにつかまらないと、また落ちて、永遠の往復が始まります。もうひとつ落とし穴を。日本の真裏はブラジルではなく、じつは大西洋のどまんなかです。</p>
+
+  <div class="note"><div class="nt">💡 豆知識:地球のまんなかは、なぜまだ熱い?</div>
+  地球が生まれたのは約46億年前。それなのに中心が5000℃を超えているのは、たとえるなら、大きな肉まんと同じです。表面は冷めても、中まではなかなか冷めません。地球誕生のときの熱が巨大な体にとじこめられ、さらに岩石の中の放射性元素が今も少しずつ熱を出し続けているため、地球は46億年たってもまだ冷めきっていないのです。この「残り熱」こそが、火山を動かし、大陸を動かし、磁場を作る地球のエンジンです。</div>
+  
+  <div class="termmemo"><div class="tm">🔎 むずかしい言葉は「用語じてん」でチェック</div>
+  <div class="termchips"><a href="kotoba.html#mantle">マントル</a><a href="kotoba.html#magnetic-field">磁場(磁気圏)</a><a href="kotoba.html#gravity">重力</a></div></div>
+  
+  <div class="sources"><div class="st">📚 出典・参考(ファクトチェック済み)</div><ul><li><a href="https://ja.wikipedia.org/wiki/%E5%9C%B0%E7%90%83%E3%81%AE%E6%A7%8B%E9%80%A0" rel="noopener noreferrer">地球の内部構造:地殻(5-70km)・マントル(〜約2890km)・液体の外核・固体の内核(鉄とニッケル)(Wikipedia:地球の構造)</a></li>
+<li><a href="https://tigakutasu.com/kisokyousitutikyunonaibu/" rel="noopener noreferrer">核は深さ2900kmから中心まで。中心部の温度は約5000〜6000℃。外核の流れが磁気を生む(ダイナモ理論)(ちがくたす)</a></li>
+<li><a href="https://www.gsj.jp/geology/geology-japan/geology-earth/index.html" rel="noopener noreferrer">上部マントルはかんらん岩、外核は液体・内核は固体の鉄ニッケル(産総研 地質調査総合センター)</a></li>
+<li><a href="https://ja.wikipedia.org/wiki/%E3%82%B3%E3%83%A9%E5%8D%8A%E5%B3%B6%E8%B6%85%E6%B7%B1%E5%BA%A6%E6%8E%98%E5%89%8A%E5%9D%91" rel="noopener noreferrer">コラ半島超深度掘削坑:1989年に12,262mへ到達、今も地球上で最も深い人工地点(Wikipedia)</a></li>
+<li><a href="https://site.ngk.co.jp/tv/no7/" rel="noopener noreferrer">地球貫通トンネルの思考実験:重力で加速し反対側まで約38分(NGKサイエンスサイト)</a></li>
+<li><a href="https://news.yahoo.co.jp/expert/articles/8813285643584c31e7f2d4668e142a5cb8acf96c" rel="noopener noreferrer">貫通トンネルは約42分・東京の真裏はブラジルではなく大西洋(柳田理科雄/Yahoo!ニュース エキスパート)</a></li></ul></div>
+  <div class="relnav">
+    <a class="btn primary" href="simulator.html">🎛️ 統合シミュレーターで全部いじる</a><a class="btn" href="walk.html">🚀 次の記事:もしも歩いて宇宙まで行けたら</a><a class="btn" href="jump.html">🦘 前の記事:もしもとなりの星でジャンプしたら</a>
+  </div>
+</div>
+
+<footer class="site">
+  <div class="flinks">
+    <a href="../index.html">トップ</a><a href="../zukan/index.html">もしも図鑑</a><a href="../zukan/kotoba.html">用語じてん</a><a href="../tera.html">テラちゃん</a><a href="../qa.html">Q&amp;A</a><a href="../omiyage.html">おみやげ</a><a href="../contact.html">お問い合わせ</a>
+  </div>
+  ※ 当サイトのシミュレーションはすべて簡略化した概算モデルです。実際の気候・人口動態はもっと複雑です。<br>
+  © もしも地球ラボ / OBSERVATION LOG by テラちゃん
+</footer>
+</body>
+</html>
