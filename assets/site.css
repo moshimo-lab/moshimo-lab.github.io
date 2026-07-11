@@ -279,6 +279,36 @@ footer.site{position:relative;z-index:1;text-align:center;color:var(--sub);font-
 footer.site .flinks{margin-bottom:8px;font-family:'Noto Sans JP',sans-serif;font-size:13px}
 footer.site .flinks a{margin:0 8px;color:var(--sub)}
 
+/* ===== かけあいコーナー ===== */
+.talk{border:1px solid var(--line);border-radius:14px;background:var(--bg2);padding:16px 14px 12px;margin:22px 0 8px}
+.talk .talk-title{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:14.5px;color:var(--gold);margin-bottom:12px;letter-spacing:.03em}
+.talk .avwrap{flex:0 0 auto;width:48px}
+.ava{width:46px;height:46px;border-radius:50%;position:relative;border:2px solid var(--line);background:#0e1730}
+.ava svg{position:absolute;inset:0;width:100%;height:100%;border-radius:50%}
+.ava-cap{display:block;font-size:10px;color:var(--sub);text-align:center;margin-top:4px;font-family:'Zen Maru Gothic',sans-serif}
+.ava .face{position:absolute;inset:0;border-radius:50%;overflow:hidden}
+.ava .eye{position:absolute;top:19px;width:7px;height:9px;border-radius:50%;background:#20303f;z-index:3}
+.ava .eye::after{content:"";position:absolute;left:1.5px;top:1.5px;width:3px;height:3px;border-radius:50%;background:#fff}
+.ava .eye.l{left:11px}.ava .eye.r{right:11px}
+.ava .blush{position:absolute;top:27px;width:8px;height:5px;border-radius:50%;background:rgba(255,145,165,.55);z-index:3}
+.ava .blush.l{left:5px}.ava .blush.r{right:5px}
+.ava .mouth{position:absolute;left:50%;top:28px;transform:translateX(-50%);width:8px;height:4.5px;border-radius:0 0 9px 9px;background:#e2606f;z-index:3}
+.ava .mouth::after{content:"";position:absolute;left:1.5px;bottom:.5px;width:5px;height:2px;border-radius:0 0 6px 6px;background:#ff9aa8}
+.ava.tera .face{background:radial-gradient(circle at 38% 26%, #eafff8 0%, #a9ecd9 45%, #6fd3ba 100%)}
+.ava.tera .ant{position:absolute;left:50%;top:-9px;transform:translateX(-50%);width:2px;height:9px;background:#6fd3ba;z-index:1}
+.ava.tera .ant::after{content:"";position:absolute;left:50%;top:-5px;transform:translateX(-50%);width:6px;height:6px;border-radius:50%;background:var(--gold);box-shadow:0 0 6px rgba(255,209,102,.8)}
+.trow{display:flex;gap:10px;align-items:flex-start;margin:13px 0}
+.trow.right{flex-direction:row-reverse}
+.tb{max-width:76%;border-radius:14px;padding:9px 13px;font-size:14.5px;line-height:1.75;position:relative}
+.trow .tb{background:#1a2947;border:1px solid var(--line);border-top-left-radius:4px}
+.trow.right .tb{background:rgba(94,234,212,.12);border:1px solid rgba(94,234,212,.4);border-top-right-radius:4px}
+.tb .who{display:block;font-family:'Zen Maru Gothic',sans-serif;font-size:10.5px;font-weight:700;color:var(--sub);margin-bottom:2px}
+.trow.right .tb .who{color:var(--teal);text-align:right}
+.tb.punch{background:rgba(255,209,102,.13);border-color:rgba(255,209,102,.55)}
+.tb.punch::after{content:"オチ";position:absolute;right:-6px;top:-9px;font-family:'Zen Maru Gothic',sans-serif;font-size:9px;font-weight:900;color:#3a2c00;background:var(--gold);border-radius:99px;padding:2px 7px}
+.tb .tele{margin-top:8px;padding-top:7px;border-top:1px dashed rgba(255,209,102,.4);font-size:12px;line-height:1.6;color:var(--sub)}
+.tb .tele::before{content:"※ ";color:var(--gold)}
+
 /* ===== 図鑑の絞りこみ ===== */
 .zukan-filter{margin:6px 0 14px}
 .zukan-filter input[type=search]{width:100%;box-sizing:border-box;background:var(--bg2);border:1px solid var(--line);
