@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src https://formspree.io; base-uri 'none'; form-action https://formspree.io">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="description" content="巨大磁気嵐が起きるとオーロラの輪は赤道側へ拡大。1859年はハワイでも、2024年5月は日本の広範囲で観測。ただし送電網には試練。">
+<meta property="og:site_name" content="もしも地球ラボ">
+<meta property="og:title" content="もしもオーロラが世界中で見られたら|もしも図鑑|もしも地球ラボ">
+<meta property="og:description" content="巨大磁気嵐が起きるとオーロラの輪は赤道側へ拡大。1859年はハワイでも、2024年5月は日本の広範囲で観測。ただし送電網には試練。">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://moshimo-lab.pages.dev/assets/ogp.png?v=202607110052">
+<title>もしもオーロラが世界中で見られたら|もしも図鑑|もしも地球ラボ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=JetBrains+Mono:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../assets/site.css?v=202607110052">
+<script src="../assets/aurora.js?v=202607110052" defer></script>
+</head>
+<body>
+<div class="stars"></div>
+<nav class="topnav">
+  <a class="brand" href="../index.html">🌍 もしも地球ラボ</a>
+  <div class="links">
+    <a href="../zukan/index.html" class="active">もしも図鑑</a>
+    <a href="../zukan/kotoba.html">用語じてん</a>
+    <a href="../tera.html">テラちゃんについて</a>
+    <a href="../qa.html">地球のギモンQ&amp;A</a>
+    <a href="../omiyage.html">おみやげ</a>
+    <a href="../contact.html">お問い合わせ</a>
+  </div>
+</nav>
+
+<div class="wrap">
+  <div class="article-hero">
+    <div class="eyebrow">MOSHIMO ZUKAN // FILE 39</div>
+    <h1>🌌 もしもオーロラが世界中で見られたら</h1>
+    <p class="sub">1859年、それは実際に起きた。ハワイでもカリブ海でも、そして日本でも空が光った夜——美しさの裏には、文明への請求書がついてくる。</p>
+  </div>
+  
+  <div class="minisim">
+    <div class="stage">
+      <div class="earth-wrap small" id="earthWrap">
+      
+      <div class="atmosphere"></div>
+      <div class="earth" id="earth">
+        <div class="globe-strip" id="globeStrip">
+          <div class="hemi"><div class="land land1"></div><div class="land land2"></div><div class="land land3"></div><div class="clouds"></div></div>
+          <div class="hemi"><div class="land land1"></div><div class="land land2"></div><div class="land land3"></div><div class="clouds"></div></div>
+        </div>
+        <div class="heat-overlay" id="heatOverlay"></div>
+        <div class="ice-overlay" id="iceOverlay"></div>
+      </div>
+    </div>
+      <div class="mascot" id="mascot">
+      <div class="sat">
+        <div class="antenna"></div><div class="tip"></div>
+        <div class="wing l"><i></i><i></i><b></b></div>
+        <div class="wing r"><b></b><i></i><i></i></div>
+        <div class="mascot-body" id="mascotBody">
+          <div class="eye l"></div><div class="eye r"></div>
+          <div class="blush l"></div><div class="blush r"></div>
+          <div class="sweat"></div>
+        </div>
+        <div class="tail"></div>
+      </div>
+      <div class="speech" id="speech"><span class="name">テラちゃん</span><span id="speechLine">今日も平常運転だよ〜</span></div>
+    </div>
+    </div>
+    <div class="readout cols3">
+      <div class="card"><div class="k">オーロラが見える範囲</div><div class="v" id="aurange">極地のまわりの輪</div></div>
+      <div class="card"><div class="k">日本の空</div><div class="v" id="aujapan">見えない</div></div>
+      <div class="card"><div class="k">くらしへの影響</div><div class="v" id="autech">なし</div></div>
+    </div>
+    <div class="aurora-viz">
+      <div class="lane-cap">🌌夜空のようす(磁気嵐が強いほどオーロラは低緯度へ広がる)</div>
+      <div class="aurora-stage">
+        <div class="au-red" id="auRed"></div>
+        <div class="au-band" id="auBand"></div>
+        <div class="au-ground"></div>
+      </div>
+    </div>
+    <div class="slider-panel bare" id="panelAu">
+      <div class="label">磁気嵐の強さ</div>
+      <div class="value" id="valAu">静穏(ふだん)</div>
+      <input type="range" id="au" min="0" max="100" value="0" aria-label="磁気嵐の強さ">
+      <div class="scale"><span>ふだん</span><span class="warn">2024年5月級</span><span class="warn">キャリントン級</span></div>
+      <div class="why" id="whyAu">🔎 オーロラは太陽風の粒が磁力線に導かれて、極のまわりの輪(オーロラオーバル)で大気とぶつかって光る現象だよ</div>
+    </div>
+  </div>
+  
+  <h2>磁気嵐を強くすると、オーロラはどこまで来る?</h2>
+  <h3>① オーロラは、磁場が描く「極の輪」</h3>
+  <p>オーロラの正体は、太陽から吹きつける<strong>太陽風の粒(プラズマ)が、上空の大気とぶつかって光る現象</strong>です。地球の<a href="magnet.html">磁場</a>は太陽風の大部分を受け流しますが、磁力線が大気に流れこむ極のまわりだけは粒の通り道になります。そのためオーロラはふだん、北極・南極を取り巻く<strong>磁気緯度65〜70度あたりの輪(オーロラオーバル)</strong>でだけ光ります。アラスカやカナダ、北欧がオーロラの名所なのは、ちょうどこの輪の真下にあるからです。オーロラが極地の専売特許なのは、磁場という盾の形が決めているのです。</p>
+  <h3>② 色は「高さの名札」——日本のオーロラが赤い理由</h3>
+  <p>オーロラの色は、光る高さで決まります。エネルギーの高い粒は高度100〜200kmまで深く飛びこみ、酸素を光らせて定番の<strong>緑</strong>に。エネルギーの低い粒は高度150km以上の高いところまでしか届かず、酸素をほのかな<strong>赤</strong>に光らせます。日本のような低緯度から見えるのは、遠くのオーロラの高い部分——つまりほとんどが赤です。この赤い空は「<strong>赤気(せっき)</strong>」と呼ばれ、日本書紀の推古天皇の時代(620年)から江戸時代まで、たびたび記録されてきました。日本人は1400年前から、低緯度オーロラの観測者だったのです。</p>
+  <h3>③ 世界中で見えた夜は、実際にあった</h3>
+  <p>「オーロラが世界中で」は空想ではありません。1859年9月、観測史上最大の磁気嵐<strong>キャリントン・イベント</strong>が発生し、オーロラの輪は大きく赤道側へ広がって、<strong>ハワイやカリブ海沿岸でもオーロラが目撃されました</strong>。日本でも青森県や和歌山県に記録が残っています。そして記憶に新しい2024年5月11日。21年ぶりの最大級(G5)の磁気嵐で、<strong>北海道から兵庫県・愛知県まで</strong>、日本の広い範囲でマゼンタ色に光る空が撮影されました。市民から寄せられた179枚の写真の解析で、このオーロラは通常よりずっと高い<strong>高度1000km</strong>付近まで光っていたことがわかっています。スライダーを上げると、オーロラの輪がどこまで南下するかを確かめられます。</p>
+  <h3>④ 美しさには、請求書がついてくる</h3>
+  <p>ただし、世界中でオーロラが見える夜は、文明にとっては警報の夜でもあります。オーロラを全球に広げるほどの磁気嵐は、地上に強い電流を誘導し、<strong>送電網や人工衛星、GPSを直撃</strong>します。キャリントン・イベントでは当時最先端だった電信機から火花が出て通信網が止まり、1989年の磁気嵐ではカナダ・ケベック州の送電システムが障害を起こして大停電になりました。電気に深く依存した現代でキャリントン級が直撃したら——それは各国の宇宙天気機関が本気で備えているシナリオです。毎晩世界中でオーロラが見える地球とは、<a href="flip.html">磁場の盾が弱った地球</a>か、太陽が荒れ続ける地球。美しい空と引きかえに、文明は薄氷の上を歩くことになります。</p>
+
+  <div class="note"><div class="nt">💡 豆知識:2024年のオーロラは「みんなの写真」が解明した</div>
+  2024年5月のオーロラで研究の決め手になったのは、専門の観測機器ではなく、市民がスマートフォンやカメラで撮った179枚の写真でした。国立極地研究所の呼びかけに全国から写真が集まり、撮影地点と写り方を突き合わせることで「高度1000kmという異例の高さで光っていた」ことが判明。色がマゼンタだったのは、赤い発光に太陽光の青い散乱が重なっていたためとわかりました。科学の最前線に、ふつうの人の夜空の1枚が並んだのです。次の巨大磁気嵐の夜は、あなたの写真が論文になるかもしれません。</div>
+  
+  <div class="termmemo"><div class="tm">🔎 むずかしい言葉は「用語じてん」でチェック</div>
+  <div class="termchips"><a href="kotoba.html#aurora">オーロラ</a><a href="kotoba.html#magnetic-storm">磁気嵐</a><a href="kotoba.html#solar-wind">太陽風</a></div></div>
+  
+  <div class="sources"><div class="st">📚 出典・参考(ファクトチェック済み)</div><ul><li><a href="https://stdb2.isee.nagoya-u.ac.jp/member/shiokawa/aurora_kaisetu.htm" rel="noopener noreferrer">オーロラの仕組みと低緯度オーロラ:ふだんは高緯度の現象だが磁気嵐時は日本でも見える。日本のオーロラはほとんど赤色で、「赤気」として日本書紀(620年)から江戸時代まで記録(名古屋大学 塩川和夫教授の解説)</a></li>
+<li><a href="http://aurora3d.jp/aurora_model/" rel="noopener noreferrer">オーロラの色は電子のエネルギーと高度で決まる:緑は高度100-200km、赤はより高い高度の酸素の発光(Aurora3D/国立極地研究所監修)</a></li>
+<li><a href="https://ja.wikipedia.org/wiki/1859%E5%B9%B4%E3%81%AE%E5%A4%AA%E9%99%BD%E5%B5%90" rel="noopener noreferrer">1859年キャリントン・イベント:記録上最大の磁気嵐。ハワイやカリブ海沿岸でもオーロラが観測され、電信システムに障害(Wikipedia:1859年の太陽嵐)</a></li>
+<li><a href="https://www.astroarts.co.jp/article/hl/a/9391_magneticstorm" rel="noopener noreferrer">キャリントン・イベントの際、青森県や和歌山県でもオーロラが見られたという記録が残る(アストロアーツ)</a></li>
+<li><a href="https://www.nipr.ac.jp/info2024/20241031.html" rel="noopener noreferrer">2024年5月11日の巨大磁気嵐:日本全国の市民写真179点を解析。オーロラは高度1000kmの高高度で発光しマゼンタ色に見えた(国立極地研究所)</a></li>
+<li><a href="https://ja.wikipedia.org/wiki/%E5%A4%AA%E9%99%BD%E5%B5%90" rel="noopener noreferrer">1989年の磁気嵐でカナダ・ケベック州一帯の送電システムが障害を起こし停電が発生(Wikipedia:太陽嵐)</a></li></ul></div>
+  <div class="relnav">
+    <a class="btn primary" href="simulator.html">🎛️ 統合シミュレーターで全部いじる</a><a class="btn" href="precession.html">🌐 前の記事:もしも北極星が入れかわったら</a>
+  </div>
+</div>
+
+<footer class="site">
+  <div class="flinks">
+    <a href="../index.html">トップ</a><a href="../zukan/index.html">もしも図鑑</a><a href="../zukan/kotoba.html">用語じてん</a><a href="../tera.html">テラちゃん</a><a href="../qa.html">Q&amp;A</a><a href="../omiyage.html">おみやげ</a><a href="../contact.html">お問い合わせ</a>
+  </div>
+  ※ 当サイトのシミュレーションはすべて簡略化した概算モデルです。実際の気候・人口動態はもっと複雑です。<br>
+  © もしも地球ラボ / OBSERVATION LOG by テラちゃん
+</footer>
+</body>
+</html>

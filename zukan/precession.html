@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src https://formspree.io; base-uri 'none'; form-action https://formspree.io">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="description" content="地軸は約2万6000年周期で首を振る(歳差)。約1万3000年後の北極星は七夕のベガ。ピラミッドの時代はトゥバンだった。">
+<meta property="og:site_name" content="もしも地球ラボ">
+<meta property="og:title" content="もしも北極星が入れかわったら|もしも図鑑|もしも地球ラボ">
+<meta property="og:description" content="地軸は約2万6000年周期で首を振る(歳差)。約1万3000年後の北極星は七夕のベガ。ピラミッドの時代はトゥバンだった。">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://moshimo-lab.pages.dev/assets/ogp.png?v=202607110052">
+<title>もしも北極星が入れかわったら|もしも図鑑|もしも地球ラボ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=JetBrains+Mono:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../assets/site.css?v=202607110052">
+<script src="../assets/precession.js?v=202607110052" defer></script>
+</head>
+<body>
+<div class="stars"></div>
+<nav class="topnav">
+  <a class="brand" href="../index.html">🌍 もしも地球ラボ</a>
+  <div class="links">
+    <a href="../zukan/index.html" class="active">もしも図鑑</a>
+    <a href="../zukan/kotoba.html">用語じてん</a>
+    <a href="../tera.html">テラちゃんについて</a>
+    <a href="../qa.html">地球のギモンQ&amp;A</a>
+    <a href="../omiyage.html">おみやげ</a>
+    <a href="../contact.html">お問い合わせ</a>
+  </div>
+</nav>
+
+<div class="wrap">
+  <div class="article-hero">
+    <div class="eyebrow">MOSHIMO ZUKAN // FILE 38</div>
+    <h1>🌐 もしも北極星が入れかわったら</h1>
+    <p class="sub">実はもう入れかわり続けている。地軸は約2万6000年かけてコマのように首を振り、北極星の座は星から星へリレーされていく。</p>
+  </div>
+  
+  <div class="minisim">
+    <div class="stage">
+      <div class="earth-wrap small" id="earthWrap">
+      <div class="axis-line"></div>
+      <div class="atmosphere"></div>
+      <div class="earth" id="earth">
+        <div class="globe-strip" id="globeStrip">
+          <div class="hemi"><div class="land land1"></div><div class="land land2"></div><div class="land land3"></div><div class="clouds"></div></div>
+          <div class="hemi"><div class="land land1"></div><div class="land land2"></div><div class="land land3"></div><div class="clouds"></div></div>
+        </div>
+        <div class="heat-overlay" id="heatOverlay"></div>
+        <div class="ice-overlay" id="iceOverlay"></div>
+      </div>
+    </div>
+      <div class="mascot" id="mascot">
+      <div class="sat">
+        <div class="antenna"></div><div class="tip"></div>
+        <div class="wing l"><i></i><i></i><b></b></div>
+        <div class="wing r"><b></b><i></i><i></i></div>
+        <div class="mascot-body" id="mascotBody">
+          <div class="eye l"></div><div class="eye r"></div>
+          <div class="blush l"></div><div class="blush r"></div>
+          <div class="sweat"></div>
+        </div>
+        <div class="tail"></div>
+      </div>
+      <div class="speech" id="speech"><span class="name">テラちゃん</span><span id="speechLine">今日も平常運転だよ〜</span></div>
+    </div>
+    </div>
+    <div class="readout cols3">
+      <div class="card"><div class="k">その時代の“北極星”</div><div class="v" id="pcstar">ポラリス(いま)</div></div>
+      <div class="card"><div class="k">首振りの進み</div><div class="v" id="pcprog">0%</div></div>
+      <div class="card"><div class="k">星空と季節</div><div class="v" id="pcsky">いまの星空</div></div>
+    </div>
+    <div class="prec-viz">
+      <div class="lane-cap">⭐地軸の先が指す場所(約2万6000年かけて1周する)</div>
+      <div class="prec-stage">
+        <div class="prec-circle"></div>
+        <div class="prec-star ps-polaris"><span>ポラリス(いま)</span></div>
+        <div class="prec-star ps-errai"><span>エライ</span></div>
+        <div class="prec-star ps-deneb"><span>デネブ</span></div>
+        <div class="prec-star ps-vega"><span>ベガ</span></div>
+        <div class="prec-star ps-thuban"><span>トゥバン(5000年前)</span></div>
+        <div class="prec-axis" id="pcAxis"></div>
+      </div>
+    </div>
+    <div class="slider-panel bare" id="panelPc">
+      <div class="label">これから何年後?</div>
+      <div class="value" id="valPc">現在</div>
+      <input type="range" id="pc" min="0" max="100" value="0" aria-label="経過時間">
+      <div class="scale"><span>いま</span><span>1万3000年後</span><span>2万6000年後</span></div>
+      <div class="why" id="whyPc">🔎 地球は赤道がふくらんだ形。月と太陽の引力がそのふくらみを引っぱるので、コマの首振りと同じ動きが生まれるよ</div>
+    </div>
+  </div>
+  
+  <h2>時間を進めると、北の空はどうなる?</h2>
+  <h3>① 北極星は「終身の職」ではない</h3>
+  <p>夜空で唯一動かない星、北極星。しかし「北極星」とは星の名前ではなく、<strong>たまたま地軸の延長線上にいる星に与えられる称号</strong>です。今その座にいるのは、こぐま座のポラリス。実はポラリスでさえ天の北極にぴったり重なってはおらず、毎晩ごく小さな円を描いています。そしてこの称号は、永遠にポラリスのものではありません。地軸の向きそのものが、ゆっくりと動いているからです。</p>
+  <h3>② 地軸は、コマのように首を振る</h3>
+  <p>地球は完全な球ではなく、自転の遠心力で<strong>赤道方向にすこしふくらんだ形</strong>をしています。月と太陽の引力はこのふくらみを引っぱり、<a href="tilt.html">傾いた地軸</a>を起こそうとする力を生みます。すると地軸は倒れる代わりに、傾き23.4度を保ったまま<strong>向きだけをゆっくり回しはじめます</strong>。たとえるなら、回っているコマの軸が、傾いたまま円を描いて首を振る動きです。これを<strong>歳差(さいさ)</strong>といい、地軸の先は約2万6000年かけて空に大きな円を1周します。紀元前2世紀、ヒッパルコスが星の記録の比較から見抜いた、空の最も長いリズムのひとつです。</p>
+  <h3>③ 北極星のリレー</h3>
+  <p>地軸の先が円を描くなら、その円周の近くにある星が、順番に「北極星」になります。約5000年前、ピラミッドが築かれたころの北極星は<strong>りゅう座のトゥバン</strong>でした。現在はポラリス。約2000年後には<strong>ケフェウス座のエライ</strong>へ、約8000年後には<strong>はくちょう座のデネブ</strong>へ、そして約<strong>1万3000年後には、七夕のおりひめ星ベガ</strong>が北極星になります。ベガは全天でも指折りの明るい1等星なので、未来の旅人にはずいぶん頼もしい目印です(ただし円からややずれた位置なので、精度はいまひとつ)。そして約2万6000年後、称号はふたたびポラリスへ帰ってきます。</p>
+  <h3>④ 星座の季節が、そっくり入れかわる</h3>
+  <p>歳差の影響は北極星だけではありません。地軸の向きが半周した約1万3000年後には、地球の傾きと季節の関係が今と逆になり、<strong>いま夏の夜に見える星座が冬に、冬の星座が夏に見える</strong>ようになります。オリオン座が夏の星座になる時代が来るのです。さらに、この首振りは<a href="iceage.html">氷期と間氷期のリズム</a>を生むミランコビッチ・サイクルの一員でもあります。約2.6万年の歳差、約4万年の地軸の傾きの変化、約10万年の軌道の変化——夜空の目印の交代と氷期の訪れが、同じ「地球のゆらぎ」から生まれているのです。</p>
+
+  <div class="note"><div class="nt">💡 豆知識:誕生日の星座が「ずれている」のも歳差のせい</div>
+  歳差で動くのは北極星だけではなく、季節の基準になる春分点も、1年に約50秒角(約72年で1度)ずつ星座の間を移動しています。星占いの「誕生日の星座」は約2000年前の空をもとに決められたため、現代では実際の太陽の位置と星座がほぼひとつ分ずれています。あなたが生まれた日、太陽は「あなたの星座」のとなりにいた可能性が高い——歳差は、星占いの世界にもこっそり首を突っこんでいるのです。</div>
+  
+  <div class="termmemo"><div class="tm">🔎 むずかしい言葉は「用語じてん」でチェック</div>
+  <div class="termchips"><a href="kotoba.html#precession">歳差</a><a href="kotoba.html#axis-tilt">地軸の傾き</a><a href="kotoba.html#milankovitch">ミランコビッチ・サイクル</a></div></div>
+  
+  <div class="sources"><div class="st">📚 出典・参考(ファクトチェック済み)</div><ul><li><a href="https://www.nao.ac.jp/faq/a1007.html" rel="noopener noreferrer">地軸は23.4度の傾きを保ったまま半径約23.4度の円を描き、約26000年で1周。こと座のベガが将来の北極星に(国立天文台)</a></li>
+<li><a href="https://eco.mtk.nao.ac.jp/koyomi/wiki/BAD0BAB9.html" rel="noopener noreferrer">歳差のしくみ:赤道方向にふくらんだ地球に月・太陽の引力がトルクとして働きコマの首振りに似た運動が生じる。紀元前2世紀ごろヒッパルコスが発見(国立天文台 暦計算室 暦Wiki)</a></li>
+<li><a href="https://crd.ndl.go.jp/reference/entry/index.php?id=1000309729&page=ref_view" rel="noopener noreferrer">北極星のリレー:約5000年前トゥバン→現在ポラリス→約2000年後エライ→約8000年後デネブ→約1万3000年後ベガ→約2万6000年後にポラリスへ戻る(国立国会図書館レファレンス協同データベース)</a></li>
+<li><a href="https://www.tamarokuto.or.jp/blog/rokuto-report/2020/05/06/northern-sky02/" rel="noopener noreferrer">約12000年後の北極星候補はベガ(円からやや離れる)。ポラリスも天の北極ぴったりではなく小さな円を描いて動く(多摩六都科学館)</a></li>
+<li><a href="https://mathematica.site/web-mag/astronomy1/a1-11/" rel="noopener noreferrer">春分点は歳差により1年に約50秒角(約72年で1度)移動する(Web連載:天文学の教室)</a></li></ul></div>
+  <div class="relnav">
+    <a class="btn primary" href="simulator.html">🎛️ 統合シミュレーターで全部いじる</a><a class="btn" href="aurora.html">🌌 次の記事:もしもオーロラが世界中で見られたら</a><a class="btn" href="rings.html">🪐 前の記事:もしも地球に環があったら</a>
+  </div>
+</div>
+
+<footer class="site">
+  <div class="flinks">
+    <a href="../index.html">トップ</a><a href="../zukan/index.html">もしも図鑑</a><a href="../zukan/kotoba.html">用語じてん</a><a href="../tera.html">テラちゃん</a><a href="../qa.html">Q&amp;A</a><a href="../omiyage.html">おみやげ</a><a href="../contact.html">お問い合わせ</a>
+  </div>
+  ※ 当サイトのシミュレーションはすべて簡略化した概算モデルです。実際の気候・人口動態はもっと複雑です。<br>
+  © もしも地球ラボ / OBSERVATION LOG by テラちゃん
+</footer>
+</body>
+</html>

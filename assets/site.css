@@ -7,14 +7,14 @@
 .p-cta{text-align:center;margin-top:24px}
 .slider-panel.bare{border:0;background:transparent;padding:10px 4px 0}
 .page-head{position:relative;z-index:1;padding:18px 24px 8px;text-align:center}
-.page-head h1{font-size:22px}
+.page-head h1{font-size:24px}
 .sweat{display:none}
 .face-hot .sweat{display:block}
 /* 出典 */
 .sources{margin:26px 0 0;border-top:1px dashed var(--line);padding-top:12px}
 .sources .st{font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.1em;color:var(--sub)}
 .sources ul{margin:8px 0 0;padding-left:18px}
-.sources li{font-size:12px;color:var(--sub);margin:4px 0}
+.sources li{font-size:13px;color:var(--sub);margin:4px 0}
 :root{
   --bg:#0b1220; --bg2:#0e1730; --line:#1c2b4a;
   --teal:#5eead4; --danger:#ff6b4a;
@@ -42,7 +42,7 @@ a:hover{text-decoration:underline}
   background:rgba(11,18,32,.9);}
 .topnav .brand{font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:16px;color:var(--text)}
 .topnav .brand:hover{text-decoration:none;color:var(--teal)}
-.topnav .links{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:13px}
+.topnav .links{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:14px}
 .topnav .links a{color:var(--sub)}
 .topnav .links a.active,.topnav .links a:hover{color:var(--teal);text-decoration:none}
 
@@ -50,12 +50,12 @@ a:hover{text-decoration:underline}
 
 .eyebrow{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.2em;
   color:var(--teal);text-transform:uppercase}
-h1{font-family:'Zen Maru Gothic',sans-serif;font-size:24px;margin:8px 0 6px;letter-spacing:.02em}
-h2{font-family:'Zen Maru Gothic',sans-serif;font-size:18px;margin:34px 0 10px;
+h1{font-family:'Zen Maru Gothic',sans-serif;font-size:26px;margin:8px 0 6px;letter-spacing:.02em}
+h2{font-family:'Zen Maru Gothic',sans-serif;font-size:20px;margin:34px 0 10px;
   padding-left:10px;border-left:3px solid var(--teal)}
-h3{font-family:'Zen Maru Gothic',sans-serif;font-size:15px;margin:22px 0 6px;color:var(--teal)}
-p{margin:10px 0;font-size:14px}
-.sub{color:var(--sub);font-size:12.5px}
+h3{font-family:'Zen Maru Gothic',sans-serif;font-size:17px;margin:22px 0 6px;color:var(--teal)}
+p{margin:10px 0;font-size:16px;line-height:1.85}
+.sub{color:var(--sub);font-size:14px}
 
 /* ===== カード・ボタン ===== */
 .card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin:14px 0}
@@ -63,12 +63,12 @@ p{margin:10px 0;font-size:14px}
   border-radius:14px;padding:14px 16px;color:var(--text);transition:border-color .2s,transform .2s}
 a.zcard:hover{border-color:var(--teal);text-decoration:none;transform:translateY(-2px)}
 .zcard .icon{font-size:22px}
-.zcard .t{font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:14.5px;margin:4px 0 2px}
-.zcard .d{font-size:12px;color:var(--sub)}
+.zcard .t{font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15.5px;margin:4px 0 2px}
+.zcard .d{font-size:13px;color:var(--sub)}
 .tag{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:.08em;
   border:1px solid var(--teal);color:var(--teal);border-radius:99px;padding:1px 8px;margin-top:8px}
 .tag.soon{border-color:var(--line);color:var(--sub)}
-.btn{display:inline-block;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:13.5px;
+.btn{display:inline-block;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:14.5px;
   border:1px solid var(--teal);color:var(--teal);background:transparent;border-radius:99px;
   padding:9px 20px;cursor:pointer;transition:background .2s,color .2s}
 .btn:hover{background:var(--teal);color:#06251f;text-decoration:none}
@@ -76,9 +76,9 @@ a.zcard:hover{border-color:var(--teal);text-decoration:none;transform:translateY
 .btn.primary:hover{background:#8bf5e4}
 
 .note{border:1px dashed var(--teal);border-radius:12px;padding:12px 16px;margin:18px 0;
-  background:rgba(94,234,212,.05);font-size:13px}
+  background:rgba(94,234,212,.05);font-size:14.5px;line-height:1.8}
 .note .nt{font-family:'Zen Maru Gothic',sans-serif;font-weight:700;color:var(--teal);
-  font-size:12.5px;margin-bottom:4px}
+  font-size:13.5px;margin-bottom:4px}
 
 /* ===== 地球ビジュアル ===== */
 .stage{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;
@@ -205,11 +205,11 @@ a.zcard:hover{border-color:var(--teal);text-decoration:none;transform:translateY
 @keyframes tipglow{0%,100%{box-shadow:0 0 8px rgba(255,209,102,.5)}50%{box-shadow:0 0 16px rgba(255,209,102,.95)}}
 
 .speech{position:relative;margin-top:8px;background:#101d38;border:1px solid var(--line);
-  border-radius:12px;padding:8px 12px;font-family:'Zen Maru Gothic',sans-serif;font-size:12px;
+  border-radius:12px;padding:8px 12px;font-family:'Zen Maru Gothic',sans-serif;font-size:13.5px;
   width:150px;text-align:center;line-height:1.45;box-shadow:0 6px 18px rgba(0,0,0,.35)}
 .speech::after{content:"";position:absolute;top:-7px;left:50%;transform:translateX(-50%);
   border-width:0 5px 7px 5px;border-style:solid;border-color:transparent transparent #101d38 transparent}
-.speech .name{color:var(--teal);font-size:10px;display:block;margin-bottom:2px}
+.speech .name{color:var(--teal);font-size:11px;display:block;margin-bottom:2px}
 
 
 /* ===== ルナ(月担当・常連さんにだけ見える) ===== */
@@ -250,8 +250,8 @@ a.zcard:hover{border-color:var(--teal);text-decoration:none;transform:translateY
 /* ===== スライダー ===== */
 .slider-panel{background:linear-gradient(180deg,var(--bg2),#0a1226);border:1px solid var(--line);
   border-radius:14px;padding:16px}
-.slider-panel .label{font-size:13px;color:var(--sub);margin-bottom:2px}
-.slider-panel .value{font-family:'JetBrains Mono',monospace;font-size:20px;font-weight:700;
+.slider-panel .label{font-size:14px;color:var(--sub);margin-bottom:2px}
+.slider-panel .value{font-family:'JetBrains Mono',monospace;font-size:22px;font-weight:700;
   color:var(--teal);margin-bottom:8px}
 .slider-panel.danger .value{color:var(--danger)}
 input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:4px;background:var(--line);
@@ -261,9 +261,9 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:16px;heigh
 input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;
   background:var(--teal);cursor:pointer;border:2px solid #082;box-shadow:0 0 8px rgba(94,234,212,.6)}
 .scale{display:flex;justify-content:space-between;font-family:'JetBrains Mono',monospace;
-  font-size:10px;color:var(--sub)}
+  font-size:11px;color:var(--sub)}
 .scale .warn{color:var(--danger)}
-.why{margin-top:10px;font-size:11.5px;color:var(--sub);line-height:1.55;
+.why{margin-top:10px;font-size:13px;color:var(--sub);line-height:1.65;
   border-top:1px dashed var(--line);padding-top:8px}
 
 /* ===== readout ===== */
@@ -271,12 +271,12 @@ input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;
   display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
 .readout.cols3{grid-template-columns:repeat(3,1fr)}
 .card{background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:8px 6px;text-align:center}
-.card .k{font-size:9.5px;color:var(--sub);font-family:'JetBrains Mono',monospace;letter-spacing:.02em}
-.card .v{font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:700;margin-top:3px}
+.card .k{font-size:11px;color:var(--sub);font-family:'JetBrains Mono',monospace;letter-spacing:.02em}
+.card .v{font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:700;margin-top:3px}
 
-footer.site{position:relative;z-index:1;text-align:center;color:var(--sub);font-size:11px;
+footer.site{position:relative;z-index:1;text-align:center;color:var(--sub);font-size:12px;
   padding:28px 16px 34px;font-family:'JetBrains Mono',monospace;border-top:1px solid var(--line);margin-top:48px}
-footer.site .flinks{margin-bottom:8px;font-family:'Noto Sans JP',sans-serif;font-size:12px}
+footer.site .flinks{margin-bottom:8px;font-family:'Noto Sans JP',sans-serif;font-size:13px}
 footer.site .flinks a{margin:0 8px;color:var(--sub)}
 
 @media (max-width:560px){
@@ -303,13 +303,13 @@ footer.site .flinks a{margin:0 8px;color:var(--sub)}
 .section-head .more{font-size:12px}
 .qa-teaser{background:linear-gradient(180deg,var(--bg2),#0a1226);border:1px solid var(--line);
   border-radius:14px;padding:14px 18px}
-.qa-teaser .q{font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:14.5px;color:var(--teal)}
-.qa-teaser .a{font-size:13px;margin-top:6px}
+.qa-teaser .q{font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15.5px;color:var(--teal)}
+.qa-teaser .a{font-size:14px;margin-top:6px}
 
 .profile{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin:14px 0}
 .pcard{background:linear-gradient(180deg,var(--bg2),#0a1226);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
 .pcard .k{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.15em;color:var(--teal)}
-.pcard .v{font-size:13.5px;margin-top:4px}
+.pcard .v{font-size:14.5px;margin-top:4px}
 .faces{display:flex;flex-wrap:wrap;gap:20px;justify-content:center;margin:20px 0;
   background:linear-gradient(180deg,var(--bg2),#0a1226);border:1px solid var(--line);border-radius:16px;padding:22px 12px 14px}
 .face-item{display:flex;flex-direction:column;align-items:center;gap:10px}
@@ -320,26 +320,26 @@ footer.site .flinks a{margin:0 8px;color:var(--sub)}
 .tlog{display:flex;flex-direction:column;gap:10px;margin:14px 0}
 .tlog .entry{background:linear-gradient(180deg,var(--bg2),#0a1226);border:1px solid var(--line);
   border-left:3px solid var(--teal);border-radius:0 12px 12px 0;padding:10px 14px;
-  font-family:'Zen Maru Gothic',sans-serif;font-size:13px;line-height:1.7}
+  font-family:'Zen Maru Gothic',sans-serif;font-size:14px;line-height:1.75}
 .tlog .d{display:block;font-family:'JetBrains Mono',monospace;font-size:10px;
   letter-spacing:.15em;color:var(--teal);margin-bottom:3px}
 
 details{background:linear-gradient(180deg,var(--bg2),#0a1226);border:1px solid var(--line);
   border-radius:14px;padding:0;margin:10px 0;overflow:hidden}
 summary{cursor:pointer;padding:13px 16px;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;
-  font-size:14px;color:var(--teal);list-style:none;position:relative}
+  font-size:15.5px;color:var(--teal);list-style:none;position:relative}
 summary::-webkit-details-marker{display:none}
 summary::after{content:"+";position:absolute;right:16px;color:var(--sub);font-family:'JetBrains Mono',monospace}
 details[open] summary::after{content:"−"}
-details .body{padding:0 16px 14px;font-size:13.5px}
-details .tera{margin-top:8px;font-family:'Zen Maru Gothic',sans-serif;font-size:12px;color:var(--teal)}
+details .body{padding:0 16px 14px;font-size:15px;line-height:1.8}
+details .tera{margin-top:8px;font-family:'Zen Maru Gothic',sans-serif;font-size:13.5px;color:var(--teal)}
 
 .sticky-panel{position:sticky;top:0;z-index:20;
   background:radial-gradient(circle at 25% 10%, #14213f 0%, transparent 55%), var(--bg);
   padding:8px 16px 12px;box-shadow:0 12px 24px -12px rgba(0,0,0,.6);border-bottom:1px solid var(--line)}
 .presets{position:relative;z-index:1;max-width:640px;margin:8px auto 0;display:flex;gap:6px;
   overflow-x:auto;padding-bottom:2px;-webkit-overflow-scrolling:touch}
-.preset{flex:0 0 auto;font-family:'Zen Maru Gothic',sans-serif;font-size:11.5px;font-weight:700;
+.preset{flex:0 0 auto;font-family:'Zen Maru Gothic',sans-serif;font-size:12.5px;font-weight:700;
   border:1px solid var(--line);color:var(--sub);background:var(--bg2);border-radius:99px;
   padding:5px 12px;cursor:pointer;transition:border-color .2s,color .2s}
 .preset:hover{border-color:var(--teal);color:var(--teal)}
@@ -348,9 +348,9 @@ details .tera{margin-top:8px;font-family:'Zen Maru Gothic',sans-serif;font-size:
 .missions{background:linear-gradient(180deg,#0f1c38,#0a1226);border:1px solid var(--line);
   border-radius:14px;padding:14px 16px}
 .missions .mh{display:flex;justify-content:space-between;align-items:baseline}
-.missions .mh .t{font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:14px;color:var(--teal)}
+.missions .mh .t{font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:15px;color:var(--teal)}
 .missions .mh .c{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--sub)}
-.mission{display:flex;gap:8px;align-items:baseline;font-size:12.5px;padding:6px 4px;
+.mission{display:flex;gap:8px;align-items:baseline;font-size:13.5px;padding:6px 4px;
   border-bottom:1px dashed var(--line);transition:background .4s}
 .mission:last-child{border-bottom:0}
 .mission .chk{font-family:'JetBrains Mono',monospace;color:var(--sub);flex:0 0 auto}
@@ -387,7 +387,7 @@ details .tera{margin-top:8px;font-family:'Zen Maru Gothic',sans-serif;font-size:
 .kidviz{display:flex;gap:14px;align-items:stretch;margin:12px 0 4px}
 .dist-lane{flex:1;position:relative;background:linear-gradient(90deg,rgba(255,209,102,.12),rgba(11,18,32,0));
   border:1px solid var(--line);border-radius:12px;padding:10px 14px 20px;min-width:0}
-.dist-lane .lane-cap{font-size:10.5px;color:var(--sub);margin-bottom:8px}
+.dist-lane .lane-cap{font-size:11.5px;color:var(--sub);margin-bottom:8px}
 .lane-row{position:relative;height:34px}
 .sunball{position:absolute;left:0;top:50%;transform:translateY(-50%);width:30px;height:30px;border-radius:50%;
   background:radial-gradient(circle at 35% 30%,#fff6d8 0%,#ffd166 55%,#e08a2e 100%);
@@ -420,7 +420,7 @@ details .tera{margin-top:8px;font-family:'Zen Maru Gothic',sans-serif;font-size:
 /* 楕円軌道ビジュアル */
 .orbit-viz{border:1px solid var(--line);border-radius:12px;background:var(--bg2);
   padding:10px 14px 8px;margin:12px 0 4px}
-.orbit-viz .lane-cap{font-size:10.5px;color:var(--sub);margin-bottom:4px}
+.orbit-viz .lane-cap{font-size:11.5px;color:var(--sub);margin-bottom:4px}
 .orbit-stage{position:relative;height:130px;overflow:hidden}
 .ov-oval{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
   border:2px dashed rgba(94,234,212,.55);border-radius:50%;
@@ -452,17 +452,17 @@ details .tera{margin-top:8px;font-family:'Zen Maru Gothic',sans-serif;font-size:
 /* 空の色バンド(sky) */
 .skyband-wrap{border:1px solid var(--line);border-radius:12px;background:var(--bg2);
   padding:10px 14px 8px;margin:12px 0 4px}
-.skyband-wrap .lane-cap{font-size:10.5px;color:var(--sub);margin-bottom:6px}
+.skyband-wrap .lane-cap{font-size:11.5px;color:var(--sub);margin-bottom:6px}
 .skyband{position:relative;height:56px;border-radius:10px;overflow:hidden;
   transition:background .25s ease;border:1px solid rgba(255,255,255,.06)}
 .skysun-mini{position:absolute;right:14%;top:50%;transform:translate(50%,-50%);
   width:24px;height:24px;border-radius:50%;transition:background .25s ease;
   background:radial-gradient(circle at 35% 30%,#fff6d8 0%,#ffd166 55%,#e08a2e 100%)}
-.skyband-labels{display:flex;justify-content:space-between;font-size:9px;color:var(--sub);margin-top:4px}
+.skyband-labels{display:flex;justify-content:space-between;font-size:10px;color:var(--sub);margin-top:4px}
 /* 公転レーン(year) */
 .rev-wrap{border:1px solid var(--line);border-radius:12px;background:var(--bg2);
   padding:10px 14px 8px;margin:12px 0 4px}
-.rev-wrap .lane-cap{font-size:10.5px;color:var(--sub);margin-bottom:4px}
+.rev-wrap .lane-cap{font-size:11.5px;color:var(--sub);margin-bottom:4px}
 .rev-stage{position:relative;height:120px}
 .rev-orbit{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
   width:100px;height:100px;border:2px dashed rgba(94,234,212,.5);border-radius:50%}
@@ -480,16 +480,16 @@ details .tera{margin-top:8px;font-family:'Zen Maru Gothic',sans-serif;font-size:
 @media (prefers-reduced-motion: reduce){.rev-spin{animation:none}}
 /* サイズ比較(planetsize) */
 .sizecompare{border:1px solid var(--line);border-radius:12px;background:var(--bg2);padding:10px 14px 8px;margin:12px 0 4px}
-.sizecompare .lane-cap{font-size:10.5px;color:var(--sub);margin-bottom:6px}
+.sizecompare .lane-cap{font-size:11.5px;color:var(--sub);margin-bottom:6px}
 .sizecompare-stage{position:relative;height:120px;display:flex;align-items:center;justify-content:center}
 .sc-ref{position:absolute;width:54px;height:54px;border-radius:50%;border:2px dashed rgba(94,234,212,.6);box-sizing:border-box}
 .sc-ball{border-radius:50%;transition:width .15s ease,height .15s ease;
   background:radial-gradient(circle at 35% 30%,#bfe3ff 0%,#4fb3ff 55%,#0a2f63 100%);
   box-shadow:0 0 16px rgba(79,179,255,.5)}
-.sizecompare-labels{display:flex;justify-content:space-between;font-size:9.5px;color:var(--sub);margin-top:4px}
+.sizecompare-labels{display:flex;justify-content:space-between;font-size:10.5px;color:var(--sub);margin-top:4px}
 /* 方位磁針(flip) */
 .compass-viz{border:1px solid var(--line);border-radius:12px;background:var(--bg2);padding:10px 14px 10px;margin:12px 0 4px}
-.compass-viz .lane-cap{font-size:10.5px;color:var(--sub);margin-bottom:6px}
+.compass-viz .lane-cap{font-size:11.5px;color:var(--sub);margin-bottom:6px}
 .compass{position:relative;width:96px;height:96px;margin:0 auto;border-radius:50%;
   border:2px solid var(--line);background:radial-gradient(circle at 50% 50%,#0e1730,#0b1220)}
 .compass-dial{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:space-between;
@@ -500,7 +500,7 @@ details .tera{margin-top:8px;font-family:'Zen Maru Gothic',sans-serif;font-size:
   background:linear-gradient(180deg,#ff5c4a 0%,#ff5c4a 50%,#e8edf5 50%,#e8edf5 100%)}
 /* 海面レーン(water) */
 .sealevel-viz{border:1px solid var(--line);border-radius:12px;background:var(--bg2);padding:10px 14px 8px;margin:12px 0 4px}
-.sealevel-viz .lane-cap{font-size:10.5px;color:var(--sub);margin-bottom:6px}
+.sealevel-viz .lane-cap{font-size:11.5px;color:var(--sub);margin-bottom:6px}
 .sealevel-stage{position:relative;height:80px;border-radius:8px;overflow:hidden;
   background:linear-gradient(180deg,#0e1730 0%,#12233f 100%)}
 .sl-land{position:absolute;left:0;right:0;bottom:0;height:100%;
@@ -511,7 +511,7 @@ details .tera{margin-top:8px;font-family:'Zen Maru Gothic',sans-serif;font-size:
   border-top:1.5px solid rgba(150,210,255,.8)}
 /* 風の帯(wind) */
 .wind-viz{border:1px solid var(--line);border-radius:12px;background:var(--bg2);padding:10px 14px 8px;margin:12px 0 4px}
-.wind-viz .lane-cap{font-size:10.5px;color:var(--sub);margin-bottom:6px}
+.wind-viz .lane-cap{font-size:11.5px;color:var(--sub);margin-bottom:6px}
 .wind-stage{position:relative;height:66px;border-radius:8px;overflow:hidden;
   background:linear-gradient(180deg,#12233f 0%,#0e1730 100%)}
 .wind-band{position:absolute;left:-40%;width:180%;height:12px;border-radius:8px;
@@ -524,24 +524,62 @@ details .tera{margin-top:8px;font-family:'Zen Maru Gothic',sans-serif;font-size:
 @media (prefers-reduced-motion: reduce){.wind-band{animation:none}}
 /* 時代トラック(dinosaur) */
 .era-viz{border:1px solid var(--line);border-radius:12px;background:var(--bg2);padding:10px 14px 8px;margin:12px 0 4px}
-.era-viz .lane-cap{font-size:10.5px;color:var(--sub);margin-bottom:8px}
+.era-viz .lane-cap{font-size:11.5px;color:var(--sub);margin-bottom:8px}
 .era-track{position:relative;height:16px;margin:0 4px;
   background:linear-gradient(90deg,#4fb3ff 0%,#ffd166 55%,#ff7a4d 100%);border-radius:8px}
 .era-marker{position:absolute;top:50%;width:16px;height:16px;border-radius:50%;
   transform:translate(-50%,-50%);transition:left .15s ease;background:#fff;
   border:3px solid #16233f;box-shadow:0 0 8px rgba(255,255,255,.6)}
 .era-tick{position:absolute;top:-4px;width:2px;height:24px;background:rgba(255,255,255,.5)}
-.era-labels{display:flex;justify-content:space-between;font-size:9px;color:var(--sub);margin-top:6px}
+.era-labels{display:flex;justify-content:space-between;font-size:10px;color:var(--sub);margin-top:6px}
 .era-track.sun-track{background:linear-gradient(90deg,#ffd166 0%,#ff9a4d 45%,#ff5c4a 78%,#9aa7c7 100%)}
 .earth-wrap.unstable{animation:tiltWobble 5s ease-in-out infinite}
 @keyframes tiltWobble{0%,100%{transform:rotate(8deg)}50%{transform:rotate(42deg)}}
 @media (prefers-reduced-motion: reduce){.earth-wrap.unstable{animation:none;transform:rotate(23.4deg)}}
+/* 環の空(rings) */
+.ringsky{border:1px solid var(--line);border-radius:12px;background:var(--bg2);padding:10px 14px 8px;margin:12px 0 4px}
+.ringsky .lane-cap{font-size:11.5px;color:var(--sub);margin-bottom:6px}
+.ringsky-stage{position:relative;height:110px;border-radius:8px;overflow:hidden;
+  background:linear-gradient(180deg,#050a18 0%,#0e1730 75%,#16233f 100%)}
+.ring-arc{position:absolute;left:50%;transform:translateX(-50%);width:340px;height:340px;border-radius:50%;
+  border:3px solid rgba(230,240,255,.8);box-shadow:0 0 14px rgba(190,215,255,.35);
+  transition:top .15s ease,width .15s ease,opacity .2s ease}
+.ringsky-ground{position:absolute;left:0;right:0;bottom:0;height:14px;background:linear-gradient(180deg,#16233f,#0b1220)}
+.ringsky-note{position:absolute;left:10px;bottom:18px;font-size:10.5px;color:var(--sub)}
+/* 歳差サークル(precession) */
+.prec-viz{border:1px solid var(--line);border-radius:12px;background:var(--bg2);padding:10px 14px 8px;margin:12px 0 4px}
+.prec-viz .lane-cap{font-size:11.5px;color:var(--sub);margin-bottom:4px}
+.prec-stage{position:relative;height:150px}
+.prec-circle{position:absolute;left:50%;top:50%;width:110px;height:110px;transform:translate(-50%,-50%);
+  border:2px dashed rgba(94,234,212,.5);border-radius:50%}
+.prec-star{position:absolute;width:7px;height:7px;border-radius:50%;background:#fff;
+  box-shadow:0 0 8px rgba(255,255,255,.8);transform:translate(-50%,-50%)}
+.prec-star span{position:absolute;top:8px;left:50%;transform:translateX(-50%);font-size:8.5px;color:var(--sub);white-space:nowrap}
+.ps-polaris{left:calc(50% + 0px);top:calc(50% - 55px)}
+.ps-errai{left:calc(50% + 26px);top:calc(50% - 49px)}
+.ps-deneb{left:calc(50% + 51px);top:calc(50% + 20px)}
+.ps-vega{left:calc(50% + 0px);top:calc(50% + 55px);background:#bfe9ff}
+.ps-thuban{left:calc(50% - 51px);top:calc(50% - 20px)}
+.prec-axis{position:absolute;left:50%;top:calc(50% - 55px);width:12px;height:12px;border-radius:50%;background:var(--gold);
+  box-shadow:0 0 12px rgba(255,209,102,.85);transform:translate(-50%,-50%);transition:left .1s linear,top .1s linear}
+/* オーロラの空(aurora) */
+.aurora-viz{border:1px solid var(--line);border-radius:12px;background:var(--bg2);padding:10px 14px 8px;margin:12px 0 4px}
+.aurora-viz .lane-cap{font-size:11.5px;color:var(--sub);margin-bottom:6px}
+.aurora-stage{position:relative;height:96px;border-radius:8px;overflow:hidden;
+  background:linear-gradient(180deg,#050a18 0%,#0e1730 100%)}
+.au-red{position:absolute;inset:0;opacity:0;transition:opacity .2s ease;
+  background:linear-gradient(180deg,rgba(255,80,110,.6) 0%,rgba(255,80,110,.15) 60%,transparent 100%)}
+.au-band{position:absolute;left:-4%;right:-4%;bottom:14px;height:34px;opacity:.25;filter:blur(.6px);
+  transition:height .2s ease,opacity .2s ease;
+  background:repeating-linear-gradient(90deg,rgba(120,255,190,0) 0 10px,rgba(120,255,190,.55) 14px 20px,rgba(120,255,190,0) 24px 34px),
+    linear-gradient(180deg,rgba(255,120,150,.35) 0%,rgba(120,255,190,.55) 70%,rgba(120,255,190,.15) 100%)}
+.au-ground{position:absolute;left:0;right:0;bottom:0;height:14px;background:linear-gradient(180deg,#16233f,#0b1220)}
 
-.kotoba-term .yomi{font-size:11px;color:var(--sub);font-weight:400;margin-left:6px;
+.kotoba-term .yomi{font-size:12px;color:var(--sub);font-weight:400;margin-left:6px;
   font-family:'Zen Maru Gothic',sans-serif}
 .kotoba-body .short{font-weight:700;color:var(--text);margin-bottom:6px}
 .kotoba-body .more{color:var(--sub)}
-.kotoba-body .golink{display:inline-block;margin-top:10px;font-size:12px}
+.kotoba-body .golink{display:inline-block;margin-top:10px;font-size:13px}
 .kotoba-index{display:flex;flex-wrap:wrap;gap:6px;margin:14px 0 20px}
 .kotoba-index a{font-size:12px;padding:5px 10px;border:1px solid var(--line);border-radius:999px;
   color:var(--sub);background:var(--bg2)}
