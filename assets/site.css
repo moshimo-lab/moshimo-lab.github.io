@@ -532,6 +532,7 @@ details .tera{margin-top:8px;font-family:'Zen Maru Gothic',sans-serif;font-size:
   border:3px solid #16233f;box-shadow:0 0 8px rgba(255,255,255,.6)}
 .era-tick{position:absolute;top:-4px;width:2px;height:24px;background:rgba(255,255,255,.5)}
 .era-labels{display:flex;justify-content:space-between;font-size:9px;color:var(--sub);margin-top:6px}
+.era-track.sun-track{background:linear-gradient(90deg,#ffd166 0%,#ff9a4d 45%,#ff5c4a 78%,#9aa7c7 100%)}
 .earth-wrap.unstable{animation:tiltWobble 5s ease-in-out infinite}
 @keyframes tiltWobble{0%,100%{transform:rotate(8deg)}50%{transform:rotate(42deg)}}
 @media (prefers-reduced-motion: reduce){.earth-wrap.unstable{animation:none;transform:rotate(23.4deg)}}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src https://formspree.io; base-uri 'none'; form-action https://formspree.io">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="description" content="月は毎年3.8cm遠ざかる。遠い未来、月が小さく見えて皆既日食は消える。地球の1日も少しずつ長くなる。">
+<meta property="og:site_name" content="もしも地球ラボ">
+<meta property="og:title" content="もしも遠い未来、月が今より遠ざかったら|もしも図鑑|もしも地球ラボ">
+<meta property="og:description" content="月は毎年3.8cm遠ざかる。遠い未来、月が小さく見えて皆既日食は消える。地球の1日も少しずつ長くなる。">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://moshimo-lab.pages.dev/assets/ogp.png?v=202607110008">
+<title>もしも遠い未来、月が今より遠ざかったら|もしも図鑑|もしも地球ラボ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=JetBrains+Mono:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../assets/site.css?v=202607110008">
+<script src="../assets/moonaway.js?v=202607110008" defer></script>
+</head>
+<body>
+<div class="stars"></div>
+<nav class="topnav">
+  <a class="brand" href="../index.html">🌍 もしも地球ラボ</a>
+  <div class="links">
+    <a href="../zukan/index.html" class="active">もしも図鑑</a>
+    <a href="../zukan/kotoba.html">用語じてん</a>
+    <a href="../tera.html">テラちゃんについて</a>
+    <a href="../qa.html">地球のギモンQ&amp;A</a>
+    <a href="../omiyage.html">おみやげ</a>
+    <a href="../contact.html">お問い合わせ</a>
+  </div>
+</nav>
+
+<div class="wrap">
+  <div class="article-hero">
+    <div class="eyebrow">MOSHIMO ZUKAN // FILE 35</div>
+    <h1>🌙 もしも遠い未来、月が今より遠ざかったら</h1>
+    <p class="sub">月は毎年3.8cmずつ地球から離れている。遠い未来、皆既日食は永遠に見られなくなり、1日はもっと長くなる。</p>
+  </div>
+  
+  <div class="minisim">
+    <div class="stage">
+      <div class="earth-wrap small" id="earthWrap">
+      
+      <div class="atmosphere"></div>
+      <div class="earth" id="earth">
+        <div class="globe-strip" id="globeStrip">
+          <div class="hemi"><div class="land land1"></div><div class="land land2"></div><div class="land land3"></div><div class="clouds"></div></div>
+          <div class="hemi"><div class="land land1"></div><div class="land land2"></div><div class="land land3"></div><div class="clouds"></div></div>
+        </div>
+        <div class="heat-overlay" id="heatOverlay"></div>
+        <div class="ice-overlay" id="iceOverlay"></div>
+      </div>
+    </div>
+      <div class="mini-moon" id="miniMoon"></div>
+      <div class="mascot" id="mascot">
+      <div class="sat">
+        <div class="antenna"></div><div class="tip"></div>
+        <div class="wing l"><i></i><i></i><b></b></div>
+        <div class="wing r"><b></b><i></i><i></i></div>
+        <div class="mascot-body" id="mascotBody">
+          <div class="eye l"></div><div class="eye r"></div>
+          <div class="blush l"></div><div class="blush r"></div>
+          <div class="sweat"></div>
+        </div>
+        <div class="tail"></div>
+      </div>
+      <div class="speech" id="speech"><span class="name">テラちゃん</span><span id="speechLine">今日も平常運転だよ〜</span></div>
+    </div>
+    </div>
+    <div class="readout cols3">
+      <div class="card"><div class="k">空に見える月の大きさ</div><div class="v" id="masize">1.0 倍</div></div>
+      <div class="card"><div class="k">皆既日食</div><div class="v" id="maeclipse">見られる</div></div>
+      <div class="card"><div class="k">1日の長さ</div><div class="v" id="maday">24時間</div></div>
+    </div>
+    <div class="dist-lane">
+      <div class="lane-cap">🌍地球から月までの距離(未来へ進むほど遠ざかる)</div>
+      <div class="lane-row">
+        <div class="earthball"></div>
+        <div class="lane-track">
+          <div class="lane-tick" id="maTick"></div>
+          <div class="lane-moon" id="maLaneMoon"></div>
+        </div>
+      </div>
+    </div>
+    <div class="slider-panel bare" id="panelMa">
+      <div class="label">これから何年後?(未来へ)</div>
+      <div class="value" id="valMa">現在</div>
+      <input type="range" id="ma" min="0" max="100" value="0" aria-label="未来へ">
+      <div class="scale"><span>いま</span><span class="warn">約6億年後</span><span class="warn">はるか未来</span></div>
+      <div class="why" id="whyMa">🔎 月は毎年3.8cmずつ遠ざかっているよ。地球の自転のエネルギーが、潮の満ち引きを通して月に受けわたされているんだ</div>
+    </div>
+  </div>
+  
+  <h2>時間を未来へ進めると、月はどうなる?</h2>
+  <h3>① 月は、今も毎年3.8cm遠ざかっている</h3>
+  <p>月は地球のまわりをただ回っているのではなく、<strong>毎年約3.8cmずつ、少しずつ遠ざかっています</strong>。これはアポロが月面に置いた反射鏡へレーザーを当てて往復時間を測ることで、正確にわかっています。1年ではわずかな距離ですが、何億年もの時間が積み重なれば、莫大な変化になります。スライダーを未来へ進めると、月がじわじわと地球から離れていきます。</p>
+  <h3>② なぜ遠ざかる?——1日が伸びる理由でもある</h3>
+  <p>月が遠ざかる仕組みは、<a href="rotation.html">地球の自転</a>と深く結びついています。月の引力が生む<a href="moonhalf.html">潮の満ち引き</a>は、海水と海底の間に摩擦を生み、地球の自転にわずかなブレーキをかけます。そのぶんのエネルギーが月に受けわたされ、月は少し外側へ押し出される——。その結果、<strong>地球の1日は少しずつ長くなり、月は遠ざかる</strong>のです。実際、地球が6億歳くらいの頃、1日はまだ約22時間しかありませんでした。今の24時間は、月が長い時間をかけてブレーキをかけ続けた結果なのです。</p>
+  <h3>③ そして、皆既日食が見られなくなる</h3>
+  <p>ここに、少し切ない未来があります。今、<a href="bigmoon.html">月と太陽は空でほぼ同じ大きさに見え</a>、だからこそ月が太陽をぴったり隠す<strong>皆既日食</strong>が起こります。でも月が遠ざかれば、見かけの月はどんどん小さくなり、やがて太陽を隠しきれなくなる。数億年後には、<strong>皆既日食は永遠に見られなくなる</strong>と考えられています。太陽のまわりにリングが残る金環日食だけの世界になるのです。今、私たちが皆既日食を見られるのは、宇宙の長い歴史の中の"たまたまのタイミング"なのです。</p>
+  <h3>④ 遠ざかりは、いつか止まる</h3>
+  <p>月は永遠に遠ざかり続けるわけではありません。はるか未来、地球の自転がうんと遅くなり、<strong>地球の自転周期と月の公転周期がぴったり同じ</strong>になると、エネルギーのやりとりが釣り合って、月の後退は止まると考えられています。そのとき地球と月は、いつも同じ面を向け合ったまま、静かに回るパートナーになります。月との長い長いダンスは、こうしてゆっくり終わりに近づいていくのです。</p>
+
+  <div class="note"><div class="nt">💡 豆知識:私たちは「皆既日食を見られる時代」の住人</div>
+  月が誕生したばかりの頃、月は地球のすぐ近く——今の10分の1ほどの距離にあり、空には今よりずっと大きな月がかかっていました。そして遠い未来には、小さくしぼんだ月しか見られなくなります。皆既日食で太陽と月がぴったり重なるこの絶妙なバランスは、46億年の地球の歴史の中で、ちょうど今この時代に居合わせた私たちだけが見られる奇跡なのです。次に皆既日食のニュースを聞いたら、その"タイミングの奇跡"を思い出してみてください。</div>
+  
+  <div class="termmemo"><div class="tm">🔎 むずかしい言葉は「用語じてん」でチェック</div>
+  <div class="termchips"><a href="kotoba.html#tidal-force">潮汐力(起潮力)</a><a href="kotoba.html#tidal-lock">潮汐ロック</a><a href="kotoba.html#rotation">自転</a></div></div>
+  
+  <div class="sources"><div class="st">📚 出典・参考(ファクトチェック済み)</div><ul><li><a href="https://diamond.jp/articles/-/384551?page=3" rel="noopener noreferrer">月は毎年約3.8cm遠ざかる・アポロの反射鏡でレーザー測距・自転にブレーキがかかり1日が伸びる(ダイヤモンド・オンライン)</a></li>
+<li><a href="https://crd.ndl.go.jp/reference/entry/index.php?id=1000270314&page=ref_view" rel="noopener noreferrer">月の潮汐力が地球の自転を遅くし角運動量保存で月が遠ざかる・50億年ほどで後退が止まり自転と公転が一致(国立国会図書館レファレンス協同データベース)</a></li>
+<li><a href="https://www.hokusei-ghs-jh.ed.jp/principal_blog/13209/" rel="noopener noreferrer">地球が6億歳の頃1日は約22時間・自転は100年に1.8ミリ秒遅くなる・やがて潮汐ロックに至る(北星学園女子中学高等学校)</a></li>
+<li><a href="https://global.canon/ja/technology/kids/mystery/m_01_10.html" rel="noopener noreferrer">月が遠ざかると見かけが小さくなり皆既日食が金環日食に変わっていく(キヤノンサイエンスラボ・キッズ)</a></li>
+<li><a href="https://www.kids.isas.jaxa.jp/faq/moon/000071.html" rel="noopener noreferrer">潮汐力が地球の自転にブレーキをかけ月の公転半径が大きくなる(JAXA宇宙科学研究所キッズ)</a></li></ul></div>
+  <div class="relnav">
+    <a class="btn primary" href="simulator.html">🎛️ 統合シミュレーターで全部いじる</a><a class="btn" href="iceage.html">❄️ 次の記事:もしも氷河期がやってきたら</a><a class="btn" href="sundeath.html">🌞 前の記事:もしも太陽が寿命をむかえたら</a>
+  </div>
+</div>
+
+<footer class="site">
+  <div class="flinks">
+    <a href="../index.html">トップ</a><a href="../zukan/index.html">もしも図鑑</a><a href="../zukan/kotoba.html">用語じてん</a><a href="../tera.html">テラちゃん</a><a href="../qa.html">Q&amp;A</a><a href="../omiyage.html">おみやげ</a><a href="../contact.html">お問い合わせ</a>
+  </div>
+  ※ 当サイトのシミュレーションはすべて簡略化した概算モデルです。実際の気候・人口動態はもっと複雑です。<br>
+  © もしも地球ラボ / OBSERVATION LOG by テラちゃん
+</footer>
+</body>
+</html>

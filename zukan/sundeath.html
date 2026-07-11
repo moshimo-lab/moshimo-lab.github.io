@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src https://formspree.io; base-uri 'none'; form-action https://formspree.io">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="description" content="約50億年後、太陽は赤色巨星に膨張し水星・金星をのみ込む。地球の運命は議論中。最後は白色矮星に。">
+<meta property="og:site_name" content="もしも地球ラボ">
+<meta property="og:title" content="もしも太陽が寿命をむかえたら|もしも図鑑|もしも地球ラボ">
+<meta property="og:description" content="約50億年後、太陽は赤色巨星に膨張し水星・金星をのみ込む。地球の運命は議論中。最後は白色矮星に。">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://moshimo-lab.pages.dev/assets/ogp.png?v=202607110008">
+<title>もしも太陽が寿命をむかえたら|もしも図鑑|もしも地球ラボ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=JetBrains+Mono:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../assets/site.css?v=202607110008">
+<script src="../assets/sundeath.js?v=202607110008" defer></script>
+</head>
+<body>
+<div class="stars"></div>
+<nav class="topnav">
+  <a class="brand" href="../index.html">🌍 もしも地球ラボ</a>
+  <div class="links">
+    <a href="../zukan/index.html" class="active">もしも図鑑</a>
+    <a href="../zukan/kotoba.html">用語じてん</a>
+    <a href="../tera.html">テラちゃんについて</a>
+    <a href="../qa.html">地球のギモンQ&amp;A</a>
+    <a href="../omiyage.html">おみやげ</a>
+    <a href="../contact.html">お問い合わせ</a>
+  </div>
+</nav>
+
+<div class="wrap">
+  <div class="article-hero">
+    <div class="eyebrow">MOSHIMO ZUKAN // FILE 34</div>
+    <h1>🌞 もしも太陽が寿命をむかえたら</h1>
+    <p class="sub">約50億年後、太陽はふくれあがって赤色巨星に。水星と金星をのみ込み、地球の運命は——今も研究者の議論の的だ。</p>
+  </div>
+  
+  <div class="minisim">
+    <div class="stage">
+      <div class="earth-wrap small" id="earthWrap">
+      
+      <div class="atmosphere"></div>
+      <div class="earth" id="earth">
+        <div class="globe-strip" id="globeStrip">
+          <div class="hemi"><div class="land land1"></div><div class="land land2"></div><div class="land land3"></div><div class="clouds"></div></div>
+          <div class="hemi"><div class="land land1"></div><div class="land land2"></div><div class="land land3"></div><div class="clouds"></div></div>
+        </div>
+        <div class="heat-overlay" id="heatOverlay"></div>
+        <div class="ice-overlay" id="iceOverlay"></div>
+      </div>
+    </div>
+      <div class="mascot" id="mascot">
+      <div class="sat">
+        <div class="antenna"></div><div class="tip"></div>
+        <div class="wing l"><i></i><i></i><b></b></div>
+        <div class="wing r"><b></b><i></i><i></i></div>
+        <div class="mascot-body" id="mascotBody">
+          <div class="eye l"></div><div class="eye r"></div>
+          <div class="blush l"></div><div class="blush r"></div>
+          <div class="sweat"></div>
+        </div>
+        <div class="tail"></div>
+      </div>
+      <div class="speech" id="speech"><span class="name">テラちゃん</span><span id="speechLine">今日も平常運転だよ〜</span></div>
+    </div>
+    </div>
+    <div class="readout cols3">
+      <div class="card"><div class="k">太陽の大きさ</div><div class="v" id="sdsize">1 倍(いま)</div></div>
+      <div class="card"><div class="k">太陽の姿</div><div class="v" id="sdphase">主系列星</div></div>
+      <div class="card"><div class="k">地球のようす</div><div class="v" id="sdearth">生命の星</div></div>
+    </div>
+    <div class="era-viz">
+      <div class="lane-cap">⏳未来へ進んでみよう</div>
+      <div class="era-track sun-track">
+        <div class="era-marker" id="sdMarker"></div>
+      </div>
+      <div class="era-labels"><span>いま</span><span>10億年後</span><span>50億年後</span><span>70億年後〜</span></div>
+    </div>
+    <div class="slider-panel bare" id="panelSd">
+      <div class="label">これから何年後?</div>
+      <div class="value" id="valSd">現在</div>
+      <input type="range" id="sd" min="0" max="100" value="0" aria-label="経過時間">
+      <div class="scale"><span>いま</span><span class="warn">赤色巨星</span><span class="warn">白色矮星</span></div>
+      <div class="why" id="whySd">🔎 太陽は今、水素を燃やして安定して輝く「主系列星」。でも燃料には限りがあるよ。あと約50億年で寿命をむかえるんだ</div>
+    </div>
+  </div>
+  
+  <h2>時間を未来へ進めると、太陽はどうなる?</h2>
+  <h3>① 今の太陽は「働きざかりの大人」</h3>
+  <p>太陽は今、中心で水素を燃やして(核融合して)、安定して輝いています。この状態を<strong>主系列星</strong>といい、いわば星の働きざかりの大人の時期です。太陽は約46億歳で、寿命は約100億年とされるので、ちょうど一生の折り返し地点あたり。あと約<strong>50億年</strong>は、今と大きく変わらず輝き続けると考えられています。ただし、その前に地球には試練が訪れます。</p>
+  <h3>② 実は「あと10億年」で、地球は住めなくなる</h3>
+  <p>意外に思うかもしれませんが、太陽の寿命が尽きるずっと前——今から約<strong>10億年後</strong>——に、地球は生き物の住めない星になると考えられています。太陽は年老いるにつれて少しずつ明るさを増していて、約10億年後には今より1割ほど明るくなる見込み。たったそれだけで<a href="greenhouse.html">暴走温室</a>のスイッチが入り、海が蒸発してしまうのです。「あと50億年」ではなく「あと10億年」——これが、地球で生命が暮らせる本当のタイムリミットかもしれません。</p>
+  <h3>③ 約50億年後、太陽は巨大にふくれあがる</h3>
+  <p>中心の水素を使い果たすと、太陽はバランスを崩して外側が大きくふくらみ、表面温度が下がって赤くなります。これが<strong>赤色巨星</strong>です。このときの太陽は今の<strong>200倍以上</strong>もの大きさになり、いちばん近い<strong>水星と金星は、確実にのみ込まれて</strong>しまいます。スライダーを進めると、太陽がみるみる巨大化していきます。真っ赤な巨大な太陽が空を覆う——想像を絶する光景です。</p>
+  <h3>④ 地球の運命は、今も議論の的</h3>
+  <p>では地球はどうなるのか。実はこれは<strong>研究者の間でも決着がついていない問題</strong>です。太陽が巨大化すると地球ものみ込まれる、という説が長く語られてきました。一方で近年は、太陽が年老いてガスを放出し軽くなることで引力が弱まり、<strong>地球は外側へ逃げてのみ込まれずにすむ</strong>かもしれない、という研究も出ています。どちらになるかは、太陽がどれくらいの速さでやせ細るかという微妙なバランス次第。いずれにせよ、その頃の地球はとうに焼けつく世界で、人類が居られる場所ではありません。最後は太陽もガスを失い、地球サイズの暗い<strong>白色矮星</strong>となって、静かに冷えていきます。</p>
+
+  <div class="note"><div class="nt">💡 豆知識:私たちの体は「星のかけら」でできている</div>
+  太陽の一生は、こわい終末の物語ではありません。宇宙が生まれたときにあったのは水素とヘリウムだけ。私たちの体を作る炭素や酸素、骨のカルシウムや血液の鉄は、みな昔の星が一生の最後に作り、宇宙にまき散らしたものです。太陽もいつか外層のガスを宇宙に返し、それが遠い未来、新しい星や惑星の材料になります。星の死は、次の星の誕生でもある。夜空を見上げるとき、あなたは"親戚の星たち"を見ているのかもしれません。</div>
+  
+  <div class="termmemo"><div class="tm">🔎 むずかしい言葉は「用語じてん」でチェック</div>
+  <div class="termchips"><a href="kotoba.html#reddwarf">赤色矮星</a><a href="kotoba.html#greenhouse">温室効果</a><a href="kotoba.html#habitable">ハビタブルゾーン</a></div></div>
+  
+  <div class="sources"><div class="st">📚 出典・参考(ファクトチェック済み)</div><ul><li><a href="https://thewonder.it/article/762/description/" rel="noopener noreferrer">太陽は約46億歳で寿命は約100億年・約50億年後に赤色巨星になり今の200倍に膨張し水星金星をのみ込む・最後は白色矮星(ザ・ワンダー)</a></li>
+<li><a href="https://www.isee.nagoya-u.ac.jp/50naze/shin-wakusei/20.html" rel="noopener noreferrer">約70億年後に太陽は最大となり地球軌道あたりまで膨張・地球が飲み込まれるかは専門家の見解が分かれる(名古屋大学 惑星50のなぜ)</a></li>
+<li><a href="https://www.gizmodo.jp/article/earth-could-survive-the-suns-bloated-death-stage-but-theres-a-catch/" rel="noopener noreferrer">太陽が質量を失い地球が外側へ逃れのみ込みを回避する可能性を示した研究(ギズモード・ジャパン/Astronomy and Astrophysics)</a></li>
+<li><a href="https://cosmic-note.com/space-knowledge/sun-true-face/" rel="noopener noreferrer">約10億年後に太陽が10%明るくなり海が蒸発し地球は生命の住めない環境になる(COSMIC NOTE)</a></li>
+<li><a href="https://xn--29sob207cg49a.com/space/red-giant-star-evolution-2026/" rel="noopener noreferrer">赤色巨星は直径が元の数十〜数百倍・約50億年後に太陽も赤色巨星化し最期は白色矮星(宇宙旅行.com)</a></li></ul></div>
+  <div class="relnav">
+    <a class="btn primary" href="simulator.html">🎛️ 統合シミュレーターで全部いじる</a><a class="btn" href="moonaway.html">🌙 次の記事:もしも遠い未来、月が今より遠ざかったら</a><a class="btn" href="lightning.html">⚡ 前の記事:もしも一日中ずっと雷が鳴っていたら</a>
+  </div>
+</div>
+
+<footer class="site">
+  <div class="flinks">
+    <a href="../index.html">トップ</a><a href="../zukan/index.html">もしも図鑑</a><a href="../zukan/kotoba.html">用語じてん</a><a href="../tera.html">テラちゃん</a><a href="../qa.html">Q&amp;A</a><a href="../omiyage.html">おみやげ</a><a href="../contact.html">お問い合わせ</a>
+  </div>
+  ※ 当サイトのシミュレーションはすべて簡略化した概算モデルです。実際の気候・人口動態はもっと複雑です。<br>
+  © もしも地球ラボ / OBSERVATION LOG by テラちゃん
+</footer>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src https://formspree.io; base-uri 'none'; form-action https://formspree.io">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="description" content="氷期と間氷期は約10万年周期で繰り返す。原因は地球の軌道のゆらぎ(ミランコビッチ・サイクル)。海面が下がり大陸がつながった。">
+<meta property="og:site_name" content="もしも地球ラボ">
+<meta property="og:title" content="もしも氷河期がやってきたら|もしも図鑑|もしも地球ラボ">
+<meta property="og:description" content="氷期と間氷期は約10万年周期で繰り返す。原因は地球の軌道のゆらぎ(ミランコビッチ・サイクル)。海面が下がり大陸がつながった。">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://moshimo-lab.pages.dev/assets/ogp.png?v=202607110008">
+<title>もしも氷河期がやってきたら|もしも図鑑|もしも地球ラボ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=JetBrains+Mono:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="../assets/site.css?v=202607110008">
+<script src="../assets/iceage.js?v=202607110008" defer></script>
+</head>
+<body>
+<div class="stars"></div>
+<nav class="topnav">
+  <a class="brand" href="../index.html">🌍 もしも地球ラボ</a>
+  <div class="links">
+    <a href="../zukan/index.html" class="active">もしも図鑑</a>
+    <a href="../zukan/kotoba.html">用語じてん</a>
+    <a href="../tera.html">テラちゃんについて</a>
+    <a href="../qa.html">地球のギモンQ&amp;A</a>
+    <a href="../omiyage.html">おみやげ</a>
+    <a href="../contact.html">お問い合わせ</a>
+  </div>
+</nav>
+
+<div class="wrap">
+  <div class="article-hero">
+    <div class="eyebrow">MOSHIMO ZUKAN // FILE 36</div>
+    <h1>❄️ もしも氷河期がやってきたら</h1>
+    <p class="sub">全球凍結ほどではない、でも確実に繰り返してきた寒暖のリズム。マンモスが歩き、海が下がって大陸がつながった時代。</p>
+  </div>
+  
+  <div class="minisim">
+    <div class="stage">
+      <div class="earth-wrap small" id="earthWrap">
+      
+      <div class="atmosphere"></div>
+      <div class="earth" id="earth">
+        <div class="globe-strip" id="globeStrip">
+          <div class="hemi"><div class="land land1"></div><div class="land land2"></div><div class="land land3"></div><div class="clouds"></div></div>
+          <div class="hemi"><div class="land land1"></div><div class="land land2"></div><div class="land land3"></div><div class="clouds"></div></div>
+        </div>
+        <div class="heat-overlay" id="heatOverlay"></div>
+        <div class="ice-overlay" id="iceOverlay"></div>
+      </div>
+    </div>
+      <div class="mascot" id="mascot">
+      <div class="sat">
+        <div class="antenna"></div><div class="tip"></div>
+        <div class="wing l"><i></i><i></i><b></b></div>
+        <div class="wing r"><b></b><i></i><i></i></div>
+        <div class="mascot-body" id="mascotBody">
+          <div class="eye l"></div><div class="eye r"></div>
+          <div class="blush l"></div><div class="blush r"></div>
+          <div class="sweat"></div>
+        </div>
+        <div class="tail"></div>
+      </div>
+      <div class="speech" id="speech"><span class="name">テラちゃん</span><span id="speechLine">今日も平常運転だよ〜</span></div>
+    </div>
+    </div>
+    <div class="readout cols3">
+      <div class="card"><div class="k">世界の平均気温</div><div class="v" id="iatemp">約15℃(いま)</div></div>
+      <div class="card"><div class="k">氷におおわれた陸</div><div class="v" id="iaice">約1割</div></div>
+      <div class="card"><div class="k">海面の高さ</div><div class="v" id="iasea">いまの高さ</div></div>
+    </div>
+    <div class="sealevel-viz">
+      <div class="lane-cap">🌊氷期には海面が下がって、陸が広がる</div>
+      <div class="sealevel-stage">
+        <div class="sl-land"></div>
+        <div class="sl-water" id="iaWater"></div>
+      </div>
+      <div class="sizecompare-labels"><span id="iaLabel">いまの気候</span><span>海面の高さ</span></div>
+    </div>
+    <div class="slider-panel bare" id="panelIa">
+      <div class="label">気候(左=いま/右=氷期のピーク)</div>
+      <div class="value" id="valIa">間氷期(いま)</div>
+      <input type="range" id="ia" min="0" max="100" value="0" aria-label="気候">
+      <div class="scale"><span>いま(間氷期)</span><span class="warn">氷期のピーク</span></div>
+      <div class="why" id="whyIa">🔎 氷期と間氷期は約10万年の周期で繰り返してきたよ。原因は地球の軌道や地軸のわずかなゆらぎ(ミランコビッチ・サイクル)なんだ</div>
+    </div>
+  </div>
+  
+  <h2>氷期のピークへ近づけると、何が起きる?</h2>
+  <h3>① 全球凍結とは違う、"ほどほどの"氷の時代</h3>
+  <p>「氷河期」と聞くと<a href="snowball.html">地球全体が凍りつく全球凍結</a>を思い浮かべるかもしれませんが、ここで扱うのはもっとおだやかな、しかし何度も繰り返してきた<strong>氷期</strong>です。今の地球は、氷期と氷期の間の暖かい<strong>間氷期</strong>にあたります。過去100万年ほどの地球は、寒い氷期と暖かい間氷期を、およそ<strong>10万年の周期</strong>でくり返してきました。スライダーを進めると、地球はこの氷期のピークへ近づいていきます。</p>
+  <h3>② 原因は、地球の軌道の"わずかなゆらぎ"</h3>
+  <p>氷期をもたらすのは、地球の外ではなく、地球自身の動きのわずかな変化です。地球の<a href="orbit.html">公転軌道のかたち</a>、<a href="tilt.html">地軸の傾き</a>、そして地軸が独楽のように首を振る<strong>歳差</strong>——この3つが、それぞれ約10万年・約4万年・約2.6万年の周期でゆっくり変化しています。これらが重なって、地球の高緯度が夏に受ける日ざしが増えたり減ったりする。この日射のリズムが、氷期と間氷期のスイッチを押しているのです。これを、発見した人の名から<strong>ミランコビッチ・サイクル</strong>と呼びます。</p>
+  <h3>③ 海が下がり、大陸が地続きになる</h3>
+  <p>氷期には、海の水が蒸発して雪となり、陸の上に巨大な氷の板(氷床)として積もります。そのぶん海の水が減るので、<strong>海面が下がります</strong>。約2万年前の最も寒かった時期(最終氷期極大期)には、世界の平均気温が今より約6℃低く、海面は今より<strong>約125mも低かった</strong>と考えられています。すると浅い海が陸になり、今は海で隔てられた土地が地続きに。人類やマンモスなどの動物が、大陸から大陸へ歩いて渡れた時代があったのです。スライダーを進めると、海面が下がって陸が広がるのが見えます。</p>
+  <h3>④ 私たちは「暖かい時代」に生きている</h3>
+  <p>大事なのは、氷期は遠い過去の異変ではなく、地球が<strong>今も繰り返している自然なリズムの一部</strong>だということ。私たちがたまたま暮らしているのは、そのリズムの中の暖かい間氷期です。約1万年前に最後の氷期が終わって温暖な時代になり、そのおかげで農耕がはじまり、今の文明が育ちました。人類の歴史は、氷が退いた"暖かい幕間"に花開いたのです。地球の気候は、長い目で見れば、いつもゆっくりと揺れ動いています。</p>
+
+  <div class="note"><div class="nt">💡 豆知識:氷期の記録は、氷と泥の中に眠っている</div>
+  何万年も前の気温を、どうやって知るのでしょう。南極やグリーンランドの氷を深く掘ると、その氷には当時の空気が小さな泡として閉じこめられていて、大昔の大気を直接調べられます。また海底の泥に含まれる微生物の殻を調べると、当時の海の水温がわかります。地球は、自分の歩んできた気候の歴史を、氷と泥の中に日記のように残してくれているのです。ちなみに、この10万年周期がなぜこれほど強く出るのかは「10万年問題」と呼ばれ、実はまだ完全には解けていない謎です。</div>
+  
+  <div class="termmemo"><div class="tm">🔎 むずかしい言葉は「用語じてん」でチェック</div>
+  <div class="termchips"><a href="kotoba.html#milankovitch">ミランコビッチ・サイクル</a><a href="kotoba.html#albedo">アルベド(反射率)</a><a href="kotoba.html#eccentricity">離心率</a></div></div>
+  
+  <div class="sources"><div class="st">📚 出典・参考(ファクトチェック済み)</div><ul><li><a href="https://astro-dic.jp/milankovitch-cycle/" rel="noopener noreferrer">氷期-間氷期は約10万年周期・原因は公転軌道離心率(約10万年)・地軸傾き(約4万年)・歳差(約2.6万年)の日射変動(天文学辞典:ミランコビッチサイクル)</a></li>
+<li><a href="https://spaceshipearth.jp/ice-age/" rel="noopener noreferrer">最終氷期極大期(約2万6500〜2万年前)は世界平均気温が今より約6℃低く陸の約25%が氷床・海面は約125m低下し陸橋ができた(SpaceshipEarth)</a></li>
+<li><a href="https://ja.wikipedia.org/wiki/%E3%83%9F%E3%83%A9%E3%83%B3%E3%82%B3%E3%83%93%E3%83%83%E3%83%81%E3%83%BB%E3%82%B5%E3%82%A4%E3%82%AF%E3%83%AB" rel="noopener noreferrer">氷期サイクルの10万年周期と離心率変動の一致・10万年問題(Wikipedia:ミランコビッチ・サイクル)</a></li>
+<li><a href="https://www.aori.u-tokyo.ac.jp/research/news/2013/20130808.html" rel="noopener noreferrer">氷期-間氷期サイクルは夏の日射変動が要因でCO2が振幅を増幅(東京大学大気海洋研究所)</a></li>
+<li><a href="https://akihisakitamura.la.coocan.jp/41ka.pdf" rel="noopener noreferrer">約270万年前〜90万年前の氷期は4.1万年周期・約80万年前に10万年周期へ移行(中期更新世遷移)(akihisakitamura)</a></li></ul></div>
+  <div class="relnav">
+    <a class="btn primary" href="simulator.html">🎛️ 統合シミュレーターで全部いじる</a><a class="btn" href="moonaway.html">🌙 前の記事:もしも遠い未来、月が今より遠ざかったら</a>
+  </div>
+</div>
+
+<footer class="site">
+  <div class="flinks">
+    <a href="../index.html">トップ</a><a href="../zukan/index.html">もしも図鑑</a><a href="../zukan/kotoba.html">用語じてん</a><a href="../tera.html">テラちゃん</a><a href="../qa.html">Q&amp;A</a><a href="../omiyage.html">おみやげ</a><a href="../contact.html">お問い合わせ</a>
+  </div>
+  ※ 当サイトのシミュレーションはすべて簡略化した概算モデルです。実際の気候・人口動態はもっと複雑です。<br>
+  © もしも地球ラボ / OBSERVATION LOG by テラちゃん
+</footer>
+</body>
+</html>
