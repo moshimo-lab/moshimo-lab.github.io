@@ -11,13 +11,13 @@
 <meta property="og:description" content="スライダーで星をえらぶと、ジャンプの高さ・体重計の数字・ボールの落ち方が変わる。月では約3m、木星では20cm。">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
-<meta property="og:image" content="https://moshimo-lab.pages.dev/assets/ogp.png?v=202607110837">
+<meta property="og:image" content="https://moshimo-lab.pages.dev/assets/ogp.png?v=202607110929">
 <title>もしもとなりの星でジャンプしたら|もしも図鑑|もしも地球ラボ</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=JetBrains+Mono:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
-<link rel="stylesheet" href="../assets/site.css?v=202607110837">
-<script src="../assets/jump.js?v=202607110837" defer></script>
+<link rel="stylesheet" href="../assets/site.css?v=202607110929">
+<script src="../assets/jump.js?v=202607110929" defer></script>
 </head>
 <body>
 <div class="stars"></div>
@@ -86,7 +86,7 @@
     <div class="slider-panel bare" id="panelJp">
       <div class="label">立っている星</div>
       <div class="value" id="valJp">地球</div>
-      <input type="range" id="jp" min="0" max="5" value="3" step="1" aria-label="立っている星">
+      <div class="drag-hint"><span class="dh-hand">👇</span>スライダーをうごかして、じっけんしてみよう</div><input type="range" id="jp" min="0" max="5" value="3" step="1" aria-label="立っている星">
       <div class="scale"><span>月</span><span>地球</span><span>木星</span></div>
       <div class="why" id="whyJp">🔎 ジャンプの高さは重力に反比例。重力が半分なら2倍跳べる、シンプルなルールだよ</div>
     </div>
@@ -147,7 +147,7 @@
 <path d="M43 71 Q50 79 57 71" stroke="#c2596b" stroke-width="2" fill="none" stroke-linecap="round"/>
 </g></g>
 </defs></svg>
-<div class="talk"><div class="talk-title">🎬 テラちゃんげきじょう「となりの星でジャンプしたら」</div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-sora"/></svg></span><span class="ava-cap">ソラ</span></div><div class="tb"><span class="who">ソラ</span>月に行ったら、スーパーマンみたいに跳べるってほんと?</div></div><div class="trow right"><div class="avwrap"><span class="ava tera"><span class="ant"></span><span class="face"></span><span class="eye l"></span><span class="eye r"></span><span class="blush l"></span><span class="blush r"></span><span class="mouth"></span></span><span class="ava-cap">テラちゃん</span></div><div class="tb"><span class="who">テラちゃん</span>ほんとだよ。月の重力は地球の6分の1。50cm跳べるソラなら、月では約3m!</div></div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-hoshi"/></svg></span><span class="ava-cap">ホシ</span></div><div class="tb"><span class="who">ホシ</span>じゃあ、いちばん大きい木星なら、もっと跳べるんじゃない?</div></div><div class="trow right"><div class="avwrap"><span class="ava tera"><span class="ant"></span><span class="face"></span><span class="eye l"></span><span class="eye r"></span><span class="blush l"></span><span class="blush r"></span><span class="mouth"></span></span><span class="ava-cap">テラちゃん</span></div><div class="tb"><span class="who">テラちゃん</span>それが逆なんだ。木星は重力2.5倍だから、跳べるのは階段1段ぶんの20cmだよ</div></div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-sora"/></svg></span><span class="ava-cap">ソラ</span></div><div class="tb punch"><span class="who">ソラ</span>大きい星ほど跳べない…ぼくの記録が出せるの、やっぱり地球か月だけか。<div class="tele">いちばん跳べるのは小さな星。小惑星ケレスなら16m跳べます。跳びすぎて宇宙に出ないよう注意!</div></div></div></div>
+<div class="talk"><div class="talk-title">🎬 テラちゃんげきじょう「となりの星でジャンプしたら」</div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-sora"/></svg></span><span class="ava-cap">ソラ</span></div><div class="tb"><span class="who">ソラ</span>月に行ったら、スーパーマンみたいに跳べるってほんと?</div></div><div class="trow right"><div class="avwrap"><span class="ava tera"><span class="ant"></span><span class="face"></span><span class="eye l"></span><span class="eye r"></span><span class="blush l"></span><span class="blush r"></span><span class="mouth"></span></span><span class="ava-cap">テラちゃん</span></div><div class="tb"><span class="who">テラちゃん</span>ほんとだよ。月の重力は地球の6分の1。50cm跳べるソラなら、月では約3m!</div></div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-hoshi"/></svg></span><span class="ava-cap">ホシ</span></div><div class="tb"><span class="who">ホシ</span>じゃあ、いちばん大きい木星なら、もっと跳べるんじゃない?</div></div><div class="trow right"><div class="avwrap"><span class="ava tera"><span class="ant"></span><span class="face"></span><span class="eye l"></span><span class="eye r"></span><span class="blush l"></span><span class="blush r"></span><span class="mouth"></span></span><span class="ava-cap">テラちゃん</span></div><div class="tb"><span class="who">テラちゃん</span>それが逆なんだ。木星は重力2.5倍だから、跳べるのは階段1段ぶんの20cmだよ</div></div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-sora"/></svg></span><span class="ava-cap">ソラ</span></div><div class="tb punch"><span class="who">ソラ</span>星ごとにジャンプの高さがちがうんだ…いつか月で、本当に跳んでみたいな。<div class="tele">月面でジャンプする人類の映像は本当にあります。「アポロ ジャンプ」で検索してみて。</div></div></div></div>
   
   <div class="termmemo"><div class="tm">🔎 むずかしい言葉は「用語じてん」でチェック</div>
   <div class="termchips"><a href="kotoba.html#gravity">重力</a><a href="kotoba.html#density">密度</a><a href="kotoba.html#escape-velocity">脱出速度</a></div></div>
