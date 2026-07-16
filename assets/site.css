@@ -58,6 +58,14 @@ p{margin:10px 0;font-size:16px;line-height:1.85}
 .sub{color:var(--sub);font-size:14px}
 
 /* ===== カード・ボタン ===== */
+/* おすすめカード */
+.featured-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:14px 0 28px}
+.zcard.featured{padding:18px 20px;border-color:var(--teal);background:linear-gradient(180deg,rgba(94,234,212,.08),rgba(94,234,212,.02))}
+.zcard.featured .icon{font-size:28px}
+.zcard.featured .t{font-size:17px;margin:6px 0 4px}
+.zcard.featured .d{font-size:14px}
+.tag.rec{background:var(--teal);color:#04211c;border-color:var(--teal)}
+
 .card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin:14px 0}
 .zcard{display:block;background:linear-gradient(180deg,var(--bg2),#0a1226);border:1px solid var(--line);
   border-radius:14px;padding:14px 16px;color:var(--text);transition:border-color .2s,transform .2s}
