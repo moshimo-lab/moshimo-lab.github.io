@@ -18,6 +18,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=JetBrains+Mono:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
 <link rel="stylesheet" href="../assets/site.css?v=202607140620">
 <script src="../assets/distance.js?v=202607140620" defer></script>
+<script src="../assets/site-common.js?v=202607140620" defer></script>
 </head>
 <body>
 <div class="stars"></div>
@@ -99,18 +100,7 @@
     </div>
   </div>
   
-  <h2>1.5倍にすると、何が起きる?</h2>
-  <h3>① 届く日光が44%になる</h3>
-  <p>光は距離の2乗で薄まります(逆2乗則)。距離が1.5倍なら、受け取る日射エネルギーは 1÷1.5² ≒ 44%。太陽のまわりの軌道を、たとえるなら教室の「席」だと考えてみてください——太陽に近い前の席ほど日ざしが強く、後ろの席ほど弱い。実際にほぼその席(1.52AU)に座っているのが火星で、届く太陽エネルギーは地球の4割ちょっとしかありません。</p>
-  <h3>② 平均気温はマイナス30℃前後に</h3>
-  <p>このサイトのモデルで計算すると、地球の大気をそのまま持って1.5AUに引っ越した場合の平均気温は約−32℃。「あれ、火星は−63℃じゃなかった?」と思った人は鋭い。火星が地球より大幅に寒いのは、距離のせいだけでなく<strong>大気が地球の1%未満しかなく、温室効果がほとんど働かない</strong>からです(温室効果の上乗せは数℃程度とされます)。つまり同じ席でも、地球の大気を保てるなら30℃ぶんくらいは大気の保温(温室効果)で稼げるのです。</p>
-  <h3>③ 海は凍っていく — 地球は一度経験済み</h3>
-  <p>平均−32℃の世界では、海は極から凍り始めます。氷は白く日光をよく反射するので、凍るほどさらに寒くなる悪循環(アイスアルベド・フィードバック)が働き、最終的には赤道近くまで氷に覆われるかもしれません。実はこれ、SFではありません。地球は約7億2000万〜6億3500万年前(クライオジェニアン紀)に「スターチアン氷期」「マリノアン氷期」という、赤道まで凍りついたとされる<strong>全球凍結(スノーボールアース)</strong>をすでに経験しています。</p>
-  <h3>④ それでも生命は生き延びる。帰り道もある</h3>
-  <p>全球凍結の時代も、生命は氷の下の海などで生き延びたと考えられています。そして脱出ルートも実例があります。氷に覆われても火山は二酸化炭素を吐き出し続け、CO₂が大気にたまって温室効果が強まると、氷は一気に溶けたと考えられているのです。<strong>統合シミュレーターで「距離1.5AU+大気を4〜5倍」にしてみてください</strong>。気温が15℃前後まで戻るのを、このサイトのモデルでも確認できます。距離のハンデは、大気しだいで取り返せるのです。</p>
 
-  <div class="note"><div class="nt">💡 豆知識:ハビタブルゾーンは「大気しだい」で伸び縮みする</div>
-  水が液体でいられる距離の範囲(ハビタブルゾーン)は、狭い見積もりでは太陽から約0.97〜1.4AU。ところがCO₂の温室効果などまで考えた広い見積もりでは、外側の境界は約1.67AUまで広がるとする研究もあります。つまり1.5AUは「大気しだいでギリギリ住めるかもしれない席」。ハビタブルゾーンが距離だけでなく大気とセットで決まることの、いちばんわかりやすい例です。</div>
   <svg width="0" height="0" class="svgdefs" aria-hidden="true"><defs>
 <clipPath id="avclip"><circle cx="50" cy="50" r="50"/></clipPath>
 <g id="kid-sora"><g clip-path="url(#avclip)">
@@ -154,7 +144,22 @@
 <path d="M43 71 Q50 79 57 71" stroke="#c2596b" stroke-width="2" fill="none" stroke-linecap="round"/>
 </g></g>
 </defs></svg>
-<div class="talk"><div class="talk-title">🎬 テラちゃんげきじょう「太陽との距離が1.5倍だったら」</div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-sora"/></svg></span><span class="ava-cap">ソラ</span></div><div class="tb"><span class="who">ソラ</span>太陽から1.5倍はなれたら、ちょっと涼しくなるくらい?</div></div><div class="trow right"><div class="avwrap"><span class="ava tera"><span class="ant"></span><span class="face"></span><span class="eye l"></span><span class="eye r"></span><span class="blush l"></span><span class="blush r"></span><span class="mouth"></span></span><span class="ava-cap">テラちゃん</span></div><div class="tb"><span class="who">テラちゃん</span>それがね、届く日ざしは半分以下の44%。海はこおって、真っ白な星になっちゃう</div></div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-sora"/></svg></span><span class="ava-cap">ソラ</span></div><div class="tb"><span class="who">ソラ</span>半分でそんなに!? 1.5倍って場所、どこかにあるの?</div></div><div class="trow right"><div class="avwrap"><span class="ava tera"><span class="ant"></span><span class="face"></span><span class="eye l"></span><span class="eye r"></span><span class="blush l"></span><span class="blush r"></span><span class="mouth"></span></span><span class="ava-cap">テラちゃん</span></div><div class="tb"><span class="who">テラちゃん</span>あるよ。ちょうど火星の席。地球を火星の位置に置いた感じなんだ</div></div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-sora"/></svg></span><span class="ava-cap">ソラ</span></div><div class="tb punch"><span class="who">ソラ</span>近すぎても遠すぎてもダメ…地球の席、よく取れたなあ。いい席すぎない?<div class="tele">この「ちょうどいい席」をハビタブルゾーンといいます。宇宙人さがしの合言葉です。</div></div></div></div>
+<div class="talk"><div class="talk-title">🎬 テラちゃんげきじょう「太陽との距離が1.5倍だったら」</div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-sora"/></svg></span><span class="ava-cap">ソラ</span></div><div class="tb"><span class="who">ソラ</span>太陽から1.5倍はなれたら、ちょっと涼しくなるくらい?</div></div><div class="trow right"><div class="avwrap"><span class="ava tera"><span class="ant"></span><span class="face"></span><span class="eye l"></span><span class="eye r"></span><span class="blush l"></span><span class="blush r"></span><span class="mouth"></span></span><span class="ava-cap">テラちゃん</span></div><div class="tb"><span class="who">テラちゃん</span>それがね、届く日ざしは半分以下の44%。海はこおって、真っ白な星になっちゃう</div></div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-sora"/></svg></span><span class="ava-cap">ソラ</span></div><div class="tb"><span class="who">ソラ</span>半分でそんなに!? 1.5倍って場所、どこかにあるの?</div></div><div class="trow right"><div class="avwrap"><span class="ava tera"><span class="ant"></span><span class="face"></span><span class="eye l"></span><span class="eye r"></span><span class="blush l"></span><span class="blush r"></span><span class="mouth"></span></span><span class="ava-cap">テラちゃん</span></div><div class="tb"><span class="who">テラちゃん</span>あるよ。ちょうど火星の席。地球を火星の位置に置いた感じなんだ</div></div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-sora"/></svg></span><span class="ava-cap">ソラ</span></div><div class="tb punch"><span class="who">ソラ</span>近すぎても遠すぎてもダメ…地球の席、よく取れたなあ。いい席すぎない?<div class="tele">この「ちょうどいい席」をハビタブルゾーンといいます。宇宙人さがしの合言葉です。</div></div></div>
+
+  <h2>1.5倍にすると、何が起きる?</h2>
+  <h3>① 届く日光が44%になる</h3>
+  <p>光は距離の2乗で薄まります(逆2乗則)。距離が1.5倍なら、受け取る日射エネルギーは 1÷1.5² ≒ 44%。太陽のまわりの軌道を、たとえるなら教室の「席」だと考えてみてください——太陽に近い前の席ほど日ざしが強く、後ろの席ほど弱い。実際にほぼその席(1.52AU)に座っているのが火星で、届く太陽エネルギーは地球の4割ちょっとしかありません。</p>
+  <h3>② 平均気温はマイナス30℃前後に</h3>
+  <p>このサイトのモデルで計算すると、地球の大気をそのまま持って1.5AUに引っ越した場合の平均気温は約−32℃。「あれ、火星は−63℃じゃなかった?」と思った人は鋭い。火星が地球より大幅に寒いのは、距離のせいだけでなく<strong>大気が地球の1%未満しかなく、温室効果がほとんど働かない</strong>からです(温室効果の上乗せは数℃程度とされます)。つまり同じ席でも、地球の大気を保てるなら30℃ぶんくらいは大気の保温(温室効果)で稼げるのです。</p>
+  <h3>③ 海は凍っていく — 地球は一度経験済み</h3>
+  <p>平均−32℃の世界では、海は極から凍り始めます。氷は白く日光をよく反射するので、凍るほどさらに寒くなる悪循環(アイスアルベド・フィードバック)が働き、最終的には赤道近くまで氷に覆われるかもしれません。実はこれ、SFではありません。地球は約7億2000万〜6億3500万年前(クライオジェニアン紀)に「スターチアン氷期」「マリノアン氷期」という、赤道まで凍りついたとされる<strong>全球凍結(スノーボールアース)</strong>をすでに経験しています。</p>
+  <h3>④ それでも生命は生き延びる。帰り道もある</h3>
+  <p>全球凍結の時代も、生命は氷の下の海などで生き延びたと考えられています。そして脱出ルートも実例があります。氷に覆われても火山は二酸化炭素を吐き出し続け、CO₂が大気にたまって温室効果が強まると、氷は一気に溶けたと考えられているのです。<strong>統合シミュレーターで「距離1.5AU+大気を4〜5倍」にしてみてください</strong>。気温が15℃前後まで戻るのを、このサイトのモデルでも確認できます。距離のハンデは、大気しだいで取り返せるのです。</p>
+
+  <div class="note"><div class="nt">💡 豆知識:ハビタブルゾーンは「大気しだい」で伸び縮みする</div>
+  水が液体でいられる距離の範囲(ハビタブルゾーン)は、狭い見積もりでは太陽から約0.97〜1.4AU。ところがCO₂の温室効果などまで考えた広い見積もりでは、外側の境界は約1.67AUまで広がるとする研究もあります。つまり1.5AUは「大気しだいでギリギリ住めるかもしれない席」。ハビタブルゾーンが距離だけでなく大気とセットで決まることの、いちばんわかりやすい例です。</div>
+  
+</div>
   
   <div class="termmemo"><div class="tm">🔎 むずかしい言葉は「用語じてん」でチェック</div>
   <div class="termchips"><a href="kotoba.html#habitable">ハビタブルゾーン</a><a href="kotoba.html#greenhouse">温室効果</a><a href="kotoba.html#atmosphere">大気</a></div></div>

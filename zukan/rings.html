@@ -18,6 +18,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=JetBrains+Mono:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
 <link rel="stylesheet" href="../assets/site.css?v=202607140620">
 <script src="../assets/rings.js?v=202607140620" defer></script>
+<script src="../assets/site-common.js?v=202607140620" defer></script>
 </head>
 <body>
 <div class="stars"></div>
@@ -91,18 +92,7 @@
     </div>
   </div>
   
-  <h2>緯度を変えると、環はどう見える?</h2>
-  <h3>① 環は「壊れた天体」からできる</h3>
-  <p>惑星の環は、材料さえあれば自然にできます。天体が惑星に近づきすぎると、惑星の引力が天体を引き裂いてしまう距離があり、これを<strong>ロッシュ限界</strong>といいます。地球の場合、中心から半径の約3倍——およそ<strong>1万9000km</strong>より内側です。この線を越えて近づいた天体は<a href="moonhalf.html">潮汐の力</a>でばらばらに砕け、破片は赤道の上空に広がって、薄い円盤状の環になります。土星や木星の環も、ほとんどがロッシュ限界の内側にあります。つまり環とは、衛星になりそこねた破片たちの姿なのです。</p>
-  <h3>② 空にかかる、動かない光のアーチ</h3>
-  <p>もし今の地球に環があったら、その眺めは緯度によって一変します。環は赤道の真上に広がるので、<strong>赤道直下からは真横から見ることになり、頭の真上を横切る細い光の線</strong>に見えます。緯度が上がるにつれて環は面として見えはじめ、日本のような中緯度からは<strong>南の空にかかる巨大な光のアーチ</strong>に。さらに高緯度へ行くと、アーチは地平線へ沈み、極地からは地球自身のふくらみにさえぎられて見えなくなります。環は星と違って昇りも沈みもせず、毎晩、空の同じ場所にかかり続けます。夜の環は太陽の光を反射して輝きますが、真夜中には地球自身の影が環に落ち、アーチの一部が暗く欠けます。スライダーで緯度を変えて、眺めの違いを確かめてみてください。</p>
-  <h3>③ 環は、天気まで変える</h3>
-  <p>環は美しいだけの飾りではありません。薄いとはいえ巨大な円盤なので、<strong>地上に影を落とします</strong>。太陽が環の反対側にまわる冬には、中緯度の地域に環の影がかかり、日ざしを減らして<strong>冬をいっそう寒くする</strong>と考えられます。実際、かつての地球に環があったとする研究では、環が日射をさえぎったことが、当時の寒冷期(オルドビス紀末の氷期)の一因になった可能性が指摘されています。空のアーチの代金は、寒い冬で支払うことになるわけです。</p>
-  <h3>④ 実は地球にも、環があった?</h3>
-  <p>これは完全な空想ではありません。2024年、モナシュ大学の研究チームが「<strong>約4億6600万年前の地球には環があったかもしれない</strong>」とする研究を発表しました。根拠は隕石の落ち方の偏りです。この時代(オルドビス紀)には隕石の衝突が急増したことが知られていますが、当時の大陸の位置を復元すると、21個のクレーターがすべて<strong>当時の赤道から緯度30度以内</strong>に集中していました。高緯度にも陸は広くあったのに、です。チームは、ロッシュ限界の内側で砕けた天体が赤道上空に環を作り、その破片が数千万年かけて赤道付近へ降り続けた——と考えると説明がつくとしています。環は最大で4000万年ほど存在した可能性があるとのこと。大昔の空を見上げた三葉虫たちは、光のアーチを見ていたのかもしれません。</p>
 
-  <div class="note"><div class="nt">💡 豆知識:環の時代の夜空は「流れ星ラッシュ」</div>
-  環の材料は、少しずつ地球へ落ちてきます。オルドビス紀に隕石の衝突が急増していたのは、まさに環のかけらが降り注いでいた痕跡だと研究チームは考えています。つまり環のある時代の夜空は、動かない光のアーチと、そこから流れ落ちる無数の流れ星のセット。ため息が出るような眺めですが、落ちてくるのは岩のかけらでもあります。ちなみに土星の環は主に氷ですが、地球の環(があったとすれば)は砕けた岩石の環だったと考えられています。</div>
   <svg width="0" height="0" class="svgdefs" aria-hidden="true"><defs>
 <clipPath id="avclip"><circle cx="50" cy="50" r="50"/></clipPath>
 <g id="kid-sora"><g clip-path="url(#avclip)">
@@ -146,7 +136,22 @@
 <path d="M43 71 Q50 79 57 71" stroke="#c2596b" stroke-width="2" fill="none" stroke-linecap="round"/>
 </g></g>
 </defs></svg>
-<div class="talk"><div class="talk-title">🎬 テラちゃんげきじょう「地球に環があったら」</div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-sora"/></svg></span><span class="ava-cap">ソラ</span></div><div class="tb"><span class="who">ソラ</span>土星みたいな環が地球にあったら、かっこいいだろうなあ!</div></div><div class="trow right"><div class="avwrap"><span class="ava tera"><span class="ant"></span><span class="face"></span><span class="eye l"></span><span class="eye r"></span><span class="blush l"></span><span class="blush r"></span><span class="mouth"></span></span><span class="ava-cap">テラちゃん</span></div><div class="tb"><span class="who">テラちゃん</span>赤道の真上に光の輪ができて、日本からは南の空に大きなアーチが見えるよ</div></div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-sora"/></svg></span><span class="ava-cap">ソラ</span></div><div class="tb"><span class="who">ソラ</span>毎晩あの眺め!? 最高じゃん。いいことしかないでしょ?</div></div><div class="trow right"><div class="avwrap"><span class="ava tera"><span class="ant"></span><span class="face"></span><span class="eye l"></span><span class="eye r"></span><span class="blush l"></span><span class="blush r"></span><span class="mouth"></span></span><span class="ava-cap">テラちゃん</span></div><div class="tb"><span class="who">テラちゃん</span>それがね、環の影が地上に落ちて、冬がもっと寒くなっちゃうんだ</div></div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-sora"/></svg></span><span class="ava-cap">ソラ</span></div><div class="tb punch"><span class="who">ソラ</span>4億年前の空には光のアーチがあったかも…三葉虫が見上げてた夜空、想像しちゃうな。<div class="tele">証拠はクレーターの並び方。空の謎を地面を掘って調べる——科学っておもしろいでしょ。</div></div></div></div>
+<div class="talk"><div class="talk-title">🎬 テラちゃんげきじょう「地球に環があったら」</div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-sora"/></svg></span><span class="ava-cap">ソラ</span></div><div class="tb"><span class="who">ソラ</span>土星みたいな環が地球にあったら、かっこいいだろうなあ!</div></div><div class="trow right"><div class="avwrap"><span class="ava tera"><span class="ant"></span><span class="face"></span><span class="eye l"></span><span class="eye r"></span><span class="blush l"></span><span class="blush r"></span><span class="mouth"></span></span><span class="ava-cap">テラちゃん</span></div><div class="tb"><span class="who">テラちゃん</span>赤道の真上に光の輪ができて、日本からは南の空に大きなアーチが見えるよ</div></div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-sora"/></svg></span><span class="ava-cap">ソラ</span></div><div class="tb"><span class="who">ソラ</span>毎晩あの眺め!? 最高じゃん。いいことしかないでしょ?</div></div><div class="trow right"><div class="avwrap"><span class="ava tera"><span class="ant"></span><span class="face"></span><span class="eye l"></span><span class="eye r"></span><span class="blush l"></span><span class="blush r"></span><span class="mouth"></span></span><span class="ava-cap">テラちゃん</span></div><div class="tb"><span class="who">テラちゃん</span>それがね、環の影が地上に落ちて、冬がもっと寒くなっちゃうんだ</div></div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-sora"/></svg></span><span class="ava-cap">ソラ</span></div><div class="tb punch"><span class="who">ソラ</span>4億年前の空には光のアーチがあったかも…三葉虫が見上げてた夜空、想像しちゃうな。<div class="tele">証拠はクレーターの並び方。空の謎を地面を掘って調べる——科学っておもしろいでしょ。</div></div></div>
+
+  <h2>緯度を変えると、環はどう見える?</h2>
+  <h3>① 環は「壊れた天体」からできる</h3>
+  <p>惑星の環は、材料さえあれば自然にできます。天体が惑星に近づきすぎると、惑星の引力が天体を引き裂いてしまう距離があり、これを<strong>ロッシュ限界</strong>といいます。地球の場合、中心から半径の約3倍——およそ<strong>1万9000km</strong>より内側です。この線を越えて近づいた天体は<a href="moonhalf.html">潮汐の力</a>でばらばらに砕け、破片は赤道の上空に広がって、薄い円盤状の環になります。土星や木星の環も、ほとんどがロッシュ限界の内側にあります。つまり環とは、衛星になりそこねた破片たちの姿なのです。</p>
+  <h3>② 空にかかる、動かない光のアーチ</h3>
+  <p>もし今の地球に環があったら、その眺めは緯度によって一変します。環は赤道の真上に広がるので、<strong>赤道直下からは真横から見ることになり、頭の真上を横切る細い光の線</strong>に見えます。緯度が上がるにつれて環は面として見えはじめ、日本のような中緯度からは<strong>南の空にかかる巨大な光のアーチ</strong>に。さらに高緯度へ行くと、アーチは地平線へ沈み、極地からは地球自身のふくらみにさえぎられて見えなくなります。環は星と違って昇りも沈みもせず、毎晩、空の同じ場所にかかり続けます。夜の環は太陽の光を反射して輝きますが、真夜中には地球自身の影が環に落ち、アーチの一部が暗く欠けます。スライダーで緯度を変えて、眺めの違いを確かめてみてください。</p>
+  <h3>③ 環は、天気まで変える</h3>
+  <p>環は美しいだけの飾りではありません。薄いとはいえ巨大な円盤なので、<strong>地上に影を落とします</strong>。太陽が環の反対側にまわる冬には、中緯度の地域に環の影がかかり、日ざしを減らして<strong>冬をいっそう寒くする</strong>と考えられます。実際、かつての地球に環があったとする研究では、環が日射をさえぎったことが、当時の寒冷期(オルドビス紀末の氷期)の一因になった可能性が指摘されています。空のアーチの代金は、寒い冬で支払うことになるわけです。</p>
+  <h3>④ 実は地球にも、環があった?</h3>
+  <p>これは完全な空想ではありません。2024年、モナシュ大学の研究チームが「<strong>約4億6600万年前の地球には環があったかもしれない</strong>」とする研究を発表しました。根拠は隕石の落ち方の偏りです。この時代(オルドビス紀)には隕石の衝突が急増したことが知られていますが、当時の大陸の位置を復元すると、21個のクレーターがすべて<strong>当時の赤道から緯度30度以内</strong>に集中していました。高緯度にも陸は広くあったのに、です。チームは、ロッシュ限界の内側で砕けた天体が赤道上空に環を作り、その破片が数千万年かけて赤道付近へ降り続けた——と考えると説明がつくとしています。環は最大で4000万年ほど存在した可能性があるとのこと。大昔の空を見上げた三葉虫たちは、光のアーチを見ていたのかもしれません。</p>
+
+  <div class="note"><div class="nt">💡 豆知識:環の時代の夜空は「流れ星ラッシュ」</div>
+  環の材料は、少しずつ地球へ落ちてきます。オルドビス紀に隕石の衝突が急増していたのは、まさに環のかけらが降り注いでいた痕跡だと研究チームは考えています。つまり環のある時代の夜空は、動かない光のアーチと、そこから流れ落ちる無数の流れ星のセット。ため息が出るような眺めですが、落ちてくるのは岩のかけらでもあります。ちなみに土星の環は主に氷ですが、地球の環(があったとすれば)は砕けた岩石の環だったと考えられています。</div>
+  
+</div>
   
   <div class="termmemo"><div class="tm">🔎 むずかしい言葉は「用語じてん」でチェック</div>
   <div class="termchips"><a href="kotoba.html#roche-limit">ロッシュ限界</a><a href="kotoba.html#tidal-force">潮汐力(起潮力)</a><a href="kotoba.html#albedo">アルベド(反射率)</a></div></div>

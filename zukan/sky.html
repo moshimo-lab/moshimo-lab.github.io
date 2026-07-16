@@ -18,6 +18,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=JetBrains+Mono:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
 <link rel="stylesheet" href="../assets/site.css?v=202607140620">
 <script src="../assets/sky.js?v=202607140620" defer></script>
+<script src="../assets/site-common.js?v=202607140620" defer></script>
 </head>
 <body>
 <div class="stars"></div>
@@ -89,18 +90,7 @@
     </div>
   </div>
   
-  <h2>空気の量を変えると、空の色はどうなる?</h2>
-  <h3>① 空の青は「散らばった光」の色</h3>
-  <p>太陽の光にはすべての色が混ざっています。その光が空気の分子(窒素や酸素)にぶつかると、四方八方にはね散らされます——これが<strong>散乱</strong>です。ポイントは、色によって散らされやすさが違うこと。<strong>波長の短い青い光は、波長の長い赤い光よりずっと強く散乱されます</strong>(レイリー散乱)。だから昼間、空のあちこちから散らばった青い光が目に届き、空全体が青く見えるのです。青は「空にもともとある色」ではなく、「空気が散らした光の色」なのです。</p>
-  <h3>② 夕焼けが赤いのも、同じ理屈の裏側</h3>
-  <p>夕方、太陽が低くなると、光は大気の中を昼よりずっと<strong>長い距離</strong>通ってきます。その道中で青い光はすっかり散らされ尽くし、散乱されにくい赤やオレンジだけが目に届く——これが夕焼けです。スライダーで空気を濃くすると、この「散らされ尽くし」が昼間から起こるようになり、太陽は低い位置でなくても赤っぽく、空は白っぽくかすんでいきます。逆に空気を減らすと、散らす相手がいなくなり、空の青はどんどん暗く、深くなっていきます。</p>
-  <h3>③ 空気ゼロなら、昼でも空は真っ黒</h3>
-  <p>スライダーを0にしてみてください。散乱する空気がなければ、太陽のある方向だけがまぶしく、<strong>空そのものは昼でも真っ黒</strong>です。月面で撮影された写真の空が真っ暗なのは、まさにこれ。しかも星は太陽と同時に見えます。「青い空」は当たり前の風景ではなく、ほどよい厚さの大気を持つ惑星だけの特権なのです。ちなみに高い山や飛行機から空を見ると、通ってくる空気が少ないぶん、空はより濃く、紫がかって見えます。実は太陽光の中で最も散乱されやすいのは紫で、地上に届く前に上空で散らされ尽くしているのです。</p>
-  <h3>④ 火星の夕焼けは、青い</h3>
-  <p>おとなりの火星では、この物語がひっくり返ります。火星の大気はとても薄く、かわりに空に細かい砂ぼこり(ダスト)が漂っています。この粒は空気の分子よりずっと大きいため、光の散らし方のルールが変わり(ミー散乱)、<strong>赤い光のほうが散らされやすくなる</strong>のです。その結果、火星の昼の空は赤っぽく、そして夕方には——散らされにくい青が残って、<strong>青い夕焼け</strong>が沈みます。探査車が実際に撮影したその写真は、「空の色は惑星の大気が決める」ことの、何よりの証拠です。</p>
 
-  <div class="note"><div class="nt">💡 豆知識:大噴火の年は、夕焼けが燃える</div>
-  1883年のクラカタウ火山の大噴火のあと、ヨーロッパでは数年にわたって異常に赤い夕焼けが続き、画家が何百枚もスケッチに残したと伝えられています。噴火で成層圏まで巻き上げられた微粒子が、散乱をさらに強めたためです。空の色は、大気の「量」だけでなく「中身」にも敏感なセンサー。夕焼けの色が いつもと違う日は、空が地球のどこかの出来事を報せているのかもしれません。なお、このシミュレーターの色はイメージをつかむための簡略表現です。</div>
   <svg width="0" height="0" class="svgdefs" aria-hidden="true"><defs>
 <clipPath id="avclip"><circle cx="50" cy="50" r="50"/></clipPath>
 <g id="kid-sora"><g clip-path="url(#avclip)">
@@ -144,7 +134,22 @@
 <path d="M43 71 Q50 79 57 71" stroke="#c2596b" stroke-width="2" fill="none" stroke-linecap="round"/>
 </g></g>
 </defs></svg>
-<div class="talk"><div class="talk-title">🎬 テラちゃんげきじょう「空が青くなかったら」</div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-sora"/></svg></span><span class="ava-cap">ソラ</span></div><div class="tb"><span class="who">ソラ</span>空ってなんで青いの? もともと青くぬってあるの?</div></div><div class="trow right"><div class="avwrap"><span class="ava tera"><span class="ant"></span><span class="face"></span><span class="eye l"></span><span class="eye r"></span><span class="blush l"></span><span class="blush r"></span><span class="mouth"></span></span><span class="ava-cap">テラちゃん</span></div><div class="tb"><span class="who">テラちゃん</span>太陽の光の中の青が、空気にぶつかって散らばるからだよ。それで空一面が青くなるんだ</div></div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-sora"/></svg></span><span class="ava-cap">ソラ</span></div><div class="tb"><span class="who">ソラ</span>じゃあ空気がなかったら?</div></div><div class="trow right"><div class="avwrap"><span class="ava tera"><span class="ant"></span><span class="face"></span><span class="eye l"></span><span class="eye r"></span><span class="blush l"></span><span class="blush r"></span><span class="mouth"></span></span><span class="ava-cap">テラちゃん</span></div><div class="tb"><span class="who">テラちゃん</span>昼でも空は真っ黒。星が見える。ちなみに火星では、夕焼けが青くなるんだよ</div></div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-sora"/></svg></span><span class="ava-cap">ソラ</span></div><div class="tb punch"><span class="who">ソラ</span>星がちがうと夕焼けの色までちがうんだ。火星の青い夕日、いつか人類は見るのかな。<div class="tele">火星の青い夕焼けの写真は、NASAの探査車が本当に撮影しています。検索してみてください。</div></div></div></div>
+<div class="talk"><div class="talk-title">🎬 テラちゃんげきじょう「空が青くなかったら」</div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-sora"/></svg></span><span class="ava-cap">ソラ</span></div><div class="tb"><span class="who">ソラ</span>空ってなんで青いの? もともと青くぬってあるの?</div></div><div class="trow right"><div class="avwrap"><span class="ava tera"><span class="ant"></span><span class="face"></span><span class="eye l"></span><span class="eye r"></span><span class="blush l"></span><span class="blush r"></span><span class="mouth"></span></span><span class="ava-cap">テラちゃん</span></div><div class="tb"><span class="who">テラちゃん</span>太陽の光の中の青が、空気にぶつかって散らばるからだよ。それで空一面が青くなるんだ</div></div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-sora"/></svg></span><span class="ava-cap">ソラ</span></div><div class="tb"><span class="who">ソラ</span>じゃあ空気がなかったら?</div></div><div class="trow right"><div class="avwrap"><span class="ava tera"><span class="ant"></span><span class="face"></span><span class="eye l"></span><span class="eye r"></span><span class="blush l"></span><span class="blush r"></span><span class="mouth"></span></span><span class="ava-cap">テラちゃん</span></div><div class="tb"><span class="who">テラちゃん</span>昼でも空は真っ黒。星が見える。ちなみに火星では、夕焼けが青くなるんだよ</div></div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-sora"/></svg></span><span class="ava-cap">ソラ</span></div><div class="tb punch"><span class="who">ソラ</span>星がちがうと夕焼けの色までちがうんだ。火星の青い夕日、いつか人類は見るのかな。<div class="tele">火星の青い夕焼けの写真は、NASAの探査車が本当に撮影しています。検索してみてください。</div></div></div>
+
+  <h2>空気の量を変えると、空の色はどうなる?</h2>
+  <h3>① 空の青は「散らばった光」の色</h3>
+  <p>太陽の光にはすべての色が混ざっています。その光が空気の分子(窒素や酸素)にぶつかると、四方八方にはね散らされます——これが<strong>散乱</strong>です。ポイントは、色によって散らされやすさが違うこと。<strong>波長の短い青い光は、波長の長い赤い光よりずっと強く散乱されます</strong>(レイリー散乱)。だから昼間、空のあちこちから散らばった青い光が目に届き、空全体が青く見えるのです。青は「空にもともとある色」ではなく、「空気が散らした光の色」なのです。</p>
+  <h3>② 夕焼けが赤いのも、同じ理屈の裏側</h3>
+  <p>夕方、太陽が低くなると、光は大気の中を昼よりずっと<strong>長い距離</strong>通ってきます。その道中で青い光はすっかり散らされ尽くし、散乱されにくい赤やオレンジだけが目に届く——これが夕焼けです。スライダーで空気を濃くすると、この「散らされ尽くし」が昼間から起こるようになり、太陽は低い位置でなくても赤っぽく、空は白っぽくかすんでいきます。逆に空気を減らすと、散らす相手がいなくなり、空の青はどんどん暗く、深くなっていきます。</p>
+  <h3>③ 空気ゼロなら、昼でも空は真っ黒</h3>
+  <p>スライダーを0にしてみてください。散乱する空気がなければ、太陽のある方向だけがまぶしく、<strong>空そのものは昼でも真っ黒</strong>です。月面で撮影された写真の空が真っ暗なのは、まさにこれ。しかも星は太陽と同時に見えます。「青い空」は当たり前の風景ではなく、ほどよい厚さの大気を持つ惑星だけの特権なのです。ちなみに高い山や飛行機から空を見ると、通ってくる空気が少ないぶん、空はより濃く、紫がかって見えます。実は太陽光の中で最も散乱されやすいのは紫で、地上に届く前に上空で散らされ尽くしているのです。</p>
+  <h3>④ 火星の夕焼けは、青い</h3>
+  <p>おとなりの火星では、この物語がひっくり返ります。火星の大気はとても薄く、かわりに空に細かい砂ぼこり(ダスト)が漂っています。この粒は空気の分子よりずっと大きいため、光の散らし方のルールが変わり(ミー散乱)、<strong>赤い光のほうが散らされやすくなる</strong>のです。その結果、火星の昼の空は赤っぽく、そして夕方には——散らされにくい青が残って、<strong>青い夕焼け</strong>が沈みます。探査車が実際に撮影したその写真は、「空の色は惑星の大気が決める」ことの、何よりの証拠です。</p>
+
+  <div class="note"><div class="nt">💡 豆知識:大噴火の年は、夕焼けが燃える</div>
+  1883年のクラカタウ火山の大噴火のあと、ヨーロッパでは数年にわたって異常に赤い夕焼けが続き、画家が何百枚もスケッチに残したと伝えられています。噴火で成層圏まで巻き上げられた微粒子が、散乱をさらに強めたためです。空の色は、大気の「量」だけでなく「中身」にも敏感なセンサー。夕焼けの色が いつもと違う日は、空が地球のどこかの出来事を報せているのかもしれません。なお、このシミュレーターの色はイメージをつかむための簡略表現です。</div>
+  
+</div>
   
   <div class="termmemo"><div class="tm">🔎 むずかしい言葉は「用語じてん」でチェック</div>
   <div class="termchips"><a href="kotoba.html#scattering">光の散乱</a><a href="kotoba.html#atmosphere">大気</a></div></div>
