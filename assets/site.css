@@ -468,7 +468,7 @@ details .tera{margin-top:8px;font-family:'Zen Maru Gothic',sans-serif;font-size:
   box-shadow:0 8px 24px rgba(94,234,212,.15);text-decoration:none}
 .relnav a.btn{border-radius:14px;font-size:14px;line-height:1.5}
 .relnav a.btn.primary{background:linear-gradient(180deg,rgba(94,234,212,.2),rgba(94,234,212,.08));
-  border-color:var(--teal)}
+  border-color:var(--teal);color:#fff}
 .relnav a.btn.primary:hover{background:linear-gradient(180deg,rgba(94,234,212,.3),rgba(94,234,212,.12));
   box-shadow:0 8px 24px rgba(94,234,212,.25)}
 .mini-moon{width:26px;height:26px;border-radius:50%;flex:0 0 auto;align-self:flex-start;margin-top:8px;
