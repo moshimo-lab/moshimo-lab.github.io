@@ -95,3 +95,84 @@
     }
   }
 })();
+
+// 観測バッジシステム（案C）
+(function(){
+  var STORAGE_KEY = 'moshimo_observed';
+  var LEVELS = [
+    { min: 0, name: '見習い観測員', icon: '🔰' },
+    { min: 3, name: '観測員', icon: '🔭' },
+    { min: 10, name: '上級観測員', icon: '⭐' },
+    { min: 20, name: 'マスター観測員', icon: '🏆' },
+    { min: 42, name: 'コンプリート！', icon: '🌍' }
+  ];
+
+  function getObserved(){
+    try {
+      return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+    } catch(e){ return []; }
+  }
+
+  function saveObserved(list){
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(list));
+    } catch(e){}
+  }
+
+  function getLevel(count){
+    for(var i = LEVELS.length - 1; i >= 0; i--){
+      if(count >= LEVELS[i].min) return LEVELS[i];
+    }
+    return LEVELS[0];
+  }
+
+  // 記事ページ: 訪問を記録
+  var path = location.pathname;
+  var articleMatch = path.match(/\/zukan\/([a-z]+)\.html$/);
+  if(articleMatch && !/index|kotoba|simulator/.test(path)){
+    var slug = articleMatch[1];
+    var observed = getObserved();
+    if(observed.indexOf(slug) === -1){
+      observed.push(slug);
+      saveObserved(observed);
+    }
+  }
+
+  // 図鑑一覧: 観測済みマークを表示
+  var zukanGrid = document.getElementById('zukanGrid');
+  if(zukanGrid){
+    var observed = getObserved();
+    zukanGrid.querySelectorAll('.zcard').forEach(function(card){
+      var href = card.getAttribute('href');
+      if(!href) return;
+      var m = href.match(/([a-z]+)\.html$/);
+      if(m && observed.indexOf(m[1]) !== -1){
+        card.classList.add('observed');
+      }
+    });
+  }
+
+  // ヘッダーにレベル表示
+  var observed = getObserved();
+  var count = observed.length;
+  if(count > 0){
+    var level = getLevel(count);
+    var badge = document.createElement('div');
+    badge.className = 'observer-badge';
+    badge.innerHTML = '<span class="ob-icon">' + level.icon + '</span><span class="ob-text">' + level.name + ' (' + count + '/42)</span>';
+    var nav = document.querySelector('.topnav');
+    if(nav) nav.appendChild(badge);
+  }
+
+  // 5本読了時にバナー表示（1回だけ）
+  if(count >= 5 && !localStorage.getItem('moshimo_banner_shown')){
+    var banner = document.createElement('div');
+    banner.className = 'obs-banner';
+    banner.innerHTML = '🎉 5記事観測達成！ <a href="' + (path.includes('/zukan/') ? '../' : '') + 'omiyage.html">観測キットで本格観測しよう →</a><button class="obs-close">×</button>';
+    document.body.appendChild(banner);
+    banner.querySelector('.obs-close').addEventListener('click', function(){
+      banner.remove();
+      localStorage.setItem('moshimo_banner_shown', '1');
+    });
+  }
+})();
