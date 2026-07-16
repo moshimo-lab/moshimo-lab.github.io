@@ -715,3 +715,15 @@ details .tera{margin-top:8px;font-family:'Zen Maru Gothic',sans-serif;font-size:
 .termchips a{font-size:12px;padding:5px 10px;border:1px solid var(--line);border-radius:999px;
   color:var(--sub);background:var(--bg)}
 .termchips a:hover{color:var(--teal);border-color:var(--teal);text-decoration:none}
+
+/* 関連記事セクション */
+.related-section{margin:24px 0 20px;padding:18px 16px;background:linear-gradient(180deg,var(--bg2),#0a1226);border:1px solid var(--line);border-radius:14px}
+.related-section h3{font-family:'Zen Maru Gothic',sans-serif;font-size:15px;color:var(--teal);margin:0 0 14px}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px}
+.zcard.mini{padding:10px 12px;min-height:auto}
+.zcard.mini .icon{font-size:18px}
+.zcard.mini .t{font-size:12.5px;line-height:1.4}
+.zcard.mini .d{display:none}
+@media(max-width:600px){
+  .related-grid{grid-template-columns:1fr}
+}
