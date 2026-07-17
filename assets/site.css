@@ -364,8 +364,10 @@ footer.site .flinks a{margin:0 8px;color:var(--sub)}
   .speech{width:130px}
   .readout{grid-template-columns:repeat(2,1fr)}
   .readout.cols3{grid-template-columns:repeat(3,1fr)}
-  .relnav{flex-direction:column;gap:10px}
-  .relnav a{flex:0 0 auto;padding:12px 14px}
+}
+@media (max-width:768px){
+  .relnav{flex-direction:column;gap:8px}
+  .relnav a{flex:0 0 auto;padding:10px 14px;min-height:0}
 }
 @media (prefers-reduced-motion: reduce){
   .mascot,.face-cold,.face-dizzy,.face-hot,.sweat,.tail,.tip,.wing.l,.wing.r,.luna,.ltip{animation:none}
