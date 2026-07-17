@@ -367,7 +367,7 @@ footer.site .flinks a{margin:0 8px;color:var(--sub)}
 }
 @media (max-width:768px){
   .relnav{flex-direction:column;gap:8px}
-  .relnav a{flex:0 0 auto;padding:10px 14px;min-height:0}
+  .relnav a{flex:none!important;padding:10px 14px!important;height:auto!important;min-height:0!important}
 }
 @media (prefers-reduced-motion: reduce){
   .mascot,.face-cold,.face-dizzy,.face-hot,.sweat,.tail,.tip,.wing.l,.wing.r,.luna,.ltip{animation:none}
