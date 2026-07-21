@@ -2,7 +2,7 @@
 const $=id=>document.getElementById(id);
 const rd=$('rd'),valRd=$('valRd'),hz=$('hz'),lock=$('lock'),life=$('life');
 const globeStrip=$('globeStrip'),earthWrap=$('earthWrap'),speechLine=$('speechLine');
-const starMini=$('starMini');
+const starMini=$('starMini'),heatOverlay=$('heatOverlay'),iceOverlay=$('iceOverlay');
 const mascot=$('mascot'),panelRd=$('panelRd'),whyRd=$('whyRd');
 function update(){
   const m=rd.value/100; // 主星質量(太陽=1) 0.08〜1.20
@@ -19,6 +19,13 @@ function update(){
     starMini.classList.toggle('reddwarf',m<0.6);
     starMini.classList.toggle('bright',m>1.05);
   }
+  // 地球への影響: 暗い星=凍結(HZが内側に移動)、明るい星=灼熱
+  const coldEffect=m<0.8?Math.max(0,(0.8-m)/0.7*0.7):0;
+  const hotEffect=m>1.05?Math.min(0.6,(m-1.05)/0.15*0.6):0;
+  if(iceOverlay)iceOverlay.style.opacity=coldEffect.toFixed(2);
+  if(heatOverlay)heatOverlay.style.opacity=hotEffect.toFixed(2);
+  earthWrap.classList.toggle('extreme-ice',m<0.4);
+  earthWrap.classList.toggle('extreme-heat',m>1.15);
   // 潮汐ロックのリスク: HZが主星に近い(小さいd)ほど高い。目安 0.2AU未満で高。
   let lk,lkClass=false;
   if(d>=0.5){lk='なし';}

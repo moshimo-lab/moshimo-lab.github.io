@@ -2,6 +2,7 @@
 const $=id=>document.getElementById(id);
 const tilt=$('tilt'),valTilt=$('valTilt'),season=$('season'),polar=$('polar'),pop=$('pop');
 const globeStrip=$('globeStrip'),earthWrap=$('earthWrap'),speechLine=$('speechLine');
+const heatOverlay=$('heatOverlay'),iceOverlay=$('iceOverlay');
 const mascot=$('mascot'),panelTilt=$('panelTilt'),whyTilt=$('whyTilt');
 function setFace(f){mascot.className='mascot'+(f?' face-'+f:'');}
 function update(){
@@ -16,6 +17,12 @@ function update(){
   const population=80*tiltFactor;
   pop.textContent='約'+population.toFixed(1)+'億';
   panelTilt.classList.toggle('danger',t>60);
+  // 極端な傾き: 季節差が激しすぎて灼熱/極寒が交互に
+  const extremeTilt=Math.max(0,(t-40)/50);
+  if(heatOverlay)heatOverlay.style.opacity=(extremeTilt*0.4).toFixed(2);
+  if(iceOverlay)iceOverlay.style.opacity=(extremeTilt*0.5).toFixed(2);
+  earthWrap.classList.toggle('extreme-heat',t>70);
+  earthWrap.classList.toggle('extreme-ice',t>80);
   let line='23.4°。ちょうどいい四季の傾きだね',face='happy';
   if(t<3){line='まっすぐ!四季がなくなっちゃった…毎日おなじ季節だ';face='';}
   else if(t<15){line='季節の変化がずいぶん穏やかになったね';face='';}
