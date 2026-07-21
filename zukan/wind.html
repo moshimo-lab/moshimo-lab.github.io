@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://formspree.io; base-uri 'none'; form-action https://formspree.io">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src https://formspree.io; base-uri 'none'; form-action https://formspree.io">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="description" content="貿易風や偏西風は自転(コリオリの力)が生む。風が熱を運ばないと、赤道と極の温度差は約40℃→80℃に。">
@@ -11,14 +11,13 @@
 <meta property="og:description" content="貿易風や偏西風は自転(コリオリの力)が生む。風が熱を運ばないと、赤道と極の温度差は約40℃→80℃に。">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
-<meta property="og:image" content="https://moshimo-lab.pages.dev/assets/ogp/wind.png?v=202607161500">
+<meta property="og:image" content="https://moshimo-lab.pages.dev/assets/ogp/wind.png?v=202607211838">
 <title>もしも地球に風が吹かなかったら|もしも図鑑|もしも地球ラボ</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=JetBrains+Mono:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
-<link rel="stylesheet" href="../assets/site.css?v=202607172400">
-<script src="../assets/wind.js?v=202607161500" defer></script>
-<script src="../assets/site-common.js?v=202607161500" defer></script>
+<link rel="stylesheet" href="../assets/site.css?v=202607211838">
+<script src="../assets/wind.js?v=202607211838" defer></script>
 </head>
 <body>
 <div class="stars"></div>
@@ -29,7 +28,7 @@
     <a href="../zukan/kotoba.html">用語じてん</a>
     <a href="../tera.html">テラちゃんについて</a>
     <a href="../qa.html">地球のギモンQ&amp;A</a>
-    <a href="../omiyage.html">観測キット</a>
+    <a href="../omiyage.html">おみやげ</a>
     <a href="../contact.html">お問い合わせ</a>
   </div>
 </nav>
@@ -53,6 +52,7 @@
         </div>
         <div class="heat-overlay" id="heatOverlay"></div>
         <div class="ice-overlay" id="iceOverlay"></div>
+        
       </div>
     </div>
       <div class="mascot" id="mascot">
@@ -91,8 +91,6 @@
       <div class="why" id="whyWd">🔎 風は熱を運ぶ宅配便。赤道の熱を極へ、極の冷気を赤道へ運んで、地球の温度をならしているんだ</div>
     </div>
   </div>
-  
-
   <svg width="0" height="0" class="svgdefs" aria-hidden="true"><defs>
 <clipPath id="avclip"><circle cx="50" cy="50" r="50"/></clipPath>
 <g id="kid-sora"><g clip-path="url(#avclip)">
@@ -136,8 +134,8 @@
 <path d="M43 71 Q50 79 57 71" stroke="#c2596b" stroke-width="2" fill="none" stroke-linecap="round"/>
 </g></g>
 </defs></svg>
-<div class="talk"><div class="talk-title">🎬 テラちゃんげきじょう「風が吹かなかったら」</div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-sora"/></svg></span><span class="ava-cap">ソラ</span></div><div class="tb"><span class="who">ソラ</span>風がふかなかったら、しずかで気持ちよさそう!</div></div><div class="trow right"><div class="avwrap"><span class="ava tera"><span class="ant"></span><span class="face"></span><span class="eye l"></span><span class="eye r"></span><span class="blush l"></span><span class="blush r"></span><span class="mouth"></span></span><span class="ava-cap">テラちゃん</span></div><div class="tb"><span class="who">テラちゃん</span>ところが風は、あつさ寒さを運ぶ配達員なんだ。止まると赤道と北極の温度差が2倍に広がる</div></div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-sora"/></svg></span><span class="ava-cap">ソラ</span></div><div class="tb"><span class="who">ソラ</span>2倍!? 風ってそんな大仕事してたの?</div></div><div class="trow right"><div class="avwrap"><span class="ava tera"><span class="ant"></span><span class="face"></span><span class="eye l"></span><span class="eye r"></span><span class="blush l"></span><span class="blush r"></span><span class="mouth"></span></span><span class="ava-cap">テラちゃん</span></div><div class="tb"><span class="who">テラちゃん</span>そう。しかも風がふくのは、地球が回ってるおかげなんだよ</div></div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-sora"/></svg></span><span class="ava-cap">ソラ</span></div><div class="tb punch"><span class="who">ソラ</span>風は熱の配達員で、生みの親は自転…今日ふいてる風、ちょっと見る目が変わったよ。<div class="tele">台風がうずを巻くのも自転のしわざ(コリオリの力)。毎日の天気は、宇宙とつながっています。</div></div></div>
-
+<div class="talk"><div class="talk-title">🎬 テラちゃんげきじょう「風が吹かなかったら」</div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-sora"/></svg></span><span class="ava-cap">ソラ</span></div><div class="tb"><span class="who">ソラ</span>風がふかなかったら、しずかで気持ちよさそう!</div></div><div class="trow right"><div class="avwrap"><span class="ava tera"><span class="ant"></span><span class="face"></span><span class="eye l"></span><span class="eye r"></span><span class="blush l"></span><span class="blush r"></span><span class="mouth"></span></span><span class="ava-cap">テラちゃん</span></div><div class="tb"><span class="who">テラちゃん</span>ところが風は、あつさ寒さを運ぶ配達員なんだ。止まると赤道と北極の温度差が2倍に広がる</div></div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-sora"/></svg></span><span class="ava-cap">ソラ</span></div><div class="tb"><span class="who">ソラ</span>2倍!? 風ってそんな大仕事してたの?</div></div><div class="trow right"><div class="avwrap"><span class="ava tera"><span class="ant"></span><span class="face"></span><span class="eye l"></span><span class="eye r"></span><span class="blush l"></span><span class="blush r"></span><span class="mouth"></span></span><span class="ava-cap">テラちゃん</span></div><div class="tb"><span class="who">テラちゃん</span>そう。しかも風がふくのは、地球が回ってるおかげなんだよ</div></div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-sora"/></svg></span><span class="ava-cap">ソラ</span></div><div class="tb punch"><span class="who">ソラ</span>風は熱の配達員で、生みの親は自転…今日ふいてる風、ちょっと見る目が変わったよ。<div class="tele">台風がうずを巻くのも自転のしわざ(コリオリの力)。毎日の天気は、宇宙とつながっています。</div></div></div></div>
+  
   <h2>地球の風を止めると、何が起きる?</h2>
   <h3>① そもそも、風は自転から生まれている</h3>
   <p>地球規模で吹く風——赤道近くの<strong>貿易風</strong>や、日本の上空を吹く<strong>偏西風</strong>——は、ただの空気の移動ではありません。太陽に暖められた赤道の空気が上昇し、極へ向かって流れる大きな循環(ハドレー循環など)に、<a href="reverse.html">地球の自転が生むコリオリの力</a>が加わって、東西に曲げられることで生まれます。つまり地球の風の骨格は、<strong>自転が描いている</strong>のです。だから<a href="rotation.html">自転</a>の記事とも深くつながっています。</p>
@@ -150,8 +148,6 @@
 
   <div class="note"><div class="nt">💡 豆知識:「貿易風」の名前の由来</div>
   貿易風という名前は、風で進む帆船の時代に、この安定した風がインド洋などの<strong>交易(貿易)</strong>に使われたことに由来します。決まった向きに安定して吹く風は、エンジンのない船にとって頼れる道でした。地球の自転が生んだ風の道が、人類の交易の歴史を運んでいた——空の上の物理と、海の上の歴史が、一本の風でつながっているのです。</div>
-  
-</div>
   
   <div class="termmemo"><div class="tm">🔎 むずかしい言葉は「用語じてん」でチェック</div>
   <div class="termchips"><a href="kotoba.html#coriolis">コリオリの力</a><a href="kotoba.html#rotation">自転</a><a href="kotoba.html#ocean">海洋循環</a></div></div>
@@ -168,11 +164,10 @@
 
 <footer class="site">
   <div class="flinks">
-    <a href="../index.html">トップ</a><a href="../zukan/index.html">もしも図鑑</a><a href="../zukan/kotoba.html">用語じてん</a><a href="../tera.html">テラちゃん</a><a href="../qa.html">Q&amp;A</a><a href="../omiyage.html">観測キット</a><a href="../contact.html">お問い合わせ</a>
+    <a href="../index.html">トップ</a><a href="../zukan/index.html">もしも図鑑</a><a href="../zukan/kotoba.html">用語じてん</a><a href="../tera.html">テラちゃん</a><a href="../qa.html">Q&amp;A</a><a href="../omiyage.html">おみやげ</a><a href="../contact.html">お問い合わせ</a>
   </div>
   ※ 当サイトのシミュレーションはすべて簡略化した概算モデルです。実際の気候・人口動態はもっと複雑です。<br>
   © もしも地球ラボ / OBSERVATION LOG by テラちゃん
 </footer>
-<!-- Cloudflare Web Analytics --><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "8a1063ba24db48fea0ce747406f696bf"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>

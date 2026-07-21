@@ -8,34 +8,8 @@ try{
   if(visits<1)visits=1;
 }catch(e){}
 // 3回目から:あいさつが変わる / 7回目から:月担当・ルナが現れる
-// テラちゃんのセリフ集
-const IDLE_LINES = [
-  'スライダーを動かしてみて!',
-  '地球の「ちょうどよさ」、体験してみよう',
-  '太陽に近づけると…どうなるかな?',
-  '遠ざけると…氷の星になっちゃうかも',
-  '今日も観測日和だね〜',
-  '地球って絶妙なバランスなんだよ',
-  '下の図鑑も読んでみてね!',
-];
-const REGULAR_LINE = visits>=3 ? ('また来てくれた!今日で'+visits+'回目の観測だね') : IDLE_LINES[0];
+const REGULAR_LINE = visits>=3 ? ('また来てくれた!今日で'+visits+'回目の観測だね。記録しまーす!') : '今日も平常運転だよ〜';
 if(visits>=7){const lu=document.getElementById('luna'); if(lu) lu.hidden=false;}
-
-// 待機中にセリフを変える
-let idleTimer=null, idleIndex=0, isInteracting=false;
-function cycleIdleLine(){
-  if(isInteracting) return;
-  idleIndex = (idleIndex + 1) % IDLE_LINES.length;
-  speechLine.textContent = IDLE_LINES[idleIndex];
-  setFace(idleIndex % 3 === 0 ? 'happy' : '');
-}
-function startIdleCycle(){
-  if(idleTimer) return;
-  idleTimer = setInterval(cycleIdleLine, 4000);
-}
-function stopIdleCycle(){
-  if(idleTimer){ clearInterval(idleTimer); idleTimer=null; }
-}
 
 const dist=document.getElementById('dist'),valDist=document.getElementById('valDist'),
 temp=document.getElementById('temp'),speech=document.getElementById('speech'),speechLine=document.getElementById('speechLine'),
@@ -62,19 +36,7 @@ function update(){
   setFace(face);
 }
 globeStrip.style.animation='slideGlobe 6s linear infinite';
-dist.addEventListener('input', function(){
-  isInteracting = true;
-  stopIdleCycle();
-  update();
-});
-dist.addEventListener('change', function(){
-  setTimeout(function(){
-    isInteracting = false;
-    startIdleCycle();
-  }, 3000);
-});
-// ページ読み込み後、5秒後からセリフサイクル開始
-setTimeout(startIdleCycle, 5000);
+dist.addEventListener('input',update);
 const QAS=[
  ['地球の1日は、本当は24時間じゃない?','自転そのものは約23時間56分で1周。太陽の方向がずれるぶんを足して、太陽が真南に来る間隔が約24時間になっています。'],
  ['地軸はなぜ23.4°も傾いているの?','有力なのは、大昔に火星サイズの天体がぶつかった説。その衝突で月も生まれたと考えられています。'],

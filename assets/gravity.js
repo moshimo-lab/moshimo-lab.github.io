@@ -3,6 +3,7 @@ const $=id=>document.getElementById(id);
 const grav=$('grav'),valGrav=$('valGrav'),weight=$('weight'),mountain=$('mountain'),pop=$('pop');
 const globeStrip=$('globeStrip'),earthWrap=$('earthWrap'),speechLine=$('speechLine');
 const mascot=$('mascot'),panelGrav=$('panelGrav'),whyGrav=$('whyGrav');
+const atmoEscape=$('atmoEscape');
 function setFace(f){mascot.className='mascot'+(f?' face-'+f:'');}
 function update(){
   const g=grav.value/100;
@@ -22,6 +23,10 @@ function update(){
   const base=Math.max(-8,Math.min(5,(g-1)*5));
   mascot.style.setProperty('--float-amp',amp.toFixed(1)+'px');
   mascot.style.setProperty('--float-base',base.toFixed(1)+'px');
+  // 重力が弱いと大気が逃げる視覚効果
+  const escapeOpacity=g<0.5?Math.max(0,(0.5-g)/0.4*0.8):0;
+  if(atmoEscape)atmoEscape.style.opacity=escapeOpacity.toFixed(2);
+  earthWrap.classList.toggle('atmo-thin',g<0.3);
   panelGrav.classList.toggle('danger',g<0.2||g>2.5);
   let line='1G。ちょうどいい重さだね',face='happy';
   if(g<0.2){line='ふわふわすぎ!大気も逃げちゃうし、地面に戻れないよ〜!';face='dizzy';}

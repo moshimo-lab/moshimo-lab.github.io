@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://formspree.io; base-uri 'none'; form-action https://formspree.io">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src https://formspree.io; base-uri 'none'; form-action https://formspree.io">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="description" content="噴火が増えると短期は日傘効果で寒冷化(火山の冬)、長期はCO₂で温暖化。火山は両方向のスイッチを持つ。">
@@ -11,14 +11,13 @@
 <meta property="og:description" content="噴火が増えると短期は日傘効果で寒冷化(火山の冬)、長期はCO₂で温暖化。火山は両方向のスイッチを持つ。">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
-<meta property="og:image" content="https://moshimo-lab.pages.dev/assets/ogp/volcano.png?v=202607161500">
+<meta property="og:image" content="https://moshimo-lab.pages.dev/assets/ogp/volcano.png?v=202607211838">
 <title>もしも火山だらけの地球だったら|もしも図鑑|もしも地球ラボ</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=JetBrains+Mono:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
-<link rel="stylesheet" href="../assets/site.css?v=202607172400">
-<script src="../assets/volcano.js?v=202607161500" defer></script>
-<script src="../assets/site-common.js?v=202607161500" defer></script>
+<link rel="stylesheet" href="../assets/site.css?v=202607211838">
+<script src="../assets/volcano.js?v=202607211838" defer></script>
 </head>
 <body>
 <div class="stars"></div>
@@ -29,7 +28,7 @@
     <a href="../zukan/kotoba.html">用語じてん</a>
     <a href="../tera.html">テラちゃんについて</a>
     <a href="../qa.html">地球のギモンQ&amp;A</a>
-    <a href="../omiyage.html">観測キット</a>
+    <a href="../omiyage.html">おみやげ</a>
     <a href="../contact.html">お問い合わせ</a>
   </div>
 </nav>
@@ -53,6 +52,7 @@
         </div>
         <div class="heat-overlay" id="heatOverlay"></div>
         <div class="ice-overlay" id="iceOverlay"></div>
+        
       </div>
     </div>
       <div class="mascot" id="mascot">
@@ -83,8 +83,6 @@
       <div class="why" id="whyVo">🔎 噴火のちりは太陽の光をさえぎって地球を冷やすよ。でも火山が出すCO₂は、長い時間をかけて地球を暖めるんだ</div>
     </div>
   </div>
-  
-
   <svg width="0" height="0" class="svgdefs" aria-hidden="true"><defs>
 <clipPath id="avclip"><circle cx="50" cy="50" r="50"/></clipPath>
 <g id="kid-sora"><g clip-path="url(#avclip)">
@@ -128,8 +126,8 @@
 <path d="M43 71 Q50 79 57 71" stroke="#c2596b" stroke-width="2" fill="none" stroke-linecap="round"/>
 </g></g>
 </defs></svg>
-<div class="talk"><div class="talk-title">🎬 テラちゃんげきじょう「火山だらけの地球だったら」</div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-hoshi"/></svg></span><span class="ava-cap">ホシ</span></div><div class="tb"><span class="who">ホシ</span>火山がいっぱいだと、あつくて大変そう</div></div><div class="trow right"><div class="avwrap"><span class="ava tera"><span class="ant"></span><span class="face"></span><span class="eye l"></span><span class="eye r"></span><span class="blush l"></span><span class="blush r"></span><span class="mouth"></span></span><span class="ava-cap">テラちゃん</span></div><div class="tb"><span class="who">テラちゃん</span>それがふしぎでね。噴火が増えると、まず日傘みたいに日ざしをさえぎって寒くなるんだ</div></div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-hoshi"/></svg></span><span class="ava-cap">ホシ</span></div><div class="tb"><span class="who">ホシ</span>えっ、あつくなるんじゃなくて、寒くなるの!?</div></div><div class="trow right"><div class="avwrap"><span class="ava tera"><span class="ant"></span><span class="face"></span><span class="eye l"></span><span class="eye r"></span><span class="blush l"></span><span class="blush r"></span><span class="mouth"></span></span><span class="ava-cap">テラちゃん</span></div><div class="tb"><span class="who">テラちゃん</span>短い間はね。でも長い目で見ると、出てきたガスで今度はあたたかくなる。両方できるんだ</div></div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-hoshi"/></svg></span><span class="ava-cap">ホシ</span></div><div class="tb punch"><span class="who">ホシ</span>火山って、冷やすのも温めるのもできるんだ。地球の気温のリモコン、握ってたんだね。<div class="tele">1991年のピナトゥボ山の噴火では、世界の気温が実際に約0.5℃下がりました。</div></div></div>
-
+<div class="talk"><div class="talk-title">🎬 テラちゃんげきじょう「火山だらけの地球だったら」</div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-hoshi"/></svg></span><span class="ava-cap">ホシ</span></div><div class="tb"><span class="who">ホシ</span>火山がいっぱいだと、あつくて大変そう</div></div><div class="trow right"><div class="avwrap"><span class="ava tera"><span class="ant"></span><span class="face"></span><span class="eye l"></span><span class="eye r"></span><span class="blush l"></span><span class="blush r"></span><span class="mouth"></span></span><span class="ava-cap">テラちゃん</span></div><div class="tb"><span class="who">テラちゃん</span>それがふしぎでね。噴火が増えると、まず日傘みたいに日ざしをさえぎって寒くなるんだ</div></div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-hoshi"/></svg></span><span class="ava-cap">ホシ</span></div><div class="tb"><span class="who">ホシ</span>えっ、あつくなるんじゃなくて、寒くなるの!?</div></div><div class="trow right"><div class="avwrap"><span class="ava tera"><span class="ant"></span><span class="face"></span><span class="eye l"></span><span class="eye r"></span><span class="blush l"></span><span class="blush r"></span><span class="mouth"></span></span><span class="ava-cap">テラちゃん</span></div><div class="tb"><span class="who">テラちゃん</span>短い間はね。でも長い目で見ると、出てきたガスで今度はあたたかくなる。両方できるんだ</div></div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-hoshi"/></svg></span><span class="ava-cap">ホシ</span></div><div class="tb punch"><span class="who">ホシ</span>火山って、冷やすのも温めるのもできるんだ。地球の気温のリモコン、握ってたんだね。<div class="tele">1991年のピナトゥボ山の噴火では、世界の気温が実際に約0.5℃下がりました。</div></div></div></div>
+  
   <h2>噴火を増やしていくと、何が起きる?</h2>
   <h3>① まず、地球は「冷える」</h3>
   <p>火山が大噴火すると、噴煙は空の高いところ(成層圏)まで届き、細かいちり(硫酸のエアロゾル)が地球全体に広がります。このちりが太陽の光をさえぎる<strong>日傘</strong>のように働いて、地表に届く日ざしを減らし、地球を冷やすのです。これは「火山の冬」と呼ばれます。スライダーで噴火を増やすと、まず「数年後の気温」が下がっていくのはこのためです。</p>
@@ -142,8 +140,6 @@
 
   <div class="note"><div class="nt">💡 豆知識:噴火で夕焼けが赤くなる</div>
   大きな噴火のあと、世界中で<a href="sky.html">夕焼け</a>がいつもより赤く、美しくなることが知られています。空にただよう火山のちりが夕方の光をより強く散らすためで、有名な絵画の燃えるような夕焼けの空は、遠くの火山噴火が描かせたのではないか、と言われることもあります。空を冷やすちりが、同時に空を彩る絵の具にもなる——火山は、こんなところでも二つの顔を持っているのです。</div>
-  
-</div>
   
   <div class="termmemo"><div class="tm">🔎 むずかしい言葉は「用語じてん」でチェック</div>
   <div class="termchips"><a href="kotoba.html#greenhouse">温室効果</a><a href="kotoba.html#carbon-cycle">炭素循環(サーモスタット)</a><a href="kotoba.html#platetectonics">プレートテクトニクス</a></div></div>
@@ -160,11 +156,10 @@
 
 <footer class="site">
   <div class="flinks">
-    <a href="../index.html">トップ</a><a href="../zukan/index.html">もしも図鑑</a><a href="../zukan/kotoba.html">用語じてん</a><a href="../tera.html">テラちゃん</a><a href="../qa.html">Q&amp;A</a><a href="../omiyage.html">観測キット</a><a href="../contact.html">お問い合わせ</a>
+    <a href="../index.html">トップ</a><a href="../zukan/index.html">もしも図鑑</a><a href="../zukan/kotoba.html">用語じてん</a><a href="../tera.html">テラちゃん</a><a href="../qa.html">Q&amp;A</a><a href="../omiyage.html">おみやげ</a><a href="../contact.html">お問い合わせ</a>
   </div>
   ※ 当サイトのシミュレーションはすべて簡略化した概算モデルです。実際の気候・人口動態はもっと複雑です。<br>
   © もしも地球ラボ / OBSERVATION LOG by テラちゃん
 </footer>
-<!-- Cloudflare Web Analytics --><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "8a1063ba24db48fea0ce747406f696bf"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>

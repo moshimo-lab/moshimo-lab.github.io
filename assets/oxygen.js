@@ -2,7 +2,8 @@
 const $=id=>document.getElementById(id);
 const ox=$('ox'),valOx=$('valOx'),bug=$('bug'),fire=$('fire'),breath=$('breath');
 const globeStrip=$('globeStrip'),earthWrap=$('earthWrap'),speechLine=$('speechLine');
-const heatOverlay=$('heatOverlay'),mascot=$('mascot'),panelOx=$('panelOx'),whyOx=$('whyOx');
+const heatOverlay=$('heatOverlay'),bugIcon=$('bugIcon');
+const mascot=$('mascot'),panelOx=$('panelOx'),whyOx=$('whyOx');
 function update(){
   const p=parseInt(ox.value,10); // 酸素濃度 %
   valOx.textContent=p+'%';
@@ -14,6 +15,12 @@ function update(){
   else if(p<38)b='巨大(翼70cm級)';
   else b='超巨大';
   bug.textContent=b;
+  // ★昆虫アイコンのビジュアル: 酸素濃度に応じてサイズ変化
+  if(bugIcon){
+    bugIcon.classList.toggle('tiny',p<12);
+    bugIcon.classList.toggle('giant',p>=30&&p<38);
+    bugIcon.classList.toggle('mega',p>=38);
+  }
   // 山火事
   let f;
   if(p<15)f='燃えにくい';

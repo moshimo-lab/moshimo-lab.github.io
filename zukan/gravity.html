@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://formspree.io; base-uri 'none'; form-action https://formspree.io">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src https://formspree.io; base-uri 'none'; form-action https://formspree.io">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="description" content="体重2倍、木も山も低くなり、ロケットは飛ばせない。でも大気だけはがっちり守れる。">
@@ -11,14 +11,13 @@
 <meta property="og:description" content="体重2倍、木も山も低くなり、ロケットは飛ばせない。でも大気だけはがっちり守れる。">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
-<meta property="og:image" content="https://moshimo-lab.pages.dev/assets/ogp/gravity.png?v=202607161500">
+<meta property="og:image" content="https://moshimo-lab.pages.dev/assets/ogp/gravity.png?v=202607211838">
 <title>もしも重力が2倍だったら|もしも図鑑|もしも地球ラボ</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=JetBrains+Mono:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
-<link rel="stylesheet" href="../assets/site.css?v=202607172400">
-<script src="../assets/gravity.js?v=202607161500" defer></script>
-<script src="../assets/site-common.js?v=202607161500" defer></script>
+<link rel="stylesheet" href="../assets/site.css?v=202607211838">
+<script src="../assets/gravity.js?v=202607211838" defer></script>
 </head>
 <body>
 <div class="stars"></div>
@@ -29,7 +28,7 @@
     <a href="../zukan/kotoba.html">用語じてん</a>
     <a href="../tera.html">テラちゃんについて</a>
     <a href="../qa.html">地球のギモンQ&amp;A</a>
-    <a href="../omiyage.html">観測キット</a>
+    <a href="../omiyage.html">おみやげ</a>
     <a href="../contact.html">お問い合わせ</a>
   </div>
 </nav>
@@ -53,6 +52,7 @@
         </div>
         <div class="heat-overlay" id="heatOverlay"></div>
         <div class="ice-overlay" id="iceOverlay"></div>
+        <div class="atmo-escape" id="atmoEscape"></div>
       </div>
     </div>
       <div class="mascot" id="mascot">
@@ -83,7 +83,6 @@
       <div class="why" id="whyGrav">🔎 今の重力が、大気をつなぎとめ、生き物や山の大きさを決めているよ</div>
     </div>
   </div>
-
   <svg width="0" height="0" class="svgdefs" aria-hidden="true"><defs>
 <clipPath id="avclip"><circle cx="50" cy="50" r="50"/></clipPath>
 <g id="kid-sora"><g clip-path="url(#avclip)">
@@ -128,7 +127,7 @@
 </g></g>
 </defs></svg>
 <div class="talk"><div class="talk-title">🎬 テラちゃんげきじょう「重力が2倍だったら」</div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-hoshi"/></svg></span><span class="ava-cap">ホシ</span></div><div class="tb"><span class="who">ホシ</span>重力が2倍だと、体重も2倍…ダイエットしなきゃ!</div></div><div class="trow right"><div class="avwrap"><span class="ava tera"><span class="ant"></span><span class="face"></span><span class="eye l"></span><span class="eye r"></span><span class="blush l"></span><span class="blush r"></span><span class="mouth"></span></span><span class="ava-cap">テラちゃん</span></div><div class="tb"><span class="who">テラちゃん</span>木も山も低くなって、ロケットは重すぎて飛ばせなくなるよ</div></div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-hoshi"/></svg></span><span class="ava-cap">ホシ</span></div><div class="tb"><span class="who">ホシ</span>ロケットが飛ばないの!? 宇宙に行けないじゃない</div></div><div class="trow right"><div class="avwrap"><span class="ava tera"><span class="ant"></span><span class="face"></span><span class="eye l"></span><span class="eye r"></span><span class="blush l"></span><span class="blush r"></span><span class="mouth"></span></span><span class="ava-cap">テラちゃん</span></div><div class="tb"><span class="who">テラちゃん</span>そうなんだ。でもいいこともある。重力が強いと空気をがっちりつかまえて、逃がさないんだ</div></div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-hoshi"/></svg></span><span class="ava-cap">ホシ</span></div><div class="tb punch"><span class="who">ホシ</span>重力って地球のシートベルトなんだ。しめすぎず、ゆるすぎず…ちょうどいいんだね。<div class="tele">重すぎる星ではロケットが飛べません。地球は「宇宙に出られる重さ」でもあるんです。</div></div></div></div>
-
+  
   <h2>2Gにすると、何が起きる?</h2>
   <h3>① 全人類、常時リュック60kg</h3>
   <p>体重60kgの人は、感覚的には120kgを支えて生きることになります。立つ・歩く・階段を上る、すべてが筋トレ。心臓は血液を「2倍重い体」の上まで押し上げねばならず、骨も血管も設計変更が必要です。進化の時間があれば、生き物は低く、脚が太く、ずんぐりした姿に寄っていくと考えられます。キリンのような「高さで勝負」する動物は、かなり苦しい戦略になります。</p>
@@ -141,7 +140,7 @@
 
   <div class="note"><div class="nt">💡 豆知識:「山の高さ上限」は太陽系で実証済み</div>
   上の目安の式(エベレスト8,850m×1G÷重力)に火星の0.38Gを入れると約2万3,000m──実際のオリンポス山(約22km)とほぼ一致します。ざっくりした概算式でも、太陽系のスケール感はけっこう説明できてしまうのです。ただし山の高さは岩の強度や火山活動にもよるので、あくまで「目安」。この几帳面さも観測係の約束です。</div>
-
+  
   <div class="termmemo"><div class="tm">🔎 むずかしい言葉は「用語じてん」でチェック</div>
   <div class="termchips"><a href="kotoba.html#gravity">重力</a><a href="kotoba.html#atmosphere">大気</a><a href="kotoba.html#magnetic-field">磁場(磁気圏)</a></div></div>
   
@@ -155,11 +154,10 @@
 
 <footer class="site">
   <div class="flinks">
-    <a href="../index.html">トップ</a><a href="../zukan/index.html">もしも図鑑</a><a href="../zukan/kotoba.html">用語じてん</a><a href="../tera.html">テラちゃん</a><a href="../qa.html">Q&amp;A</a><a href="../omiyage.html">観測キット</a><a href="../contact.html">お問い合わせ</a>
+    <a href="../index.html">トップ</a><a href="../zukan/index.html">もしも図鑑</a><a href="../zukan/kotoba.html">用語じてん</a><a href="../tera.html">テラちゃん</a><a href="../qa.html">Q&amp;A</a><a href="../omiyage.html">おみやげ</a><a href="../contact.html">お問い合わせ</a>
   </div>
   ※ 当サイトのシミュレーションはすべて簡略化した概算モデルです。実際の気候・人口動態はもっと複雑です。<br>
   © もしも地球ラボ / OBSERVATION LOG by テラちゃん
 </footer>
-<!-- Cloudflare Web Analytics --><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "8a1063ba24db48fea0ce747406f696bf"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>

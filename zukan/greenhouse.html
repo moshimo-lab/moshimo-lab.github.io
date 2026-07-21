@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://formspree.io; base-uri 'none'; form-action https://formspree.io">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src https://formspree.io; base-uri 'none'; form-action https://formspree.io">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="description" content="温室効果ゼロだと地球は平均−18℃の凍った星。実際は+15℃。この33℃の差が温室効果の実力。">
@@ -11,14 +11,13 @@
 <meta property="og:description" content="温室効果ゼロだと地球は平均−18℃の凍った星。実際は+15℃。この33℃の差が温室効果の実力。">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
-<meta property="og:image" content="https://moshimo-lab.pages.dev/assets/ogp/greenhouse.png?v=202607161500">
+<meta property="og:image" content="https://moshimo-lab.pages.dev/assets/ogp/greenhouse.png?v=202607211838">
 <title>もしも温室効果がなかったら|もしも図鑑|もしも地球ラボ</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=JetBrains+Mono:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
-<link rel="stylesheet" href="../assets/site.css?v=202607172400">
-<script src="../assets/greenhouse.js?v=202607161500" defer></script>
-<script src="../assets/site-common.js?v=202607161500" defer></script>
+<link rel="stylesheet" href="../assets/site.css?v=202607211838">
+<script src="../assets/greenhouse.js?v=202607211838" defer></script>
 </head>
 <body>
 <div class="stars"></div>
@@ -29,7 +28,7 @@
     <a href="../zukan/kotoba.html">用語じてん</a>
     <a href="../tera.html">テラちゃんについて</a>
     <a href="../qa.html">地球のギモンQ&amp;A</a>
-    <a href="../omiyage.html">観測キット</a>
+    <a href="../omiyage.html">おみやげ</a>
     <a href="../contact.html">お問い合わせ</a>
   </div>
 </nav>
@@ -53,6 +52,7 @@
         </div>
         <div class="heat-overlay" id="heatOverlay"></div>
         <div class="ice-overlay" id="iceOverlay"></div>
+        
       </div>
     </div>
       <div class="mascot" id="mascot">
@@ -83,8 +83,6 @@
       <div class="why" id="whyGh">🔎 温室効果は、地球から逃げる熱をつかまえて温める「毛布」。ないと地球は凍りつくよ</div>
     </div>
   </div>
-  
-
   <svg width="0" height="0" class="svgdefs" aria-hidden="true"><defs>
 <clipPath id="avclip"><circle cx="50" cy="50" r="50"/></clipPath>
 <g id="kid-sora"><g clip-path="url(#avclip)">
@@ -128,8 +126,8 @@
 <path d="M43 71 Q50 79 57 71" stroke="#c2596b" stroke-width="2" fill="none" stroke-linecap="round"/>
 </g></g>
 </defs></svg>
-<div class="talk"><div class="talk-title">🎬 テラちゃんげきじょう「温室効果がなかったら」</div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-sora"/></svg></span><span class="ava-cap">ソラ</span></div><div class="tb"><span class="who">ソラ</span>温室効果ってわるいやつでしょ? なくなればいいのに</div></div><div class="trow right"><div class="avwrap"><span class="ava tera"><span class="ant"></span><span class="face"></span><span class="eye l"></span><span class="eye r"></span><span class="blush l"></span><span class="blush r"></span><span class="mouth"></span></span><span class="ava-cap">テラちゃん</span></div><div class="tb"><span class="who">テラちゃん</span>ぜんぶ無くすと、地球の平均気温はマイナス18℃。カチカチにこおっちゃうよ</div></div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-sora"/></svg></span><span class="ava-cap">ソラ</span></div><div class="tb"><span class="who">ソラ</span>マイナス18℃!? 冷凍庫の中じゃん…</div></div><div class="trow right"><div class="avwrap"><span class="ava tera"><span class="ant"></span><span class="face"></span><span class="eye l"></span><span class="eye r"></span><span class="blush l"></span><span class="blush r"></span><span class="mouth"></span></span><span class="ava-cap">テラちゃん</span></div><div class="tb"><span class="who">テラちゃん</span>そう。ちょうどいい温室効果のおかげで、今は+15℃のあたたかさなんだ</div></div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-sora"/></svg></span><span class="ava-cap">ソラ</span></div><div class="tb punch"><span class="who">ソラ</span>温室効果って毛布だったんだ。ちょうどいい厚さの毛布って、むずかしいんだね。<div class="tele">金星は毛布が厚すぎて460℃、火星は薄すぎて−63℃。地球はそのあいだの奇跡です。</div></div></div>
-
+<div class="talk"><div class="talk-title">🎬 テラちゃんげきじょう「温室効果がなかったら」</div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-sora"/></svg></span><span class="ava-cap">ソラ</span></div><div class="tb"><span class="who">ソラ</span>温室効果ってわるいやつでしょ? なくなればいいのに</div></div><div class="trow right"><div class="avwrap"><span class="ava tera"><span class="ant"></span><span class="face"></span><span class="eye l"></span><span class="eye r"></span><span class="blush l"></span><span class="blush r"></span><span class="mouth"></span></span><span class="ava-cap">テラちゃん</span></div><div class="tb"><span class="who">テラちゃん</span>ぜんぶ無くすと、地球の平均気温はマイナス18℃。カチカチにこおっちゃうよ</div></div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-sora"/></svg></span><span class="ava-cap">ソラ</span></div><div class="tb"><span class="who">ソラ</span>マイナス18℃!? 冷凍庫の中じゃん…</div></div><div class="trow right"><div class="avwrap"><span class="ava tera"><span class="ant"></span><span class="face"></span><span class="eye l"></span><span class="eye r"></span><span class="blush l"></span><span class="blush r"></span><span class="mouth"></span></span><span class="ava-cap">テラちゃん</span></div><div class="tb"><span class="who">テラちゃん</span>そう。ちょうどいい温室効果のおかげで、今は+15℃のあたたかさなんだ</div></div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-sora"/></svg></span><span class="ava-cap">ソラ</span></div><div class="tb punch"><span class="who">ソラ</span>温室効果って毛布だったんだ。ちょうどいい厚さの毛布って、むずかしいんだね。<div class="tele">金星は毛布が厚すぎて460℃、火星は薄すぎて−63℃。地球はそのあいだの奇跡です。</div></div></div></div>
+  
   <h2>温室効果を止めると、何が起きる?</h2>
   <h3>① まず、地球が−18℃まで凍える</h3>
   <p>太陽であたたまった地球は、その熱を赤外線として宇宙へ逃がしています。もし大気に温室効果がまったくなければ、入ってくる太陽の熱と出ていく熱がつり合う温度は<strong>約−18℃</strong>。今の地球の平均気温は約+15℃ですから、その差はおよそ<strong>33℃</strong>。この33℃ぶんの暖かさは、大気中のわずかな温室効果ガス——水蒸気や二酸化炭素——が、逃げようとする赤外線をつかまえて地表に投げ返しているおかげです。温室効果は、たとえるなら地球をくるむ見えない毛布のような存在です(この記事では以後「毛布」と呼びます)。スライダーを0にすると、地球はたちまち凍った星になります。</p>
@@ -142,8 +140,6 @@
 
   <div class="note"><div class="nt">💡 豆知識:−18℃という数字は、月が教えてくれる</div>
   「大気がなかったら−18℃」というのは机上の計算だけの話ではありません。ほとんど大気を持たない<a href="moon.html">月</a>は、まさに温室効果ゼロの世界。昼は+100℃を超え、夜は−170℃以下まで下がる、毛布のない星の姿を見せてくれます。同じ太陽からの距離にいながら、大気の毛布があるかないかで、これほど世界が変わる。地球のおだやかな気候は、当たり前ではないのです。</div>
-  
-</div>
   
   <div class="termmemo"><div class="tm">🔎 むずかしい言葉は「用語じてん」でチェック</div>
   <div class="termchips"><a href="kotoba.html#greenhouse">温室効果</a><a href="kotoba.html#atmosphere">大気</a><a href="kotoba.html#carbon-cycle">炭素循環(サーモスタット)</a></div></div>
@@ -160,11 +156,10 @@
 
 <footer class="site">
   <div class="flinks">
-    <a href="../index.html">トップ</a><a href="../zukan/index.html">もしも図鑑</a><a href="../zukan/kotoba.html">用語じてん</a><a href="../tera.html">テラちゃん</a><a href="../qa.html">Q&amp;A</a><a href="../omiyage.html">観測キット</a><a href="../contact.html">お問い合わせ</a>
+    <a href="../index.html">トップ</a><a href="../zukan/index.html">もしも図鑑</a><a href="../zukan/kotoba.html">用語じてん</a><a href="../tera.html">テラちゃん</a><a href="../qa.html">Q&amp;A</a><a href="../omiyage.html">おみやげ</a><a href="../contact.html">お問い合わせ</a>
   </div>
   ※ 当サイトのシミュレーションはすべて簡略化した概算モデルです。実際の気候・人口動態はもっと複雑です。<br>
   © もしも地球ラボ / OBSERVATION LOG by テラちゃん
 </footer>
-<!-- Cloudflare Web Analytics --><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "8a1063ba24db48fea0ce747406f696bf"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>

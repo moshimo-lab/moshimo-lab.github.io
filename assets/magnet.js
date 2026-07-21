@@ -2,6 +2,7 @@
 const $=id=>document.getElementById(id);
 const mag=$('mag'),valMag=$('valMag'),shield=$('shield'),aurora=$('aurora'),fate=$('fate');
 const globeStrip=$('globeStrip'),earthWrap=$('earthWrap'),speechLine=$('speechLine');
+const auroraRing=$('auroraRing'),solarWind=$('solarWind');
 const mascot=$('mascot'),panelMag=$('panelMag'),whyMag=$('whyMag');
 function setFace(f){mascot.className='mascot'+(f?' face-'+f:'');}
 function update(){
@@ -13,6 +14,14 @@ function update(){
   // オーロラが降りる磁気緯度の目安: 磁場が弱いほど低緯度へ。ざっくり 67°×√m。
   if(m<0.01)aurora.textContent='赤道まで';
   else{const lat=Math.min(67,67*Math.sqrt(m));aurora.textContent=lat.toFixed(0)+'°〜';}
+  // ★オーロラリングの視覚演出: 磁場が弱いほどリングが大きく(赤道へ降りる)
+  if(auroraRing){
+    auroraRing.classList.toggle('visible',m<1.5);
+    auroraRing.classList.toggle('weak',m<0.7&&m>=0.1);
+    auroraRing.classList.toggle('equator',m<0.1);
+  }
+  // 磁場が弱いと太陽風が直撃
+  if(solarWind)solarWind.style.opacity=m<0.5?((0.5-m)/0.5*0.8).toFixed(2):0;
   // 大気の運命(長い目)
   let ft='がっちり保持';
   if(m<0.01)ft='何億年で流出→火星化';

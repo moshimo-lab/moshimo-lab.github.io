@@ -3,6 +3,12 @@ const $=id=>document.getElementById(id);
 const jp=$('jp'),valJp=$('valJp'),jreach=$('jreach'),jbelt=$('jbelt'),jrisk=$('jrisk');
 const globeStrip=$('globeStrip'),earthWrap=$('earthWrap'),speechLine=$('speechLine');
 const mascot=$('mascot'),panelJp=$('panelJp'),whyJp=$('whyJp');
+const impactFlash=$('impactFlash');
+let impactTimer=null;
+function doImpact(){
+  impactFlash.classList.add('on');
+  setTimeout(()=>impactFlash.classList.remove('on'),120);
+}
 function update(){
   const m=jp.value/100; // 木星の質量(いま=1)
   valJp.textContent=m.toFixed(2)+' 倍';
@@ -23,6 +29,10 @@ function update(){
   else r='はじく力も送る力も増';
   jrisk.textContent=r;
   panelJp.classList.toggle('danger',m<0.01);
+  // 視覚効果: 木星がないと地球が揺れ、衝撃フラッシュ
+  earthWrap.classList.toggle('vulnerable',m<0.1);
+  if(m<0.1&&!impactTimer){impactTimer=setInterval(doImpact,1800);doImpact();}
+  else if(m>=0.1&&impactTimer){clearInterval(impactTimer);impactTimer=null;}
   let line='太陽系の重力の大黒柱、いつも通りだね',face='happy';
   if(m<0.01){line='木星が消えた…太陽系の交通整理係がいなくなっちゃった…';face='dizzy';}
   else if(m<0.5){line='軽い木星。小惑星帯の乱れがおとなしくなるね';face='';}

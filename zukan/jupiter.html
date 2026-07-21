@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://formspree.io; base-uri 'none'; form-action https://formspree.io">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src https://formspree.io; base-uri 'none'; form-action https://formspree.io">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="description" content="太陽系最大の惑星が消えたら。「地球を守る盾」説と、それを見直す近年の研究。答えがまだ動いている話。">
@@ -11,14 +11,13 @@
 <meta property="og:description" content="太陽系最大の惑星が消えたら。「地球を守る盾」説と、それを見直す近年の研究。答えがまだ動いている話。">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
-<meta property="og:image" content="https://moshimo-lab.pages.dev/assets/ogp/jupiter.png?v=202607161500">
+<meta property="og:image" content="https://moshimo-lab.pages.dev/assets/ogp/jupiter.png?v=202607211838">
 <title>もしも木星がなかったら|もしも図鑑|もしも地球ラボ</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=JetBrains+Mono:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
-<link rel="stylesheet" href="../assets/site.css?v=202607172400">
-<script src="../assets/jupiter.js?v=202607161500" defer></script>
-<script src="../assets/site-common.js?v=202607161500" defer></script>
+<link rel="stylesheet" href="../assets/site.css?v=202607211838">
+<script src="../assets/jupiter.js?v=202607211838" defer></script>
 </head>
 <body>
 <div class="stars"></div>
@@ -29,7 +28,7 @@
     <a href="../zukan/kotoba.html">用語じてん</a>
     <a href="../tera.html">テラちゃんについて</a>
     <a href="../qa.html">地球のギモンQ&amp;A</a>
-    <a href="../omiyage.html">観測キット</a>
+    <a href="../omiyage.html">おみやげ</a>
     <a href="../contact.html">お問い合わせ</a>
   </div>
 </nav>
@@ -53,6 +52,7 @@
         </div>
         <div class="heat-overlay" id="heatOverlay"></div>
         <div class="ice-overlay" id="iceOverlay"></div>
+        <div class="impact-flash" id="impactFlash"></div>
       </div>
     </div>
       <div class="mascot" id="mascot">
@@ -83,8 +83,6 @@
       <div class="why" id="whyJp">🔎 木星は全惑星を合わせたより重い、太陽系の重力の大黒柱。その影響は太陽系全体におよぶよ</div>
     </div>
   </div>
-  
-
   <svg width="0" height="0" class="svgdefs" aria-hidden="true"><defs>
 <clipPath id="avclip"><circle cx="50" cy="50" r="50"/></clipPath>
 <g id="kid-sora"><g clip-path="url(#avclip)">
@@ -128,8 +126,8 @@
 <path d="M43 71 Q50 79 57 71" stroke="#c2596b" stroke-width="2" fill="none" stroke-linecap="round"/>
 </g></g>
 </defs></svg>
-<div class="talk"><div class="talk-title">🎬 テラちゃんげきじょう「木星がなかったら」</div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-hoshi"/></svg></span><span class="ava-cap">ホシ</span></div><div class="tb"><span class="who">ホシ</span>木星って遠いし、なくても関係なさそうだけど?</div></div><div class="trow right"><div class="avwrap"><span class="ava tera"><span class="ant"></span><span class="face"></span><span class="eye l"></span><span class="eye r"></span><span class="blush l"></span><span class="blush r"></span><span class="mouth"></span></span><span class="ava-cap">テラちゃん</span></div><div class="tb"><span class="who">テラちゃん</span>じつは木星は太陽系で一番大きくて、『地球を守る盾』かもって言われてきたんだ</div></div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-hoshi"/></svg></span><span class="ava-cap">ホシ</span></div><div class="tb"><span class="who">ホシ</span>盾? 何から守ってくれるの?</div></div><div class="trow right"><div class="avwrap"><span class="ava tera"><span class="ant"></span><span class="face"></span><span class="eye l"></span><span class="eye r"></span><span class="blush l"></span><span class="blush r"></span><span class="mouth"></span></span><span class="ava-cap">テラちゃん</span></div><div class="tb"><span class="who">テラちゃん</span>飛んでくる危ない天体を、強い重力で受け止めてくれる…という説。でも最近は見直しもあってね</div></div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-hoshi"/></svg></span><span class="ava-cap">ホシ</span></div><div class="tb punch"><span class="who">ホシ</span>宇宙には答えの決まってない話がいっぱいあるんだ…ぼく、調べる側になろうかな。<div class="tele">木星は夜空でとても明るく見えます。今夜、そのボディガード(かも)を探してみては。</div></div></div>
-
+<div class="talk"><div class="talk-title">🎬 テラちゃんげきじょう「木星がなかったら」</div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-hoshi"/></svg></span><span class="ava-cap">ホシ</span></div><div class="tb"><span class="who">ホシ</span>木星って遠いし、なくても関係なさそうだけど?</div></div><div class="trow right"><div class="avwrap"><span class="ava tera"><span class="ant"></span><span class="face"></span><span class="eye l"></span><span class="eye r"></span><span class="blush l"></span><span class="blush r"></span><span class="mouth"></span></span><span class="ava-cap">テラちゃん</span></div><div class="tb"><span class="who">テラちゃん</span>じつは木星は太陽系で一番大きくて、『地球を守る盾』かもって言われてきたんだ</div></div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-hoshi"/></svg></span><span class="ava-cap">ホシ</span></div><div class="tb"><span class="who">ホシ</span>盾? 何から守ってくれるの?</div></div><div class="trow right"><div class="avwrap"><span class="ava tera"><span class="ant"></span><span class="face"></span><span class="eye l"></span><span class="eye r"></span><span class="blush l"></span><span class="blush r"></span><span class="mouth"></span></span><span class="ava-cap">テラちゃん</span></div><div class="tb"><span class="who">テラちゃん</span>飛んでくる危ない天体を、強い重力で受け止めてくれる…という説。でも最近は見直しもあってね</div></div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-hoshi"/></svg></span><span class="ava-cap">ホシ</span></div><div class="tb punch"><span class="who">ホシ</span>宇宙には答えの決まってない話がいっぱいあるんだ…ぼく、調べる側になろうかな。<div class="tele">木星は夜空でとても明るく見えます。今夜、そのボディガード(かも)を探してみては。</div></div></div></div>
+  
   <h2>太陽系最大の惑星を消すと、何が起きる?</h2>
   <h3>① 「太陽系の掃除屋」という定説があった</h3>
   <p>木星は太陽系で圧倒的に大きな惑星で、その強い重力は太陽系全体に影響を及ぼしています。そこから生まれたのが「<strong>太陽系の掃除屋</strong>」という異名です。外からやってくる彗星を強い重力で受け止めたり弾き飛ばしたりして、内側の地球を衝突から守ってきた——「木星がなければ、地球に衝突する天体は1000倍になっていた」という見積もりまで語られてきました。1994年にシューメーカー・レヴィ第9彗星が木星に衝突する様子が観測されたことも、この「盾」のイメージを強くしました。</p>
@@ -142,8 +140,6 @@
 
   <div class="note"><div class="nt">💡 豆知識:「答えが動いている」ことこそ、科学の現在地</div>
   この記事には、他の記事のようなスッキリした結論がありません。それは手抜きではなく、<strong>本当にまだ決着がついていない</strong>からです。かつての定説が新しい計算で見直され、また新しい観測で書き換えられていく——教科書の内容も、こうやって静かに更新され続けています。このシミュレーターの数値も同じで、正解を当てるためではなく、「もしも」を想像して楽しむための道具です。10年後、木星の評価がどうなっているか。それを見届けられるのも、科学の楽しみのひとつです。</div>
-  
-</div>
   
   <div class="termmemo"><div class="tm">🔎 むずかしい言葉は「用語じてん」でチェック</div>
   <div class="termchips"><a href="kotoba.html#gravity">重力</a><a href="kotoba.html#revolution">公転</a><a href="kotoba.html#lhb">後期重爆撃期</a></div></div>
@@ -159,11 +155,10 @@
 
 <footer class="site">
   <div class="flinks">
-    <a href="../index.html">トップ</a><a href="../zukan/index.html">もしも図鑑</a><a href="../zukan/kotoba.html">用語じてん</a><a href="../tera.html">テラちゃん</a><a href="../qa.html">Q&amp;A</a><a href="../omiyage.html">観測キット</a><a href="../contact.html">お問い合わせ</a>
+    <a href="../index.html">トップ</a><a href="../zukan/index.html">もしも図鑑</a><a href="../zukan/kotoba.html">用語じてん</a><a href="../tera.html">テラちゃん</a><a href="../qa.html">Q&amp;A</a><a href="../omiyage.html">おみやげ</a><a href="../contact.html">お問い合わせ</a>
   </div>
   ※ 当サイトのシミュレーションはすべて簡略化した概算モデルです。実際の気候・人口動態はもっと複雑です。<br>
   © もしも地球ラボ / OBSERVATION LOG by テラちゃん
 </footer>
-<!-- Cloudflare Web Analytics --><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "8a1063ba24db48fea0ce747406f696bf"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>

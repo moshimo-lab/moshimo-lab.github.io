@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://formspree.io; base-uri 'none'; form-action https://formspree.io">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src https://formspree.io; base-uri 'none'; form-action https://formspree.io">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="description" content="地球は海71%・陸29%。海は大気の約1000倍の熱をたくわえる巨大な保温タンク。減らすと寒暖差が牙をむく。">
@@ -11,14 +11,13 @@
 <meta property="og:description" content="地球は海71%・陸29%。海は大気の約1000倍の熱をたくわえる巨大な保温タンク。減らすと寒暖差が牙をむく。">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
-<meta property="og:image" content="https://moshimo-lab.pages.dev/assets/ogp/ocean.png?v=202607161500">
+<meta property="og:image" content="https://moshimo-lab.pages.dev/assets/ogp/ocean.png?v=202607211838">
 <title>もしも陸と海が半々だったら|もしも図鑑|もしも地球ラボ</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=JetBrains+Mono:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
-<link rel="stylesheet" href="../assets/site.css?v=202607172400">
-<script src="../assets/ocean.js?v=202607161500" defer></script>
-<script src="../assets/site-common.js?v=202607161500" defer></script>
+<link rel="stylesheet" href="../assets/site.css?v=202607211838">
+<script src="../assets/ocean.js?v=202607211838" defer></script>
 </head>
 <body>
 <div class="stars"></div>
@@ -29,7 +28,7 @@
     <a href="../zukan/kotoba.html">用語じてん</a>
     <a href="../tera.html">テラちゃんについて</a>
     <a href="../qa.html">地球のギモンQ&amp;A</a>
-    <a href="../omiyage.html">観測キット</a>
+    <a href="../omiyage.html">おみやげ</a>
     <a href="../contact.html">お問い合わせ</a>
   </div>
 </nav>
@@ -53,6 +52,7 @@
         </div>
         <div class="heat-overlay" id="heatOverlay"></div>
         <div class="ice-overlay" id="iceOverlay"></div>
+        <div class="dry-overlay" id="dryOverlay"></div><div class="flood-overlay" id="floodOverlay"></div>
       </div>
     </div>
       <div class="mascot" id="mascot">
@@ -79,12 +79,10 @@
       <div class="label">海が地球表面をおおう割合</div>
       <div class="value" id="valOc">71%</div>
       <div class="drag-hint"><span class="dh-hand">👇</span>スライダーをうごかして、じっけんしてみよう</div><input type="range" id="oc" min="0" max="100" value="71" aria-label="海の割合">
-      <div class="scale"><span class="warn">0%(全部陸)</span><span>71%(いま)</span><span class="warn">100%(全部海)</span></div>
+      <div class="scale"><span class="warn">0%(ほぼ陸)</span><span></span><span class="warn">100%(ほぼ海)</span></div>
       <div class="why" id="whyOc">🔎 海は温まりにくく冷めにくい、巨大な保温タンク。今の7割が気候をなめらかにしているよ</div>
     </div>
   </div>
-  
-
   <svg width="0" height="0" class="svgdefs" aria-hidden="true"><defs>
 <clipPath id="avclip"><circle cx="50" cy="50" r="50"/></clipPath>
 <g id="kid-sora"><g clip-path="url(#avclip)">
@@ -128,8 +126,8 @@
 <path d="M43 71 Q50 79 57 71" stroke="#c2596b" stroke-width="2" fill="none" stroke-linecap="round"/>
 </g></g>
 </defs></svg>
-<div class="talk"><div class="talk-title">🎬 テラちゃんげきじょう「陸と海が半々だったら」</div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-sora"/></svg></span><span class="ava-cap">ソラ</span></div><div class="tb"><span class="who">ソラ</span>海が減って陸が増えたら、公園がいっぱいできてうれしいな</div></div><div class="trow right"><div class="avwrap"><span class="ava tera"><span class="ant"></span><span class="face"></span><span class="eye l"></span><span class="eye r"></span><span class="blush l"></span><span class="blush r"></span><span class="mouth"></span></span><span class="ava-cap">テラちゃん</span></div><div class="tb"><span class="who">テラちゃん</span>でも海は、大気の1000倍もの熱をためこむ巨大な保温タンクなんだ</div></div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-sora"/></svg></span><span class="ava-cap">ソラ</span></div><div class="tb"><span class="who">ソラ</span>タンク? 海があったかさを貯金してるってこと?</div></div><div class="trow right"><div class="avwrap"><span class="ava tera"><span class="ant"></span><span class="face"></span><span class="eye l"></span><span class="eye r"></span><span class="blush l"></span><span class="blush r"></span><span class="mouth"></span></span><span class="ava-cap">テラちゃん</span></div><div class="tb"><span class="who">テラちゃん</span>そう。海が減ると貯金が減って、昼と夜、夏と冬の気温差がすごく激しくなるよ</div></div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-sora"/></svg></span><span class="ava-cap">ソラ</span></div><div class="tb punch"><span class="who">ソラ</span>海って地球のおふとんだったんだ。海の見える町が、ちょっとうらやましくなってきた。<div class="tele">海流は熱を運ぶベルトコンベア。日本があたたかいのも、黒潮という海流のおかげです。</div></div></div>
-
+<div class="talk"><div class="talk-title">🎬 テラちゃんげきじょう「陸と海が半々だったら」</div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-sora"/></svg></span><span class="ava-cap">ソラ</span></div><div class="tb"><span class="who">ソラ</span>海が減って陸が増えたら、公園がいっぱいできてうれしいな</div></div><div class="trow right"><div class="avwrap"><span class="ava tera"><span class="ant"></span><span class="face"></span><span class="eye l"></span><span class="eye r"></span><span class="blush l"></span><span class="blush r"></span><span class="mouth"></span></span><span class="ava-cap">テラちゃん</span></div><div class="tb"><span class="who">テラちゃん</span>でも海は、大気の1000倍もの熱をためこむ巨大な保温タンクなんだ</div></div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-sora"/></svg></span><span class="ava-cap">ソラ</span></div><div class="tb"><span class="who">ソラ</span>タンク? 海があったかさを貯金してるってこと?</div></div><div class="trow right"><div class="avwrap"><span class="ava tera"><span class="ant"></span><span class="face"></span><span class="eye l"></span><span class="eye r"></span><span class="blush l"></span><span class="blush r"></span><span class="mouth"></span></span><span class="ava-cap">テラちゃん</span></div><div class="tb"><span class="who">テラちゃん</span>そう。海が減ると貯金が減って、昼と夜、夏と冬の気温差がすごく激しくなるよ</div></div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-sora"/></svg></span><span class="ava-cap">ソラ</span></div><div class="tb punch"><span class="who">ソラ</span>海って地球のおふとんだったんだ。海の見える町が、ちょっとうらやましくなってきた。<div class="tele">海流は熱を運ぶベルトコンベア。日本があたたかいのも、黒潮という海流のおかげです。</div></div></div></div>
+  
   <h2>陸と海の配分を変えると、何が起きる?</h2>
   <h3>① 海は、大気の約1000倍の熱をためる「保温タンク」</h3>
   <p>地球の表面はいま、海が約71%、陸が約29%。この海が、気候の陰の主役です。水は「温まりにくく、冷めにくい」性質を持ち、地球表面の7割を占める海は<strong>大気のおよそ1000倍もの熱容量</strong>を持っています。夏に受けた熱を溜め込み、冬にゆっくり吐き出す——巨大な保温タンクのおかげで、地球の気温は昼夜でも季節でも、角がとれてなめらかになっています。</p>
@@ -142,8 +140,6 @@
 
   <div class="note"><div class="nt">💡 豆知識:海に沈めても、水はあふれない。もう一つの「ちょうどよさ」</div>
   もし地球の陸をぜんぶ削ってツルツルの球にならしたら、地球は深さ約2.7kmの海にすっぽり覆われる——という試算があります。地表の凸凹(高い山や深い海溝)があるからこそ、陸が水面から顔を出していられるのです。<a href="gravity.html">重力</a>が大気をつなぎとめ、<a href="magnet.html">磁場</a>が太陽風を防ぎ、そして海が熱をならす。地球の住みやすさは、たった一つの奇跡ではなく、いくつもの「ちょうどよさ」の重ね合わせでできているのです。</div>
-  
-</div>
   
   <div class="termmemo"><div class="tm">🔎 むずかしい言葉は「用語じてん」でチェック</div>
   <div class="termchips"><a href="kotoba.html#heat-capacity">熱容量</a><a href="kotoba.html#continental-climate">大陸性気候</a></div></div>
@@ -160,11 +156,10 @@
 
 <footer class="site">
   <div class="flinks">
-    <a href="../index.html">トップ</a><a href="../zukan/index.html">もしも図鑑</a><a href="../zukan/kotoba.html">用語じてん</a><a href="../tera.html">テラちゃん</a><a href="../qa.html">Q&amp;A</a><a href="../omiyage.html">観測キット</a><a href="../contact.html">お問い合わせ</a>
+    <a href="../index.html">トップ</a><a href="../zukan/index.html">もしも図鑑</a><a href="../zukan/kotoba.html">用語じてん</a><a href="../tera.html">テラちゃん</a><a href="../qa.html">Q&amp;A</a><a href="../omiyage.html">おみやげ</a><a href="../contact.html">お問い合わせ</a>
   </div>
   ※ 当サイトのシミュレーションはすべて簡略化した概算モデルです。実際の気候・人口動態はもっと複雑です。<br>
   © もしも地球ラボ / OBSERVATION LOG by テラちゃん
 </footer>
-<!-- Cloudflare Web Analytics --><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "8a1063ba24db48fea0ce747406f696bf"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>

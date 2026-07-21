@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://formspree.io; base-uri 'none'; form-action https://formspree.io">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src https://formspree.io; base-uri 'none'; form-action https://formspree.io">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="description" content="地面が動くのは地球だけの特技。止めれば地震は消えるが、CO₂で気温を保つ天然サーモスタットも止まる。">
@@ -11,14 +11,13 @@
 <meta property="og:description" content="地面が動くのは地球だけの特技。止めれば地震は消えるが、CO₂で気温を保つ天然サーモスタットも止まる。">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
-<meta property="og:image" content="https://moshimo-lab.pages.dev/assets/ogp/plate.png?v=202607161500">
+<meta property="og:image" content="https://moshimo-lab.pages.dev/assets/ogp/plate.png?v=202607211838">
 <title>もしもプレートテクトニクスが止まったら|もしも図鑑|もしも地球ラボ</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=JetBrains+Mono:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
-<link rel="stylesheet" href="../assets/site.css?v=202607172400">
-<script src="../assets/plate.js?v=202607161500" defer></script>
-<script src="../assets/site-common.js?v=202607161500" defer></script>
+<link rel="stylesheet" href="../assets/site.css?v=202607211838">
+<script src="../assets/plate.js?v=202607211838" defer></script>
 </head>
 <body>
 <div class="stars"></div>
@@ -29,7 +28,7 @@
     <a href="../zukan/kotoba.html">用語じてん</a>
     <a href="../tera.html">テラちゃんについて</a>
     <a href="../qa.html">地球のギモンQ&amp;A</a>
-    <a href="../omiyage.html">観測キット</a>
+    <a href="../omiyage.html">おみやげ</a>
     <a href="../contact.html">お問い合わせ</a>
   </div>
 </nav>
@@ -53,6 +52,7 @@
         </div>
         <div class="heat-overlay" id="heatOverlay"></div>
         <div class="ice-overlay" id="iceOverlay"></div>
+        <div class="volcano-spots active" id="volcanoSpots"><div class="volcano-spot"></div><div class="volcano-spot"></div><div class="volcano-spot"></div><div class="volcano-spot"></div><div class="volcano-spot"></div></div>
       </div>
     </div>
       <div class="mascot" id="mascot">
@@ -83,8 +83,6 @@
       <div class="why" id="whyPl">🔎 プレートが動くから地震や火山が起きるよ。でも実はそれが気候の調整にもつながっているんだ</div>
     </div>
   </div>
-  
-
   <svg width="0" height="0" class="svgdefs" aria-hidden="true"><defs>
 <clipPath id="avclip"><circle cx="50" cy="50" r="50"/></clipPath>
 <g id="kid-sora"><g clip-path="url(#avclip)">
@@ -128,8 +126,8 @@
 <path d="M43 71 Q50 79 57 71" stroke="#c2596b" stroke-width="2" fill="none" stroke-linecap="round"/>
 </g></g>
 </defs></svg>
-<div class="talk"><div class="talk-title">🎬 テラちゃんげきじょう「プレートが止まったら」</div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-hoshi"/></svg></span><span class="ava-cap">ホシ</span></div><div class="tb"><span class="who">ホシ</span>地面が動かなくなったら、地震がなくなって安心じゃない?</div></div><div class="trow right"><div class="avwrap"><span class="ava tera"><span class="ant"></span><span class="face"></span><span class="eye l"></span><span class="eye r"></span><span class="blush l"></span><span class="blush r"></span><span class="mouth"></span></span><span class="ava-cap">テラちゃん</span></div><div class="tb"><span class="who">テラちゃん</span>地震は減るね。でも地面の動きは、気温を保つ天然のエアコンでもあるんだ</div></div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-hoshi"/></svg></span><span class="ava-cap">ホシ</span></div><div class="tb"><span class="who">ホシ</span>地面がエアコン? どういうこと?</div></div><div class="trow right"><div class="avwrap"><span class="ava tera"><span class="ant"></span><span class="face"></span><span class="eye l"></span><span class="eye r"></span><span class="blush l"></span><span class="blush r"></span><span class="mouth"></span></span><span class="ava-cap">テラちゃん</span></div><div class="tb"><span class="who">テラちゃん</span>大地がゆっくり動くことで、あたたかさのもとになるガスの量が調整されてるんだ</div></div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-hoshi"/></svg></span><span class="ava-cap">ホシ</span></div><div class="tb punch"><span class="who">ホシ</span>動く地面って地球だけの特技なんだ。地震はこわいけど、意味もあったんだね。<div class="tele">火星や金星の地面はほぼ動きません。「動く大地」は地球のいちばんの個性です。</div></div></div>
-
+<div class="talk"><div class="talk-title">🎬 テラちゃんげきじょう「プレートが止まったら」</div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-hoshi"/></svg></span><span class="ava-cap">ホシ</span></div><div class="tb"><span class="who">ホシ</span>地面が動かなくなったら、地震がなくなって安心じゃない?</div></div><div class="trow right"><div class="avwrap"><span class="ava tera"><span class="ant"></span><span class="face"></span><span class="eye l"></span><span class="eye r"></span><span class="blush l"></span><span class="blush r"></span><span class="mouth"></span></span><span class="ava-cap">テラちゃん</span></div><div class="tb"><span class="who">テラちゃん</span>地震は減るね。でも地面の動きは、気温を保つ天然のエアコンでもあるんだ</div></div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-hoshi"/></svg></span><span class="ava-cap">ホシ</span></div><div class="tb"><span class="who">ホシ</span>地面がエアコン? どういうこと?</div></div><div class="trow right"><div class="avwrap"><span class="ava tera"><span class="ant"></span><span class="face"></span><span class="eye l"></span><span class="eye r"></span><span class="blush l"></span><span class="blush r"></span><span class="mouth"></span></span><span class="ava-cap">テラちゃん</span></div><div class="tb"><span class="who">テラちゃん</span>大地がゆっくり動くことで、あたたかさのもとになるガスの量が調整されてるんだ</div></div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-hoshi"/></svg></span><span class="ava-cap">ホシ</span></div><div class="tb punch"><span class="who">ホシ</span>動く地面って地球だけの特技なんだ。地震はこわいけど、意味もあったんだね。<div class="tele">火星や金星の地面はほぼ動きません。「動く大地」は地球のいちばんの個性です。</div></div></div></div>
+  
   <h2>大地の動きを止めると、何が起きる?</h2>
   <h3>① 地面が動くのは、太陽系で地球だけの特技</h3>
   <p>地球の表面は十数枚の硬い板(プレート)に分かれていて、その下のやわらかい層に乗って年に数cmずつ動いています。これがプレートテクトニクス。地震や火山、山脈は、このプレートがぶつかったりすれ違ったりする境目で起きています。実はこの「板が動く」仕組みが確認されているのは、<strong>今のところ太陽系で地球だけ</strong>。<a href="distance.html">火星</a>はプレートが動かなかったため火山が一か所に噴き続け、標高27kmの太陽系最大の火山オリンポス山ができました。</p>
@@ -142,8 +140,6 @@
 
   <div class="note"><div class="nt">💡 豆知識:大地が動くのに、水とCO₂が効いているらしい</div>
   なぜ地球だけがプレートを動かせるのか、その理由はまだ完全には解けていません。有力なのは、プレートの下の層がほどよくやわらかいから、という説。近年の研究では、地球内部の<strong>二酸化炭素や微量の水</strong>がその層をやわらかくし、プレートを動きやすくしている可能性が示されています。地表の空気を調整するCO₂が、地下深くでは大地を動かす潤滑油にもなっているかもしれない——地球はどこまでも、絶妙なバランスの上に立っているのです。</div>
-  
-</div>
   
   <div class="termmemo"><div class="tm">🔎 むずかしい言葉は「用語じてん」でチェック</div>
   <div class="termchips"><a href="kotoba.html#platetectonics">プレートテクトニクス</a><a href="kotoba.html#carbon-cycle">炭素循環(サーモスタット)</a><a href="kotoba.html#greenhouse">温室効果</a></div></div>
@@ -160,11 +156,10 @@
 
 <footer class="site">
   <div class="flinks">
-    <a href="../index.html">トップ</a><a href="../zukan/index.html">もしも図鑑</a><a href="../zukan/kotoba.html">用語じてん</a><a href="../tera.html">テラちゃん</a><a href="../qa.html">Q&amp;A</a><a href="../omiyage.html">観測キット</a><a href="../contact.html">お問い合わせ</a>
+    <a href="../index.html">トップ</a><a href="../zukan/index.html">もしも図鑑</a><a href="../zukan/kotoba.html">用語じてん</a><a href="../tera.html">テラちゃん</a><a href="../qa.html">Q&amp;A</a><a href="../omiyage.html">おみやげ</a><a href="../contact.html">お問い合わせ</a>
   </div>
   ※ 当サイトのシミュレーションはすべて簡略化した概算モデルです。実際の気候・人口動態はもっと複雑です。<br>
   © もしも地球ラボ / OBSERVATION LOG by テラちゃん
 </footer>
-<!-- Cloudflare Web Analytics --><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "8a1063ba24db48fea0ce747406f696bf"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>

@@ -2,10 +2,17 @@
 const $=id=>document.getElementById(id);
 const pl=$('pl'),valPl=$('valPl'),quake=$('quake'),thermo=$('thermo'),climate=$('climate');
 const globeStrip=$('globeStrip'),earthWrap=$('earthWrap'),speechLine=$('speechLine');
+const volcanoSpots=$('volcanoSpots');
 const mascot=$('mascot'),panelPl=$('panelPl'),whyPl=$('whyPl');
 function update(){
   const s=pl.value/100; // プレート速度(いま=1)
   valPl.textContent=s.toFixed(2)+' 倍';
+  // ★火山スポットのビジュアル: 速度に応じて活発さ変化
+  if(volcanoSpots){
+    volcanoSpots.classList.toggle('stopped',s<0.05);
+    volcanoSpots.classList.toggle('active',s>=0.5&&s<1.5);
+    volcanoSpots.classList.toggle('fast',s>=1.5);
+  }
   // 地震・火山
   let q;
   if(s<0.05)q='なし(静穏)';

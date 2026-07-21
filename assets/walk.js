@@ -3,6 +3,7 @@ const $=id=>document.getElementById(id);
 const wk=$('wk'),valWk=$('valWk'),wkwalk=$('wkwalk'),wkcar=$('wkcar'),wklight=$('wklight');
 const globeStrip=$('globeStrip'),earthWrap=$('earthWrap'),speechLine=$('speechLine');
 const tripMarker=$('tripMarker'),mascot=$('mascot'),panelWk=$('panelWk'),whyWk=$('whyWk');
+const heatOverlay=$('heatOverlay'),spaceOverlay=$('spaceOverlay');
 function setFace(f){mascot.className='mascot'+(f?' face-'+f:'');}
 const D=[
  {n:'宇宙の入り口(高度100km)',walk:'約1日',car:'約1時間',light:'約0.0003秒',left:24,
@@ -20,6 +21,10 @@ function update(){
   valWk.textContent=d.n;
   wkwalk.textContent=d.walk;wkcar.textContent=d.car;wklight.textContent=d.light;
   if(tripMarker)tripMarker.style.left=d.left+'%';
+  // 宇宙・月は暗く、太陽は熱く
+  if(spaceOverlay)spaceOverlay.style.opacity=i===2?0:(i===1?0.5:0.3);
+  if(heatOverlay)heatOverlay.style.opacity=i===2?0.6:0;
+  earthWrap.classList.toggle('extreme-heat',i===2);
   panelWk.classList.toggle('danger',false);
   speechLine.textContent=d.line;
   setFace(d.face);

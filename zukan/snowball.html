@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://formspree.io; base-uri 'none'; form-action https://formspree.io">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src https://formspree.io; base-uri 'none'; form-action https://formspree.io">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="description" content="約7億年前、地球は赤道まで凍った(全球凍結)。白い星はさらに冷える。抜け出せたのは火山のCO₂のおかげ。">
@@ -11,14 +11,13 @@
 <meta property="og:description" content="約7億年前、地球は赤道まで凍った(全球凍結)。白い星はさらに冷える。抜け出せたのは火山のCO₂のおかげ。">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
-<meta property="og:image" content="https://moshimo-lab.pages.dev/assets/ogp/snowball.png?v=202607161500">
+<meta property="og:image" content="https://moshimo-lab.pages.dev/assets/ogp/snowball.png?v=202607211838">
 <title>もしも地球がまるごと凍ったら|もしも図鑑|もしも地球ラボ</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=JetBrains+Mono:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
-<link rel="stylesheet" href="../assets/site.css?v=202607172400">
-<script src="../assets/snowball.js?v=202607161500" defer></script>
-<script src="../assets/site-common.js?v=202607161500" defer></script>
+<link rel="stylesheet" href="../assets/site.css?v=202607211838">
+<script src="../assets/snowball.js?v=202607211838" defer></script>
 </head>
 <body>
 <div class="stars"></div>
@@ -29,7 +28,7 @@
     <a href="../zukan/kotoba.html">用語じてん</a>
     <a href="../tera.html">テラちゃんについて</a>
     <a href="../qa.html">地球のギモンQ&amp;A</a>
-    <a href="../omiyage.html">観測キット</a>
+    <a href="../omiyage.html">おみやげ</a>
     <a href="../contact.html">お問い合わせ</a>
   </div>
 </nav>
@@ -53,6 +52,7 @@
         </div>
         <div class="heat-overlay" id="heatOverlay"></div>
         <div class="ice-overlay" id="iceOverlay"></div>
+        
       </div>
     </div>
       <div class="mascot" id="mascot">
@@ -79,12 +79,10 @@
       <div class="label">地球をおおう氷の割合</div>
       <div class="value" id="valSb">10%(いまの地球)</div>
       <div class="drag-hint"><span class="dh-hand">👇</span>スライダーをうごかして、じっけんしてみよう</div><input type="range" id="sb" min="0" max="100" value="10" aria-label="氷の割合">
-      <div class="scale"><span>0%</span><span>10%(いま)</span><span class="warn">100%(全球凍結)</span></div>
+      <div class="scale"><span>0%</span><span></span><span class="warn">100%(全球凍結)</span></div>
       <div class="why" id="whySb">🔎 白い氷は太陽光をはね返すよ。氷が増えるほど寒くなり、その寒さがまた氷を増やす——これが暴走のもとだよ</div>
     </div>
   </div>
-  
-
   <svg width="0" height="0" class="svgdefs" aria-hidden="true"><defs>
 <clipPath id="avclip"><circle cx="50" cy="50" r="50"/></clipPath>
 <g id="kid-sora"><g clip-path="url(#avclip)">
@@ -128,8 +126,8 @@
 <path d="M43 71 Q50 79 57 71" stroke="#c2596b" stroke-width="2" fill="none" stroke-linecap="round"/>
 </g></g>
 </defs></svg>
-<div class="talk"><div class="talk-title">🎬 テラちゃんげきじょう「地球がまるごと凍ったら」</div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-sora"/></svg></span><span class="ava-cap">ソラ</span></div><div class="tb"><span class="who">ソラ</span>地球ぜんぶがこおるなんて、SFの話でしょ?</div></div><div class="trow right"><div class="avwrap"><span class="ava tera"><span class="ant"></span><span class="face"></span><span class="eye l"></span><span class="eye r"></span><span class="blush l"></span><span class="blush r"></span><span class="mouth"></span></span><span class="ava-cap">テラちゃん</span></div><div class="tb"><span class="who">テラちゃん</span>それが本当にあったんだ。7億年前、赤道までカチカチの『全球凍結』</div></div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-sora"/></svg></span><span class="ava-cap">ソラ</span></div><div class="tb"><span class="who">ソラ</span>ええっ、どうやってそこから復活したの!?</div></div><div class="trow right"><div class="avwrap"><span class="ava tera"><span class="ant"></span><span class="face"></span><span class="eye l"></span><span class="eye r"></span><span class="blush l"></span><span class="blush r"></span><span class="mouth"></span></span><span class="ava-cap">テラちゃん</span></div><div class="tb"><span class="who">テラちゃん</span>火山だよ。ふき出したガスが少しずつ空をあたためて、氷をとかしてくれたんだ</div></div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-sora"/></svg></span><span class="ava-cap">ソラ</span></div><div class="tb punch"><span class="who">ソラ</span>凍らせたのも自然、とかしたのも自然…地球、何度もピンチを乗りこえてきたんだね。<div class="tele">全球凍結のあと、複雑な生き物が一気に増えたという説も。ピンチはチャンスかもしれません。</div></div></div>
-
+<div class="talk"><div class="talk-title">🎬 テラちゃんげきじょう「地球がまるごと凍ったら」</div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-sora"/></svg></span><span class="ava-cap">ソラ</span></div><div class="tb"><span class="who">ソラ</span>地球ぜんぶがこおるなんて、SFの話でしょ?</div></div><div class="trow right"><div class="avwrap"><span class="ava tera"><span class="ant"></span><span class="face"></span><span class="eye l"></span><span class="eye r"></span><span class="blush l"></span><span class="blush r"></span><span class="mouth"></span></span><span class="ava-cap">テラちゃん</span></div><div class="tb"><span class="who">テラちゃん</span>それが本当にあったんだ。7億年前、赤道までカチカチの『全球凍結』</div></div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-sora"/></svg></span><span class="ava-cap">ソラ</span></div><div class="tb"><span class="who">ソラ</span>ええっ、どうやってそこから復活したの!?</div></div><div class="trow right"><div class="avwrap"><span class="ava tera"><span class="ant"></span><span class="face"></span><span class="eye l"></span><span class="eye r"></span><span class="blush l"></span><span class="blush r"></span><span class="mouth"></span></span><span class="ava-cap">テラちゃん</span></div><div class="tb"><span class="who">テラちゃん</span>火山だよ。ふき出したガスが少しずつ空をあたためて、氷をとかしてくれたんだ</div></div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-sora"/></svg></span><span class="ava-cap">ソラ</span></div><div class="tb punch"><span class="who">ソラ</span>凍らせたのも自然、とかしたのも自然…地球、何度もピンチを乗りこえてきたんだね。<div class="tele">全球凍結のあと、複雑な生き物が一気に増えたという説も。ピンチはチャンスかもしれません。</div></div></div></div>
+  
   <h2>地球の氷を増やしていくと、何が起きる?</h2>
   <h3>① 白は、太陽光をはね返す</h3>
   <p>雪や氷が白いのには、気候にとって大きな意味があります。白い面は太陽の光をよく<strong>はね返す</strong>(反射率=アルベドが高い)ので、そこに届いたエネルギーは地面を温めずに宇宙へ逃げていきます。氷が増えるほど地球は太陽の熱を受け取れなくなり、さらに冷える。冷えればまた氷が増える——。この「寒さが寒さを呼ぶ」暴走を、<strong>アイス・アルベド・フィードバック</strong>と呼びます。スライダーで氷を増やしていくと、あるところから気温が坂道を転がるように下がりはじめるのは、このためです。</p>
@@ -142,8 +140,6 @@
 
   <div class="note"><div class="nt">💡 豆知識:このサイトの伏線が、ここで回収される</div>
   全球凍結は、これまでの記事のしくみが総動員される舞台です。<a href="ocean.html">氷アルベド</a>による暴走、<a href="plate.html">プレートと火山</a>によるCO₂の供給、<a href="greenhouse.html">温室効果</a>による脱出、そして<a href="atmosphere.html">大気</a>のはたらき。地球の気候は、いくつものしくみが押し合いへし合いする、ひとつの巨大なシーソーなのです。なお、このシミュレーターは暴走のイメージをつかむための簡略モデルで、実際の全球凍結の開始・終了には、まだ研究者が議論を続けている謎が多く残っています。</div>
-  
-</div>
   
   <div class="termmemo"><div class="tm">🔎 むずかしい言葉は「用語じてん」でチェック</div>
   <div class="termchips"><a href="kotoba.html#albedo">アルベド(反射率)</a><a href="kotoba.html#greenhouse">温室効果</a><a href="kotoba.html#carbon-cycle">炭素循環(サーモスタット)</a></div></div>
@@ -160,11 +156,10 @@
 
 <footer class="site">
   <div class="flinks">
-    <a href="../index.html">トップ</a><a href="../zukan/index.html">もしも図鑑</a><a href="../zukan/kotoba.html">用語じてん</a><a href="../tera.html">テラちゃん</a><a href="../qa.html">Q&amp;A</a><a href="../omiyage.html">観測キット</a><a href="../contact.html">お問い合わせ</a>
+    <a href="../index.html">トップ</a><a href="../zukan/index.html">もしも図鑑</a><a href="../zukan/kotoba.html">用語じてん</a><a href="../tera.html">テラちゃん</a><a href="../qa.html">Q&amp;A</a><a href="../omiyage.html">おみやげ</a><a href="../contact.html">お問い合わせ</a>
   </div>
   ※ 当サイトのシミュレーションはすべて簡略化した概算モデルです。実際の気候・人口動態はもっと複雑です。<br>
   © もしも地球ラボ / OBSERVATION LOG by テラちゃん
 </footer>
-<!-- Cloudflare Web Analytics --><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "8a1063ba24db48fea0ce747406f696bf"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>

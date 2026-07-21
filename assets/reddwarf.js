@@ -2,6 +2,7 @@
 const $=id=>document.getElementById(id);
 const rd=$('rd'),valRd=$('valRd'),hz=$('hz'),lock=$('lock'),life=$('life');
 const globeStrip=$('globeStrip'),earthWrap=$('earthWrap'),speechLine=$('speechLine');
+const starMini=$('starMini');
 const mascot=$('mascot'),panelRd=$('panelRd'),whyRd=$('whyRd');
 function update(){
   const m=rd.value/100; // 主星質量(太陽=1) 0.08〜1.20
@@ -10,6 +11,14 @@ function update(){
   const L=Math.pow(m,3.5);
   const d=Math.sqrt(L); // AU
   hz.textContent=d>=0.1?d.toFixed(2)+' AU':(d*1000).toFixed(0)+'×10⁻³AU';
+  // ★主星ビジュアル: 質量に応じてサイズと色を変化
+  if(starMini){
+    const size=Math.max(14,Math.min(60,36*Math.pow(m,0.8)));
+    starMini.style.width=size+'px';
+    starMini.style.height=size+'px';
+    starMini.classList.toggle('reddwarf',m<0.6);
+    starMini.classList.toggle('bright',m>1.05);
+  }
   // 潮汐ロックのリスク: HZが主星に近い(小さいd)ほど高い。目安 0.2AU未満で高。
   let lk,lkClass=false;
   if(d>=0.5){lk='なし';}

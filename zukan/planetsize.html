@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://formspree.io; base-uri 'none'; form-action https://formspree.io">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src https://formspree.io; base-uri 'none'; form-action https://formspree.io">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="description" content="地球のサイズを変えると重力も変わる。小さいと空気が逃げて火星に、大きいと重力に押しつぶされる。">
@@ -11,14 +11,13 @@
 <meta property="og:description" content="地球のサイズを変えると重力も変わる。小さいと空気が逃げて火星に、大きいと重力に押しつぶされる。">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
-<meta property="og:image" content="https://moshimo-lab.pages.dev/assets/ogp/planetsize.png?v=202607161500">
+<meta property="og:image" content="https://moshimo-lab.pages.dev/assets/ogp/planetsize.png?v=202607211838">
 <title>もしも地球がもっと大きかったら|もしも図鑑|もしも地球ラボ</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=JetBrains+Mono:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
-<link rel="stylesheet" href="../assets/site.css?v=202607172400">
-<script src="../assets/planetsize.js?v=202607161500" defer></script>
-<script src="../assets/site-common.js?v=202607161500" defer></script>
+<link rel="stylesheet" href="../assets/site.css?v=202607211838">
+<script src="../assets/planetsize.js?v=202607211838" defer></script>
 </head>
 <body>
 <div class="stars"></div>
@@ -29,7 +28,7 @@
     <a href="../zukan/kotoba.html">用語じてん</a>
     <a href="../tera.html">テラちゃんについて</a>
     <a href="../qa.html">地球のギモンQ&amp;A</a>
-    <a href="../omiyage.html">観測キット</a>
+    <a href="../omiyage.html">おみやげ</a>
     <a href="../contact.html">お問い合わせ</a>
   </div>
 </nav>
@@ -53,6 +52,7 @@
         </div>
         <div class="heat-overlay" id="heatOverlay"></div>
         <div class="ice-overlay" id="iceOverlay"></div>
+        
       </div>
     </div>
       <div class="mascot" id="mascot">
@@ -91,8 +91,6 @@
       <div class="why" id="whyPs">🔎 惑星が大きいほど重力が強くなり、空気(大気)を強くつなぎとめられるよ。小さいと空気は宇宙へ逃げてしまうんだ</div>
     </div>
   </div>
-  
-
   <svg width="0" height="0" class="svgdefs" aria-hidden="true"><defs>
 <clipPath id="avclip"><circle cx="50" cy="50" r="50"/></clipPath>
 <g id="kid-sora"><g clip-path="url(#avclip)">
@@ -136,8 +134,8 @@
 <path d="M43 71 Q50 79 57 71" stroke="#c2596b" stroke-width="2" fill="none" stroke-linecap="round"/>
 </g></g>
 </defs></svg>
-<div class="talk"><div class="talk-title">🎬 テラちゃんげきじょう「地球がもっと大きかったら」</div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-sora"/></svg></span><span class="ava-cap">ソラ</span></div><div class="tb"><span class="who">ソラ</span>地球が大きくなったら、土地が増えて広々していいな</div></div><div class="trow right"><div class="avwrap"><span class="ava tera"><span class="ant"></span><span class="face"></span><span class="eye l"></span><span class="eye r"></span><span class="blush l"></span><span class="blush r"></span><span class="mouth"></span></span><span class="ava-cap">テラちゃん</span></div><div class="tb"><span class="who">テラちゃん</span>大きいと重力も強くなるよ。強すぎると、生き物は自分の体重に押しつぶされちゃう</div></div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-sora"/></svg></span><span class="ava-cap">ソラ</span></div><div class="tb"><span class="who">ソラ</span>じゃあ小さければいい?</div></div><div class="trow right"><div class="avwrap"><span class="ava tera"><span class="ant"></span><span class="face"></span><span class="eye l"></span><span class="eye r"></span><span class="blush l"></span><span class="blush r"></span><span class="mouth"></span></span><span class="ava-cap">テラちゃん</span></div><div class="tb"><span class="who">テラちゃん</span>小さいと重力が弱くて、空気が宇宙に逃げていく。火星みたいにスカスカになるんだ</div></div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-sora"/></svg></span><span class="ava-cap">ソラ</span></div><div class="tb punch"><span class="who">ソラ</span>大きさが空気の量まで決めるんだ…地球のサイズ、奇跡のちょうどよさだね。<div class="tele">宇宙では地球より少し大きい「スーパーアース」が続々見つかっています。住めるかは研究中。</div></div></div>
-
+<div class="talk"><div class="talk-title">🎬 テラちゃんげきじょう「地球がもっと大きかったら」</div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-sora"/></svg></span><span class="ava-cap">ソラ</span></div><div class="tb"><span class="who">ソラ</span>地球が大きくなったら、土地が増えて広々していいな</div></div><div class="trow right"><div class="avwrap"><span class="ava tera"><span class="ant"></span><span class="face"></span><span class="eye l"></span><span class="eye r"></span><span class="blush l"></span><span class="blush r"></span><span class="mouth"></span></span><span class="ava-cap">テラちゃん</span></div><div class="tb"><span class="who">テラちゃん</span>大きいと重力も強くなるよ。強すぎると、生き物は自分の体重に押しつぶされちゃう</div></div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-sora"/></svg></span><span class="ava-cap">ソラ</span></div><div class="tb"><span class="who">ソラ</span>じゃあ小さければいい?</div></div><div class="trow right"><div class="avwrap"><span class="ava tera"><span class="ant"></span><span class="face"></span><span class="eye l"></span><span class="eye r"></span><span class="blush l"></span><span class="blush r"></span><span class="mouth"></span></span><span class="ava-cap">テラちゃん</span></div><div class="tb"><span class="who">テラちゃん</span>小さいと重力が弱くて、空気が宇宙に逃げていく。火星みたいにスカスカになるんだ</div></div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-sora"/></svg></span><span class="ava-cap">ソラ</span></div><div class="tb punch"><span class="who">ソラ</span>大きさが空気の量まで決めるんだ…地球のサイズ、奇跡のちょうどよさだね。<div class="tele">宇宙では地球より少し大きい「スーパーアース」が続々見つかっています。住めるかは研究中。</div></div></div></div>
+  
   <h2>地球の大きさを変えると、何が起きる?</h2>
   <h3>① 大きさは、そのまま「重力」を変える</h3>
   <p>惑星が大きくなると、含まれる物質が増えて重くなり、地表を引っぱる<a href="gravity.html">重力</a>も強くなります。同じ材料でできているとすると、直径を2倍にすれば地表の重力もおよそ2倍。逆に小さくすれば重力は弱まります。スライダーで地球の直径を変えると、まず地表の重力の数字が動くのはこのためです。重力は、体重やジャンプ力だけでなく、もっと大事なあるものの運命を握っています。</p>
@@ -150,8 +148,6 @@
 
   <div class="note"><div class="nt">💡 豆知識:重力を振りきる「脱出速度」</div>
   空気が逃げるかどうかは、<strong>脱出速度</strong>という考え方で説明できます。惑星の重力を振りきって宇宙へ飛び出すのに必要な速さのことで、地球では秒速約11.2km。重力が強い(=大きい)惑星ほどこの速度は大きく、空気の分子は振りきれずにとどまります。逆に重力の弱い小さな惑星では、あたためられて素早く動く軽い分子(水素やヘリウム)から順に、脱出速度を超えて逃げ出してしまう。惑星が「どんな空気を保てるか」は、その大きさが静かに決めているのです。</div>
-  
-</div>
   
   <div class="termmemo"><div class="tm">🔎 むずかしい言葉は「用語じてん」でチェック</div>
   <div class="termchips"><a href="kotoba.html#gravity">重力</a><a href="kotoba.html#atmosphere">大気</a><a href="kotoba.html#escape-velocity">脱出速度</a></div></div>
@@ -168,11 +164,10 @@
 
 <footer class="site">
   <div class="flinks">
-    <a href="../index.html">トップ</a><a href="../zukan/index.html">もしも図鑑</a><a href="../zukan/kotoba.html">用語じてん</a><a href="../tera.html">テラちゃん</a><a href="../qa.html">Q&amp;A</a><a href="../omiyage.html">観測キット</a><a href="../contact.html">お問い合わせ</a>
+    <a href="../index.html">トップ</a><a href="../zukan/index.html">もしも図鑑</a><a href="../zukan/kotoba.html">用語じてん</a><a href="../tera.html">テラちゃん</a><a href="../qa.html">Q&amp;A</a><a href="../omiyage.html">おみやげ</a><a href="../contact.html">お問い合わせ</a>
   </div>
   ※ 当サイトのシミュレーションはすべて簡略化した概算モデルです。実際の気候・人口動態はもっと複雑です。<br>
   © もしも地球ラボ / OBSERVATION LOG by テラちゃん
 </footer>
-<!-- Cloudflare Web Analytics --><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "8a1063ba24db48fea0ce747406f696bf"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://formspree.io; base-uri 'none'; form-action https://formspree.io">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src https://formspree.io; base-uri 'none'; form-action https://formspree.io">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="description" content="宇宙の恒星の7割超は暗い赤色矮星。ハビタブルゾーンが主星に激近し、惑星は潮汐ロックで半分が永遠の昼になる。">
@@ -11,14 +11,13 @@
 <meta property="og:description" content="宇宙の恒星の7割超は暗い赤色矮星。ハビタブルゾーンが主星に激近し、惑星は潮汐ロックで半分が永遠の昼になる。">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
-<meta property="og:image" content="https://moshimo-lab.pages.dev/assets/ogp/reddwarf.png?v=202607161500">
+<meta property="og:image" content="https://moshimo-lab.pages.dev/assets/ogp/reddwarf.png?v=202607211838">
 <title>もしも太陽が赤色矮星だったら|もしも図鑑|もしも地球ラボ</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=JetBrains+Mono:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
-<link rel="stylesheet" href="../assets/site.css?v=202607172400">
-<script src="../assets/reddwarf.js?v=202607161500" defer></script>
-<script src="../assets/site-common.js?v=202607161500" defer></script>
+<link rel="stylesheet" href="../assets/site.css?v=202607211838">
+<script src="../assets/reddwarf.js?v=202607211838" defer></script>
 </head>
 <body>
 <div class="stars"></div>
@@ -29,7 +28,7 @@
     <a href="../zukan/kotoba.html">用語じてん</a>
     <a href="../tera.html">テラちゃんについて</a>
     <a href="../qa.html">地球のギモンQ&amp;A</a>
-    <a href="../omiyage.html">観測キット</a>
+    <a href="../omiyage.html">おみやげ</a>
     <a href="../contact.html">お問い合わせ</a>
   </div>
 </nav>
@@ -42,7 +41,8 @@
   </div>
   
   <div class="minisim">
-    <div class="stage">
+    <div class="stage" style="position:relative;padding-left:50px">
+      <div class="star-mini pulse" id="starMini"></div>
       <div class="earth-wrap small" id="earthWrap">
       
       <div class="atmosphere"></div>
@@ -53,6 +53,7 @@
         </div>
         <div class="heat-overlay" id="heatOverlay"></div>
         <div class="ice-overlay" id="iceOverlay"></div>
+        
       </div>
     </div>
       <div class="mascot" id="mascot">
@@ -83,8 +84,6 @@
       <div class="why" id="whyRd">🔎 星は軽いほど暗い。暗い星のまわりでは「住める帯」が主星のすぐ近くまで寄ってくるよ</div>
     </div>
   </div>
-  
-
   <svg width="0" height="0" class="svgdefs" aria-hidden="true"><defs>
 <clipPath id="avclip"><circle cx="50" cy="50" r="50"/></clipPath>
 <g id="kid-sora"><g clip-path="url(#avclip)">
@@ -128,8 +127,8 @@
 <path d="M43 71 Q50 79 57 71" stroke="#c2596b" stroke-width="2" fill="none" stroke-linecap="round"/>
 </g></g>
 </defs></svg>
-<div class="talk"><div class="talk-title">🎬 テラちゃんげきじょう「太陽が赤色矮星だったら」</div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-hoshi"/></svg></span><span class="ava-cap">ホシ</span></div><div class="tb"><span class="who">ホシ</span>赤い太陽? なんだかロマンチックでいいじゃない</div></div><div class="trow right"><div class="avwrap"><span class="ava tera"><span class="ant"></span><span class="face"></span><span class="eye l"></span><span class="eye r"></span><span class="blush l"></span><span class="blush r"></span><span class="mouth"></span></span><span class="ava-cap">テラちゃん</span></div><div class="tb"><span class="who">テラちゃん</span>じつは宇宙の星の7割以上が、この暗くて赤い『赤色矮星』なんだよ</div></div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-hoshi"/></svg></span><span class="ava-cap">ホシ</span></div><div class="tb"><span class="who">ホシ</span>7割!? 太陽みたいな星のほうが少数派なの?</div></div><div class="trow right"><div class="avwrap"><span class="ava tera"><span class="ant"></span><span class="face"></span><span class="eye l"></span><span class="eye r"></span><span class="blush l"></span><span class="blush r"></span><span class="mouth"></span></span><span class="ava-cap">テラちゃん</span></div><div class="tb"><span class="who">テラちゃん</span>そう。赤色矮星は暗いから、惑星がうんと近くを回る。すると片面だけが永遠のお昼になるんだ</div></div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-hoshi"/></svg></span><span class="ava-cap">ホシ</span></div><div class="tb punch"><span class="who">ホシ</span>宇宙では赤い太陽が多数派なんだ…夜空の星たちにも、いろんな色の人生があるんだね。<div class="tele">赤色矮星は暗くて肉眼ではほぼ見えません。夜空に輝く星は、選ばれしまぶしい少数派です。</div></div></div>
-
+<div class="talk"><div class="talk-title">🎬 テラちゃんげきじょう「太陽が赤色矮星だったら」</div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-hoshi"/></svg></span><span class="ava-cap">ホシ</span></div><div class="tb"><span class="who">ホシ</span>赤い太陽? なんだかロマンチックでいいじゃない</div></div><div class="trow right"><div class="avwrap"><span class="ava tera"><span class="ant"></span><span class="face"></span><span class="eye l"></span><span class="eye r"></span><span class="blush l"></span><span class="blush r"></span><span class="mouth"></span></span><span class="ava-cap">テラちゃん</span></div><div class="tb"><span class="who">テラちゃん</span>じつは宇宙の星の7割以上が、この暗くて赤い『赤色矮星』なんだよ</div></div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-hoshi"/></svg></span><span class="ava-cap">ホシ</span></div><div class="tb"><span class="who">ホシ</span>7割!? 太陽みたいな星のほうが少数派なの?</div></div><div class="trow right"><div class="avwrap"><span class="ava tera"><span class="ant"></span><span class="face"></span><span class="eye l"></span><span class="eye r"></span><span class="blush l"></span><span class="blush r"></span><span class="mouth"></span></span><span class="ava-cap">テラちゃん</span></div><div class="tb"><span class="who">テラちゃん</span>そう。赤色矮星は暗いから、惑星がうんと近くを回る。すると片面だけが永遠のお昼になるんだ</div></div><div class="trow"><div class="avwrap"><span class="ava"><svg viewBox="0 0 100 100"><use href="#kid-hoshi"/></svg></span><span class="ava-cap">ホシ</span></div><div class="tb punch"><span class="who">ホシ</span>宇宙では赤い太陽が多数派なんだ…夜空の星たちにも、いろんな色の人生があるんだね。<div class="tele">赤色矮星は暗くて肉眼ではほぼ見えません。夜空に輝く星は、選ばれしまぶしい少数派です。</div></div></div></div>
+  
   <h2>太陽を暗い星に取りかえると、何が起きる?</h2>
   <h3>① そもそも赤色矮星って、宇宙で一番ありふれた星</h3>
   <p>赤色矮星は、太陽よりずっと軽くて暗い、赤っぽい光の星です。地味な存在ですが、実は<strong>宇宙にある恒星の7割以上がこのタイプ</strong>。太陽のほうが少数派なんです。太陽にいちばん近い恒星プロキシマ・ケンタウリ(約4.2光年)も赤色矮星で、そのまわりには地球サイズの惑星プロキシマbが見つかっています。系外惑星さがしの主役は、今やこの暗い星たちです。</p>
@@ -142,8 +141,6 @@
 
   <div class="note"><div class="nt">💡 豆知識:太陽は「当たり」の星だったのかもしれない</div>
   ありふれた赤色矮星ではなく、太陽のような中くらいの明るさの星のまわりだからこそ、地球は主星から1億5000万kmという<strong>ほどよく離れた距離</strong>にいられます。近すぎないから潮汐ロックされず、<a href="rotation.html">自転</a>して昼と夜が規則正しく訪れ、<a href="tilt.html">地軸を傾け</a>て四季をつくれる。宇宙の多数派に生まれていたら、この当たり前は手に入らなかったかもしれません。地味だけど、太陽は地球にとって「当たり」の星だったのです。</div>
-  
-</div>
   
   <div class="termmemo"><div class="tm">🔎 むずかしい言葉は「用語じてん」でチェック</div>
   <div class="termchips"><a href="kotoba.html#reddwarf">赤色矮星</a><a href="kotoba.html#habitable">ハビタブルゾーン</a><a href="kotoba.html#tidal-lock">潮汐ロック</a><a href="kotoba.html#solar-wind">太陽風</a></div></div>
@@ -160,11 +157,10 @@
 
 <footer class="site">
   <div class="flinks">
-    <a href="../index.html">トップ</a><a href="../zukan/index.html">もしも図鑑</a><a href="../zukan/kotoba.html">用語じてん</a><a href="../tera.html">テラちゃん</a><a href="../qa.html">Q&amp;A</a><a href="../omiyage.html">観測キット</a><a href="../contact.html">お問い合わせ</a>
+    <a href="../index.html">トップ</a><a href="../zukan/index.html">もしも図鑑</a><a href="../zukan/kotoba.html">用語じてん</a><a href="../tera.html">テラちゃん</a><a href="../qa.html">Q&amp;A</a><a href="../omiyage.html">おみやげ</a><a href="../contact.html">お問い合わせ</a>
   </div>
   ※ 当サイトのシミュレーションはすべて簡略化した概算モデルです。実際の気候・人口動態はもっと複雑です。<br>
   © もしも地球ラボ / OBSERVATION LOG by テラちゃん
 </footer>
-<!-- Cloudflare Web Analytics --><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "8a1063ba24db48fea0ce747406f696bf"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>

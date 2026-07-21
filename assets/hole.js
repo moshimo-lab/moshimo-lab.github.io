@@ -3,6 +3,7 @@ const $=id=>document.getElementById(id);
 const hl=$('hl'),valHl=$('valHl'),hllayer=$('hllayer'),hltemp=$('hltemp'),hllook=$('hllook');
 const globeStrip=$('globeStrip'),earthWrap=$('earthWrap'),speechLine=$('speechLine');
 const depthMarker=$('depthMarker'),mascot=$('mascot'),panelHl=$('panelHl'),whyHl=$('whyHl');
+const heatOverlay=$('heatOverlay');
 function setFace(f){mascot.className='mascot'+(f?' face-'+f:'');}
 function lerp(a,b,t){return a+(b-a)*t;}
 function tempAt(d){
@@ -34,6 +35,10 @@ function update(){
   hltemp.textContent=d<1?'15℃':'約'+(t<1000?Math.round(t/10)*10:Math.round(t/100)*100).toLocaleString()+'℃';
   hllook.textContent=look;
   if(depthMarker)depthMarker.style.top=pctAt(d).toFixed(1)+'%';
+  // 深さに応じて地球が熱く見える効果
+  const heatPct=Math.min(1,d/6371);
+  if(heatOverlay)heatOverlay.style.opacity=(heatPct*0.7).toFixed(2);
+  earthWrap.classList.toggle('extreme-heat',d>=2900);
   panelHl.classList.toggle('danger',d>=2900);
   let line,face='';
   if(d<5){line='出発!足の下には、まだだれも見たことのない世界が6371kmも続いてるよ';face='happy';}
