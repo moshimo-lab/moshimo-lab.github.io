@@ -3,6 +3,7 @@ const $=id=>document.getElementById(id);
 const wt=$('wt'),valWt=$('valWt'),wsea=$('wsea'),wland=$('wland'),wworld=$('wworld');
 const globeStrip=$('globeStrip'),earthWrap=$('earthWrap'),speechLine=$('speechLine');
 const slWater=$('slWater'),slLabel=$('slLabel'),mascot=$('mascot'),panelWt=$('panelWt'),whyWt=$('whyWt');
+const dryOverlay=$('dryOverlay'),floodOverlay=$('floodOverlay');
 function update(){
   const w=wt.value/100; // 水の量(いま=1)
   valWt.textContent=w.toFixed(2)+(w<0.02?' 倍(水なし)':Math.abs(w-1)<0.03?' 倍(いまの地球)':' 倍');
@@ -27,6 +28,11 @@ function update(){
   if(slLabel)slLabel.textContent='水の量 '+w.toFixed(1)+'倍';
   const ice=w<0.02?0.4:0;
   panelWt.classList.toggle('danger',w<0.02||w>=2.5);
+  // 水の量に応じたオーバーレイ効果
+  const dryEffect=w<0.5?Math.min(1,(0.5-w)/0.5):0;
+  const floodEffect=w>1.3?Math.min(0.7,(w-1.3)/1.7*0.7):0;
+  if(dryOverlay)dryOverlay.style.opacity=dryEffect.toFixed(2);
+  if(floodOverlay)floodOverlay.style.opacity=floodEffect.toFixed(2);
   let line='海71%、陸29%。いまの地球のバランスだね',face='happy';
   if(w<0.02){line='水が全部消えた…海のない、からからの星だ…';face='dizzy';}
   else if(w<0.5){line='水が減って、海底が顔を出してきた!大陸が広いね';face='';}

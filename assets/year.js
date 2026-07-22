@@ -2,6 +2,7 @@
 const $=id=>document.getElementById(id);
 const yr=$('yr'),valYr=$('valYr'),ylen=$('ylen'),yseason=$('yseason'),ylike=$('ylike');
 const globeStrip=$('globeStrip'),earthWrap=$('earthWrap'),speechLine=$('speechLine');
+const heatOverlay=$('heatOverlay'),iceOverlay=$('iceOverlay');
 const revSpin=$('revSpin'),mascot=$('mascot'),panelYr=$('panelYr'),whyYr=$('whyYr');
 function update(){
   const d=yr.value/100; // 太陽との距離(いま=1)
@@ -25,6 +26,13 @@ function update(){
   ylike.textContent=lk;
   // 公転アニメ: 1年=4秒を基準にTに比例
   if(revSpin)revSpin.style.animationDuration=(4*T)+'s';
+  // 距離による温度変化: 近い=灼熱、遠い=極寒
+  const hotEffect=d<0.7?Math.max(0,(0.7-d)/0.4*0.6):0;
+  const coldEffect=d>1.3?Math.min(0.7,(d-1.3)/3*0.7):0;
+  if(heatOverlay)heatOverlay.style.opacity=hotEffect.toFixed(2);
+  if(iceOverlay)iceOverlay.style.opacity=coldEffect.toFixed(2);
+  earthWrap.classList.toggle('extreme-heat',d<0.4);
+  earthWrap.classList.toggle('extreme-ice',d>3);
   panelYr.classList.toggle('danger',d<0.3);
   let line='1年365日。季節は3か月ずつ。ちょうどいいリズムだね',face='happy';
   if(d<=0.45){line='1年が'+Math.round(days)+'日!お正月がすぐ来るよ。でも暑い…';face='hot';}

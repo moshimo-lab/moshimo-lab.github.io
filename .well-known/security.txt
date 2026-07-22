@@ -1,0 +1,4 @@
+# 脆弱性を見つけた方はこちらへ
+Contact: https://moshimo-lab.pages.dev/contact.html
+Expires: 2027-07-09T00:00:00.000Z
+Preferred-Languages: ja, en

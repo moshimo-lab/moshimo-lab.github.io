@@ -3,6 +3,7 @@ const $=id=>document.getElementById(id);
 const bm=$('bm'),valBm=$('valBm'),ecVerdict=$('ecVerdict'),btide=$('btide'),bnight=$('bnight');
 const globeStrip=$('globeStrip'),earthWrap=$('earthWrap'),speechLine=$('speechLine');
 const miniMoon=$('miniMoon'),ecMoon=$('ecMoon'),mascot=$('mascot'),panelBm=$('panelBm'),whyBm=$('whyBm');
+const floodOverlay=$('floodOverlay');
 function update(){
   const s=bm.value/100; // 月の大きさ(いま=1)
   valBm.textContent=s.toFixed(2)+' 倍';
@@ -24,6 +25,9 @@ function update(){
     miniMoon.style.width=mp+'px';miniMoon.style.height=mp+'px';
   }
   panelBm.classList.toggle('danger',s>=2);
+  // 潮汐が強すぎると洪水オーバーレイ
+  const tidalEffect=s>1.2?Math.min(0.6,(s-1.2)/1.8*0.6):0;
+  if(floodOverlay)floodOverlay.style.opacity=tidalEffect.toFixed(2);
   let line='いつもの月。日食のときは太陽とぴったり同じ大きさに見えるんだ',face='happy';
   if(s>=2.5){line='大きすぎ!潮が'+t.toFixed(0)+'倍…海辺が大変なことに…';face='dizzy';}
   else if(s>=1.5){line='大きな月!夜がすごく明るいね。潮も'+t.toFixed(1)+'倍だよ';face='';}
